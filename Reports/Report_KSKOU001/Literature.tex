@@ -1,0 +1,71 @@
+\chapter{Literature Review}
+
+Once upon a time engineers and researchers believed... In this area of research, they used the following methods... \cite{jct2010}
+
+Write this section first as it will take you the longest. I suggest you start writing this as soon as you
+have done your initial research at the beginning of your project. You can then return to it once you
+have completed your work to edit and adjust it.
+
+A literature review forms the theoretical basis of your project. You need to read a large number of
+journal papers, sections in books, technical reports etc. relevant to your work at the start of project.
+This will give you a good idea of the field of research.
+
+When writing your review start of with the general concepts and move to the more specific aspects
+explaining the necessary theory as you go. This section is NOT a copy and paste from others work or a
+rewrite-but-change-one-word section. I suggest you read all your material, and then put it down and
+write this section, referring back to the work only when you need to check something.
+
+See your PCS textbook for more details on how to write a literature review.
+
+If you include a figure or a table in your text please see the example in Fig. \ref{fig:model} as to how to caption it.
+Please make sure that all text in your figures is readable and that you reference your figures if they are
+from another source.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=0.7\textwidth]{model.png}
+\caption{A block diagram illustrating the connections to the IRQ pin on the MCS08GT16A microcontroller (Please
+note that your headings should be short descriptions of what is in the diagram not simply the figure title)}
+\label{fig:model}
+\end{figure}
+\section{Gait sequence modelling and estimation}
+\subsection{Quadrupede gait modelling}
+\subsubsection{Periodicity}
+\subsection{Quadrupede gait estimation}
+\section{Case study: Inertia Measurement Unit}
+\section{Hidden Markov Models}
+Assumption of statistical model: Signal can be parametrised as a parametric random process and that the parametrers of the stochastic process can be determined/estimated in a precise, well-defined manner.\\
+Observation is a probabilitistic function of the state - doubly embedded stochastic process.\\
+Each state characterised by the probability distribution of observations, and transitions between states are characterised by a state transition matrix.
+\subsubsection{First order Markov model - current and predecessor only considered}
+\subsection{Transition Probability Matrix}
+\subsection{Emission Probability Matrix}
+\subsection{Initial distribution}
+\subsection{Elements of an HMM}
+\begin{enumerate}
+	\item Number of states, N
+	\item Number of distinct observation symbols per state, M
+	%\item The state transition probability distribution A = \left\lbrace  a_{ij} \right\rbrace 
+	%\item The observation symbol probability distribution in state j, B = \left\lbrace  b_{j}(k) \right\rbrace 
+\item The initial state distribution, pi
+\end{enumerate}
+\subsection{Three fundamental problems for HMM design}
+\begin{enumerate}
+	\item Number of states, N
+	\item Number of distinct observation symbols per state, M
+%	\item The state transition probability distribution A = \left\lbrace  a_{ij} \right\rbrace 
+%	\item The observation symbol probability distribution in state j, B = \left\lbrace  b_{j}(k) \right\rbrace 
+%	\item The initial state distribution, pi.
+\end{enumerate}
+\subsection{Types of HMM}
+\subsubsection{Ergodic model}
+\subsubsection{Left-Right model or Bakis model}
+\subsubsection{Evaluation of the probability of a sequence of observations}
+\subsubsection{The determination of a best sequence states}
+\subsubsection{The adjustment of model parameters to account for observed signal}
+\section{k-Nearest Neighbour}
+\section{Dimension reduction}
+\subsection{Feature selection}
+\section{Sufficiency of Training Data}
+\section{Techniques to increase Training Data}
+\subsection{Mirroring}
