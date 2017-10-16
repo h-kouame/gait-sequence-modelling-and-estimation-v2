@@ -25,6 +25,13 @@ function [A, B, accuracy] = foothmm(datapath, foot)
     %evaluate
     [A, B] = hmmestimate(OT, ST, 'PSEUDOEMISSIONS',PSEUDOE, 'PSEUDOTRANSITIONS',PSEUDOTR);
     
+   %  Save HMM parameters
+   filepath = 'C:\School\EEE4022S\Gait Sequence Estimation\Output\HMM\';
+%    datestamp = string(datetime('now','TimeZone','local','Format','yyyyMMdd_HHmmss'));
+%    filename = strcat(filepath , foot, '_', datestamp, '.mat');
+   filename = strcat(filepath , foot, '.mat');
+   save(filename, 'A', 'B');
+    
     %decode
 %     SS = flipud(ST);
 %     OS = SS;

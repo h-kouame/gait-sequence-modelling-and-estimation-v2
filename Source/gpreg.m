@@ -1,6 +1,6 @@
 function [G] = gpreg(datapath)
     if nargin < 1
-        datapath = 'C:\School\EEE4022S\DataSets\calibrated_data_with_footfalls\Data_Test6(Walk1).mat';
+        datapath = 'C:\School\EEE4022S\Gait Sequence Estimation\DataSets\calibrated_data_with_footfalls\Data_Test6(Walk1).mat';
     end
     
     rng(0,'twister');
@@ -10,17 +10,17 @@ function [G] = gpreg(datapath)
 %        O = [O1; O2];
 %        M = [M1; M2];
 
-       [O, M] = preprocess(datapath);
+       [D, O, S] = preprocess(datapath);
       
       % 2. Fit the model using 'exact' and predict using 'exact'.
-      G = fitrgp(O, M,'Basis','linear','Optimizer','QuasiNewton',...
+      G = fitrgp(S, O(:, 1),'Basis','linear','Optimizer','QuasiNewton',...
                    'verbose',1,'FitMethod','exact','PredictMethod','exact');
 
       % 3. Plot results.
-      scatter(O, M,'b');
+      scatter(S, O(:, 1), 'b');
       hold on;
-      scatter(O, resubPredict(G),'r', 'filled');
-      xlabel('O');
-      ylabel('M');
-      legend('Data','GPR fit');
+      scatter(S, resubPredict(G),'r', 'filled');
+      xlabel('States');
+      ylabel('Measurement');
+      legend('Data', 'GPR fit');
 end

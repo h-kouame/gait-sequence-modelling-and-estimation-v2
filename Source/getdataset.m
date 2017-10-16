@@ -5,34 +5,8 @@ function dataset = getdataset(datapath, foot)
     elseif nargin < 2
         foot = 'LF';   
     end
-    data = load(datapath);
-    states = data.LF;
-    switch foot
-        case 'RF'
-            states = data.RF;
-        case 'LB'
-            states = data.LB;
-        case 'RB'  
-            states = data.RB;
-    end
     
-    fields = {'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
-    D = rmfield(data, fields);
-    fns = fieldnames(D);
-    observations =  [];
-    feature_labels = {};
-    for i = 1:length(fns)
-        measur = D.(fns{i});
-        for j = 1:size(measur, 2)
-            observations = [observations, measur(:, j)];
-            if j > 1
-               feat_lab = strcat(fns{i}, num2str(j));
-            else
-               feat_lab = fns{i}; 
-            end
-            feature_labels = [feature_labels; feat_lab];
-        end
-    end
+    [observations, states, feature_labels] = getseqs(datapath, foot);
     
     dataset_len = min(length(observations), length(states));
     classes = [];
