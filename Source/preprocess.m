@@ -1,4 +1,4 @@
-function [dataset, observations] = preprocess(datapath)
+function [dataset, observations, states] = preprocess(datapath)
     if nargin < 1
         datapath = 'C:\School\EEE4022S\Gait Sequence Estimation\DataSets\calibrated_data_with_footfalls\Data_Test6(Walk1).mat'; 
     end

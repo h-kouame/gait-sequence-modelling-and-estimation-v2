@@ -1,4 +1,4 @@
-function [accuracy, Q, logP] = chmmpath(modelpath, testdatapath)
+function [PSTATES, logpseq, FORWARD, BACKWARD, S] = chmmposterior(modelpath, testdatapath)
     if nargin < 1
         modelpath = 'C:\School\EEE4022S\Gait Sequence Estimation\Output\HMM\CHMM'; 
         testdatapath =  'C:\School\EEE4022S\Gait Sequence Estimation\DataSets\calibrated_data_with_footfalls\Data_Test7(Trot then Walk-transition at around 320).mat';
@@ -18,8 +18,5 @@ function [accuracy, Q, logP] = chmmpath(modelpath, testdatapath)
     RB2str = num2str(data.RB);
     feat2observ = strcat(LF2str, RF2str, LB2str, RB2str);
     O = bin2dec(feat2observ) + 1; %sequence of observations
-%     test with reverse sequence of observations
-%     OS = flipud(O); 
-    [Q, logP] = hmmviterbi(O, A, B);
-    accuracy = 100*sum(O == Q.')/length(O)
+    [PSTATES, logpseq, FORWARD, BACKWARD, S] = hmmdecode(O.', A, B);
 end

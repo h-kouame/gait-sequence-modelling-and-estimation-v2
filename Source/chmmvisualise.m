@@ -1,9 +1,14 @@
-function chmmvisualise(datapath)
+function chmmvisualise(modelpath)
     if nargin < 1
-        datapath = 'C:\School\EEE4022S\Gait Sequence Estimation\DataSets\calibrated_data_with_footfalls\Data_Test6(Walk1).mat';  
+        modelpath = 'C:\School\EEE4022S\Gait Sequence Estimation\Output\HMM\CHMM'; 
     end
+        
     delfigs;
-    [A, B] = chmm(datapath);
+    
+    %Build HMM
+    CHMM = load(modelpath);
+    A = CHMM.A;  
+    
     stateNames = ["S1" "S2" "S3" "S4" "S5" "S6" "S7" "S8" "S9" "S10" "S11" "S12" "S13" "S14" "S15" "S16"];
     mc = dtmc(A, 'StateNames', stateNames);
     
@@ -54,7 +59,7 @@ function chmmvisualise(datapath)
 
 %     Plot an animated histogram. Set the frame rate to two seconds.
     figure;
-    distplot(mc,X,'Type','histogram','FrameRate', 2);
+    distplot(mc, X, 'Type','histogram','FrameRate', 2);
     title 'Animated histogram of distribution of states';
     
 %     A simulation plot graphs of random walks through the Markov chain starting at particular initial states. 

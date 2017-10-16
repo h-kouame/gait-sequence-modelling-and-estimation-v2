@@ -1,12 +1,25 @@
-function [A, B] = chmm(datapath)
+function [A, B] = chmm(individual_hmmpath)
     if nargin < 1
-        datapath = 'C:\School\EEE4022S\Gait Sequence Estimation\DataSets\calibrated_data_with_footfalls\Data_Test6(Walk1).mat';  
+        individual_hmmpath = 'C:\School\EEE4022S\Gait Sequence Estimation\Output\HMM\';  
     end
     
-    [A1, B1] = foothmm(datapath, 'LF');
-    [A2, B2] = foothmm(datapath, 'RF');
-    [A3, B3] = foothmm(datapath, 'LB');
-    [A4, B4] = foothmm(datapath, 'RB');
+    LF_HMM = load(strcat(individual_hmmpath, 'LF.mat'));
+    RF_HMM = load(strcat(individual_hmmpath, 'RF.mat'));
+    LB_HMM = load(strcat(individual_hmmpath, 'RB.mat'));
+    RB_HMM = load(strcat(individual_hmmpath, 'LB.mat'));
+    
+    A1 = LF_HMM.A;
+    B1 = LF_HMM.B;
+    
+    A2 = RF_HMM.A;
+    B2 = RF_HMM.B;
+    
+    A3 = LB_HMM.A;
+    B3 = LB_HMM.B;
+    
+    A4 = RB_HMM.A;
+    B4 = RB_HMM.B;
+    
     tempA = {A1, A2, A3, A4};
     tempB = {B1, B2, B3, B4};
     
@@ -20,4 +33,11 @@ function [A, B] = chmm(datapath)
             B(i, j) = combined_prob(i, j, tempB);
         end
     end
+    
+%  Save HMM parameters
+   filepath = 'C:\School\EEE4022S\Gait Sequence Estimation\Output\HMM\';
+%    datestamp = string(datetime('now','TimeZone','local','Format','yyyyMMdd_HHmmss'));
+%    filename = strcat(filepath ,'CHMM_' , datestamp, '.mat');
+   filename = strcat(filepath ,'CHMM', '.mat');
+   save(filename, 'A', 'B');
 end

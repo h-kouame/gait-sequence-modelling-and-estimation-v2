@@ -1,0 +1,14 @@
+*.asv
+*.csv
+DataSets/
+Admin/
+Books/
+Figures/
+Proposals/
+Reports/
+Tools/
+Source/matlab-hmm-master/
+Source/matlab_workspace.mat
+Source/modelling.py
+Source/prtools/
+Source/successors.py
