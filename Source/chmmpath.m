@@ -21,5 +21,5 @@ function [accuracy, Q, logP] = chmmpath(modelpath, testdatapath)
 %     test with reverse sequence of observations
 %     OS = flipud(O); 
     [Q, logP] = hmmviterbi(O, A, B);
-    accuracy = 100*sum(O == Q.')/length(O);
+    accuracy = 100*sum(O == Q.')/length(O)
 end

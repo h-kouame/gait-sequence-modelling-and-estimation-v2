@@ -20,7 +20,7 @@ function [A, B, accuracy] = foothmm(datapath, foot)
     OT = ST;
     M = length(unique(ST));
     N = M;
-    PSEUDOE = ones(M, N);
+    PSEUDOE = ones(M, N)*60;
     PSEUDOTR = PSEUDOE;
     %evaluate
     [A, B] = hmmestimate(OT, ST, 'PSEUDOEMISSIONS',PSEUDOE, 'PSEUDOTRANSITIONS',PSEUDOTR);

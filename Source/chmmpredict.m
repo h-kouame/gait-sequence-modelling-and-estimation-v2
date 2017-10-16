@@ -1,4 +1,4 @@
-function [overall_accuracy, hmm_accuracy, Q, logP] = chmmpredict(hmmpath, knnpath, testdatapath)
+function [overall_accuracy, overall_knn_accuracy, hmm_accuracy, Q, logP] = chmmpredict(hmmpath, knnpath, testdatapath)
     if nargin < 1
         hmmpath = 'C:\School\EEE4022S\Gait Sequence Estimation\Output\HMM\CHMM'; 
         knnpath = 'C:\School\EEE4022S\Gait Sequence Estimation\Output\KNN\KNN.mat';
@@ -59,6 +59,7 @@ function [overall_accuracy, hmm_accuracy, Q, logP] = chmmpredict(hmmpath, knnpat
     [Q, logP] = hmmviterbi(knn_seq_observ, A, B);
     
 %     Accuracies
-    hmm_accuracy = 100*sum(knn_seq_observ == Q.')/length(knn_seq_observ);
-    overall_accuracy = 100*sum(seq_observ == Q.')/length(seq_observ);
+    overall_knn_accuracy = 100*sum(knn_seq_observ == seq_observ)/length(knn_seq_observ)
+    hmm_accuracy = 100*sum(knn_seq_observ == Q.')/length(knn_seq_observ)
+    overall_accuracy = 100*sum(seq_observ == Q.')/length(seq_observ)
 end

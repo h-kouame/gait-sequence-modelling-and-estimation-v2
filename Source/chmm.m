@@ -1,12 +1,12 @@
-function [A, B] = chmm(datapath)
+function [A, B] = chmm(individual_hmmpath)
     if nargin < 1
-        datapath = 'C:\School\EEE4022S\Gait Sequence Estimation\Output\HMM\';  
+        individual_hmmpath = 'C:\School\EEE4022S\Gait Sequence Estimation\Output\HMM\';  
     end
     
-    LF_HMM = load(strcat(datapath, 'LF.mat'));
-    RF_HMM = load(strcat(datapath, 'RF.mat'));
-    LB_HMM = load(strcat(datapath, 'RB.mat'));
-    RB_HMM = load(strcat(datapath, 'LB.mat'));
+    LF_HMM = load(strcat(individual_hmmpath, 'LF.mat'));
+    RF_HMM = load(strcat(individual_hmmpath, 'RF.mat'));
+    LB_HMM = load(strcat(individual_hmmpath, 'RB.mat'));
+    RB_HMM = load(strcat(individual_hmmpath, 'LB.mat'));
     
     A1 = LF_HMM.A;
     B1 = LF_HMM.B;
