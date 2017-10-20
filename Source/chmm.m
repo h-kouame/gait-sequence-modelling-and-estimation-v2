@@ -5,8 +5,8 @@ function [A, B] = chmm(individual_hmmpath)
     
     LF_HMM = load(strcat(individual_hmmpath, 'LF.mat'));
     RF_HMM = load(strcat(individual_hmmpath, 'RF.mat'));
-    LB_HMM = load(strcat(individual_hmmpath, 'RB.mat'));
-    RB_HMM = load(strcat(individual_hmmpath, 'LB.mat'));
+    LB_HMM = load(strcat(individual_hmmpath, 'LB.mat'));
+    RB_HMM = load(strcat(individual_hmmpath, 'RB.mat'));
     
     A1 = LF_HMM.A;
     B1 = LF_HMM.B;
