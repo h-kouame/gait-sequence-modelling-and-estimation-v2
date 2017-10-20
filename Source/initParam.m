@@ -23,8 +23,10 @@ function [pi, A, B] = initParam(observ_seq, state_seq)
         end
     end
     
-    pi = [size(O1, 1) size(O2, 1) size(O3, 1) size(O4, 1)]/size(observ_seq, 1); 
+%     pi = [size(O1, 1) size(O2, 1) size(O3, 1) size(O4, 1)]/size(observ_seq, 1); 
     state_num = 4;
+    pi = ones(1, state_num)/4;
+    
     PSEUDOTR = ones(state_num, state_num)*1;
     A = hmmestimate(state_seq, state_seq, 'PSEUDOTRANSITIONS',PSEUDOTR);
     feat_num = size(observ_seq, 2);

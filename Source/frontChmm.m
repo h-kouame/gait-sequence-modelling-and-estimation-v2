@@ -11,10 +11,14 @@ function [p_start, A, phi, loglik] = frontChmm(datapath)
     iter_num = 100;
     [p_start, A, phi] = initParam(observ_seq, state_seq);
     [p_start, A, phi, loglik] = ChmmGauss(data, state_num, 'p_start', p_start, 'A', A, 'phi', phi, 'cov_type', 'full', 'cov_thresh', 1e-1);
-    logp_xn_given_zn = Gauss_logp_xn_given_zn(data{1}, phi);
+    
+    testdatapath =  'C:\School\EEE4022S\Gait Sequence Estimation\DataSets\calibrated_data_with_footfalls\Data_Test7(Trot then Walk-transition at around 320).mat';    
+    [test_observ_seq, test_state_seq] = getfrontdata(testdatapath);
+    test_data{1} = test_observ_seq; 
+    logp_xn_given_zn = Gauss_logp_xn_given_zn(test_data{1}, phi);
     [~,~, loglik] = LogForwardBackward(logp_xn_given_zn, p_start, A);
     path = LogViterbiDecode(logp_xn_given_zn, p_start, A);
     
-    accuracy = 100*mean(path == state_seq)
+    accuracy = 100*mean(path == test_state_seq)
 end
     
