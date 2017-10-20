@@ -1,4 +1,3 @@
-foothmm;
 all_feethmm;
 chmm;
 chmmpath;

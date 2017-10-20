@@ -13,3 +13,5 @@ Source/modelling.py
 Source/prtools/
 Source/successors.py
 Source/pmtk3-master/
+Source/matlab.mat
+Output/PMTK3/
