@@ -8,8 +8,8 @@ function [observations, states, feature_labels] = getbackdata(datapath)
     states = bin2dec(num2str(states)) + 1;
 
 %     double states sequence by mirroring
-    states = [states; flipud(states)];
-    fields = {'magFront_cal', 'accFrontZ', 'accFrontY', 'accFrontX', 'FrontRoll', 'FrontPitch', 'FrontYaw', 'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
+%     states = [states; flipud(states)];
+    fields = {'magBack_cal', 'magFront_cal', 'accFrontZ', 'accFrontY', 'accFrontX', 'FrontRoll', 'FrontPitch', 'FrontYaw', 'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
  
     D = rmfield(data, fields);
     fns = fieldnames(D);
@@ -28,5 +28,5 @@ function [observations, states, feature_labels] = getbackdata(datapath)
         end
     end
 %     double observations sequence by mirroring
-    observations = [observations; flipud(observations)];
+%     observations = [observations; flipud(observations)];
 end
