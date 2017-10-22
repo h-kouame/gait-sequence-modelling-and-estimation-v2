@@ -13,6 +13,7 @@ function [observations, states, feature_labels] = getfrontdata(datapath)
     fields = {'magFront_cal', 'magBack_cal', 'accBackZ', 'accBackY', 'accBackX', 'BackRoll', 'BackPitch', 'BackYaw', 'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
  
     D = rmfield(data, fields);
+    D = orderfields(D);
     fns = fieldnames(D);
     observations =  [];
     feature_labels = {};

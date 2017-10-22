@@ -19,6 +19,7 @@ function [observations, states, feature_labels] = getseqs(datapath, foot)
     states = [states; flipud(states)];
     fields = {'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
     D = rmfield(data, fields);
+    D = orderfields(D);
     fns = fieldnames(D);
     observations =  [];
     feature_labels = {};
