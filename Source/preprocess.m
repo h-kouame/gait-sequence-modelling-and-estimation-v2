@@ -12,6 +12,7 @@ function [dataset, observations, states] = preprocess(datapath)
     
     fields = {'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
     D = rmfield(data, fields);
+    D = orderfields(D);
     fns = fieldnames(D);
     observations =  [];
     feature_labels = {};

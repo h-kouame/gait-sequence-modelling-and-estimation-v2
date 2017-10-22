@@ -1,6 +1,6 @@
-function [selected_observ_seq, state_seq, out_feat_labels] = featselect(body_part, num_feat_out)
+function [selected_observ_seq, state_seq, out_feat_labels] = SDM(body_part, num_feat_out)
     if nargin < 1
-        body_part = 'back';
+        body_part = 'front';
         num_feat_out = 0;
     elseif nargin < 2
         num_feat_out = 0;
@@ -33,9 +33,41 @@ function [selected_observ_seq, state_seq, out_feat_labels] = featselect(body_par
     
 %     forward feature selection
     dataset = setname(dataset, 'original dataset');
-    mix_num = 2;
-    mixt_based_classifier = mogc([], mix_num);
-    W = featself(dataset, mixt_based_classifier, num_feat_out); 
+    [means, cov_matrices] = meancov(dataset);
+%     separability degree matrix
+%     sdm = distmaha(dataset, means, cov_matrices);
+    
+    feat_num = size(observ_seq, 2);
+    class_num = 4;
+    sdm = zeros(class_num, class_num, feat_num);
+    for k = 1:feat_num
+        sdm_k = distmaha(dataset(:, k));
+        sdm(:, :, k) = sdm_k; 
+    end
+    sdm_avg = mean(sdm, 3);
+    
+    sim_d_k = zeros(class_num, class_num, feat_num);
+    threshold = 1;
+    for k = 1:feat_num
+        for r = 1:class_num
+            for c = 1:class_num
+                if sdm(r, c, k) > 1.1*sdm_avg(r, c, 1)
+                   sim_d_k(r, c, k) = 1;
+                elseif sdm(r, c, k) > threshold
+                    sim_d_k(r, c, k) = 1;
+                else
+                    sim_d_k(r, c, k) = 0;
+                end
+            end
+        end
+    end
+    
+    wm_k = sim_d_k ./ (sum(sim_d_k, 3));
+    
+    G_x_k = zeros(1, feat_num);
+    for k = 1:feat_num
+        G_x_k = sum(sum(sim_d_k .* wm_k(:,:, k), 'omitnan'));
+    end
     
     out_feat_labels = W.labels
     

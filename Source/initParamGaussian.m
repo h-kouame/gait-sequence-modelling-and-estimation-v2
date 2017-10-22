@@ -1,4 +1,4 @@
-function [pi, A, B] = initParam(observ_seq, state_seq)
+function [pi, A, B] = initParamGaussian(observ_seq, state_seq)
     if nargin < 1
         datapath = 'C:\School\EEE4022S\Gait Sequence Estimation\DataSets\calibrated_data_with_footfalls\Data_Test6(Walk1).mat';
         [observ_seq, state_seq] = getfrontdata(datapath);   
@@ -25,6 +25,8 @@ function [pi, A, B] = initParam(observ_seq, state_seq)
     
     pi = [size(O1, 1) size(O2, 1) size(O3, 1) size(O4, 1)]/size(observ_seq, 1); 
     state_num = 4;
+%     pi = ones(1, state_num)/4;
+    
     PSEUDOTR = ones(state_num, state_num)*1;
     A = hmmestimate(state_seq, state_seq, 'PSEUDOTRANSITIONS',PSEUDOTR);
     feat_num = size(observ_seq, 2);

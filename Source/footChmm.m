@@ -11,7 +11,6 @@ function [p_start, A, phi, loglik] = footChmm(datapath, foot)
     end
     
     delfigs;
-    knn_post = knn_posterior(knnpath, datapath, foot);
     [observ_seq, states] = getseqs(datapath, foot); 
     data{1} = observ_seq(:, :);
     state_num = 2;

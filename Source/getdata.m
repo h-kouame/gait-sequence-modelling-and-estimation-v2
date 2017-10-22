@@ -1,6 +1,9 @@
-function [observations, states, feature_labels] = getbackdata(datapath) 
+function [observations, states, feature_labels] = getdata(datapath, body_part) 
     if nargin < 1
         datapath = 'C:\School\EEE4022S\Gait Sequence Estimation\DataSets\calibrated_data_with_footfalls\Data_Test6(Walk1).mat';  
+        body_part = 'front';
+    elseif nargin < 2
+        body_part = 'front';
     end
     
     data = load(datapath);
@@ -8,10 +11,16 @@ function [observations, states, feature_labels] = getbackdata(datapath)
     states = bin2dec(num2str(states)) + 1;
 
 %     double states sequence by mirroring
-    states = [states; flipud(states)];
-    fields = {'magFront_cal', 'accFrontZ', 'accFrontY', 'accFrontX', 'FrontRoll', 'FrontPitch', 'FrontYaw', 'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
+%     states = [states; flipud(states)];
+
+    if(strcmp(body_part, 'front'))
+         fields = {'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
+    else
+         fields = {'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
+    end
  
     D = rmfield(data, fields);
+    D = orderfields(D);
     fns = fieldnames(D);
     observations =  [];
     feature_labels = {};
@@ -28,5 +37,5 @@ function [observations, states, feature_labels] = getbackdata(datapath)
         end
     end
 %     double observations sequence by mirroring
-    observations = [observations; flipud(observations)];
+%     observations = [observations; flipud(observations)];
 end
