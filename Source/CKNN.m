@@ -1,6 +1,8 @@
-function [post_prob, state_seq, feat_labels] = CKNN(body_part)
+function [test_err, train_err] = CKNN(data, train_prop)
     if nargin < 1
-        body_part = 'front';  
+        [obs, states, feats] = get_all_data();
+        data = make_data(obs, states, feats);
+        train_prop = 0.5;
     end
     
     delfigs;
@@ -8,23 +10,25 @@ function [post_prob, state_seq, feat_labels] = CKNN(body_part)
     prwaitbar off                % waitbar not needed here
     randreset(1);                % takes care of reproducility
    
-    [dataset, ~ , state_seq, feat_labels] = getprdataset(body_part);
+%     [dataset, ~ , state_seq, feat_labels] = getprdataset(data);
+    dataset = getprdataset(data);
     
-    [T, S] = gendat(dataset, 0.5);
-    T = setname(T, strcat(body_part, ' Training Set')); 
-    S = setname(S, strcat(body_part, ' Test Set'));
+    %split dataset into train and test sets
+    [T, S] = gendat(dataset, train_prop);
+    T = setname(T, 'Training Set'); 
+    S = setname(S, 'Test Set');
     KNN = knnc(dataset);
         
-    %Errors
-    DT = dataset*KNN;
-    training_error = DT*testc
-    DS = flipud(dataset)*KNN;
-    test_error = DS*testc
-    labs = getlabels(flipud(dataset));        
-    labsc = DS*labeld;
-    accuracy = 100*mean(labs==labsc)
+
+%     evaluate bias error
+    DT = T*KNN;
+    train_err = DT*testc
     
-    post_prob = +knn_map(dataset, KNN);
+%     evaluate variance error
+    DS = S*KNN;
+    test_err = DS*testc
+        
+%     post_prob = +knn_map(dataset, KNN);
 %     MOGC = mogc(post_prob, 2);
 %     
 %     DT = post_prob*MOGC;

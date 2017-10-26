@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  25 OCT 2017 21:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  27 OCT 2017 01:07
 entering extended mode
 **"./Project Report Template.tex"
 ("Project Report Template.tex"
@@ -484,16 +484,12 @@ Package epstopdf Info: Source file: <Figures/BackPitch_vs_BackRoll.eps>
 (epstopdf)                    size: 461102 bytes
 (epstopdf)             Output file: <Figures/BackPitch_vs_BackRoll-eps-converte
 d-to.pdf>
+(epstopdf)                    date: 2017-10-25 21:42:37
+(epstopdf)                    size: 287682 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/BackPitch_vs_BackRo
 ll-eps-converted-to.pdf Figures/BackPitch_vs_BackRoll.eps>
 (epstopdf)             \includegraphics on input line 5.
-runsystem(epstopdf --outfile=Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf
- Figures/BackPitch_vs_BackRoll.eps)...executed (allowed).
-
-Package epstopdf Info: Result file: <Figures/BackPitch_vs_BackRoll-eps-converte
-d-to.pdf>
-(epstopdf)                    date: 2017-10-25 21:42:37
-(epstopdf)                    size: 287682 bytes.
+Package epstopdf Info: Output file is already uptodate.
 
 <Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=294, 354.32375pt x 302.
 12875pt>
@@ -672,7 +668,7 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "Project Report Template.pdf" (25 pages, 577295 bytes).
+Output written on "Project Report Template.pdf" (25 pages, 577296 bytes).
 PDF statistics:
  431 PDF objects out of 1000 (max. 8388607)
  96 named destinations out of 1000 (max. 500000)

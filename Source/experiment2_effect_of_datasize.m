@@ -1,17 +1,18 @@
 % Effect of training data size on performance
 
-% Consider both one dimensionality reduction and no reduction
+rng(8000,'twister');
 
 % Get dataset
+proportion = 0.2;
 body_part = 'front';
-num_feat_out = 0;
+best_feat_num = 4; %experiment_optimal_number_of_features;
 [observ_seq, state_seq, feat_names] = get_all_data(body_part);
 
 % Have multiple runs of both methods
 run_num = 9;
-accuracies = zeros(2, run_num);
+accuracies = zeros(2, run_num*2);
 % For each run, 
-for i = run_num:-1:1
+for i = run_num:-0.5:0.5
     testdata_proportion = i/10;
     [traindata, testdata] = splitdataset(observ_seq, state_seq, testdata_proportion);
    
@@ -21,20 +22,23 @@ for i = run_num:-1:1
     no_reduc_model.A = A;
     no_reduc_model.phi = phi;
     no_reduc_model.pi = pi;
-    accuracies(1, i) = GmmHMMpredict(no_reduc_model, testdata);
+    accuracies(1, i*2) = GmmHMMpredict(no_reduc_model, testdata);
    
     %Build model with dimensionality reduction
     disp('Feature selection');
-    selected_observ = featselect(body_part, num_feat_out);
-    [pi, A, phi] = BuildGmmHMM(traindata.observ, traindata.state);
+    data = make_data(traindata.observ, traindata.state, feat_names);
+    [selected_observ, feat_out] = featselect(data, best_feat_num);
+    reduc_testdata = get_selected_features(testdata.observ, feat_names, feat_out);
+    testdata.observ = reduc_testdata;
+    [pi, A, phi] = BuildGmmHMM(selected_observ, traindata.state);
     filter_model.A = A;
     filter_model.phi = phi;
     filter_model.pi = pi;
-    accuracies(2, i) = GmmHMMpredict(filter_model, testdata);
+    accuracies(2, i*2) = GmmHMMpredict(filter_model, testdata);
 end
 
 % Plot effect of datasize
-plot(0.1:-0.1:0.9, accuracies(1,:)); hold on;
-plot(0.1:-0.1:0.9, accuracies(2,:));
+plot(0.05:0.05:0.9, accuracies(1,:)); hold on;
+plot(0.05:0.05:0.9, accuracies(2,:));
 xlabel('Training data proportion');
 xlabel('HMM model accuracy');
