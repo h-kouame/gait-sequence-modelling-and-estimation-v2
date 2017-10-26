@@ -5,7 +5,7 @@ function [p_start, A, phi, loglik] = backChmmGaussian(datapath)
     
     delfigs;
     
-    [observ_seq, state_seq] = get_all_backdata(datapath);
+    [observ_seq, state_seq] = get_all_data('back');
     data{1} = observ_seq(: , :);
     state_num = 4;
     iter_num = 100;

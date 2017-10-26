@@ -18,27 +18,29 @@
 \contentsline {subsection}{\numberline {2.3.3}Initial distribution}{5}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4}Elements of an HMM}{5}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5}Three fundamental problems for HMM design}{5}{subsection.2.3.5}
-\contentsline {subsubsection}{Evaluation of the probability of a sequence of observations}{6}{section*.4}
-\contentsline {subsubsection}{The determination of a best sequence states}{6}{section*.5}
-\contentsline {subsubsection}{The adjustment of model parameters to account for observed signal}{6}{section*.6}
+\contentsline {subsection}{\numberline {2.3.6}Types of HMM}{6}{subsection.2.3.6}
+\contentsline {subsubsection}{Ergodic model}{6}{section*.4}
+\contentsline {subsubsection}{Left-Right model or Bakis model}{6}{section*.5}
+\contentsline {subsubsection}{Evaluation of the probability of a sequence of observations}{6}{section*.6}
+\contentsline {subsubsection}{The determination of a best sequence states}{6}{section*.7}
+\contentsline {subsubsection}{The adjustment of model parameters to account for observed signal}{6}{section*.8}
 \contentsline {section}{\numberline {2.4}k-Nearest Neighbour}{6}{section.2.4}
 \contentsline {section}{\numberline {2.5}Dimension reduction}{6}{section.2.5}
 \contentsline {subsection}{\numberline {2.5.1}Feature selection}{6}{subsection.2.5.1}
 \contentsline {section}{\numberline {2.6}Sufficiency of Training Data}{6}{section.2.6}
 \contentsline {section}{\numberline {2.7}Techniques to increase Training Data}{6}{section.2.7}
 \contentsline {subsection}{\numberline {2.7.1}Mirroring}{6}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Mirroring}{6}{subsection.2.7.2}
 \contentsline {chapter}{\numberline {3}Methodology}{7}{chapter.3}
 \contentsline {section}{\numberline {3.1}Nature of the available data}{8}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Source: IMU for a moving dog}{8}{subsection.3.1.1}
-\contentsline {subsubsection}{stationary: statistical property do not vary over time or non-stationary: properties vary over time}{8}{section*.7}
-\contentsline {subsubsection}{pure or corrupted?}{8}{section*.8}
+\contentsline {subsubsection}{stationary: statistical property do not vary over time or non-stationary: properties vary over time}{8}{section*.9}
+\contentsline {subsubsection}{pure or corrupted?}{8}{section*.10}
 \contentsline {subsection}{\numberline {3.1.2}Nature: continuous observations - Finite and discrete States}{8}{subsection.3.1.2}
 \contentsline {section}{\numberline {3.2}HMM Design}{8}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Nature and Number of states}{8}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Nature and Number of observations - IMU measurements}{8}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Dimension reduction}{8}{subsection.3.2.3}
-\contentsline {subsubsection}{From 18 to 4 features using classification with knn}{8}{section*.9}
+\contentsline {subsubsection}{From 18 to 4 features using classification with knn}{8}{section*.11}
 \contentsline {subsection}{\numberline {3.2.4}Continuous observations/features to Discrete observations/features}{8}{subsection.3.2.4}
 \contentsline {chapter}{\numberline {4}Results}{9}{chapter.4}
 \contentsline {section}{\numberline {4.1}Aim}{9}{section.4.1}

@@ -9,7 +9,7 @@ function [observations, states, feature_labels] = getdata(datapath, body_part)
     data = load(datapath);
     states = [data.LB, data.RB];
     states = bin2dec(num2str(states)) + 1;
-
+        
 %     double states sequence by mirroring
 %     states = [states; flipud(states)];
 
@@ -17,6 +17,12 @@ function [observations, states, feature_labels] = getdata(datapath, body_part)
          fields = {'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
     else
          fields = {'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
+    end
+    
+    try 
+        z = data.z;
+        fields = [fields, 'z'];
+    catch
     end
  
     D = rmfield(data, fields);

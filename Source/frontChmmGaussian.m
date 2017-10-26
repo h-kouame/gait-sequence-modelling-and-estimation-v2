@@ -5,7 +5,7 @@ function [p_start, A, phi, loglik] = frontChmmGaussian(datapath)
     
     delfigs;
     
-    [observ_seq, state_seq] = get_all_frontdata();
+    [observ_seq, state_seq] = get_all_data();
     data{1} = observ_seq(: , :);
     state_num = 4;
     mixture_num = 2;
