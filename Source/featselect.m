@@ -1,6 +1,6 @@
 function [selected_observ_seq, state_seq, out_feat_labels] = featselect(body_part, num_feat_out)
     if nargin < 1
-        body_part = 'back';
+        body_part = 'front';
         num_feat_out = 0;
     elseif nargin < 2
         num_feat_out = 0;

@@ -16,13 +16,13 @@
 \BOOKMARK [2][-]{subsection.2.3.3}{Initial distribution}{section.2.3}% 16
 \BOOKMARK [2][-]{subsection.2.3.4}{Elements of an HMM}{section.2.3}% 17
 \BOOKMARK [2][-]{subsection.2.3.5}{Three fundamental problems for HMM design}{section.2.3}% 18
-\BOOKMARK [1][-]{section.2.4}{k-Nearest Neighbour}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.5}{Dimension reduction}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.5.1}{Feature selection}{section.2.5}% 21
-\BOOKMARK [1][-]{section.2.6}{Sufficiency of Training Data}{chapter.2}% 22
-\BOOKMARK [1][-]{section.2.7}{Techniques to increase Training Data}{chapter.2}% 23
-\BOOKMARK [2][-]{subsection.2.7.1}{Mirroring}{section.2.7}% 24
-\BOOKMARK [2][-]{subsection.2.7.2}{Mirroring}{section.2.7}% 25
+\BOOKMARK [2][-]{subsection.2.3.6}{Types of HMM}{section.2.3}% 19
+\BOOKMARK [1][-]{section.2.4}{k-Nearest Neighbour}{chapter.2}% 20
+\BOOKMARK [1][-]{section.2.5}{Dimension reduction}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.5.1}{Feature selection}{section.2.5}% 22
+\BOOKMARK [1][-]{section.2.6}{Sufficiency of Training Data}{chapter.2}% 23
+\BOOKMARK [1][-]{section.2.7}{Techniques to increase Training Data}{chapter.2}% 24
+\BOOKMARK [2][-]{subsection.2.7.1}{Mirroring}{section.2.7}% 25
 \BOOKMARK [0][-]{chapter.3}{Methodology}{}% 26
 \BOOKMARK [1][-]{section.3.1}{Nature of the available data}{chapter.3}% 27
 \BOOKMARK [2][-]{subsection.3.1.1}{Source: IMU for a moving dog}{section.3.1}% 28

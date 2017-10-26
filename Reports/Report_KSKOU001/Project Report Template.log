@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  10 OCT 2017 11:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  25 OCT 2017 21:42
 entering extended mode
 **"./Project Report Template.tex"
 ("Project Report Template.tex"
@@ -479,8 +479,32 @@ less on input line 160.
 
 (Introduction.tex
 Chapter 1.
+Package epstopdf Info: Source file: <Figures/BackPitch_vs_BackRoll.eps>
+(epstopdf)                    date: 2017-10-25 18:14:24
+(epstopdf)                    size: 461102 bytes
+(epstopdf)             Output file: <Figures/BackPitch_vs_BackRoll-eps-converte
+d-to.pdf>
+(epstopdf)             Command: <epstopdf --outfile=Figures/BackPitch_vs_BackRo
+ll-eps-converted-to.pdf Figures/BackPitch_vs_BackRoll.eps>
+(epstopdf)             \includegraphics on input line 5.
+runsystem(epstopdf --outfile=Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf
+ Figures/BackPitch_vs_BackRoll.eps)...executed (allowed).
 
-Overfull \hbox (0.1075pt too wide) in paragraph at lines 14--17
+Package epstopdf Info: Result file: <Figures/BackPitch_vs_BackRoll-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2017-10-25 21:42:37
+(epstopdf)                    size: 287682 bytes.
+
+<Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=294, 354.32375pt x 302.
+12875pt>
+File: Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf use
+d on input line 5.
+(pdftex.def)             Requested size: 354.32288pt x 302.128pt.
+
+Overfull \hbox (0.1075pt too wide) in paragraph at lines 19--22
 \OT1/cmr/m/n/12 Scope indicates to the reader what has and has not been include
 d in the study. Limitations
  []
@@ -489,7 +513,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.17 
+l.22 
       [1
 
 
@@ -505,12 +529,13 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.160 }
-        [2]
+        [2 <./Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf>]
 \openout2 = `Literature.aux'.
 
- (Literature.tex
+
+(Literature.tex
 Chapter 2.
-<model.png, id=304, 650.43pt x 396.48125pt>
+<model.png, id=309, 650.43pt x 396.48125pt>
 File: model.png Graphic file (type png)
  <use model.png>
 Package pdftex.def Info: model.png used on input line 26.
@@ -631,14 +656,14 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
 Package rerunfilecheck Info: File `"Project Report Template".out' has not chang
 ed.
-(rerunfilecheck)             Checksum: F9815867370EE06120C1E87E19E28561;3529.
+(rerunfilecheck)             Checksum: 42298AE1A7F5E7A0F1487C1D9B4ACF71;3532.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 161.
  ) 
 Here is how much of TeX's memory you used:
- 7103 strings out of 493333
- 101421 string characters out of 3139192
- 199148 words of memory out of 3000000
- 10372 multiletter control sequences out of 15000+200000
+ 7123 strings out of 493333
+ 101749 string characters out of 3139192
+ 199139 words of memory out of 3000000
+ 10376 multiletter control sequences out of 15000+200000
  10756 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  28i,10n,43p,379b,508s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -647,9 +672,9 @@ ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "Project Report Template.pdf" (25 pages, 307026 bytes).
+Output written on "Project Report Template.pdf" (25 pages, 577295 bytes).
 PDF statistics:
- 424 PDF objects out of 1000 (max. 8388607)
- 94 named destinations out of 1000 (max. 500000)
- 403 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 96 named destinations out of 1000 (max. 500000)
+ 408 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,22 +1,38 @@
-function best_mix_num = optimal_mixture_component(data, max_feat_num)
+function [best_mix_num, accuracies] = optimal_mixture_component(body_part)
     if nargin < 1
-        data = get_all_data;   
+        body_part = 'front';  
+    end
+    
+    dataset = getprdataset(body_part);
+    [T, S] = gendat(dataset, 0.8);
+    T = setname(T, strcat(body_part, ' Training Set')); 
+    S = setname(S, strcat(body_part, ' Test Set'));
+    
+    max_feat_num = size(dataset, 2);
+    accuracies = zeros(1, max_feat_num);
+    best_mix_num = 2;
+    max_accuracy = 0;
+    for k = 2:6
+        k
+        KNN = mogc(T, k); 
+        DS = S*KNN;
+%         test_error = DS*testc;
+        labs = getlabels(S);        
+        labsc = DS*labeld;
+        accuracy = 100*mean(labs==labsc);
+        accuracies(k) = accuracy;
+        if accuracy > max_accuracy
+            best_mix_num = k;
+            max_accuracy = accuracy;
+        end
     end
 
-    AIC = zeros(1, max_feat_num);
-    GMModels = cell(1, length(AIC));
-    options = statset('MaxIter', 500);
-    for k = 1:max_feat_num
-        GMModels{k} = fitgmdist(data, k, 'Options',options, 'CovarianceType', 'diagonal');
-        AIC(k)= GMModels{k}.AIC;
-    end
-
-    [minAIC, best_mix_num] = min(AIC);
-    if (mod(best_mix_num, 2) ~= 0)
-        best_mix_num = best_mix_num - 1;
-    end
+    max_accuracy
     best_mix_num
-        
+    
+    figure;
+    plot(1:6, accuracies(1,1:6));
+    accuracies(1,1:6)
 %     BestModel = GMModels{numComponents}
 
 end
