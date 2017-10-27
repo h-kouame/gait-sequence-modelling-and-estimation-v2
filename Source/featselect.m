@@ -15,10 +15,10 @@ function [selected_observ_seq, out_feat_labels] = featselect(data, num_feat_out)
     
 %     forward feature selection
     dataset = setname(dataset, 'original dataset');
-    mix_num = 2;
-    knn = knnc([]);
+%     mix_num = 2;
 %     mixt_based_classifier = mogc([], mix_num);
-    W = featself(dataset, knn); 
+    knn = knnc([]);
+    W = featself(dataset, knn, num_feat_out); 
     
     out_feat_labels = W.labels
     

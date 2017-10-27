@@ -11,8 +11,9 @@ function [dataset, observ_seq, state_seq, feat_labels] = getprdataset(data)
    
     observ_seq = data.observ; 
     state_seq = data.state; 
-    if (exist('data.feat', 'var'))
+    try
         feat_labels = data.feat;
+    catch
     end
     
     O = getstatesdata(observ_seq, state_seq);
@@ -24,8 +25,9 @@ function [dataset, observ_seq, state_seq, feat_labels] = getprdataset(data)
     labels = num2str(S);
     L = genlab(sizes, labels);
     dataset = prdataset(classes, L);
-    if (exist('data.feat', 'var'))
+    try
         dataset = setfeatlab(dataset, feat_labels);
+    catch
     end
     dataset_len = min(length(observ_seq), length(state_seq));
     priors = sizes./dataset_len;

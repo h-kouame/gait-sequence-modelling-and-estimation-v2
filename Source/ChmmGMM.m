@@ -13,19 +13,19 @@ function [p_start, A, phi, loglik] = ChmmGMM(body_part)
 %         observ_seq(:, 14), observ_seq(:, 15), observ_seq(:, 16), observ_seq(:, 18)];
 %     observ_seq = [observ_seq(:, 15), observ_seq(:, 18)];
     data{1} = observ_seq(: , :);
-    iter_num = 1000;
+%     iter_num = 1000;
     
-%     estimate parameters based on data
+%     estimate initial parameters based on data
     [p_start, A, phi] = BuildGmmHMM(observ_seq, state_seq);
 %     mu = phi.mu;
 %     state_num = size(mu, 3);
 %     mixture_num = size(mu, 2);
-    
+%     
 %     apply EM algorithm
 %     [p_start1, A1, phi1, loglik] = ChmmGmm(data, state_num, mixture_num, 'p_start0', p_start, 'A0', A, 'phi0', phi, 'iter_num', iter_num, 'cov_type', 'diag', 'cov_thresh', 1e-4);
     
     
-    logp_xn_given_zn = Gmm_logp_xn_given_zn(flipud(data{1}), phi);
+    logp_xn_given_zn = Gmm_logp_xn_given_zn(data{1}, phi);
     [~,~, loglik] = LogForwardBackward(logp_xn_given_zn, p_start, A);
     path = LogViterbiDecode(logp_xn_given_zn, p_start, A);
     

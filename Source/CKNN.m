@@ -19,7 +19,6 @@ function [test_err, train_err] = CKNN(data, train_prop)
     S = setname(S, 'Test Set');
     KNN = knnc(dataset);
         
-
 %     evaluate bias error
     DT = T*KNN;
     train_err = DT*testc
