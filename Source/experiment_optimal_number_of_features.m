@@ -13,7 +13,7 @@ function experiment_optimal_number_of_features(body_part, test_prop)
     [~, featureIdxSortbySD] = sort(G, 2, 'descend'); % sort the features
     
     % Vary number of feature from 1 to num of features
-    feat_num = size(data.observ, 2);
+    feat_num = size(observ_seq, 2);
     nfs = 1:1:feat_num;
 
     varianceMCE = zeros(1,14);

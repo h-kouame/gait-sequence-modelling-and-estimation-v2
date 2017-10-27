@@ -4,7 +4,7 @@ function [traindata, testdata] = splitdataset(observ_seq, state_seq, proportion)
         proportion = 0.1;
     end
     
-    rng(8000,'twister');
+    rng('shuffle','twister');
     
     group = findgroups(state_seq); %group data based on the different states
     C = cvpartition(group, 'HoldOut', proportion); %partion
