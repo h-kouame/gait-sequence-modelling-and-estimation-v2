@@ -17,7 +17,7 @@ function selected_data = SDM_featsel(data, test_prop)
 
     testMCE = zeros(1, 14);
     trainMCE = zeros(1,14);
-    for i = 1:18
+    for i = 1:feat_num
        fs = featureIdxSortbySD(1:nfs(i));
        [testMCE(i), trainMCE(i)] = CKNN(make_data(observ_seq(:, fs), state_seq, feat_names(fs,:)), 1 - test_prop);
     end

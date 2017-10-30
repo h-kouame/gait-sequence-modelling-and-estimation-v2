@@ -18,7 +18,7 @@ function [selected_observ_seq, out_feat_labels] = featselect(data, num_feat_out)
 %     mix_num = 2;
 %     mixt_based_classifier = mogc([], mix_num);
     knn = knnc([]);
-    W = featself(dataset, knn, num_feat_out); 
+    W = featself(dataset, 'NN', num_feat_out); 
     
     out_feat_labels = W.labels
     
