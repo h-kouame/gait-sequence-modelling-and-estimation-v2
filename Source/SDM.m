@@ -1,43 +1,16 @@
-function [selected_observ_seq, state_seq, out_feat_labels] = SDM(body_part, num_feat_out)
+function [G_x_k, wm_k, sim_d_k, sdm_avg, sdm] = SDM(data)
     if nargin < 1
-        body_part = 'front';
-        num_feat_out = 0;
-    elseif nargin < 2
-        num_feat_out = 0;
+        [obs, states, feats] = get_all_data();
+        data = make_data(obs, states, feats);
     end
     
     prwaitbar off                % waitbar not needed here
     randreset(1);                % takes care of reproducility
-   
-    [observ_seq, state_seq, feat_labels] = get_all_data(body_part);
-    
-    if num_feat_out == size(observ_seq, 2)
-        selected_observ_seq = observ_seq;
-        out_feat_labels = feat_labels;
-        return
-    end
-    
-    O = getstatesdata(observ_seq, state_seq);
     
 %     create prtools dataset 
-    classes = [O{1}; O{2}; O{3}; O{4}];
-    sizes = [size(O{1}, 1), size(O{2}, 1), size(O{3}, 1), size(O{4}, 1)];
-    S = unique(state_seq);
-    labels = num2str(S);
-    L = genlab(sizes, labels);
-    dataset = prdataset(classes, L);
-    dataset = setfeatlab(dataset, feat_labels);
-    dataset_len = min(length(observ_seq), length(state_seq));
-    priors = sizes./dataset_len;
-    dataset = setprior(dataset, priors);
+    dataset = getprdataset(data);
     
-%     forward feature selection
-    dataset = setname(dataset, 'original dataset');
-    [means, cov_matrices] = meancov(dataset);
-%     separability degree matrix
-%     sdm = distmaha(dataset, means, cov_matrices);
-    
-    feat_num = size(observ_seq, 2);
+    feat_num = size(dataset, 2);
     class_num = 4;
     sdm = zeros(class_num, class_num, feat_num);
     for k = 1:feat_num
@@ -51,7 +24,7 @@ function [selected_observ_seq, state_seq, out_feat_labels] = SDM(body_part, num_
     for k = 1:feat_num
         for r = 1:class_num
             for c = 1:class_num
-                if sdm(r, c, k) > 1.1*sdm_avg(r, c, 1)
+                if sdm(r, c, k) > sdm_avg(r, c, 1)
                    sim_d_k(r, c, k) = 1;
                 elseif sdm(r, c, k) > threshold
                     sim_d_k(r, c, k) = 1;
@@ -64,18 +37,25 @@ function [selected_observ_seq, state_seq, out_feat_labels] = SDM(body_part, num_
     
     wm_k = sim_d_k ./ (sum(sim_d_k, 3));
     
-    G_x_k = zeros(1, feat_num);
+    G_x_k_temp = zeros(1, feat_num);
     for k = 1:feat_num
-        G_x_k = sum(sum(sim_d_k .* wm_k(:,:, k), 'omitnan'));
+        G_x_k_temp = sum(sum(sim_d_k .* wm_k(:,:, k), 'omitnan'));
     end
-    
-    out_feat_labels = W.labels
-    
-    selected_observ_seq = []; 
-    for i = 1:size(feat_labels)
-        feat_name = feat_labels(i);
-        if ismember(feat_name, out_feat_labels)
-            selected_observ_seq = [selected_observ_seq, observ_seq(:, i)];
-        end
-    end     
+    G_x_k = G_x_k_temp(:).';
+%     sorted_G = sort(G_x_k, 3, 'descend');
+%     ordered_observ_seq = zeros(size(observ_seq, 1), size(observ_seq, 2)); 
+%     feat_idx = 1;
+%     for i = 1:feat_num
+%         if (isempty(sorted_G))
+%             break
+%         end
+%         next_max_G = sorted_G(1,1,1);
+%         for j = 1:feat_num
+%             if G_x_k(1, 1, j) == next_max_G
+%                 ordered_observ_seq(:, feat_idx) = observ_seq(:, j);
+%                 feat_idx = feat_idx + 1;
+%             end
+%         end
+%         sorted_G = sorted_G(sorted_G(1,1,:) ~=  next_max_G);
+%     end     
 end

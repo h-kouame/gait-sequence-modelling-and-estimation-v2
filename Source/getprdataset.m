@@ -1,6 +1,7 @@
-function [dataset, observ_seq, state_seq, feat_labels] = getprdataset(body_part)
+function [dataset, observ_seq, state_seq, feat_labels] = getprdataset(data)
     if nargin < 1
-        body_part = 'front';  
+        [obs, states, feats] = get_all_data();
+        data = make_data(obs, states, feats);
     end
     
     delfigs;
@@ -8,7 +9,12 @@ function [dataset, observ_seq, state_seq, feat_labels] = getprdataset(body_part)
     prwaitbar off                % waitbar not needed here
     randreset(1);                % takes care of reproducility
    
-    [observ_seq, state_seq, feat_labels] = get_all_data(body_part);
+    observ_seq = data.observ; 
+    state_seq = data.state; 
+    try
+        feat_labels = data.feat;
+    catch
+    end
     
     O = getstatesdata(observ_seq, state_seq);
     
@@ -19,7 +25,10 @@ function [dataset, observ_seq, state_seq, feat_labels] = getprdataset(body_part)
     labels = num2str(S);
     L = genlab(sizes, labels);
     dataset = prdataset(classes, L);
-    dataset = setfeatlab(dataset, feat_labels);
+    try
+        dataset = setfeatlab(dataset, feat_labels);
+    catch
+    end
     dataset_len = min(length(observ_seq), length(state_seq));
     priors = sizes./dataset_len;
     dataset = setprior(dataset, priors);

@@ -8,9 +8,38 @@
 \section{Background to the study}
 A very brief background to your area of research. Start off with a general introduction to the area and
 then narrow it down to your focus area. Used to set the scene \cite{smt2011}.
+
+Bio-inspired robotics uses nature to inform real-world engineering
+systems. Research has been conducted at UCT to investigate the
+manner in which a cheetah uses its tail for stability during high
+acceleration, quick turns and sudden braking, with an aim to
+incorporating identified mechanisms into sophisticated robot designs.
+One way to acquire useful data is to strap an inertial measurement unit
+(IMU) to an animal, and log the sensor data while certain actions are
+being performed. We currently have such a dataset of a dog moving,
+along with corresponding video data.						
+
 \section{Objectives of this study}
+The objective of this project is to design, implement, and test Hidden Markov Models (HMM) for estimating gait sequence from Inertia Measurement Unit (IMU) data.
+
+so that specific models can be formulated and their
+parameters estimated and interrogated. The project can be extended to
+include any other useful analysis of gait patterns from similar sensor
+measurements
+
+
+1 - formulate model
+2 - estimate its parameters
+3 - Interrogate its parameters
+4 - Useful analysis of gait patterns from IMU measurements
 \subsection{Problems to be investigated}
 Description of the main questions to be investigated in this study.
+
+The main questions to be answered are the following:
+\begin{enumerate}
+	\item How well can HMM model gait sequence dynamics using IMU data, in the abscence of enough training samples?
+	\item Can dimensionality reduction cause an increase in performance of HMM models when there is not enough training data?
+\end{enumerate}
 \subsection{Purpose of the study}
 Give the significance of investigating these problems. It must be obvious why you are doing this study
 and why it is relevant.
@@ -19,6 +48,11 @@ and why it is relevant.
 Scope indicates to the reader what has and has not been included in the study. Limitations tell the
 reader what factors influenced the study such as sample size, time etc. It is not a section for excuses as
 to why your project may or may not have worked.
+
+1 - Does not include data collection
+2 - Focus on design of HMM only
+3 - Focus on analysis of the model
+4 - Focus on impact of dimensionality reduction
 
 \section{Plan of development}
 Here you tell the reader how your report has been organised and what is included in each
