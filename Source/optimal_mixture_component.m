@@ -10,18 +10,31 @@ end
 
 function [numComponents, AIC] = byAIC(data)
     X = data.observ;
-    max_feat_num = size(data.observ, 2);
-    AIC = zeros(1, max_feat_num);
-    GMModels = cell(1, max_feat_num);
-    options = statset('MaxIter',500);
-    for k = 1:max_feat_num
+    max_mixt_num = 18;
+    AIC = zeros(1, max_mixt_num);
+    BIC = zeros(1, max_mixt_num);
+    GMModels = cell(1, max_mixt_num);
+    options = statset('MaxIter', 2000);
+    for k = 1:max_mixt_num
         GMModels{k} = fitgmdist(X,k,'Options',options,'CovarianceType','diagonal', 'regularize', 1e-10);
         AIC(k)= GMModels{k}.AIC;
+        BIC(k)= GMModels{k}.BIC;
     end
 
     [minAIC, numComponents] = min(AIC);
     numComponents
     minAIC
+    
+%     figure;
+%     plot(1:max_mixt_num, AIC,... 
+%          1:max_mixt_num, BIC);
+%     legend({'AIC', 'BIC'}, 'Location','NE');
+%     xlabel('Number of mixtures');
+%     ylabel('AIC/BIC value');
+%     figtitle = 'Optimal number of mixture components';
+%     title(figtitle);
+%     figpath = strcat('C:\School\EEE4022S\Gait Sequence Estimation\Figures\', figtitle);
+%     print(figpath, '-depsc');
 end
 
 function best_mix_num = byMOGC(data)
@@ -30,8 +43,8 @@ function best_mix_num = byMOGC(data)
     T = setname(T, 'Training Set'); 
     S = setname(S, 'Test Set');
     
-    max_feat_num = size(dataset, 2);
-    accuracies = zeros(1, max_feat_num);
+    max_mixt_num = size(dataset, 2);
+    accuracies = zeros(1, max_mixt_num);
     best_mix_num = 2;
     max_accuracy = 0;
     for k = 2:6

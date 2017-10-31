@@ -29,7 +29,7 @@ function MinBiasMinVar(data, run_num, train_prop)
         [accuracies(2, i), ~, logliks(2, i)] = SDM_GmmHMMpredict(SDM_model, traindata); % test with training data to estimate bias
         [test_acc(2, i), ~, test_loglik(2, i)] = SDM_GmmHMMpredict(SDM_model, testdata);
         
-%         Reduc with SDM
+%         Reduc with KNN
         KNN_model = KNN_BuildGmmHMM(traindata);
         [accuracies(3, i), ~, logliks(3, i)] = KNN_GmmHMMpredict(KNN_model, traindata); % test with training data to estimate bias
         [test_acc(3, i), ~, test_loglik(3, i)] = KNN_GmmHMMpredict(KNN_model, testdata);

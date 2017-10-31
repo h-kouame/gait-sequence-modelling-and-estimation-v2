@@ -5,7 +5,7 @@ function [selected_observ_seq, out_feat_labels] = SDM_filter_featsel(data, num_f
         num_feat_out = 0;
     end
 
-    rng(8000, 'twister');
+    rng('shuffle','twister');
 
     % Remove G with classification degree equal to 0 
     G = SDM(data);
