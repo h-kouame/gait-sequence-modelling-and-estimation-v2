@@ -118,7 +118,7 @@ but differ in the input arguments considered.
 	\item Approach 1: Exploiting the available ground truth\\
 	This approach takes advantage of the ground truth for a labelled dataset to reduce the HMM model to a Markov Chain. This is done by making the hypothetical observation sequence identical to the state sequence. Then, using approach used in discrete HMM, %%TODO: Quote
 	the transition matrix can be estimated using maximum likelihood algorithm. %%TODO: Quote
-	For each state, the pseudocount was set to the number of occurences of that state in the training data plus a constant value, depending size of the data size. The additional connstant value is to avoid having 0 in the transition matrix for states and transitions not reflected in the dataset.
+	For each state, the pseudocount was set to the number of occurences of that state in the training data plus a constant value: \(PseudoA = |S_i| + C\). The additional constant C is to avoid having 0 in the transition matrix for states and transitions not reflected in the dataset. It can be chosen empirically.
 	This method is very simple however, it has two limitations. It not only assumes that the number of states is known but also requires the training data to be labelled. Although, the dataset at hand satisfies the two constraints, the second approach which eliminates these possible setbacks, was also considered. \\\\\
 	%%TODO: Quote [1] Durbin, R., S. Eddy, A. Krogh, and G. Mitchison. Biological Sequence Analysis. Cambridge, UK: Cambridge University Press, 1998.
 	
@@ -155,11 +155,9 @@ The mixture components were considered evenly distributed initially.
 In order to avoid zero values in the covariance matrix, it was regularized with \(10^-10\).
 The maximum number of iteration of the EM algorithm was empirically set to 1000.
 
-\subsubsection{Inital state distribution}
-\begin{enumerate}
-	\item Gaussian distribution
-	\item Gaussian mixture distribition
-	\end{enumerate}
+\subsubsection{Inital state distribution: \(\pi\)}
+The initial state distribution was estimated using the probability of occurence of each state in the training data sample.
+Thus, \(\pi = \{\pi_i\} = \frac{|S_i|}{T} \)
 \subsection{Dimension reduction}
 \subsubsection{From 18 to 4 features using classification with knn}
 \subsection{Continuous observations/features to Discrete observations/features}
