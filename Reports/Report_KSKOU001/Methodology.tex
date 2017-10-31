@@ -19,53 +19,62 @@ This section focuses on the design of the HMM used to test the hyphotheses postu
 \section{Description of available dataset}
 
 The available dataset was acquired from a moving dog using Inertia Measurement Units. 
-Two inertial measurements units (IMU) were straped to the front and back of a dog. Each unit has an accelarometer, a gyroscope and a magnetometer. The dataset contains calibrated measurements of a dog running, walking, or trotting then walking; together with the footfalls. The footfall is a binary value that indicates the state of the dog's leg: if it is on or above the ground, at a particular instant in its gait sequence. 
-The four variables representing the footfalls effectively constitutes the ground truth informing us about the state in which the dog is at any time of the gait sequence.
+Two inertial measurements units (IMU) were straped to the front and back of a dog. Each unit has an accelarometer, a gyroscope and a magnetometer. The dataset contains calibrated measurements of a dog running, walking, and trotting then walking; together with the footfalls. The footfall is represented by a binary value that indicates the state of the dog's leg: if it is on or above the ground, at a particular instant in its gait sequence. More specifically, the value 0 means leg up and the value 1 means leg down.
+The four variables representing the footfalls effectively constitute the ground truth, informing us about the state in which the dog is, at a given time in its movement.
 
-The dataset can be retrieved from nine different matlab files. Each file contains twenty four matlab variables. The variables of interest are listed below. 
+The dataset can be retrieved from nine different matlab files. Each file contains twenty four matlab variables. The variables of interest are listed in the table \ref{tab:dataset}. 
 
-\begin{center} \label{dataset}
+\begin{table}[h!] 
+	\centering
 	\begin{tabular}{ |c|c|c|c| } 
+		
 		\hline
-		\multicolumn{2}{| c |}{Observations} {Footfalls}\\
+		\multicolumn{4}{| c |} {Observations}\\
 		\hline
-		& Accelerometer & Gyroscope & Magnetometer \\ 
-		 \hline
+		
+	   	 Body part & Accelerometer & Gyroscope & Magnetometer \\ 
+		\hline
  
-
-
-	  	Front & accFrontX & FrontPitch & magFront\_cal\\
+		\multirow{3}{4em}{Front}  & accFrontX & FrontPitch & magFront\_cal \\
+		
+	  		 
 		 	  & accFrontY & FrontRoll & magFront\_cal2\\
 		      & accFrontZ & FrontYaw & magFront\_cal3\\
 		      \hline
-		 
-		Back  & accBackX & BackPitch & magBack\_cal\\
+		
+		\multirow{3}{5em|}{Back} & accBackX & BackPitch & magBack\_cal\\ 
 		      & accBackY & BackRoll & magBack\_cal2\\
 		      & accBackZ & BackYaw & magBack\_cal3\\
     \hline
 
 	\end{tabular}
-\end{center}
+	\caption{IMU measurements and footfall variables in dataset}
+	\label{tab:dataset}
+\end{table}
 
 The observations are continous and the statistical property are assumed to be stationary, i.e, the do not vary over time. In this sta
 \subsubsection{stationary: statistical property do not vary over time or non-stationary: properties vary over time}
 
 \subsubsection{pure or corrupted?}
 
-\subsection{Gait sequence modelling}
-One of the objectives of this project is to effectively model the gait sequence dynamic of the dog using IMU measurements.
-The gait sequence was modelled as a succession of hidden or latent states observed by the IMU measurements.
+\subsection{Quadrupede Gait sequence modelling}
+One of the objectives of this project is to effectively model the gait sequence dynamic of the dog from IMU measurements using HMM.
+Based on the fact that quadrupedes achieve inverted pendulum-like movements like humans, %%TODO: quote here
+their gait dynamic can be modelled as a succession of latent states observed by measurements such as IMU data. The states representing the footfalls and the observations, the outputs of the accelerometer, gyroscope and the magnetometer. Similar to human gait mechanism, it is sound to assume that the current state of a quadrupede is conditionally dependent on its previous state. 
+This inference combined with the statistical robustness of HMM makes it the best model candidate when the available dataset is not large enough.
 
-\subsubsection{States and observation }
-The state space is 
+\subsubsection{HMM model elements: states and observations properties}
+The problem at hand requires 16 distinct state that make up the state vector S, shown in equation \ref{eq:state}
 \begin{align} \label{eq:state}
-S &= {S_i} = \{(LF, RF, LB, RB)\} = \{0000, 0001, 0010, ..., 1111\}. \\
-i &= 1, 2, ..., 16
+S &= {S_i} = \{(LF, RF, LB, RB)\} = \{0000, 0001, 0010, ..., 1111\}.
 \end{align}
-is made up of 16 different states that steam from the combination of the four binary footfalls as shown in equation. \ref{eq:state}
+\[|S| = N = 2^4 = 16\]
+\[i = 1, 2, ..., 16\]
 
-The states sequences are observed through the IMU measurements that form the feature space. An observation instance is a row vector of K dimensions. The initial K value is 18 from the 18 IMU measurements.
-Thus the observation sequence O is an TxK matrix of continuous values as presented in \ref{eq:obs}. T is the number of observations in a sequence.
+The 16 distinct states are derived from the combination of the four binary footfalls. In practice, the dataset may not reveal all the 16 states.
+
+The stream of IMU measurement form the observation sequence. An observation instance is a row vector of K dimensions. The initial K value before any dimensionality reduction is 18, from the 18 IMU measurements.
+Thus, an observation sequence O is a TxK matrix of continuous values as presented in \ref{eq:obs}. T is the total number of the successive measurements.
 \begin{align} \label{eq:obs}
 O &= \{Ok_t\} = O1_t, O2_t, ..., O18_t. \\
 k &= 1, 2, ..., 18. \\
@@ -73,10 +82,10 @@ t &= 1, 2, ..., T.
 \end{align}
 
 
-\subsubsection{Splitting the design into front and back module}
-To reduce the HMM model's complexity, it was broken down into front and back sub-HMM. These two models may be combined to get back the holistic 16-states model.
-This simplifies the model by reducing the number of states from 16 down to 4 states. 
-This design design was motivated by the fact that it is a simpler task to classify 4 classses than discriminating between 16 classes. The remainig of this section will focus on the design of the 4-states HMM model.
+\subsubsection{Splitting the 16-states HMM in two 4-states HHMs}
+In order to simplify the problem, it was decided to split the the four legs in two sub-parts: two front legs and two back legs. This approach for spliting it was based on the two inverted-like movements for a quadrupede such as a dog has investigated in %%TODO: reference. 
+As a result, the initial 16-states HMM becomes, two distinct 4-states HMMs. These two models may be combined to get back the holistic 16-states model. 
+This design decision was motivated by the fact that it is a simpler task to dsicriminate between 4 distinct classses than 16 classes. From here onward, attention will be given to the 4-states HMM model.
  
 \subsubsection{Transition between states}
 %%TODO: fix the subscript
@@ -97,24 +106,54 @@ This consideration yielded in an ergodic HMM where, all the transitions are poss
 
 \subsection{Data pre-processing}
 
-\subsection{Parameters of the model}
-As a reminder, a continuous HMM model is completely specified by its initial state distribution: \(\pi\) transition matrix: A; the mean covariance matrices: \(\mu\), \(\Sigma\) which can be combined into \(\Phi\). If the observations are modelled with gaussian mixture distributions, an addition parameter is added for the initial mixture distribution: \(\beta\). The next section how each parameters were estimated in this project.
+\subsection{Model parameters estimation}
+As a reminder, a continuous HMM model is completely specified by its initial state distribution: \(\pi\) transition matrix: A; the mean covariance matrices: \(\mu\), \(\Sigma\) which can be combined into \(\Phi\). If the observations are modelled with gaussian mixture distributions, one addition parameter is required for the initial mixture distribution: \(\beta\). The next sub-sections discuss how each parameters was estimated in this project.
 
 \subsubsection{Transition matrix: A}
-For each of the front and back 4-state HMM, the state transition matrix is a 4-by-4 matrix. Two different approaches were considered in the estimation of A. The two methods make use of expectation maximisation algorithm but differ in the modelling of the underlying mechanism.
+For each of the front and back 4-state HMM, the state transition matrix A, is a 4-by-4 matrix. Two different approaches were considered in the estimation of A. The two methods make use of the expectation maximisation algorithm %%TODO: Quote
+but differ in the input arguments considered.
 
 \begin{enumerate}
 	%%TODO draw markov chain diagram
-	\item Approach 1: Exploiting available ground truth\\
-	This approach takes advantage of the ground truth for a labelled dataset to reduce the HMM model to a Markov Chain. Thus, the hypothetical observation sequence is made identical to the state sequence. Similar to discrete HMM, the transition matrix can be estimated using maximum likelihood algorithms. This approach however makes two assumptions. It not only assumes assumes that the number of states is known but also requires labelled data. Fortunately, the second approach eliminates these constraints. \\\\\
+	\item Approach 1: Exploiting the available ground truth\\
+	This approach takes advantage of the ground truth for a labelled dataset to reduce the HMM model to a Markov Chain. This is done by making the hypothetical observation sequence identical to the state sequence. Then, using approach used in discrete HMM, %%TODO: Quote
+	the transition matrix can be estimated using maximum likelihood algorithm. %%TODO: Quote
+	For each state, the pseudocount was set to the number of occurences of that state in the training data plus a constant value, depending size of the data size. The additional connstant value is to avoid having 0 in the transition matrix for states and transitions not reflected in the dataset.
+	This method is very simple however, it has two limitations. It not only assumes that the number of states is known but also requires the training data to be labelled. Although, the dataset at hand satisfies the two constraints, the second approach which eliminates these possible setbacks, was also considered. \\\\\
 	%%TODO: Quote [1] Durbin, R., S. Eddy, A. Krogh, and G. Mitchison. Biological Sequence Analysis. Cambridge, UK: Cambridge University Press, 1998.
 	
 	\item Approach 2: This method is the standard approach found in literature using expectation algorithm such as Welch-Baum algorithm. %%TODO: cite 
 	%%TODO: site papers to support claim 
-
+	and described in the literature review. %%TODO: cross-reference
 \end{enumerate}
 
-\subsubsection{Mean and covariance matrices: \(\mu\) and \(\Sigma\)}
+
+\subsubsection{Mean and covariance matrices: \(\mu\), \(\Sigma\) and \(\beta\)}
+The observations were modelled using mixture Gaussian distributions, characterised by a KxMxN mean matrix: \(\mu\) and a KxKxMxN co-variance matrix: \(\Sigma\).
+where: \\ \(K = number \quad of \quad features, \quad M = mixture \quad number, \quad and \quad N = number \quad of \quad states\).
+The observations were grouped K classes following based on the ground-truth represented by the state sequence.
+The each group of observation was used as input to the EM algorithm to estimate the  \(\mu\) and \(\Sigma\).
+In general, the optimal number of mixture, M is chosen empirically, in this project, it was estimated using akaike information criterion (AIC).
+So, gaussian mixture models were built using EM algorithm while varying the M from 1 to K, the feature number.
+Since AIC is a measure of information loss, the model with the minimum AIC best represents the dataset. The number of mixture M, is therefore set to the mixture number of this model.
+This algorithm is outlined below.
+\begin{lstlisting}[language=Matlab] 
+function M = best_M(data, K)
+	data = training_set
+	AIC = zeros(1, K);
+	models = cell(1, K);
+	for m = 1:K
+		model = gauss_mixture(data, m);
+		AIC(m) = model.AIC;
+	end
+	[minAIC, minAIC_Idx] = min(AIC);
+	M = minAIC_Idx;
+end
+\end{lstlisting} 
+
+The mixture components were considered evenly distributed initially.
+In order to avoid zero values in the covariance matrix, it was regularized with \(10^-10\).
+The maximum number of iteration of the EM algorithm was empirically set to 1000.
 
 \subsubsection{Inital state distribution}
 \begin{enumerate}
