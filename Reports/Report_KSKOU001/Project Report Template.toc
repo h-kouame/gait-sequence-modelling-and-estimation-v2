@@ -34,31 +34,31 @@
 \contentsline {section}{\numberline {3.1}Description of available dataset}{8}{section.3.1}
 \contentsline {subsubsection}{stationary: statistical property do not vary over time or non-stationary: properties vary over time}{9}{section*.9}
 \contentsline {subsubsection}{pure or corrupted?}{9}{section*.10}
-\contentsline {subsection}{\numberline {3.1.1}Gait sequence modelling}{9}{subsection.3.1.1}
-\contentsline {subsubsection}{States and observation }{9}{section*.11}
-\contentsline {subsubsection}{Splitting the design into front and back module}{10}{section*.12}
+\contentsline {subsection}{\numberline {3.1.1}Quadrupede Gait sequence modelling}{9}{subsection.3.1.1}
+\contentsline {subsubsection}{HMM model elements: states and observations properties}{9}{section*.11}
+\contentsline {subsubsection}{Splitting the 16-states HMM in two 4-states HHMs}{10}{section*.12}
 \contentsline {subsubsection}{Transition between states}{10}{section*.13}
 \contentsline {subsection}{\numberline {3.1.2}Data pre-processing}{11}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Parameters of the model}{11}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.3}Model parameters estimation}{11}{subsection.3.1.3}
 \contentsline {subsubsection}{Transition matrix: A}{11}{section*.14}
-\contentsline {subsubsection}{Mean and covariance matrices: \(\mu \) and \(\Sigma \)}{12}{section*.15}
-\contentsline {subsubsection}{Inital state distribution}{12}{section*.16}
-\contentsline {subsection}{\numberline {3.1.4}Dimension reduction}{12}{subsection.3.1.4}
-\contentsline {subsubsection}{From 18 to 4 features using classification with knn}{12}{section*.17}
-\contentsline {subsection}{\numberline {3.1.5}Continuous observations/features to Discrete observations/features}{12}{subsection.3.1.5}
-\contentsline {section}{\numberline {3.2}HMM implementation}{12}{section.3.2}
-\contentsline {chapter}{\numberline {4}Results}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Aim}{13}{section.4.1}
-\contentsline {section}{\numberline {4.2}Apparatus}{14}{section.4.2}
-\contentsline {section}{\numberline {4.3}Methods}{14}{section.4.3}
-\contentsline {section}{\numberline {4.4}Results}{14}{section.4.4}
-\contentsline {section}{\numberline {4.5}Analysis}{14}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Discrete Probability density function duration d in state i}{14}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Expected number of observations (duration) in a state}{14}{subsection.4.5.2}
-\contentsline {section}{\numberline {4.6}Experimental Results}{14}{section.4.6}
-\contentsline {chapter}{\numberline {5}Discussion}{15}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{16}{chapter.6}
-\contentsline {chapter}{\numberline {7}Recommendations}{17}{chapter.7}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{20}{appendix.A}
-\contentsline {chapter}{\numberline {B}Addenda}{21}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{21}{section.B.1}
+\contentsline {subsubsection}{Mean and covariance matrices: \(\mu \), \(\Sigma \) and \(\beta \)}{12}{section*.15}
+\contentsline {subsubsection}{Inital state distribution: \(\pi \)}{13}{section*.16}
+\contentsline {subsection}{\numberline {3.1.4}Dimension reduction}{13}{subsection.3.1.4}
+\contentsline {subsubsection}{From 18 to 4 features using classification with knn}{13}{section*.17}
+\contentsline {subsection}{\numberline {3.1.5}Continuous observations/features to Discrete observations/features}{13}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}HMM implementation}{13}{section.3.2}
+\contentsline {chapter}{\numberline {4}Results}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Aim}{14}{section.4.1}
+\contentsline {section}{\numberline {4.2}Apparatus}{15}{section.4.2}
+\contentsline {section}{\numberline {4.3}Methods}{15}{section.4.3}
+\contentsline {section}{\numberline {4.4}Results}{15}{section.4.4}
+\contentsline {section}{\numberline {4.5}Analysis}{15}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Discrete Probability density function duration d in state i}{15}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Expected number of observations (duration) in a state}{15}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}Experimental Results}{15}{section.4.6}
+\contentsline {chapter}{\numberline {5}Discussion}{16}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{17}{chapter.6}
+\contentsline {chapter}{\numberline {7}Recommendations}{18}{chapter.7}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{21}{appendix.A}
+\contentsline {chapter}{\numberline {B}Addenda}{22}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{22}{section.B.1}
