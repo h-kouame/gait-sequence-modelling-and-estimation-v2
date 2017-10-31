@@ -1,6 +1,6 @@
-function [traindata, testdata] = splitdataset(observ_seq, state_seq, proportion)  
+function [traindata, testdata] = splitdataset(observ_seq, state_seq, feat, proportion)  
     if nargin < 1
-        [observ_seq, state_seq] = get_all_data();
+        [observ_seq, state_seq, feat] = get_all_data();
         proportion = 0.1;
     end
     
@@ -13,8 +13,11 @@ function [traindata, testdata] = splitdataset(observ_seq, state_seq, proportion)
     trIdx = training(C);
     traindata.observ = observ_seq(trIdx, :);
     traindata.state = state_seq(trIdx, :);
+    traindata.feat = feat;
+    
     %test data
     teIdx = test(C); 
     testdata.observ = observ_seq(teIdx, :); 
-    testdata.state = state_seq(teIdx, :);   
+    testdata.state = state_seq(teIdx, :); 
+    testdata.feat = feat;
 end
