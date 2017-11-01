@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  1 NOV 2017 09:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  1 NOV 2017 10:00
 entering extended mode
 **"./Project Report Template.tex"
 ("Project Report Template.tex"
@@ -465,7 +465,7 @@ LaTeX Info: Redefining \nameref on input line 64.
 
 \c@lstlisting=\count134
 
-<uctLogo.png, id=195, 418.56375pt x 425.59pt>
+<uctLogo.png, id=203, 418.56375pt x 425.59pt>
 File: uctLogo.png Graphic file (type png)
  <use uctLogo.png>
 Package pdftex.def Info: uctLogo.png used on input line 78.
@@ -536,7 +536,7 @@ ll-eps-converted-to.pdf Figures/BackPitch_vs_BackRoll.eps>
 (epstopdf)             \includegraphics on input line 5.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=289, 354.32375pt x 302.
+<Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=299, 354.32375pt x 302.
 12875pt>
 File: Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -587,7 +587,7 @@ l.193 }
 
  (Literature.tex
 Chapter 2.
-<model.png, id=309, 650.43pt x 396.48125pt>
+<model.png, id=319, 650.43pt x 396.48125pt>
 File: model.png Graphic file (type png)
  <use model.png>
 Package pdftex.def Info: model.png used on input line 26.
@@ -602,7 +602,30 @@ ld be short
 
 
 
-] [5 <./model.png>]) [6] [7]
+] [5 <./model.png>]
+Overfull \hbox (7.5997pt too wide) in paragraph at lines 48--49
+[]$\OML/cmm/m/it/12 A \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 a[]\
+OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 , the state transition probabilities. It $\OM
+L/cmm/m/it/12 a[]$ \OT1/cmr/m/n/12 denotes probability of transitioning
+ []
+
+
+Overfull \hbox (1.48175pt too wide) in paragraph at lines 52--54
+\OT1/cmr/m/n/12 For continuous HMM (CHMM), i.e, HMM with continuous-valued obse
+rvations, $$ consists
+ []
+
+[6]
+Overfull \hbox (7.75787pt too wide) in paragraph at lines 71--72
+\OT1/cmr/m/n/12 naturally comes with some limitations in modelling more complex
+ problems, which however,
+ []
+
+) [7]
+Overfull \vbox (31.07841pt too high) has occurred while \output is active []
+
+
+[8]
 \openout2 = `Methodology.aux'.
 
  (Methodology.tex
@@ -610,11 +633,11 @@ Chapter 3.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8
+[9
 
 
 
-] [9] [10]
+] [10] [11]
 File: model.png Graphic file (type png)
  <use model.png>
 Package pdftex.def Info: model.png used on input line 101.
@@ -629,7 +652,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--124
 
  []
 
-[11]
+[12]
 Overfull \hbox (5.84772pt too wide) in paragraph at lines 125--128
 \OT1/cmr/m/n/12 expectation algorithm such as Welch-Baum algorithm. and describ
 ed in the literature
@@ -644,13 +667,13 @@ T1/cmr/m/n/12 = \OML/cmm/m/it/12 mixture number;  and N \OT1/cmr/m/n/12 = \OML/
 cmm/m/it/12 number of states$\OT1/cmr/m/n/12 .
  []
 
-[12]
+[13]
 Overfull \hbox (66.38495pt too wide) in paragraph at lines 163--163
 []\OT1/cmr/bx/n/14.4 Continuous observations/features to Discrete observations/
 features 
  []
 
-) [13]
+) [14]
 \openout2 = `Results.aux'.
 
  (Results.tex
@@ -661,16 +684,16 @@ Overfull \hbox (12.93237pt too wide) in paragraph at lines 4--6
 aphs where necessary. Remember
  []
 
-) [14
+) [15
 
 
 
-] [15]
+] [16]
 \openout2 = `Discussion.aux'.
 
  (Discussion.tex
 Chapter 5.
-) [16
+) [17
 
 
 
@@ -679,7 +702,7 @@ Chapter 5.
 
  (Conclusions.tex
 Chapter 6.
-) [17
+) [18
 
 
 
@@ -688,24 +711,24 @@ Chapter 6.
 
  (Recommendations.tex
 Chapter 7.
-) [18
+) [19
 
 
 
 ]
 \openout2 = `References.aux'.
 
- (References.tex [19
+ (References.tex [20
 
 
-]) [20
+]) [21
 
 ]
 \openout2 = `appendixa.aux'.
 
  (appendixa.tex
 Appendix A.
-) [21
+) [22
 
 
 
@@ -714,7 +737,7 @@ Appendix A.
 
  (appendixb.tex
 Appendix B.
-) [22
+) [23
 
 
 
@@ -727,37 +750,59 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
 (Recommendations.aux) (References.aux) (appendixa.aux) (appendixb.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 194.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 194.
-Package rerunfilecheck Info: File `"Project Report Template".out' has not chang
-ed.
-(rerunfilecheck)             Checksum: B1B7573BD5EA9EAE75BC7344D74B2C1D;3417.
 
+
+Package rerunfilecheck Warning: File `"Project Report Template".out' has change
+d.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Project Report Template".out':
+(rerunfilecheck)             Before: BABEF4792A12F3396A14CA5FA99E38EF;3566
+(rerunfilecheck)             After:  46E4BF2B96D111342755E8F28F14CAD6;3186.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
  ) 
 Here is how much of TeX's memory you used:
- 9041 strings out of 493333
- 128081 string characters out of 3139192
- 278454 words of memory out of 3000000
- 12238 multiletter control sequences out of 15000+200000
+ 9063 strings out of 493333
+ 128324 string characters out of 3139192
+ 278631 words of memory out of 3000000
+ 12243 multiletter control sequences out of 15000+200000
  10756 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  31i,12n,45p,555b,2386s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "Project Report Template.pdf" (30 pages, 670683 bytes).
+pdfTeX warning (dest): name{subsection.2.3.8} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.3.7} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.3.6} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.3.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.3.4} has been referenced but does not 
+exist, replaced by a fixed one
+
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on "Project Report Template.pdf" (31 pages, 694724 bytes).
 PDF statistics:
- 513 PDF objects out of 1000 (max. 8388607)
- 128 named destinations out of 1000 (max. 500000)
- 400 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 552 PDF objects out of 1000 (max. 8388607)
+ 145 named destinations out of 1000 (max. 500000)
+ 416 words of extra memory for PDF output out of 10000 (max. 10000000)
 

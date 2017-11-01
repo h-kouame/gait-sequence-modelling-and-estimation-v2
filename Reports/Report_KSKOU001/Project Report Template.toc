@@ -18,53 +18,48 @@
 \contentsline {subsubsection}{The training problem}{8}{section*.4}
 \contentsline {subsubsection}{The evaluation problem}{8}{section*.5}
 \contentsline {subsubsection}{The decoding problem}{8}{section*.6}
-\contentsline {subsection}{\numberline {2.3.3}Assumptions}{8}{subsection.2.3.3}
 \contentsline {subsubsection}{First order Markov model - current and predecessor only considered}{8}{section*.7}
-\contentsline {subsection}{\numberline {2.3.4}Transition Probability Matrix}{8}{subsection.2.3.4}
-\contentsline {subsection}{\numberline {2.3.5}Emission Probability Matrix}{8}{subsection.2.3.5}
-\contentsline {subsection}{\numberline {2.3.6}Initial distribution}{8}{subsection.2.3.6}
-\contentsline {subsection}{\numberline {2.3.7}Elements of an HMM}{8}{subsection.2.3.7}
-\contentsline {subsection}{\numberline {2.3.8}Types of HMM}{9}{subsection.2.3.8}
-\contentsline {subsubsection}{Ergodic model}{9}{section*.8}
-\contentsline {subsubsection}{Left-Right model or Bakis model}{9}{section*.9}
-\contentsline {subsubsection}{Evaluation of the probability of a sequence of observations}{9}{section*.10}
-\contentsline {subsubsection}{The determination of a best sequence states}{9}{section*.11}
-\contentsline {subsubsection}{The adjustment of model parameters to account for observed signal}{9}{section*.12}
-\contentsline {section}{\numberline {2.4}k-Nearest Neighbour}{9}{section.2.4}
-\contentsline {section}{\numberline {2.5}Dimension reduction}{9}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Feature selection}{9}{subsection.2.5.1}
-\contentsline {section}{\numberline {2.6}Sufficiency of Training Data}{9}{section.2.6}
-\contentsline {section}{\numberline {2.7}Techniques to increase Training Data}{9}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Mirroring}{9}{subsection.2.7.1}
-\contentsline {chapter}{\numberline {3}Hidden Markov Model design}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}Description of available dataset}{10}{section.3.1}
-\contentsline {subsubsection}{stationary: statistical property do not vary over time or non-stationary: properties vary over time}{11}{section*.13}
-\contentsline {subsubsection}{pure or corrupted?}{11}{section*.14}
-\contentsline {subsection}{\numberline {3.1.1}Quadrupede Gait sequence modelling}{11}{subsection.3.1.1}
-\contentsline {subsubsection}{HMM model elements: states and observations properties}{11}{section*.15}
-\contentsline {subsubsection}{Splitting the 16-states HMM in two 4-states HHMs}{12}{section*.16}
-\contentsline {subsubsection}{Transition between states}{12}{section*.17}
-\contentsline {subsection}{\numberline {3.1.2}Data pre-processing}{13}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Model parameters estimation}{13}{subsection.3.1.3}
-\contentsline {subsubsection}{Transition matrix: A}{13}{section*.18}
-\contentsline {subsubsection}{Mean and covariance matrices: \(\mu \), \(\Sigma \) and \(\beta \)}{14}{section*.19}
-\contentsline {subsubsection}{Inital state distribution: \(\pi \)}{15}{section*.20}
-\contentsline {subsection}{\numberline {3.1.4}Dimension reduction}{15}{subsection.3.1.4}
-\contentsline {subsubsection}{From 18 to 4 features using classification with knn}{15}{section*.21}
-\contentsline {subsection}{\numberline {3.1.5}Continuous observations/features to Discrete observations/features}{15}{subsection.3.1.5}
-\contentsline {section}{\numberline {3.2}HMM implementation}{15}{section.3.2}
-\contentsline {chapter}{\numberline {4}Results}{16}{chapter.4}
-\contentsline {section}{\numberline {4.1}Aim}{16}{section.4.1}
-\contentsline {section}{\numberline {4.2}Apparatus}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}Methods}{17}{section.4.3}
-\contentsline {section}{\numberline {4.4}Results}{17}{section.4.4}
-\contentsline {section}{\numberline {4.5}Analysis}{17}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Discrete Probability density function duration d in state i}{17}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Expected number of observations (duration) in a state}{17}{subsection.4.5.2}
-\contentsline {section}{\numberline {4.6}Experimental Results}{17}{section.4.6}
-\contentsline {chapter}{\numberline {5}Discussion}{18}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{19}{chapter.6}
-\contentsline {chapter}{\numberline {7}Recommendations}{20}{chapter.7}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{23}{appendix.A}
-\contentsline {chapter}{\numberline {B}Addenda}{24}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{24}{section.B.1}
+\contentsline {subsection}{\numberline {2.3.3}Types of HMM}{8}{subsection.2.3.3}
+\contentsline {subsubsection}{Ergodic model}{8}{section*.8}
+\contentsline {subsubsection}{Left-Right model or Bakis model}{8}{section*.9}
+\contentsline {subsubsection}{Evaluation of the probability of a sequence of observations}{8}{section*.10}
+\contentsline {subsubsection}{The determination of a best sequence states}{8}{section*.11}
+\contentsline {subsubsection}{The adjustment of model parameters to account for observed signal}{8}{section*.12}
+\contentsline {section}{\numberline {2.4}k-Nearest Neighbour}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}Dimension reduction}{8}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Feature selection}{8}{subsection.2.5.1}
+\contentsline {section}{\numberline {2.6}Sufficiency of Training Data}{8}{section.2.6}
+\contentsline {section}{\numberline {2.7}Techniques to increase Training Data}{8}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Mirroring}{8}{subsection.2.7.1}
+\contentsline {chapter}{\numberline {3}Hidden Markov Model design}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Description of available dataset}{9}{section.3.1}
+\contentsline {subsubsection}{stationary: statistical property do not vary over time or non-stationary: properties vary over time}{10}{section*.13}
+\contentsline {subsubsection}{pure or corrupted?}{10}{section*.14}
+\contentsline {subsection}{\numberline {3.1.1}Quadrupede Gait sequence modelling}{10}{subsection.3.1.1}
+\contentsline {subsubsection}{HMM model elements: states and observations properties}{10}{section*.15}
+\contentsline {subsubsection}{Splitting the 16-states HMM in two 4-states HHMs}{11}{section*.16}
+\contentsline {subsubsection}{Transition between states}{11}{section*.17}
+\contentsline {subsection}{\numberline {3.1.2}Data pre-processing}{12}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Model parameters estimation}{12}{subsection.3.1.3}
+\contentsline {subsubsection}{Transition matrix: A}{12}{section*.18}
+\contentsline {subsubsection}{Mean and covariance matrices: \(\mu \), \(\Sigma \) and \(\beta \)}{13}{section*.19}
+\contentsline {subsubsection}{Inital state distribution: \(\pi \)}{14}{section*.20}
+\contentsline {subsection}{\numberline {3.1.4}Dimension reduction}{14}{subsection.3.1.4}
+\contentsline {subsubsection}{From 18 to 4 features using classification with knn}{14}{section*.21}
+\contentsline {subsection}{\numberline {3.1.5}Continuous observations/features to Discrete observations/features}{14}{subsection.3.1.5}
+\contentsline {section}{\numberline {3.2}HMM implementation}{14}{section.3.2}
+\contentsline {chapter}{\numberline {4}Results}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}Aim}{15}{section.4.1}
+\contentsline {section}{\numberline {4.2}Apparatus}{16}{section.4.2}
+\contentsline {section}{\numberline {4.3}Methods}{16}{section.4.3}
+\contentsline {section}{\numberline {4.4}Results}{16}{section.4.4}
+\contentsline {section}{\numberline {4.5}Analysis}{16}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Discrete Probability density function duration d in state i}{16}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Expected number of observations (duration) in a state}{16}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}Experimental Results}{16}{section.4.6}
+\contentsline {chapter}{\numberline {5}Discussion}{17}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{18}{chapter.6}
+\contentsline {chapter}{\numberline {7}Recommendations}{19}{chapter.7}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{22}{appendix.A}
+\contentsline {chapter}{\numberline {B}Addenda}{23}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{23}{section.B.1}
