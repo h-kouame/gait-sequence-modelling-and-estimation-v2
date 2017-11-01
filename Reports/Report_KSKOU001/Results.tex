@@ -6,17 +6,17 @@
 The aim of this experiement is to investigate how the number of features impacts the accuracy of a Hidden Markov Model with continuous emission symbols (CHMM), in the abscence of enough training data. Thus, the hypothesis under investigation is:\\
 \textbf{\textit{In the absence of enough training data, a CHMM with observations of high dimensionality performs poorly.}}
 
-\subsection{Apparatus}
+\subsection{Experiment apparatus}
 To perform this expereiment, the following materials are required:
 \begin{itemize}
-	
 	\item CHMM, a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
 	\item At least two sample data sets training the model and testing it.
 	\item A criterion to rank and select subsets of features.
 	\item A measure to evaluate the performance of the CHMM model.
 	\item Finally, a way to visualise the results of the experiments
 \end{itemize}
-\subsection{Methods}
+
+\subsection{Experiment procedure}
 The expreriment was performed with the steps listed below:
 \begin{enumerate}
 	\item Step 0 - Preliminary data pre-processing: This step consisted in the data pre-processing as described in %%TODO: cross-ref data pre-processing section
@@ -26,12 +26,105 @@ The expreriment was performed with the steps listed below:
 	\item Step 4 - Model building and training: The CHMM model, \(\lambda\) was built and trained using with training dataset using the optimal feature subset.
 	\item Step 5 - Model testing and evaluation: The model was tested with the test dataset. The test consisted in decoding the most likely state sequence given a previously unseen sequence of observations. This path prediction was evaluated based on the evaluation criterion presented in %%TODO: cross-reference evaluation criterion.
 	\item Step 6 - Iteration: Step 3 through step 5 were repeated while varying the feature subset size until the maximum size, which is 18 in this case. In each iteration, the prediction accuracy was stored in an array for visualisation.
-	\item The different accuracies were finally ploted as a function of the observation dimensionality. This data is presented in the results section.
+	\item The different accuracies were finally ploted as a function of the observation dimensionality. Moreover, the observations were grouped based on the corresponding hidden state sequence and scattered in a 2-dimensional principal component space. This is to compare the decoded states against the ground-truth.
 \end{enumerate}
-\section{Results}
-\section{Analysis}
-\subsection{Discrete Probability density function duration d in state i}
-\subsection{Expected number of observations (duration) in a state}
+
+\subsection{Experiment results}
+The results of the experiments are presented in figure \ref{fig:dim-acc}, \ref{fig:dim-log}, \ref{fig:gt-5dim}, \ref{fig:es-5dim}, \ref{fig:gt-18dim}, \ref{fig:es-18dim}.\\
+\ref{fig:dim-acc} and \ref{fig:dim-log} show how the hidden state decoding performance and the log-likelihood estimated by the CHMM model, train with just 539 observations, varies as the observation dimensionality increases.\\
+\ref{fig:gt-5dim} and \ref{fig:es-5dim}, \ref{fig:gt-18dim} and \ref{fig:es-18dim} illustrate how the estimated state sequences compare to reality for observation sequences of 5-dimensions and 18-dimensions.    
+5 and 18 dimensions were presented because they are the two extremes in terms of accuracy. Other dimensions may be found in the appendices, %%TODO: ref appendices
+\begin{figure}[ht!]
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/dimensionality-effect-acc}
+	\caption{The effect of CHMM's observation dimensionality the state sequence decoding accuracy}
+	\label{fig:dim-acc}
+\end{figure}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/dimensionality-effect-log}
+	\caption{The effect of CHMM's observation dimensionality the log-likelihood}
+	\label{fig:dim-log}
+\end{figure}
 
 
-\section{Experimental Results}
+\begin{figure}[ht!]
+	\includegraphics{Figures/ground-truth-scatter-with-5-features}
+	\caption{Scatter plot of  5-dimensional observations grouped per state based on ground-truth state sequence}
+	\label{fig:gt-5dim}
+\end{figure}
+\begin{figure}[ht!]
+	\includegraphics{Figures/estimation-scatter-with-5-features}
+	\caption{Scatter plot of 5-dimensional observations grouped per state based on estimated state sequence}
+	\label{fig:es-5dim}
+\end{figure}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/ground-truth-scatter-with-18-features}
+	\caption{Scatter plot of 18-dimensional observations grouped per state based on ground-truth state sequence}
+	\label{fig:gt-18dim}
+\end{figure}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/estimation-scatter-with-18-features}
+	\caption{Scatter plot of 18-dimensional observations grouped per state based on estimated state sequence}
+	\label{fig:es-18dim}
+\end{figure}
+
+\subsection{Analysis of results}
+
+\subsection{Conclusions and recommendations of the experiment}
+
+\section{Experiement 2: The effect of dimensionality reduction on CHMM's performance}
+
+\subsection{Aim of the experiement}
+
+\subsection{Experiment apparatus}
+\begin{itemize}
+	\item random
+\end{itemize}
+
+\subsection{Experiment procedure}
+\begin{enumerate}
+	\item Thank you Jesus
+\end{enumerate}
+
+\subsection{Experiment results}
+\begin{figure}[ht!]
+	%\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/dimensionality-effect-acc}
+	%\caption{The effect of CHMM's observation dimensionality the state sequence decoding accuracy}
+	%\label{fig:dim-acc}
+\end{figure}
+
+\begin{figure}[ht!]
+	%\includegraphics{Figures/dimensionality-effect-log}
+	%\caption{The effect of CHMM's observation dimensionality the log-likelihood}
+	%\label{fig:dim-log}
+\end{figure}
+
+
+\begin{figure}[ht!]
+	%\includegraphics{Figures/ground-truth-scatter-with-5-features}
+	%\caption{Scatter plot of  5-dimensional observations grouped per state based on ground-truth state sequence}
+	%\label{fig:gt-5dim}
+\end{figure}
+\begin{figure}[ht!]
+	%\includegraphics{Figures/estimation-scatter-with-5-features}
+	%\caption{Scatter plot of 5-dimensional observations grouped per state based on estimated state sequence}
+	%\label{fig:es-5dim}
+\end{figure}
+
+\begin{figure}[ht!]
+	%\includegraphics{Figures/ground-truth-scatter-with-18-features}
+	%\caption{Scatter plot of 18-dimensional observations grouped per state based on ground-truth state sequence}
+	%\label{fig:gt-18dim}
+\end{figure}
+
+\begin{figure}[ht!]
+	%\includegraphics{Figures/estimation-scatter-with-18-features}
+	%\caption{Scatter plot of 18-dimensional observations grouped per state based on estimated state sequence}
+	%\label{fig:es-18dim}
+\end{figure}
+
+\subsection{Analysis of results}
+
+\subsection{Conclusions and recommendations of the experiment}

@@ -4,10 +4,7 @@ function [dataset, observ_seq, state_seq, feat_labels] = getprdataset(data)
         data = make_data(obs, states, feats);
     end
     
-    delfigs;
-    
     prwaitbar off                % waitbar not needed here
-    randreset(1);                % takes care of reproducility
    
     observ_seq = data.observ; 
     state_seq = data.state; 
@@ -22,7 +19,7 @@ function [dataset, observ_seq, state_seq, feat_labels] = getprdataset(data)
     classes = [O{1}; O{2}; O{3}; O{4}];
     sizes = [size(O{1}, 1), size(O{2}, 1), size(O{3}, 1), size(O{4}, 1)];
     S = unique(state_seq);
-    labels = num2str(S);
+    labels = strcat('state', num2str(S));
     L = genlab(sizes, labels);
     dataset = prdataset(classes, L);
     try

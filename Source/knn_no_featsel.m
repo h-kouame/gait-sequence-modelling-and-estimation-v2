@@ -10,7 +10,7 @@ function [ET2, ES2] = knn_no_featsel(datapath, foot)
     randreset(1);                % takes care of reproducability
     
     A = getdataset(datapath, foot);
-    [T1, S1] = gendat(A*pcam(A,4), 0.5);
+    [T1, S1] = gendat(A*pcam(A, 4), 0.5);
     [T2, S2] = gendat(A, 0.5);
     
     T1 = setname(T1, 'Training Set with PCA'); 

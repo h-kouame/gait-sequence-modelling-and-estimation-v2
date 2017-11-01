@@ -3,7 +3,7 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
         [observ_seq, state_seq] = get_all_data('front');   
     end
     
-    delfigs;
+    %delfigs;
     
     O = getstatesdata(observ_seq, state_seq);
     O1 = O{1};

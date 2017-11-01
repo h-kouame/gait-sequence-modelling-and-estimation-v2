@@ -4,6 +4,8 @@ function exp_featsize_effect(data)
         data = make_data(observ_seq, state_seq, feat_names);
     end
 
+    delfigs;
+    
     rng('shuffle','twister');
 
     % Sort features by separability degree 
@@ -18,21 +20,26 @@ function exp_featsize_effect(data)
     logliks = zeros(1, feat_num);
     testprop = 0.9;
     [traindata, testdata] = splitdataset(data.observ, data.state, feat_names, testprop);
+    
     for i = 1:feat_num
        fs = featureIdxSortbySD(1:nfs(i));
        [model.pi, model.A, model.phi] = BuildGmmHMM(traindata.observ(:, fs), traindata.state);
        tempdata = testdata;
        tempdata.observ = testdata.observ(:, fs);
-       [accuracies(i), ~ , logliks(i)] = GmmHMMpredict(model, tempdata);
-    end
-    
+       tempdata.feat = testdata.feat(fs);
+       [accuracies(i), predicted_states, logliks(i)] = GmmHMMpredict(model, tempdata);
+       figtitle = strcat(' ground-truth-scatter-with-', num2str(i), '-features');
+       plotclasses(tempdata, testdata.state, figtitle); %grund truth
+       figtitle = strcat(' estimation-scatter-with-', num2str(i), '-features');
+       plotclasses(tempdata, predicted_states, figtitle); %prediction    
+    end    
     figure;
     plot(1:feat_num, accuracies, 'LineWidth',2, 'MarkerSize',10);
 %     legend({'Sequence recognition accuracy'}, 'Location','SE');
     xlabel('Number of features');
     ylabel('Percentage (%) accuracy');
     figtitle = 'Effect of feature size on model accuracy';
-    title(figtitle);
+%     title(figtitle);
     figpath = strcat('C:\School\EEE4022S\Gait Sequence Estimation\Figures\', figtitle);
     print(figpath, '-depsc');
     
@@ -42,7 +49,29 @@ function exp_featsize_effect(data)
     xlabel('Number of features');
     ylabel('Log-likelihood');
     figtitle = 'Effect of feature size on log-likelihood';
-    title(figtitle);
+%     title(figtitle);
     figpath = strcat('C:\School\EEE4022S\Gait Sequence Estimation\Figures\', figtitle);
     print(figpath, '-depsc');
+end
+
+function plotclasses(data, states, figtitle)
+       figure;
+       feat_num = size(data.observ, 2);
+       grp = findgroups(states);
+       if feat_num == 1
+           gscatter(data.observ(:,:), data.observ(:,:), grp, 'bryg', 'o+xd', 10,'on');
+       elseif feat_num == 2
+           gscatter(data.observ(:, 1), data.observ(:, 2), grp.', 'bryg', 'o+xd', 10,'on'); 
+       else
+           data.state = states;
+           prdata = getprdataset(data);
+           pca_2d_data = prdata*pcam(prdata, 2);
+           scatterd(pca_2d_data, 'legend');
+       end
+       
+        xlabel('PCA Component 1');
+        ylabel('PCA Component 2');
+%         title(figtitle);
+        figpath = strcat('C:\School\EEE4022S\Gait Sequence Estimation\Figures\', figtitle);
+        print(figpath, '-depsc');
 end
