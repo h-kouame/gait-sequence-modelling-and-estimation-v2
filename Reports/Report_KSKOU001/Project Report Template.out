@@ -29,17 +29,18 @@
 \BOOKMARK [2][-]{subsection.3.1.5}{Continuous observations/features to Discrete observations/features}{section.3.1}% 29
 \BOOKMARK [1][-]{section.3.2}{HMM implementation}{chapter.3}% 30
 \BOOKMARK [0][-]{chapter.4}{Results}{}% 31
-\BOOKMARK [1][-]{section.4.1}{Aim}{chapter.4}% 32
-\BOOKMARK [1][-]{section.4.2}{Apparatus}{chapter.4}% 33
-\BOOKMARK [1][-]{section.4.3}{Methods}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.4}{Results}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.5}{Analysis}{chapter.4}% 36
-\BOOKMARK [2][-]{subsection.4.5.1}{Discrete Probability density function duration d in state i}{section.4.5}% 37
-\BOOKMARK [2][-]{subsection.4.5.2}{Expected number of observations \(duration\) in a state}{section.4.5}% 38
-\BOOKMARK [1][-]{section.4.6}{Experimental Results}{chapter.4}% 39
-\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 40
-\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 41
-\BOOKMARK [0][-]{chapter.7}{Recommendations}{}% 42
-\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 43
-\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 44
-\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 45
+\BOOKMARK [1][-]{section.4.1}{Experiement 1: The effect of a CHMM' observation dimensionality on its performance}{chapter.4}% 32
+\BOOKMARK [2][-]{subsection.4.1.1}{Aim of the experiement}{section.4.1}% 33
+\BOOKMARK [2][-]{subsection.4.1.2}{Apparatus}{section.4.1}% 34
+\BOOKMARK [2][-]{subsection.4.1.3}{Methods}{section.4.1}% 35
+\BOOKMARK [1][-]{section.4.2}{Results}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.3}{Analysis}{chapter.4}% 37
+\BOOKMARK [2][-]{subsection.4.3.1}{Discrete Probability density function duration d in state i}{section.4.3}% 38
+\BOOKMARK [2][-]{subsection.4.3.2}{Expected number of observations \(duration\) in a state}{section.4.3}% 39
+\BOOKMARK [1][-]{section.4.4}{Experimental Results}{chapter.4}% 40
+\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 41
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 42
+\BOOKMARK [0][-]{chapter.7}{Recommendations}{}% 43
+\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 44
+\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 45
+\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 46

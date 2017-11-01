@@ -49,17 +49,18 @@
 \contentsline {subsection}{\numberline {3.1.5}Continuous observations/features to Discrete observations/features}{14}{subsection.3.1.5}
 \contentsline {section}{\numberline {3.2}HMM implementation}{14}{section.3.2}
 \contentsline {chapter}{\numberline {4}Results}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}Aim}{15}{section.4.1}
-\contentsline {section}{\numberline {4.2}Apparatus}{16}{section.4.2}
-\contentsline {section}{\numberline {4.3}Methods}{16}{section.4.3}
-\contentsline {section}{\numberline {4.4}Results}{16}{section.4.4}
-\contentsline {section}{\numberline {4.5}Analysis}{16}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Discrete Probability density function duration d in state i}{16}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Expected number of observations (duration) in a state}{16}{subsection.4.5.2}
-\contentsline {section}{\numberline {4.6}Experimental Results}{16}{section.4.6}
-\contentsline {chapter}{\numberline {5}Discussion}{17}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{18}{chapter.6}
-\contentsline {chapter}{\numberline {7}Recommendations}{19}{chapter.7}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{22}{appendix.A}
-\contentsline {chapter}{\numberline {B}Addenda}{23}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{23}{section.B.1}
+\contentsline {section}{\numberline {4.1}Experiement 1: The effect of a CHMM' observation dimensionality on its performance}{15}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Aim of the experiement}{15}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Apparatus}{15}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Methods}{16}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Results}{17}{section.4.2}
+\contentsline {section}{\numberline {4.3}Analysis}{17}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Discrete Probability density function duration d in state i}{17}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Expected number of observations (duration) in a state}{17}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Experimental Results}{17}{section.4.4}
+\contentsline {chapter}{\numberline {5}Discussion}{18}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{19}{chapter.6}
+\contentsline {chapter}{\numberline {7}Recommendations}{20}{chapter.7}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{23}{appendix.A}
+\contentsline {chapter}{\numberline {B}Addenda}{24}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{24}{section.B.1}

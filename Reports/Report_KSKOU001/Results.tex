@@ -1,15 +1,33 @@
 \chapter{Results}
-These are the results I found from my investigation.
 
-Present your results in a suitable format using tables and graphs where necessary. Remember to refer
-to them in text and caption them properly.
+\section{Experiement 1: The effect of a CHMM' observation dimensionality on its performance}
 
+\subsection{Aim of the experiement}
+The aim of this experiement is to investigate how the number of features impacts the accuracy of a Hidden Markov Model with continuous emission symbols (CHMM), in the abscence of enough training data. Thus, the hypothesis under investigation is:\\
+\textbf{\textit{In the absence of enough training data, a CHMM with observations of high dimensionality performs poorly.}}
 
-\section{Aim}
-The objetive of this project is to design, implement and evaluate an algorithm, a model or a machine to predict the gait sequence of an animal (quadrupede or bipede) using Markov models.
-Thus, for a given state S, the model should be able to predict the next state S + 1, with a certain degree of confidence.
-\section{Apparatus}
-\section{Methods}
+\subsection{Apparatus}
+To perform this expereiment, the following materials are required:
+\begin{itemize}
+	
+	\item CHMM, a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
+	\item At least two sample data sets training the model and testing it.
+	\item A criterion to rank and select subsets of features.
+	\item A measure to evaluate the performance of the CHMM model.
+	\item Finally, a way to visualise the results of the experiments
+\end{itemize}
+\subsection{Methods}
+The expreriment was performed with the steps listed below:
+\begin{enumerate}
+	\item Step 0 - Preliminary data pre-processing: This step consisted in the data pre-processing as described in %%TODO: cross-ref data pre-processing section
+	\item Step 1 - Partitioning data into training and test sets: Here, the dataset was randomly sampled into training and test sets. The training set was relatively small, it was a sequence 539 observations. 
+	\item Step 2 -  Feature ranking: The features were sorted in a descending order based on their ability to discriminate the different states of the CHMM. The separability index method described in was used for this purpose. %%TODO: quote et cross-ref SIM
+	\item Step 3 - Data subset selection: Select the optimal feature subset, starting with 1 dimension. 
+	\item Step 4 - Model building and training: The CHMM model, \(\lambda\) was built and trained using with training dataset using the optimal feature subset.
+	\item Step 5 - Model testing and evaluation: The model was tested with the test dataset. The test consisted in decoding the most likely state sequence given a previously unseen sequence of observations. This path prediction was evaluated based on the evaluation criterion presented in %%TODO: cross-reference evaluation criterion.
+	\item Step 6 - Iteration: Step 3 through step 5 were repeated while varying the feature subset size until the maximum size, which is 18 in this case. In each iteration, the prediction accuracy was stored in an array for visualisation.
+	\item The different accuracies were finally ploted as a function of the observation dimensionality. This data is presented in the results section.
+\end{enumerate}
 \section{Results}
 \section{Analysis}
 \subsection{Discrete Probability density function duration d in state i}

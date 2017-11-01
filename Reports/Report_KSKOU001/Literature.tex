@@ -63,8 +63,8 @@ where \(\beta_{jm}\) is the mixture composition coefficient; \(\mu_{jm}\), \(\Si
 
 Thus, the compact specification of a continous valued observation HMM defined in \ref{eq:CHMM} and that of a discrete HMM in \ref{eq:DHMM}.
 \begin{align} 
-	\alpha = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi) \label{eq:CHMM} \\
-	\alpha = (A, b_j(k), \pi) \label{eq:DHMM}
+	\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi) \label{eq:CHMM} \\
+	\lambda = (A, b_j(k), \pi) \label{eq:DHMM}
 \end{align}
 
 \subsubsection{Basic assumptions of HMMs theory}
@@ -72,7 +72,7 @@ HMM theory is built on three basic assumptions listed below. They not only, make
 \begin{enumerate}
 \item \textit{The Markov assumption}: HMM assumes that the probability of being in the current	at any instance of time t, is uniquely dependent on the previous state, at time, t + 1. More specifically, \(a_{ij} = P[q_t = S_j|q_{t+1}=S_i]\). This assumption makes it unsuitable for long-range correlation capturing applications.
 \item \textit{The stationary assumption}: Furthermore, HMM state transition probabilities are assumed to be time-independent. Thus, the transition probabilities of two distinct time, \(t_1\) and \(t_2\) are identical, \(P[q_{t_1} = S_j|q_{t_1 -1} = S_i] = P[q{t_2}=S_i|q_{t_2-1} = S_i]\). HMMs can therefore effectively model mechanisms with stationary observations.
-\item \textit{The output/observation independence assumption}: The current observation also known as emission symbol is statistically independent of the previous observations. It is "emitted" only by the current state, \(P[O|q_1, q_2, ..., q_T, \alpha]=\prod_{t=1}^{T}P[O_t|q_t, \alpha]\).
+\item \textit{The output/observation independence assumption}: The current observation also known as emission symbol is statistically independent of the previous observations. It is "emitted" only by the current state, \(P[O|q_1, q_2, ..., q_T, \lambda]=\prod_{t=1}^{T}P[O_t|q_t, \lambda]\).
 \end{enumerate} 
 The above three assumptions are similar to those of a Markov chain. This is because the stochastic process of an HMM pertaining to the hidden states can be reduced to a Markov chain. Thus, the essential difference between an HMM and a Markov process is that with the former there is not a one-to-one correspondence between the states and the symbols. %%TODO: Quote biology book
 

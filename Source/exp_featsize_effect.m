@@ -16,7 +16,7 @@ function exp_featsize_effect(data)
 
     accuracies = zeros(1, feat_num);
     logliks = zeros(1, feat_num);
-    testprop = 0.2;
+    testprop = 0.9;
     [traindata, testdata] = splitdataset(data.observ, data.state, feat_names, testprop);
     for i = 1:feat_num
        fs = featureIdxSortbySD(1:nfs(i));
