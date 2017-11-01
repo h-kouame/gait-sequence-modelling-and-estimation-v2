@@ -5,7 +5,7 @@ function selected_data = SDM_featsel(data, test_prop)
         test_prop = 0.2;
     end
 
-    rng(8000, 'twister');
+    rng('shuffle','twister');
 
     % Sort features by separability degree 
     G = SDM(data);
@@ -15,8 +15,8 @@ function selected_data = SDM_featsel(data, test_prop)
     feat_num = size(data.observ, 2);
     nfs = 1:1:feat_num;
 
-    testMCE = zeros(1, 14);
-    trainMCE = zeros(1,14);
+    testMCE = zeros(1, feat_num);
+    trainMCE = zeros(1,feat_num);
     for i = 1:feat_num
        fs = featureIdxSortbySD(1:nfs(i));
        [testMCE(i), trainMCE(i)] = CKNN(make_data(observ_seq(:, fs), state_seq, feat_names(fs,:)), 1 - test_prop);

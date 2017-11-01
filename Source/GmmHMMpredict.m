@@ -1,6 +1,8 @@
 function [accuracy, path, loglik] = GmmHMMpredict(model, testdata)
     if nargin < 1
         [model.pi, model.A, model.phi] = BuildGmmHMM();
+        [observ_seq, state_seq, feat_names] = get_all_data();
+        testdata = make_data(observ_seq, state_seq, feat_names);
     end
         
     %Build HMM

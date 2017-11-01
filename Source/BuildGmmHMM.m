@@ -16,7 +16,7 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
     state_num = 4;
     
 %     state transition probabilities estimation
-    PSEUDOTR = ones(state_num, state_num)*1;
+    PSEUDOTR = ones(state_num, state_num)*1 + pi;
     A = hmmestimate(state_seq, state_seq, 'PSEUDOTRANSITIONS',PSEUDOTR);
     
     feat_num = size(observ_seq, 2); %feature size
@@ -31,7 +31,7 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
     
     covariance = zeros(feat_num, feat_num, mix_num, state_num);
     means = zeros(feat_num, mix_num, state_num);
-    mix_prob = ones(mix_num, state_num)/mix_num; % equal probability of mixture m given a state k.
+    mix_prob = zeros(mix_num, state_num); %probability of mixture m given a state k.
     regularization = 1e-10;
       
     if isempty(O1) 
@@ -41,6 +41,7 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
         gmm1 = fitgmdist(O1, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
         means(:, :, 1) = gmm1.mu.';
         covariance(:, :, :, 1) = gmm1.Sigma;
+        mix_prob(:, 1) = gmm1.ComponentProportion;
     end
     
     if isempty(O2) 
@@ -50,6 +51,7 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
         gmm2 = fitgmdist(O2, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
         means(:, :, 2) = gmm2.mu.';
         covariance(:, :, :, 2) = gmm2.Sigma;
+        mix_prob(:, 2) = gmm2.ComponentProportion;
     end
     
     if isempty(O3) 
@@ -59,6 +61,7 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
         gmm3 = fitgmdist(O3, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
         means(:, :, 3) = gmm3.mu.';
         covariance(:, :, :, 3) = gmm3.Sigma;
+        mix_prob(:, 3) = gmm3.ComponentProportion;
     end
     
     if isempty(O4) 
@@ -67,7 +70,8 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
     else
         gmm4 = fitgmdist(O4, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
         means(:, :, 4) = gmm4.mu.';
-        covariance(:, :, :, 4) = gmm4.Sigma;  
+        covariance(:, :, :, 4) = gmm4.Sigma; 
+        mix_prob(:, 4) = gmm4.ComponentProportion;
     end
     
     B.mu = means;
