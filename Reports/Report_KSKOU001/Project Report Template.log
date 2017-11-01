@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  31 OCT 2017 21:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  1 NOV 2017 02:08
 entering extended mode
 **"./Project Report Template.tex"
 ("Project Report Template.tex"
@@ -465,7 +465,7 @@ LaTeX Info: Redefining \nameref on input line 64.
 
 \c@lstlisting=\count134
 
-<uctLogo.png, id=195, 418.56375pt x 425.59pt>
+<uctLogo.png, id=203, 418.56375pt x 425.59pt>
 File: uctLogo.png Graphic file (type png)
  <use uctLogo.png>
 Package pdftex.def Info: uctLogo.png used on input line 78.
@@ -536,7 +536,7 @@ ll-eps-converted-to.pdf Figures/BackPitch_vs_BackRoll.eps>
 (epstopdf)             \includegraphics on input line 5.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=289, 354.32375pt x 302.
+<Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=299, 354.32375pt x 302.
 12875pt>
 File: Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -587,7 +587,7 @@ l.193 }
 
  (Literature.tex
 Chapter 2.
-<model.png, id=309, 650.43pt x 396.48125pt>
+<model.png, id=319, 650.43pt x 396.48125pt>
 File: model.png Graphic file (type png)
  <use model.png>
 Package pdftex.def Info: model.png used on input line 26.
@@ -598,17 +598,30 @@ Underfull \hbox (badness 1642) in paragraph at lines 28--28
 ld be short
  []
 
-
-Overfull \hbox (13.51985pt too wide) in paragraph at lines 37--41
-\OT1/cmr/m/n/12 underlying statistical structure. Assumption of statistical mod
-el: Signal can be parametrised
- []
-
 [4
 
 
 
-] [5 <./model.png>]) [6] [7]
+] [5 <./model.png>]
+Overfull \hbox (7.5997pt too wide) in paragraph at lines 48--49
+[]$\OML/cmm/m/it/12 A \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 a[]\
+OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 , the state transition probabilities. It $\OM
+L/cmm/m/it/12 a[]$ \OT1/cmr/m/n/12 denotes probability of transitioning
+ []
+
+
+Overfull \hbox (1.48175pt too wide) in paragraph at lines 52--54
+\OT1/cmr/m/n/12 For continuous HMM (CHMM), i.e, HMM with continuous-valued obse
+rvations, $$ consists
+ []
+
+[6]
+Overfull \hbox (7.75787pt too wide) in paragraph at lines 71--72
+\OT1/cmr/m/n/12 naturally comes with some limitations in modelling more complex
+ problems, which however,
+ []
+
+[7]) [8] [9]
 \openout2 = `Methodology.aux'.
 
  (Methodology.tex
@@ -616,11 +629,11 @@ Chapter 3.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8
+[10
 
 
 
-] [9] [10]
+] [11] [12]
 File: model.png Graphic file (type png)
  <use model.png>
 Package pdftex.def Info: model.png used on input line 101.
@@ -635,7 +648,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--124
 
  []
 
-[11]
+[13]
 Overfull \hbox (5.84772pt too wide) in paragraph at lines 125--128
 \OT1/cmr/m/n/12 expectation algorithm such as Welch-Baum algorithm. and describ
 ed in the literature
@@ -650,13 +663,13 @@ T1/cmr/m/n/12 = \OML/cmm/m/it/12 mixture number;  and N \OT1/cmr/m/n/12 = \OML/
 cmm/m/it/12 number of states$\OT1/cmr/m/n/12 .
  []
 
-[12]
+[14]
 Overfull \hbox (66.38495pt too wide) in paragraph at lines 163--163
 []\OT1/cmr/bx/n/14.4 Continuous observations/features to Discrete observations/
 features 
  []
 
-) [13]
+) [15]
 \openout2 = `Results.aux'.
 
  (Results.tex
@@ -667,16 +680,16 @@ Overfull \hbox (12.93237pt too wide) in paragraph at lines 4--6
 aphs where necessary. Remember
  []
 
-) [14
+) [16
 
 
 
-] [15]
+] [17]
 \openout2 = `Discussion.aux'.
 
  (Discussion.tex
 Chapter 5.
-) [16
+) [18
 
 
 
@@ -685,7 +698,7 @@ Chapter 5.
 
  (Conclusions.tex
 Chapter 6.
-) [17
+) [19
 
 
 
@@ -694,24 +707,24 @@ Chapter 6.
 
  (Recommendations.tex
 Chapter 7.
-) [18
+) [20
 
 
 
 ]
 \openout2 = `References.aux'.
 
- (References.tex [19
+ (References.tex [21
 
 
-]) [20
+]) [22
 
 ]
 \openout2 = `appendixa.aux'.
 
  (appendixa.tex
 Appendix A.
-) [21
+) [23
 
 
 
@@ -720,7 +733,7 @@ Appendix A.
 
  (appendixb.tex
 Appendix B.
-) [22
+) [24
 
 
 
@@ -735,7 +748,7 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 194.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 194.
 Package rerunfilecheck Info: File `"Project Report Template".out' has not chang
 ed.
-(rerunfilecheck)             Checksum: B1B7573BD5EA9EAE75BC7344D74B2C1D;3417.
+(rerunfilecheck)             Checksum: BABEF4792A12F3396A14CA5FA99E38EF;3566.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -743,27 +756,28 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
  ) 
 Here is how much of TeX's memory you used:
- 9041 strings out of 493333
- 128081 string characters out of 3139192
- 278454 words of memory out of 3000000
- 12238 multiletter control sequences out of 15000+200000
+ 9067 strings out of 493333
+ 128352 string characters out of 3139192
+ 278631 words of memory out of 3000000
+ 12243 multiletter control sequences out of 15000+200000
  10756 words of font info for 40 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  31i,12n,45p,555b,2386s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "Project Report Template.pdf" (30 pages, 670780 bytes).
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Prog
+ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on "Project Report Template.pdf" (32 pages, 696371 bytes).
 PDF statistics:
- 513 PDF objects out of 1000 (max. 8388607)
- 128 named destinations out of 1000 (max. 500000)
- 400 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 559 PDF objects out of 1000 (max. 8388607)
+ 149 named destinations out of 1000 (max. 500000)
+ 416 words of extra memory for PDF output out of 10000 (max. 10000000)
 
