@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  2 NOV 2017 14:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  2 NOV 2017 17:53
 entering extended mode
 **"./Project Report Template.tex"
 ("Project Report Template.tex"
@@ -983,14 +983,42 @@ File: Figures/size-log-2-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/size-log-2-eps-converted-to.pdf used on input 
 line 114.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+Package epstopdf Info: Source file: <Figures/bias-var.eps>
+(epstopdf)                    date: 2017-11-02 17:53:24
+(epstopdf)                    size: 18170 bytes
+(epstopdf)             Output file: <Figures/bias-var-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-02 17:52:47
+(epstopdf)                    size: 3823 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/bias-var-eps-conver
+ted-to.pdf Figures/bias-var.eps>
+(epstopdf)             \includegraphics on input line 121.
+runsystem(epstopdf --outfile=Figures/bias-var-eps-converted-to.pdf Figures/bias
+-var.eps)...executed (allowed).
+
+Package epstopdf Info: Result file: <Figures/bias-var-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-02 17:53:29
+(epstopdf)                    size: 3824 bytes.
+
+<Figures/bias-var-eps-converted-to.pdf, id=539, 1028.84375pt x 332.24126pt>
+File: Figures/bias-var-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Figures/bias-var-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/bias-var-eps-converted-to.pdf used on input li
+ne 121.
+(pdftex.def)             Requested size: 1028.84125pt x 332.24043pt.
+
+Overfull \hbox (575.87335pt too wide) in paragraph at lines 121--122
+ [][] 
+ []
+
 ) [22] [23 <./Figures/size-acc-2-eps-converted-to.pdf>] [24 <./Figures/size-log
--2-eps-converted-to.pdf>]
+-2-eps-converted-to.pdf>] [25 <./Figures/bias-var-eps-converted-to.pdf>]
 \openout2 = `Discussion.aux'.
 
 
 (Discussion.tex
 Chapter 5.
-) [25
+) [26
 
 
 
@@ -999,7 +1027,7 @@ Chapter 5.
 
  (Conclusions.tex
 Chapter 6.
-) [26
+) [27
 
 
 
@@ -1008,24 +1036,24 @@ Chapter 6.
 
  (Recommendations.tex
 Chapter 7.
-) [27
+) [28
 
 
 
 ]
 \openout2 = `References.aux'.
 
- (References.tex [28
+ (References.tex [29
 
 
-]) [29
+]) [30
 
 ]
 \openout2 = `appendixa.aux'.
 
  (appendixa.tex
 Appendix A.
-) [30
+) [31
 
 
 
@@ -1034,7 +1062,7 @@ Appendix A.
 
  (appendixb.tex
 Appendix B.
-) [31
+) [32
 
 
 
@@ -1057,10 +1085,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 197.
  ) 
 Here is how much of TeX's memory you used:
- 9888 strings out of 493333
- 142860 string characters out of 3139192
- 302000 words of memory out of 3000000
- 12995 multiletter control sequences out of 15000+200000
+ 9896 strings out of 493333
+ 143070 string characters out of 3139192
+ 302058 words of memory out of 3000000
+ 13000 multiletter control sequences out of 15000+200000
  11115 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,77p,555b,2430s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1077,9 +1105,9 @@ Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "Project Report Template.pdf" (39 pages, 1657335 bytes).
+Output written on "Project Report Template.pdf" (40 pages, 1660234 bytes).
 PDF statistics:
- 675 PDF objects out of 1000 (max. 8388607)
- 172 named destinations out of 1000 (max. 500000)
- 466 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 685 PDF objects out of 1000 (max. 8388607)
+ 174 named destinations out of 1000 (max. 500000)
+ 471 words of extra memory for PDF output out of 10000 (max. 10000000)
 

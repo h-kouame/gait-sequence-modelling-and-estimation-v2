@@ -63,9 +63,9 @@
 \contentsline {subsection}{\numberline {4.2.4}Experiment results}{22}{subsection.4.2.4}
 \contentsline {subsection}{\numberline {4.2.5}Analysis of results}{23}{subsection.4.2.5}
 \contentsline {subsection}{\numberline {4.2.6}Conclusions and recommendations of the experiment}{23}{subsection.4.2.6}
-\contentsline {chapter}{\numberline {5}Discussion}{25}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{26}{chapter.6}
-\contentsline {chapter}{\numberline {7}Recommendations}{27}{chapter.7}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{30}{appendix.A}
-\contentsline {chapter}{\numberline {B}Addenda}{31}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{31}{section.B.1}
+\contentsline {chapter}{\numberline {5}Discussion}{26}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{27}{chapter.6}
+\contentsline {chapter}{\numberline {7}Recommendations}{28}{chapter.7}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{31}{appendix.A}
+\contentsline {chapter}{\numberline {B}Addenda}{32}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{32}{section.B.1}
