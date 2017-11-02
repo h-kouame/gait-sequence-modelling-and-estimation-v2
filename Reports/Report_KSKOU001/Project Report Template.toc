@@ -6,66 +6,67 @@
 \contentsline {section}{\numberline {1.3}Scope and Limitations}{3}{section.1.3}
 \contentsline {section}{\numberline {1.4}Plan of development}{3}{section.1.4}
 \contentsline {chapter}{\numberline {2}Literature Review}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Gait sequence modelling and estimation}{5}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Quadrupede gait modelling}{5}{subsection.2.1.1}
-\contentsline {subsubsection}{Periodicity}{5}{section*.2}
-\contentsline {subsection}{\numberline {2.1.2}Quadrupede gait estimation}{5}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Case study: Inertia Measurement Unit}{5}{section.2.2}
-\contentsline {section}{\numberline {2.3}Hidden Markov Models}{5}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}HMM parameters specification}{6}{subsection.2.3.1}
-\contentsline {subsubsection}{Basic assumptions of HMMs theory}{7}{section*.3}
-\contentsline {subsection}{\numberline {2.3.2}Three fundamental problems for HMM design}{7}{subsection.2.3.2}
-\contentsline {subsubsection}{The training problem}{8}{section*.4}
-\contentsline {subsubsection}{The evaluation problem}{8}{section*.5}
-\contentsline {subsubsection}{The decoding problem}{8}{section*.6}
-\contentsline {subsubsection}{First order Markov model - current and predecessor only considered}{8}{section*.7}
-\contentsline {subsection}{\numberline {2.3.3}Types of HMM}{8}{subsection.2.3.3}
-\contentsline {subsubsection}{Ergodic model}{8}{section*.8}
-\contentsline {subsubsection}{Left-Right model or Bakis model}{8}{section*.9}
-\contentsline {subsubsection}{Evaluation of the probability of a sequence of observations}{8}{section*.10}
-\contentsline {subsubsection}{The determination of a best sequence states}{8}{section*.11}
-\contentsline {subsubsection}{The adjustment of model parameters to account for observed signal}{8}{section*.12}
-\contentsline {section}{\numberline {2.4}k-Nearest Neighbour}{8}{section.2.4}
-\contentsline {section}{\numberline {2.5}Dimension reduction}{8}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Feature selection}{8}{subsection.2.5.1}
-\contentsline {section}{\numberline {2.6}Sufficiency of Training Data}{8}{section.2.6}
-\contentsline {section}{\numberline {2.7}Techniques to increase Training Data}{8}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Mirroring}{8}{subsection.2.7.1}
-\contentsline {chapter}{\numberline {3}Hidden Markov Model design}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Description of available dataset}{9}{section.3.1}
-\contentsline {subsubsection}{stationary: statistical property do not vary over time or non-stationary: properties vary over time}{10}{section*.13}
-\contentsline {subsubsection}{pure or corrupted?}{10}{section*.14}
-\contentsline {subsection}{\numberline {3.1.1}Quadrupede Gait sequence modelling}{10}{subsection.3.1.1}
-\contentsline {subsubsection}{HMM model elements: states and observations properties}{10}{section*.15}
-\contentsline {subsubsection}{Splitting the 16-states HMM in two 4-states HHMs}{11}{section*.16}
-\contentsline {subsubsection}{Transition between states}{11}{section*.17}
-\contentsline {subsection}{\numberline {3.1.2}Data pre-processing}{12}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Model parameters estimation}{12}{subsection.3.1.3}
-\contentsline {subsubsection}{Transition matrix: A}{12}{section*.18}
-\contentsline {subsubsection}{Mean and covariance matrices: \(\mu \), \(\Sigma \) and \(\beta \)}{13}{section*.19}
-\contentsline {subsubsection}{Inital state distribution: \(\pi \)}{14}{section*.20}
-\contentsline {subsection}{\numberline {3.1.4}Dimension reduction}{14}{subsection.3.1.4}
-\contentsline {subsubsection}{Optimal number of features}{14}{section*.21}
-\contentsline {subsubsection}{Optimal PCA component number}{15}{section*.22}
-\contentsline {section}{\numberline {3.2}HMM implementation}{15}{section.3.2}
-\contentsline {chapter}{\numberline {4}Results}{16}{chapter.4}
-\contentsline {section}{\numberline {4.1}Experiement 1: The effect of a CHMM' observation dimensionality on its performance}{16}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Aim of the experiement}{16}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Experiment apparatus}{16}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Experiment procedure}{17}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Experiment results}{18}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Analysis of results}{21}{subsection.4.1.5}
-\contentsline {subsection}{\numberline {4.1.6}Conclusions and recommendations of the experiment}{21}{subsection.4.1.6}
-\contentsline {section}{\numberline {4.2}Experiement 2: The effect of dimensionality reduction on CHMM's performance}{21}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Aim of the experiement}{21}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Experiment apparatus}{22}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Experiment procedure}{22}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Experiment results}{22}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Analysis of results}{23}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}Conclusions and recommendations of the experiment}{23}{subsection.4.2.6}
-\contentsline {chapter}{\numberline {5}Discussion}{26}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{27}{chapter.6}
-\contentsline {chapter}{\numberline {7}Recommendations}{28}{chapter.7}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{31}{appendix.A}
-\contentsline {chapter}{\numberline {B}Addenda}{32}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{32}{section.B.1}
+\contentsline {section}{\numberline {2.1}Gait sequence modelling and estimation}{4}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Quadrupede gait modelling}{4}{subsection.2.1.1}
+\contentsline {subsubsection}{Periodicity}{4}{section*.2}
+\contentsline {subsection}{\numberline {2.1.2}Quadrupede gait estimation}{4}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Case study: Inertia Measurement Unit}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}Hidden Markov Models}{4}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}HMM parameters specification}{5}{subsection.2.3.1}
+\contentsline {subsubsection}{Basic assumptions of HMMs theory}{6}{section*.3}
+\contentsline {subsection}{\numberline {2.3.2}The three basics problems for HMM design}{7}{subsection.2.3.2}
+\contentsline {subsubsection}{The evaluation problem}{7}{section*.4}
+\contentsline {subsubsection}{The decoding problem}{7}{section*.5}
+\contentsline {subsubsection}{The training problem}{7}{section*.6}
+\contentsline {subsubsection}{First order Markov model - current and predecessor only considered}{9}{section*.7}
+\contentsline {section}{\numberline {2.4}k-Nearest Neighbour}{9}{section.2.4}
+\contentsline {section}{\numberline {2.5}Dimensionality reduction}{9}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Motivations for dimensionality reduction}{9}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Filter methods}{9}{subsection.2.5.2}
+\contentsline {subsubsection}{Forward feature subset selection}{9}{section*.8}
+\contentsline {subsubsection}{Similarity index}{9}{section*.9}
+\contentsline {subsection}{\numberline {2.5.3}Wrapper methods}{9}{subsection.2.5.3}
+\contentsline {subsubsection}{Principal component analysis: PCA}{9}{section*.10}
+\contentsline {subsubsection}{Linear discriminant analysis: LDA}{9}{section*.11}
+\contentsline {subsection}{\numberline {2.5.4}Hybrid filter-wrapper methods}{9}{subsection.2.5.4}
+\contentsline {section}{\numberline {2.6}Sufficiency of Training Data}{9}{section.2.6}
+\contentsline {section}{\numberline {2.7}Techniques to increase Training Data}{9}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Mirroring}{9}{subsection.2.7.1}
+\contentsline {chapter}{\numberline {3}Hidden Markov Model design}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Description of available dataset}{10}{section.3.1}
+\contentsline {subsubsection}{stationary: statistical property do not vary over time or non-stationary: properties vary over time}{11}{section*.12}
+\contentsline {subsubsection}{pure or corrupted?}{11}{section*.13}
+\contentsline {subsection}{\numberline {3.1.1}Quadrupede Gait sequence modelling}{11}{subsection.3.1.1}
+\contentsline {subsubsection}{HMM model elements: states and observations properties}{11}{section*.14}
+\contentsline {subsubsection}{Splitting the 16-states HMM in two 4-states HHMs}{12}{section*.15}
+\contentsline {subsubsection}{Transition between states}{12}{section*.16}
+\contentsline {subsection}{\numberline {3.1.2}Data pre-processing}{13}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Model parameters estimation}{13}{subsection.3.1.3}
+\contentsline {subsubsection}{Transition matrix: A}{13}{section*.17}
+\contentsline {subsubsection}{Mean and covariance matrices: \(\mu \), \(\Sigma \) and \(\beta \)}{14}{section*.18}
+\contentsline {subsubsection}{Inital state distribution: \(\pi \)}{15}{section*.19}
+\contentsline {subsection}{\numberline {3.1.4}Dimension reduction}{15}{subsection.3.1.4}
+\contentsline {subsubsection}{Optimal number of features}{15}{section*.20}
+\contentsline {subsubsection}{Optimal PCA component number}{16}{section*.21}
+\contentsline {section}{\numberline {3.2}HMM implementation}{16}{section.3.2}
+\contentsline {chapter}{\numberline {4}Results}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Experiement 1: The effect of a CHMM' observation dimensionality on its performance}{17}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Aim of the experiement}{17}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Experiment apparatus}{17}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Experiment procedure}{18}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Experiment results}{19}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Analysis of results}{22}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}Conclusions and recommendations of the experiment}{22}{subsection.4.1.6}
+\contentsline {section}{\numberline {4.2}Experiement 2: The effect of dimensionality reduction on CHMM's performance}{22}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Aim of the experiement}{22}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Experiment apparatus}{23}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Experiment procedure}{23}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}Experiment results}{23}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}Analysis of results}{24}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Conclusions and recommendations of the experiment}{24}{subsection.4.2.6}
+\contentsline {chapter}{\numberline {5}Discussion}{27}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{28}{chapter.6}
+\contentsline {chapter}{\numberline {7}Recommendations}{29}{chapter.7}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{32}{appendix.A}
+\contentsline {chapter}{\numberline {B}Addenda}{33}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{33}{section.B.1}

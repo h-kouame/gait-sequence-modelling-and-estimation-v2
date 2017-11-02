@@ -1,100 +1,91 @@
 \chapter{Literature Review}
-
-Once upon a time engineers and researchers believed... In this area of research, they used the following methods... \cite{jct2010}
-
-Write this section first as it will take you the longest. I suggest you start writing this as soon as you
-have done your initial research at the beginning of your project. You can then return to it once you
-have completed your work to edit and adjust it.
-
-A literature review forms the theoretical basis of your project. You need to read a large number of
-journal papers, sections in books, technical reports etc. relevant to your work at the start of project.
-This will give you a good idea of the field of research.
-
-When writing your review start of with the general concepts and move to the more specific aspects
-explaining the necessary theory as you go. This section is NOT a copy and paste from others work or a
-rewrite-but-change-one-word section. I suggest you read all your material, and then put it down and
-write this section, referring back to the work only when you need to check something.
-
-See your PCS textbook for more details on how to write a literature review.
-
-If you include a figure or a table in your text please see the example in Fig. \ref{fig:model} as to how to caption it.
-Please make sure that all text in your figures is readable and that you reference your figures if they are
-from another source.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.7\textwidth]{model.png}
-\caption{A block diagram illustrating the connections to the IRQ pin on the MCS08GT16A microcontroller (Please
-note that your headings should be short descriptions of what is in the diagram not simply the figure title)}
-\label{fig:model}
-\end{figure}
 \section{Gait sequence modelling and estimation}
 \subsection{Quadrupede gait modelling}
 \subsubsection{Periodicity}
 \subsection{Quadrupede gait estimation}
 \section{Case study: Inertia Measurement Unit}
 \section{Hidden Markov Models}
-Hidden Markov Models (HMMs) are doubly embedded stochastic processes with a rich underlying statistical structure. Introduced at the end of the 1960s by Baum and colleagues, they have become one of the prefered techniques in speech recognition after the implementation of Baker and Jelinek in 1970s. HMMs have been successfully applied to various other engineering problems in pattern recognition for classification and fraud detection purposes, amongst others.
+Hidden Markov Models (HMMs) are doubly embedded stochastic processes with a rich underlying statistical structure. Introduced at the end of the 1960s by Baum and colleagues, they have become one of the prefered techniques in speech recognition after the implementation of Baker and Jelinek in 1970s. HMMs have been successfully applied to various other engineering problems in pattern recognition for classification and fraud detection purposes, amongst others.\\
 %%TODO: ref: A tutorial on hidden Markov models and selected, Tool wear condition monitoring in drilling operations using, and Two-phase flow pattern identification using continuous hidden Markov model hidden Markov models (HMMs) and "Towards HMM based Human motion recogniion"
-
+The type of HMM depends on the possible connections between the states. Thus, an HMM in which a state can transition to any other state is an ergodic. Other types such as the Left-Right model or Bakis do not allow all possible transitions between the states.
 \subsection{HMM parameters specification}
-An HMM is fully specified the following parameters 
+An HMM is fully specified by the following parameters 
 \begin{enumerate}
 	\item N, the number of distinct states of the model. Together they form the set of individual states \(S = \{S_1, S_2, ..., S_N\}\).
 	\item T, the number of observations. A sample observation sequence is denoted as \(O = \{O_1, O_2, ..., O_T\}\).
 	\item \(Q = {q_t}\), the set of states with \(q_t\) denoting the current state at time instance, t such that \(q_t \epsilon S\) and \(t = 1, 2, ..., T\).
 	\item K, the number of distinct observation symbols per state. 
 	\item \(V = \{v_1, v_2, ..., v_K\}\), the feature set of K dimensions.
-	\item \(A =  \{a_{ij} \}\), the state transition probabilities. It \(a_{ij}\)  denotes probability of transitioning from state \(S_i\) to state \(S_j\).
+	\item \(A =  \{a_{ij} \}\), the state transition probabilities. \(a_{ij}\)  denotes probability of transitioning from state \(S_i\) to state \(S_j\).
 	\item \(\Phi =   \{ \phi_{j}(k\}\), the probability distribution of observation symbols in state j.
-	\item The initial state distribution, \(\pi = \pi_i\)
+	\item The initial state distribution, \(\pi = {\pi_i}\)
 \end{enumerate}
-For continuous HMM (CHMM), i.e, HMM with continuous-valued observations, \(\Phi\) consists in a probability distribution function. Many applications have continous distributions with mixtures of Gaussian distribution. %%TODO: quote
-As such, \(\phi\) is approximated by a weighted sum of M multivariate Gaussian distributions \(\eta\),
+For continuous HMM (CHMM), i.e, HMM with continuous-valued observations, \(\Phi\) consists in a probability distribution function. Many applications have succefully modelled such distributions with mixtures of Gaussian distributions. %%TODO: quote
+As such, \(\phi\) is approximated by a weighted sum of M multivariate Gaussian distributions \(\eta\). For a given, observation sequence, \(\phi\)  and \(\eta\) are therefore given by equations \ref{eq:phi} and \ref{eq:eta},
 
-\begin{align} \label{eq:mix}
-	\phi(O_t) = \sum_{m=1}^M \beta_{jm} \eta(\mu_{jm}, \Sigma_{jm}, O_t), \\
-	\eta(\mu, \Sigma, O) = \frac{1}{\sqrt{(2\pi)^K|\Sigma|}}exp(-\frac{1}{2}(O-\mu)'\Sigma^{-1}(O-\mu)
+\begin{align} 
+	\phi(O_t) = \sum_{m=1}^M \beta_{jm} \eta(\mu_{jm}, \Sigma_{jm}, O_t), \label{eq:phi} \\
+	\eta(\mu, \Sigma, O) = \frac{1}{\sqrt{(2\pi)^K|\Sigma|}}exp(-\frac{1}{2}(O-\mu)'\Sigma^{-1}(O-\mu) \label{eq:eta}
 \end{align} 
 \begin{align*}
 	1 \leq j \leq N; 1 \leq m  \leq M; \beta_{jm} \geq 0; \sum_{m=1}^{M}\beta_{jm} = 1
 \end{align*}
 where \(\beta_{jm}\) is the mixture composition coefficient; \(\mu_{jm}\), \(\Sigma_{jm}\), respectively the mean vector and covariance matrix of state j; M is the number of mixture components and K is the dimensionality of O.
 
-Thus, the compact specification of a continous valued observation HMM defined in \ref{eq:CHMM} and that of a discrete HMM in \ref{eq:DHMM}.
+As a summary, the compact specification of a continous valued observation HMM is defined by \ref{eq:CHMM} and that of a discrete HMM in \ref{eq:DHMM}.
 \begin{align} 
-	\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi) \label{eq:CHMM} \\
-	\lambda = (A, b_j(k), \pi) \label{eq:DHMM}
+	CHMM = \lambda_C = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi) \label{eq:CHMM} \\
+	DHMM = \lambda_D = (A, b_j(k), \pi) \label{eq:DHMM}
 \end{align}
 
 \subsubsection{Basic assumptions of HMMs theory}
-HMM theory is built on three basic assumptions listed below. They not only, make it a relatively simple graphic modelling tool but, also simplify its implementation. This naturally comes with some limitations in modelling more complex problems, which however, may be modelled with higher order HMMs. %%Quote
+HMM theory is built on three basic assumptions listed below.
 \begin{enumerate}
 \item \textit{The Markov assumption}: HMM assumes that the probability of being in the current	at any instance of time t, is uniquely dependent on the previous state, at time, t + 1. More specifically, \(a_{ij} = P[q_t = S_j|q_{t+1}=S_i]\). This assumption makes it unsuitable for long-range correlation capturing applications.
 \item \textit{The stationary assumption}: Furthermore, HMM state transition probabilities are assumed to be time-independent. Thus, the transition probabilities of two distinct time, \(t_1\) and \(t_2\) are identical, \(P[q_{t_1} = S_j|q_{t_1 -1} = S_i] = P[q{t_2}=S_i|q_{t_2-1} = S_i]\). HMMs can therefore effectively model mechanisms with stationary observations.
 \item \textit{The output/observation independence assumption}: The current observation also known as emission symbol is statistically independent of the previous observations. It is "emitted" only by the current state, \(P[O|q_1, q_2, ..., q_T, \lambda]=\prod_{t=1}^{T}P[O_t|q_t, \lambda]\).
 \end{enumerate} 
-The above three assumptions are similar to those of a Markov chain. This is because the stochastic process of an HMM pertaining to the hidden states can be reduced to a Markov chain. Thus, the essential difference between an HMM and a Markov process is that with the former there is not a one-to-one correspondence between the states and the symbols. %%TODO: Quote biology book
+The three assumptions make an HMM model a relatively simple graphic modelling to be implemented. This simplicity naturally comes with some limitations in modelling more complex problems, which however, may be modelled with higher order HMMs. %%Quote
+Futhermore, the three assumptions are very similar to those of a Markov chain. This is because the stochastic process of an HMM pertaining to the hidden states can be reduced to a Markov chain. In fact, an HMM is an extension of a Markov Chain. The essential difference between the two is that, with the former, there is no a one-to-one mapping between the states and the observation symbols. %%TODO: Quote biology book
 
-\subsection{Three fundamental problems for HMM design}
+\subsection{The three basics  problems for HMM design}
 In %%TODO: quote: A tutorial on Hidden Markov
-, Lawrence stipulates an HMM design needs to answer three fondamental problems. The three problems and their solutions are discussed in the next sub-sections. 
+, Lawrence argued that an HMM design needs to answer three fondamental problems. They are the \textit{training problem}, the \textit{evaluation problem}, and the \textit{decoding problem}. Each problem and its solution is discuss in greater details next. 
 
-\subsubsection{The training problem}
 \subsubsection{The evaluation problem}
+The evaluation problem is about answering this question:
+\textit{Given the observation sequence \(O = O_1O_2O_T\), and a model \(\lambda\), how do we efficiently compute \(P(O|\lambda\), the probability of the observation sequence?} %%TODO: quote tutorial on hmm, and others.
+The naive answer to this question is simply computing the \(P(O|\lambda)\) according to equation \ref{eq:P}:
+\begin{align}
+	P(O|\lambda = \sum_{q_1}^{q_T}\pi_{q_1}b_{q_1}(O_1)a_{q_1q_2}b_{q_2}(O_2)...a_{q_{T-1}q_T}(O)) \label{eq:P}
+\end{align}
+This approach has two issues, it is not only, computationally too expensive because of the exponential complexity with respect to T, but also, intractable for very long sequence. In pactice, \(P(O|\lambda)\) is computed by an algorithm called \textit{forward-backward} procedure, which is a more efficient method.
+
 \subsubsection{The decoding problem}
+ The decoding problem can be reduced to this interrogation: \textit{Given the observation sequence \(O = O_1O_2O_T\), and the model \(\lambda\), how do we choose a corresponding state sequence \(Q = q_1q_2...Q_T\) which is optimal in some meaningful sense i.e, best "explains" the observations?}
+ Simply put, this problem is about deciphering the most likely hidden states that emitted the visible observation sequences.
+ This is done dynamically using the Viterbi algorithm. %%TODO: cite viterbi and explain further if need be
+\subsubsection{The training problem}
+Given the model, \(\lambda\), the training problem raises the following question: \textit{how do we adjust the model parameters \(\lambda\) to maximise the \(P(O|\lambda)\), the probability of the probability of the observation sequence?}
+This problem is usually solved by iterative learning algorithms called expectation-maximisation. Examples of this algorithms are Baum-Welch method or any gradient based method. %%TODO: quote Tool wear condition and others
+\\When using Baum-Welch algorithm, the parameters are initialised by guesses then re-estimated iteratively to find the parameters with maximum likelihood.
+This method is vulnerable to local maxima issues. To avoid such cases, it is advice to run it multiple times with different initial values in order to keep the estimation with the highest likelihood value..
 
 \subsubsection{First order Markov model - current and predecessor only considered}
 
-\subsection{Types of HMM}
-\subsubsection{Ergodic model}
-\subsubsection{Left-Right model or Bakis model}
-\subsubsection{Evaluation of the probability of a sequence of observations}
-\subsubsection{The determination of a best sequence states}
-\subsubsection{The adjustment of model parameters to account for observed signal}
 \section{k-Nearest Neighbour}
-\section{Dimension reduction}
-\subsection{Feature selection}
+
+\section{Dimensionality reduction}
+\subsection{Motivations for dimensionality reduction}
+\subsection{Filter methods}
+\subsubsection{Forward feature subset selection}
+\subsubsection{Similarity index}
+\subsection{Wrapper methods}
+\subsubsection{Principal component analysis: PCA}
+\subsubsection{Linear discriminant analysis: LDA}
+
+\subsection{Hybrid filter-wrapper methods}
+
 \section{Sufficiency of Training Data}
 \section{Techniques to increase Training Data}
 \subsection{Mirroring}
