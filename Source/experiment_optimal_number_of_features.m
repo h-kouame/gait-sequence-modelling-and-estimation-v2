@@ -5,7 +5,7 @@ function experiment_optimal_number_of_features(body_part, test_prop)
         test_prop = 0.2;
     end
 
-    rng(8000,'twister');
+    rng('shuffle','twister');
 
     % Sort features by separability degree 
     [observ_seq, state_seq, feat_names] = get_all_data(body_part);

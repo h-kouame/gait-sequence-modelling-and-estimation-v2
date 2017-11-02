@@ -77,6 +77,9 @@ The results of the experiments are presented in figure \ref{fig:dim-acc}, \ref{f
 \section{Experiement 2: The effect of dimensionality reduction on CHMM's performance}
 
 \subsection{Aim of the experiement}
+The aim of this experiment is to investigate the effect of dimensionality reduction on the performance of a CHMM.
+The hypothesis under investigation is therefore the following:
+\textbf{\textit{Dimension reduction can cause an increase in prediction accuracy when there is not enough training data.}}
 
 \subsection{Experiment apparatus}
 \begin{itemize}
@@ -89,6 +92,13 @@ The results of the experiments are presented in figure \ref{fig:dim-acc}, \ref{f
 \end{enumerate}
 
 \subsection{Experiment results}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/best_PCA}
+	\caption{Optimal PCA component number}
+	\label{fig:opt-pca}
+\end{figure}
+
 \begin{figure}[ht!]
 	%\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/dimensionality-effect-acc}
 	%\caption{The effect of CHMM's observation dimensionality the state sequence decoding accuracy}
