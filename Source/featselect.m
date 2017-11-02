@@ -4,7 +4,7 @@ function [selected_observ_seq, out_feat_labels] = featselect(data, num_feat_out)
         data = make_data(obs, states, feats);
         num_feat_out = 0;
     elseif nargin < 2
-        num_feat_out = 0;
+        num_feat_out = 4;
     end
     
     prwaitbar off                % waitbar not needed here
@@ -15,15 +15,15 @@ function [selected_observ_seq, out_feat_labels] = featselect(data, num_feat_out)
     
 %     forward feature selection
     dataset = setname(dataset, 'original dataset');
-%     mix_num = 2;
-%     mixt_based_classifier = mogc([], mix_num);
-    knn = knnc([]);
+
     W = featself(dataset, 'NN', num_feat_out); 
-    
+  
     out_feat_labels = W.labels
+    selected_observ_seq = +W
     
-    observ_seq = data.observ; 
-    feat_labels = data.feat;
-    selected_observ_seq = get_selected_features(observ_seq, feat_labels, out_feat_labels);
+    %NOT NEEDED now that observation sequence is in the correct order
+%     observ_seq = data.observ; 
+%     feat_labels = data.feat;
+%     selected_observ_seq = get_selected_features(observ_seq, feat_labels, out_feat_labels);
 end
 

@@ -5,8 +5,6 @@ function [test_err, train_err] = CKNN(data, train_prop)
         train_prop = 0.5;
     end
     
-    delfigs;
-    
     prwaitbar off                % waitbar not needed here
     randreset(1);                % takes care of reproducility
    

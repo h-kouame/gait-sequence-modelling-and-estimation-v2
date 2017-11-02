@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  1 NOV 2017 16:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  1 NOV 2017 19:55
 entering extended mode
 **"./Project Report Template.tex"
 ("Project Report Template.tex"
@@ -515,7 +515,7 @@ LaTeX Info: Redefining \nameref on input line 67.
 
 \c@lstlisting=\count137
 
-<uctLogo.png, id=207, 418.56375pt x 425.59pt>
+<uctLogo.png, id=195, 418.56375pt x 425.59pt>
 File: uctLogo.png Graphic file (type png)
  <use uctLogo.png>
 Package pdftex.def Info: uctLogo.png used on input line 81.
@@ -558,7 +558,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3
 
 ] [4]
-Overfull \hbox (11.62735pt too wide) in paragraph at lines 59--59
+Overfull \hbox (11.62735pt too wide) in paragraph at lines 54--54
  [][] [][]\OT1/cmr/m/n/12 Experiement 2: The effect of dimensionality reduction
  on CHMM's performance[] [][]  
  []
@@ -592,7 +592,7 @@ ll-eps-converted-to.pdf Figures/BackPitch_vs_BackRoll.eps>
 (epstopdf)             \includegraphics on input line 5.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=305, 357.335pt x 302.12
+<Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=290, 357.335pt x 302.12
 875pt>
 File: Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -643,7 +643,7 @@ l.196 }
 
  (Literature.tex
 Chapter 2.
-<model.png, id=325, 650.43pt x 396.48125pt>
+<model.png, id=310, 650.43pt x 396.48125pt>
 File: model.png Graphic file (type png)
  <use model.png>
 Package pdftex.def Info: model.png used on input line 26.
@@ -717,14 +717,14 @@ ed in the literature
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Overfull \hbox (20.93217pt too wide) in paragraph at lines 132--140
+Overfull \hbox (20.93217pt too wide) in paragraph at lines 141--149
 \OML/cmm/m/it/12 K \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 number of features;  M \O
 T1/cmr/m/n/12 = \OML/cmm/m/it/12 mixture number;  and N \OT1/cmr/m/n/12 = \OML/
 cmm/m/it/12 number of states$\OT1/cmr/m/n/12 .
  []
 
 [13]
-Overfull \hbox (66.38495pt too wide) in paragraph at lines 163--163
+Overfull \hbox (66.38495pt too wide) in paragraph at lines 172--172
 []\OT1/cmr/bx/n/14.4 Continuous observations/features to Discrete observations/
 features 
  []
@@ -761,7 +761,7 @@ ct-acc-eps-converted-to.pdf Figures/dimensionality-effect-acc.eps>
 (epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/dimensionality-effect-acc-eps-converted-to.pdf, id=462, 361.35pt x 291
+<Figures/dimensionality-effect-acc-eps-converted-to.pdf, id=450, 361.35pt x 291
 .0875pt>
 File: Figures/dimensionality-effect-acc-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -789,7 +789,7 @@ ct-log-eps-converted-to.pdf Figures/dimensionality-effect-log.eps>
 (epstopdf)             \includegraphics on input line 44.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/dimensionality-effect-log-eps-converted-to.pdf, id=475, 365.365pt x 30
+<Figures/dimensionality-effect-log-eps-converted-to.pdf, id=463, 365.365pt x 30
 1.125pt>
 File: Figures/dimensionality-effect-log-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -811,7 +811,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf, id=476, 376
+<Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf, id=464, 376
 .40625pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -834,7 +834,7 @@ with-5-features-eps-converted-to.pdf Figures/estimation-scatter-with-5-features
 (epstopdf)             \includegraphics on input line 56.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-5-features-eps-converted-to.pdf, id=477, 376.4
+<Figures/estimation-scatter-with-5-features-eps-converted-to.pdf, id=465, 376.4
 0625pt x 288.07625pt>
 File: Figures/estimation-scatter-with-5-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -857,7 +857,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 62.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf, id=478, 38
+<Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf, id=466, 38
 2.42876pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -880,7 +880,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 68.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-18-features-eps-converted-to.pdf, id=479, 382.
+<Figures/estimation-scatter-with-18-features-eps-converted-to.pdf, id=467, 382.
 42876pt x 288.07625pt>
 File: Figures/estimation-scatter-with-18-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -968,20 +968,26 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
 (Recommendations.aux) (References.aux) (appendixa.aux) (appendixb.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 197.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
-Package rerunfilecheck Info: File `"Project Report Template".out' has not chang
-ed.
-(rerunfilecheck)             Checksum: 96453DC51C7ABD93E328B176FD98E429;3829.
 
+
+Package rerunfilecheck Warning: File `"Project Report Template".out' has change
+d.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `"Project Report Template".out':
+(rerunfilecheck)             Before: 75E85F827CB8820622A95759E2A6DAF1;3568
+(rerunfilecheck)             After:  96453DC51C7ABD93E328B176FD98E429;3829.
 
 LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 197.
  ) 
 Here is how much of TeX's memory you used:
- 9859 strings out of 493333
- 142064 string characters out of 3139192
- 301679 words of memory out of 3000000
- 12976 multiletter control sequences out of 15000+200000
+ 9855 strings out of 493333
+ 142001 string characters out of 3139192
+ 301238 words of memory out of 3000000
+ 12972 multiletter control sequences out of 15000+200000
  11115 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,77p,555b,2430s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -998,9 +1004,9 @@ Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "Project Report Template.pdf" (36 pages, 1640223 bytes).
+Output written on "Project Report Template.pdf" (36 pages, 1638724 bytes).
 PDF statistics:
- 636 PDF objects out of 1000 (max. 8388607)
+ 624 PDF objects out of 1000 (max. 8388607)
  166 named destinations out of 1000 (max. 500000)
- 454 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 430 words of extra memory for PDF output out of 10000 (max. 10000000)
 

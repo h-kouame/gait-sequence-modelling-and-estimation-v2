@@ -129,6 +129,15 @@ but differ in the input arguments considered.
 
 
 \subsubsection{Mean and covariance matrices: \(\mu\), \(\Sigma\) and \(\beta\)}
+%%TODO: justify use of Gaussian with this:
+\iffalse 
+Gaussian
+mixture models (GMMs) are powerful in modeling any
+desired continuous distribution and are used for example in
+speech processing successfully. Therefore, in this paper HMM
+with GMMs as output density functions is trained and used
+for human motion classification
+\fi
 The observations were modelled using mixture Gaussian distributions, characterised by a KxMxN mean matrix: \(\mu\) and a KxKxMxN co-variance matrix: \(\Sigma\).
 where: \\ \(K = number \quad of \quad features, \quad M = mixture \quad number, \quad and \quad N = number \quad of \quad states\).
 The observations were grouped K classes following based on the ground-truth represented by the state sequence.

@@ -23,7 +23,6 @@ function experiment_optimal_number_of_features(body_part, test_prop)
        [varianceMCE(i), biasMCE(i)] = CKNN(make_data(observ_seq(:, fs), state_seq, feat_names(fs,:)), 1 - test_prop);
     end
     
-    
      plot(nfs, 100*varianceMCE, nfs, 100*biasMCE);
      xlabel('Number of Features');
      ylabel('Percentage MCE (%)'); 
