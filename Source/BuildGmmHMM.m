@@ -23,7 +23,7 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
     %optimal mixture number
     data.observ = observ_seq;
     data.state = state_seq;
-    mix_num = optimal_mixture_component(data); %optimal_mixture_component(O3, feat_num);
+    mix_num = 2;%optimal_mixture_component(data); %optimal_mixture_component(O3, feat_num);
 %     GMM optimisation parameters
     iter_num = 10;
     options = statset('Display','off', 'MaxIter',1000, 'TolFun',1e-10);

@@ -7,6 +7,7 @@ function model = SDM_BuildGmmHMM(data)
 %     selected_data = SDM_featsel(data, test_prop);  %use deterministic %     result below
 
     feat_out = {'magFront_cal'; 'magBack_cal'; 'magFront_cal3'; 'BackYaw'};
+%     feat_out = {'magFront_cal'; 'magBack_cal'; 'magFront_cal3'};
     sel_observ = get_selected_features(data.observ, data.feat, feat_out);
     [pi, A, phi] = BuildGmmHMM(sel_observ, data.state);
     model.pi = pi; model.A = A; model.phi = phi;

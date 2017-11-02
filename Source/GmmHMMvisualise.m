@@ -1,6 +1,6 @@
 function GmmHMMvisualise(model)
     if nargin < 1
-        [~, ~, A] = BuildGmmHMM(); 
+        [~, model.A, ~] = BuildGmmHMM(); 
     end
     
 %     get CHMM transition matrix 

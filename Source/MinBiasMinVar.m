@@ -27,21 +27,24 @@ function MinBiasMinVar(data, run_num, train_prop)
     bias_err = mean(errors, 2);
     var_err = var(errors, 1, 2); % Use normalization N not default N - 1
     
-    bias_var_err = bias_err + var_err;
+%     bias_var_err = bias_err + var_err;
 
     test_errs = 1 - test_acc./100;
     test_err = mean(test_errs, 2);
     
+
     figure;
-    plot(bias_err.', 'x', ...
-         var_err.', 'o', ...
-         bias_var_err.', 's',...
-         test_err.', 'd');
-    legend({'Bias error', 'Variance error', 'Bias + Var Error ', 'Test error'}, 'Location','NE');
-    xlabel('CHMM model');
+    plot(1:num_models, bias_err.', ...
+         1:num_models, var_err.', ...
+         1:num_models, test_err.',...
+         'LineWidth',2, 'MarkerSize',10);
+    legend({'Bias error', 'Variance Error ', 'Test error'}, 'Location','NE');
+%     xlabel('CHMM model');
     mod_labels = {'No reduction', 'PCA', 'LDA', 'SI Ranking', 'SI-forward'};
     set(gca, 'xticklabel', mod_labels)
     ylabel('Prediction Error');
     figtitle = 'Bias - variance tradeoff';
     title(figtitle);
+    figpath = strcat('C:\School\EEE4022S\Gait Sequence Estimation\Figures\', figtitle);
+    print(figpath, '-depsc');
 end
