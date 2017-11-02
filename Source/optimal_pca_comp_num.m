@@ -16,7 +16,7 @@ function [best_comp_num, accs] = optimal_pca_comp_num(data, max_comp_num, propor
     [~, best_comp_num] = max(accs);
     
     figure;
-    plot(1:max_comp_num, accs);
+    plot(1:max_comp_num, accs, 'LineWidth',2, 'MarkerSize',10);
     figtitle = 'Optimal PCA component number';
     title(figtitle);
     ylabel('Prediction accuracy (%)');

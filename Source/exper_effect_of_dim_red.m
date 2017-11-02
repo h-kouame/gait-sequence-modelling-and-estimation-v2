@@ -44,23 +44,28 @@ function [accuracies, logliks] = exper_effect_of_dim_red(traindata, testdata)
     [accuracies(5), estimated_paths(:, 5), logliks(:, 5)] = SDM_filter_GmmHMMpredict(for_filter_model, testdata);
 
 %   Plot the accuracy of the different runs
-    figure;
-    bar(accuracies);
-    figtitle = 'Effect of dimensionality reduction on prediction accuracy';
-    title(figtitle);
-    mod_labels = {'No reduction', 'LCA', 'LDA', 'SI Ranking', 'SI-forward'};
-    set(gca, 'xticklabel', mod_labels)
-    ylabel('Prediction accuracy (%)');
-    
-    figure;
-    bar(logliks);
-    figtitle = 'Effect of dimensionality reduction on log-likelihood';
-    title(figtitle);
-    mod_labels = {'No reduction', 'PCA', 'LDA', 'SI Ranking', 'SI-forward'};
-    set(gca, 'xticklabel', mod_labels)
-    ylabel('Prediction accuracy (%)');
-    figpath = strcat('C:\School\EEE4022S\Gait Sequence Estimation\Figures\', figtitle);
-    print(figpath, '-depsc');
+%     figure;
+%     bar(accuracies);
+%     figtitle = 'Effect of dimensionality reduction on prediction accuracy';
+%     title(figtitle);
+%     mod_labels = {'No reduction', 'PCA', 'LDA', 'SI Ranking', 'SI-forward'};
+%     set(gca, 'xticklabel', mod_labels);
+%     ylabel('Prediction accuracy (%)');
+%     sample_size = size(traindata.observ, 1);
+%     figtitle = strcat('Effect of dimensionality reduction on accuracy with ', sample_size);
+%     figpath = strcat('C:\School\EEE4022S\Gait Sequence Estimation\Figures\', figtitle);
+%     print(figpath, '-depsc');
+%     
+%     figure;
+%     bar(logliks);
+%     figtitle = 'Effect of dimensionality reduction on log-likelihood with ';
+%     title(figtitle);
+%     mod_labels = {'No reduction', 'PCA', 'LDA', 'SI Ranking', 'SI-forward'};
+%     set(gca, 'xticklabel', mod_labels)
+%     ylabel('Prediction accuracy (%)');
+%     figtitle = strcat('Effect of dimensionality reduction on log-likelihood with ', sample_size);
+%     figpath = strcat('C:\School\EEE4022S\Gait Sequence Estimation\Figures\', figtitle);
+%     print(figpath, '-depsc');
 end
 
 % function red_scatter()

@@ -46,6 +46,7 @@
 \contentsline {subsubsection}{Inital state distribution: \(\pi \)}{14}{section*.20}
 \contentsline {subsection}{\numberline {3.1.4}Dimension reduction}{14}{subsection.3.1.4}
 \contentsline {subsubsection}{Optimal number of features}{14}{section*.21}
+\contentsline {subsubsection}{Optimal PCA component number}{15}{section*.22}
 \contentsline {section}{\numberline {3.2}HMM implementation}{15}{section.3.2}
 \contentsline {chapter}{\numberline {4}Results}{16}{chapter.4}
 \contentsline {section}{\numberline {4.1}Experiement 1: The effect of a CHMM' observation dimensionality on its performance}{16}{section.4.1}
@@ -60,11 +61,11 @@
 \contentsline {subsection}{\numberline {4.2.2}Experiment apparatus}{22}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Experiment procedure}{22}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}Experiment results}{22}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Analysis of results}{22}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}Conclusions and recommendations of the experiment}{22}{subsection.4.2.6}
-\contentsline {chapter}{\numberline {5}Discussion}{23}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions}{24}{chapter.6}
-\contentsline {chapter}{\numberline {7}Recommendations}{25}{chapter.7}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{28}{appendix.A}
-\contentsline {chapter}{\numberline {B}Addenda}{29}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{29}{section.B.1}
+\contentsline {subsection}{\numberline {4.2.5}Analysis of results}{23}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}Conclusions and recommendations of the experiment}{23}{subsection.4.2.6}
+\contentsline {chapter}{\numberline {5}Discussion}{25}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions}{26}{chapter.6}
+\contentsline {chapter}{\numberline {7}Recommendations}{27}{chapter.7}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{30}{appendix.A}
+\contentsline {chapter}{\numberline {B}Addenda}{31}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{31}{section.B.1}

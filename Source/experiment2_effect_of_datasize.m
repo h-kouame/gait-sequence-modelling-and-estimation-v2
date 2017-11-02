@@ -24,11 +24,11 @@ incr = 0.1*N;
 x_axis = 0.1*N:incr:0.9*N;
 % Plot effect of datasize
 figure;
-plot(x_axis, flipud(accuracies(:,1))); hold on;
-plot(x_axis, flipud(accuracies(:,2))); hold on;
-plot(x_axis, flipud(accuracies(:,3))); hold on;
-plot(x_axis, flipud(accuracies(:,4))); hold on;
-plot(x_axis, flipud(accuracies(:,5)));
+plot(x_axis, flipud(accuracies(:,1)), 'LineWidth',2, 'MarkerSize',10); hold on;
+plot(x_axis, flipud(accuracies(:,2)), 'LineWidth',2, 'MarkerSize',10); hold on;
+plot(x_axis, flipud(accuracies(:,3)), 'LineWidth',2, 'MarkerSize',10); hold on;
+plot(x_axis, flipud(accuracies(:,4)), 'LineWidth',2, 'MarkerSize',10); hold on;
+plot(x_axis, flipud(accuracies(:,5)), 'LineWidth',2, 'MarkerSize',10);
 figtitle = 'Effect on data size on accuracy';
 title(figtitle);
 xlabel('Training data size');
@@ -40,11 +40,11 @@ print(figpath, '-depsc');
 
 % Plot effect of datasize
 figure;
-plot(x_axis, flipud(logliks(:,1))); hold on;
-plot(x_axis, flipud(logliks(:,2))); hold on;
-plot(x_axis, flipud(logliks(:,3))); hold on;
-plot(x_axis, flipud(logliks(:,4))); hold on;
-plot(x_axis, flipud(logliks(:,5)));
+plot(x_axis, flipud(logliks(:,1)), 'LineWidth',2, 'MarkerSize',10); hold on;
+plot(x_axis, flipud(logliks(:,2)), 'LineWidth',2, 'MarkerSize',10); hold on;
+plot(x_axis, flipud(logliks(:,3)), 'LineWidth',2, 'MarkerSize',10); hold on;
+plot(x_axis, flipud(logliks(:,4)), 'LineWidth',2, 'MarkerSize',10); hold on;
+plot(x_axis, flipud(logliks(:,5)), 'LineWidth',2, 'MarkerSize',10);
 figtitle = 'Effect on data size on log-likelihood';
 title(figtitle);
 xlabel('Training data proportion');
