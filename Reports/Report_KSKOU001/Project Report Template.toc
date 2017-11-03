@@ -18,17 +18,18 @@
 \contentsline {subsubsection}{The evaluation problem}{7}{section*.4}
 \contentsline {subsubsection}{The decoding problem}{7}{section*.5}
 \contentsline {subsubsection}{The training problem}{7}{section*.6}
-\contentsline {subsubsection}{First order Markov model - current and predecessor only considered}{9}{section*.7}
-\contentsline {section}{\numberline {2.4}k-Nearest Neighbour}{9}{section.2.4}
-\contentsline {section}{\numberline {2.5}Dimensionality reduction}{9}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Motivations for dimensionality reduction}{9}{subsection.2.5.1}
+\contentsline {subsubsection}{Overfitting, order of markov, robustness: bias-var}{8}{section*.7}
+\contentsline {section}{\numberline {2.4}k-Nearest Neighbour}{8}{section.2.4}
+\contentsline {section}{\numberline {2.5}Dimensionality reduction}{8}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Motivations for dimensionality reduction}{8}{subsection.2.5.1}
 \contentsline {subsection}{\numberline {2.5.2}Filter methods}{9}{subsection.2.5.2}
 \contentsline {subsubsection}{Forward feature subset selection}{9}{section*.8}
 \contentsline {subsubsection}{Similarity index}{9}{section*.9}
 \contentsline {subsection}{\numberline {2.5.3}Wrapper methods}{9}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Feature extraction}{9}{subsection.2.5.4}
 \contentsline {subsubsection}{Principal component analysis: PCA}{9}{section*.10}
 \contentsline {subsubsection}{Linear discriminant analysis: LDA}{9}{section*.11}
-\contentsline {subsection}{\numberline {2.5.4}Hybrid filter-wrapper methods}{9}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Hybrid filter-wrapper methods}{9}{subsection.2.5.5}
 \contentsline {section}{\numberline {2.6}Sufficiency of Training Data}{9}{section.2.6}
 \contentsline {section}{\numberline {2.7}Techniques to increase Training Data}{9}{section.2.7}
 \contentsline {subsection}{\numberline {2.7.1}Mirroring}{9}{subsection.2.7.1}
@@ -49,6 +50,7 @@
 \contentsline {subsubsection}{Optimal number of features}{15}{section*.20}
 \contentsline {subsubsection}{Optimal PCA component number}{16}{section*.21}
 \contentsline {section}{\numberline {3.2}HMM implementation}{16}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Proving learning ability by increasing loglik for many iteration: check one of papers}{16}{subsection.3.2.1}
 \contentsline {chapter}{\numberline {4}Results}{17}{chapter.4}
 \contentsline {section}{\numberline {4.1}Experiement 1: The effect of a CHMM' observation dimensionality on its performance}{17}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Aim of the experiement}{17}{subsection.4.1.1}

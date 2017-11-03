@@ -1,6 +1,6 @@
-function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
+function model = BuildGmmHMM(observ_seq, state_seq)
     if nargin < 1
-        [observ_seq, state_seq] = get_all_data('front');   
+        [observ_seq, state_seq] = get_all_data('front');  
     end
     
     %delfigs;
@@ -11,13 +11,13 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
     O3 = O{3};
     O4 = O{4};
     
-    pi = [size(O1, 1) size(O2, 1) size(O3, 1) size(O4, 1)]/size(observ_seq, 1); 
+    model.pi = [size(O1, 1) size(O2, 1) size(O3, 1) size(O4, 1)]/size(observ_seq, 1); 
     
     state_num = 4;
     
 %     state transition probabilities estimation
     PSEUDOTR = ones(state_num, state_num)*1 + pi;
-    A = hmmestimate(state_seq, state_seq, 'PSEUDOTRANSITIONS',PSEUDOTR);
+    model.A = hmmestimate(state_seq, state_seq, 'PSEUDOTRANSITIONS',PSEUDOTR);
     
     feat_num = size(observ_seq, 2); %feature size
     %optimal mixture number
@@ -77,4 +77,5 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
     B.mu = means;
     B.Sigma = covariance;
     B.B = mix_prob;
+    model.phi = B;
 end

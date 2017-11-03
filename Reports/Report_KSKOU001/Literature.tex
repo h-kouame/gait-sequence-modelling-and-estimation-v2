@@ -50,7 +50,7 @@ Futhermore, the three assumptions are very similar to those of a Markov chain. T
 
 \subsection{The three basics  problems for HMM design}
 In %%TODO: quote: A tutorial on Hidden Markov
-, Lawrence argued that an HMM design needs to answer three fondamental problems. They are the \textit{training problem}, the \textit{evaluation problem}, and the \textit{decoding problem}. Each problem and its solution is discuss in greater details next. 
+, Lawrence argued that an HMM design needs to answer three fondamental problems. They are the \textit{training problem}, the \textit{evaluation problem}, and the \textit{decoding problem}. Each problem and its solution is discussed in greater details next. 
 
 \subsubsection{The evaluation problem}
 The evaluation problem is about answering this question:
@@ -69,18 +69,33 @@ This approach has two issues, it is not only, computationally too expensive beca
 Given the model, \(\lambda\), the training problem raises the following question: \textit{how do we adjust the model parameters \(\lambda\) to maximise the \(P(O|\lambda)\), the probability of the probability of the observation sequence?}
 This problem is usually solved by iterative learning algorithms called expectation-maximisation. Examples of this algorithms are Baum-Welch method or any gradient based method. %%TODO: quote Tool wear condition and others
 \\When using Baum-Welch algorithm, the parameters are initialised by guesses then re-estimated iteratively to find the parameters with maximum likelihood.
-This method is vulnerable to local maxima issues. To avoid such cases, it is advice to run it multiple times with different initial values in order to keep the estimation with the highest likelihood value..
+This method is vulnerable to local maxima issues. To avoid such cases, it is advice to run it multiple times with different initial values in order to keep the estimation with the highest likelihood value.
 
-\subsubsection{First order Markov model - current and predecessor only considered}
+\subsubsection{Overfitting, order of markov, robustness: bias-var}
 
 \section{k-Nearest Neighbour}
 
 \section{Dimensionality reduction}
+Dimensionality or dimension reduction is used pattern recognition, machine learning and statistics to find the most compact representation of the dataset by removing redundant and irrelevant information.
+It is achieve by extracting principal features, i.e, feature extracting or by selecting the most relevant subset of the initial feature vector, i.e, feature selection.
+
 \subsection{Motivations for dimensionality reduction}
+When building a model, the need for dimensionality is supported by several reasons. Some of the important ones are presented in three points.
+Firstly, by reducing the feature space's dimension, we can build model with higher quality. %%TODO: quote "A new hybrid filter wrapper for clustering based on ranking"
+In most classification problems, the feature domains contain variables with very little to no information for the purpose at hand.
+Thus, removing these features reduces the complexity of the problem which can in return, increases the model's accuracy.
+
+Secondly, working with hundreds to thousands of features can be diffult to conceptualise and visualise. By using dimensionality reduction, we can better understand the model and present it to others by comprehensive visualisation.%%TODO: quote "A new hybrid filter wrapper for clustering based on ranking"
+
+The third reason is about efficiency in terms of computational time and storage. In general, pattern recognition and machine learning algorithms computionally intense. Besides, storage capacity is limited in some engineering applications such as embedded systems. So, solving the problem only with the relevant features can alleviate these two problems. Consequently, the computional speed of the model can increased by using dimensionality reduction.
+%%TODO: quote "Hybrid feature selection by combining filters and wrappers"
+In the next section, some of the approaches to dimensionality reduction will be discussed.
+
 \subsection{Filter methods}
 \subsubsection{Forward feature subset selection}
 \subsubsection{Similarity index}
 \subsection{Wrapper methods}
+\subsection{Feature extraction}
 \subsubsection{Principal component analysis: PCA}
 \subsubsection{Linear discriminant analysis: LDA}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  2 NOV 2017 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  3 NOV 2017 14:33
 entering extended mode
 **"./Project Report Template.tex"
 ("Project Report Template.tex"
@@ -511,7 +511,7 @@ LaTeX Info: Redefining \nameref on input line 67.
 
 \c@lstlisting=\count137
 
-<uctLogo.png, id=215, 418.56375pt x 425.59pt>
+<uctLogo.png, id=219, 418.56375pt x 425.59pt>
 File: uctLogo.png Graphic file (type png)
  <use uctLogo.png>
 Package pdftex.def Info: uctLogo.png used on input line 81.
@@ -554,7 +554,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3
 
 ] [4]
-Overfull \hbox (11.62735pt too wide) in paragraph at lines 66--66
+Overfull \hbox (11.62735pt too wide) in paragraph at lines 62--62
  [][] [][]\OT1/cmr/m/n/12 Experiement 2: The effect of dimensionality reduction
  on CHMM's performance[] [][]  
  []
@@ -588,7 +588,7 @@ ll-eps-converted-to.pdf Figures/BackPitch_vs_BackRoll.eps>
 (epstopdf)             \includegraphics on input line 5.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=319, 357.335pt x 302.12
+<Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=325, 357.335pt x 302.12
 875pt>
 File: Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -649,7 +649,7 @@ Overfull \hbox (1.48175pt too wide) in paragraph at lines 23--25
 rvations, $$ consists
  []
 
-[5] [6] [7]) [8] [9]
+[5] [6] [7] [8]) [9]
 \openout2 = `Methodology.aux'.
 
  (Methodology.tex
@@ -661,7 +661,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-] [11] [12] <model.png, id=429, 650.43pt x 396.48125pt>
+] [11] [12] <model.png, id=435, 650.43pt x 396.48125pt>
 File: model.png Graphic file (type png)
  <use model.png>
 Package pdftex.def Info: model.png used on input line 101.
@@ -702,7 +702,7 @@ Package epstopdf Info: Source file: <Figures/MCE.eps>
 o.pdf Figures/MCE.eps>
 (epstopdf)             \includegraphics on input line 174.
 Package epstopdf Info: Output file is already uptodate.
- <Figures/MCE-eps-converted-to.pdf, id=454, 361.35pt x 302.12875pt>
+ <Figures/MCE-eps-converted-to.pdf, id=460, 361.35pt x 302.12875pt>
 File: Figures/MCE-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/MCE-eps-converted-to.pdf>
@@ -720,15 +720,20 @@ ted-to.pdf Figures/best_PCA.eps>
 (epstopdf)             \includegraphics on input line 181.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/best_PCA-eps-converted-to.pdf, id=455, 361.35pt x 288.07625pt>
+<Figures/best_PCA-eps-converted-to.pdf, id=461, 361.35pt x 288.07625pt>
 File: Figures/best_PCA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/best_PCA-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/best_PCA-eps-converted-to.pdf used on input li
 ne 181.
 (pdftex.def)             Requested size: 361.34912pt x 288.07553pt.
- [15 <./Figures/MCE-eps-converted-to.pdf>]) [16 <./Figures/best_PCA-eps-convert
-ed-to.pdf>]
+ [15 <./Figures/MCE-eps-converted-to.pdf>]
+Overfull \hbox (31.72142pt too wide) in paragraph at lines 187--187
+[]\OT1/cmr/bx/n/14.4 Proving learning ability by increasing loglik for many ite
+ration:
+ []
+
+) [16 <./Figures/best_PCA-eps-converted-to.pdf>]
 \openout2 = `Results.aux'.
 
  (Results.tex
@@ -760,7 +765,7 @@ ct-acc-eps-converted-to.pdf Figures/dimensionality-effect-acc.eps>
 (epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/dimensionality-effect-acc-eps-converted-to.pdf, id=498, 361.35pt x 291
+<Figures/dimensionality-effect-acc-eps-converted-to.pdf, id=504, 361.35pt x 291
 .0875pt>
 File: Figures/dimensionality-effect-acc-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -788,7 +793,7 @@ ct-log-eps-converted-to.pdf Figures/dimensionality-effect-log.eps>
 (epstopdf)             \includegraphics on input line 44.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/dimensionality-effect-log-eps-converted-to.pdf, id=511, 365.365pt x 30
+<Figures/dimensionality-effect-log-eps-converted-to.pdf, id=517, 365.365pt x 30
 1.125pt>
 File: Figures/dimensionality-effect-log-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -810,7 +815,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 51.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf, id=512, 376
+<Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf, id=518, 376
 .40625pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -833,7 +838,7 @@ with-5-features-eps-converted-to.pdf Figures/estimation-scatter-with-5-features
 (epstopdf)             \includegraphics on input line 56.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-5-features-eps-converted-to.pdf, id=513, 376.4
+<Figures/estimation-scatter-with-5-features-eps-converted-to.pdf, id=519, 376.4
 0625pt x 288.07625pt>
 File: Figures/estimation-scatter-with-5-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -856,7 +861,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 62.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf, id=514, 38
+<Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf, id=520, 38
 2.42876pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -879,7 +884,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 68.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-18-features-eps-converted-to.pdf, id=515, 382.
+<Figures/estimation-scatter-with-18-features-eps-converted-to.pdf, id=521, 382.
 42876pt x 288.07625pt>
 File: Figures/estimation-scatter-with-18-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -926,7 +931,7 @@ Package epstopdf Info: Source file: <Figures/size-acc-2.eps>
 erted-to.pdf Figures/size-acc-2.eps>
 (epstopdf)             \includegraphics on input line 108.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/size-acc-2-eps-converted-to.pdf, id=561, 421.575pt x 316.18124pt>
+<Figures/size-acc-2-eps-converted-to.pdf, id=567, 421.575pt x 316.18124pt>
 File: Figures/size-acc-2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/size-acc-2-eps-converted-to.pdf>
@@ -944,7 +949,7 @@ erted-to.pdf Figures/size-log-2.eps>
 (epstopdf)             \includegraphics on input line 114.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/size-log-2-eps-converted-to.pdf, id=562, 421.575pt x 316.18124pt>
+<Figures/size-log-2-eps-converted-to.pdf, id=568, 421.575pt x 316.18124pt>
 File: Figures/size-log-2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/size-log-2-eps-converted-to.pdf>
@@ -962,7 +967,7 @@ ted-to.pdf Figures/bias-var.eps>
 (epstopdf)             \includegraphics on input line 121.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/bias-var-eps-converted-to.pdf, id=563, 1028.84375pt x 335.2525pt>
+<Figures/bias-var-eps-converted-to.pdf, id=569, 1028.84375pt x 335.2525pt>
 File: Figures/bias-var-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/bias-var-eps-converted-to.pdf>
@@ -1038,46 +1043,36 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
 (Recommendations.aux) (References.aux) (appendixa.aux) (appendixb.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 197.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
-
-
-Package rerunfilecheck Warning: File `"Project Report Template".out' has change
-d.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Project Report Template".out':
-(rerunfilecheck)             Before: C9F8D76103CBF81DE3E331CC5E91B21A;3958
-(rerunfilecheck)             After:  71251A9F90C9AD6D86D321ECCE590C51;3891.
+Package rerunfilecheck Info: File `"Project Report Template".out' has not chang
+ed.
+(rerunfilecheck)             Checksum: 67A829FFEC9389CF6270801C2434ACFF;4104.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 197.
  ) 
 Here is how much of TeX's memory you used:
- 9905 strings out of 493333
- 143193 string characters out of 3139192
- 302131 words of memory out of 3000000
- 13005 multiletter control sequences out of 15000+200000
+ 9907 strings out of 493333
+ 143227 string characters out of 3139192
+ 302196 words of memory out of 3000000
+ 13006 multiletter control sequences out of 15000+200000
  11115 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,12n,77p,555b,2432s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{subsection.2.3.3} has been referenced but does no
-t exist, replaced by a fixed one
-
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmti12.pfb>
-Output written on "Project Report Template.pdf" (42 pages, 1676383 bytes).
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
+7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmti12.pfb>
+Output written on "Project Report Template.pdf" (42 pages, 1678890 bytes).
 PDF statistics:
- 713 PDF objects out of 1000 (max. 8388607)
- 178 named destinations out of 1000 (max. 500000)
- 495 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 719 PDF objects out of 1000 (max. 8388607)
+ 179 named destinations out of 1000 (max. 500000)
+ 503 words of extra memory for PDF output out of 10000 (max. 10000000)
 
