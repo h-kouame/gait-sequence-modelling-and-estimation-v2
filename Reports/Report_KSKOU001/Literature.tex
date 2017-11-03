@@ -76,8 +76,8 @@ This method is vulnerable to local maxima issues. To avoid such cases, it is adv
 \section{k-Nearest Neighbour}
 
 \section{Dimensionality reduction}
-Dimensionality or dimension reduction is used pattern recognition, machine learning and statistics to find the most compact representation of the dataset by removing redundant and irrelevant information.
-It is achieve by extracting principal features, i.e, feature extracting or by selecting the most relevant subset of the initial feature vector, i.e, feature selection.
+Dimensionality or dimension reduction is used pattern recognition, machine learning and statistics to find the most compact representation of the dataset by removing redundant and irrelevant information. %%TODO: quote feature selection with efficient distance
+It is achieve by extracting principal features, i.e, feature extracting or by selecting the most relevant subset of the initial feature vector, i.e, feature selection, using a supervised or an unsupervised approach.
 
 \subsection{Motivations for dimensionality reduction}
 When building a model, the need for dimensionality is supported by several reasons. Some of the important ones are presented in three points.
@@ -89,12 +89,79 @@ Secondly, working with hundreds to thousands of features can be diffult to conce
 
 The third reason is about efficiency in terms of computational time and storage. In general, pattern recognition and machine learning algorithms computionally intense. Besides, storage capacity is limited in some engineering applications such as embedded systems. So, solving the problem only with the relevant features can alleviate these two problems. Consequently, the computional speed of the model can increased by using dimensionality reduction.
 %%TODO: quote "Hybrid feature selection by combining filters and wrappers"
-In the next section, some of the approaches to dimensionality reduction will be discussed.
 
-\subsection{Filter methods}
-\subsubsection{Forward feature subset selection}
-\subsubsection{Similarity index}
-\subsection{Wrapper methods}
+Various dimensionality reduction have been developed in literature, %%TODO: quote a bunch of papers on dimensionality reduction 
+the next section will present a handful of the ones used in the present work. 
+
+
+\subsection{Feature selection: filters and wrappers}
+Filters and wrappers are two major categories of feature selection methods. %%TODO:  quote all 3 papers and SIM
+The structure of both methods are illustrated by figure \ref{fig:filt} and figure \ref{fig:wrap} , respectively. %%TODO: quote figure from Hybrid feature selection
+\begin{figure}[ht!]
+	\centering
+	\includegraphics{Figures/filter}
+	\caption{The procedure of filters in dimensionality reduction}
+	\label{fig:filt}
+\end{figure}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics{Figures/wrapper}
+	\caption{The procedure of wrappers in dimensionality reduction}
+	\label{fig:wrap}
+\end{figure}
+They both require a mechanism for generating a subset of the original feature set and a stoppin criterion, which can be a distance measure, a measure of similarity between the features. However, wrappers identify the best feature subset using a learning algorithm usually by fully searching the feature space, whereas, filters use a simple measurement metric based on mutual information, correlation and other distance criteria. %%QUOTE: Hybrid feature selection paper and SIM
+As a result of the two different approaches, filters are fast and do not guarantee optimal classification accuracy. On the other hand, wrappers give accurate prediction results but are very slow.
+Both approaches are often combined to build effective and efficient feature selection methods. One such approach is shown in figure \ref{fig:filt-wrap}. %%TODO: quote figure from hybrid not the new hybrid
+\begin{figure}[ht!]
+	\centering
+	\includegraphics{Figures/filter-wrapper}
+	\caption{The procedure of hybrid filter-wrapper in dimensionality reductiony}
+	\label{fig:filt-wrap}
+\end{figure}
+In this approach, the filters are used as a preliminary stage to discard irrelevant features. A feature is deemed irrevant if it cannot discrinate between the different classes or if it contains redundant information. %%TODO: quote hybrid feature selection by combining filters and wrappers
+The output of the filter stage is a smaller set of relevant features which is fed into the wrapper to find the optimal final subset of features. Thus, the filter stage effectively reduces the search time of the wrapper. 
+In classification problems, using the seperability index matrix to determine the classification content or degree of the feature generally results in very good results. %%TODO: ref SIM 
+The next section gives a particular attention to this approach.
+
+\subsubsection{Feature ranking using separability index matrix}
+In this section, we dives into a systematic approach to determine the 'classifiability of a feature' as present in %%TODO: ref SIM 
+In their paper, Jeong-Su, Sang Wan Lee and Zeungnam Bien, proposed a new criterion called separability index matrix to identify features that can discriminate between the different classes of a classification problem.
+The important concepts of this method are here defined together with their significance.
+
+\begin{enumerate}
+	\item \textbf{Separability Degree Matrix (SDM)}\\\\
+	\(SDM_k\) is a CxC symmetric matrix of the separability measures between the different classes of classification problem of C distinct classes given a particular feature \(x_k\).
+	It is defined in \ref{eq:sdm}
+\subitem \[SDM_k = [J(w_i, w_j; {x_k})] \label{eq:sdm}\]  a 	
+\subitem where \(J(w_i, w_j; {x_k})\) denotes the separability or the distance value between class \(w_i\)  and class \(w_j\) when the criterion function \(J(\textbf{.})\) such as mahalanobis or eucludian, is applied to the feature \(x_k\). %%TODO: ref mahalanobis or eucludian and SIM
+	\(SDM_k\) is symmetric matrix with zero diagonal values, because for a given feature \(x_k\), \(J(w_i, w_j; {x_k}) = J(w_j, w_i; {x_k})\) and \(J(w_i, w_i; {x_k}) = 0\).
+	This observation can be exploited  to half the computation required to calculate \(SDM_v = {SDM_1, SDM_2, ..., SDM_N}\), the set of  all \(SDM\) for the feature set of size N.
+	 
+	\item \textbf{Separability Index Matrix (SIM)}\\\\
+	\(SIM_k = {c_{ij}}\) is a CxC matrix of binary values {0, 1}. if \(c_ij=0\), then the classes \(w_i\) and \(w_j\) are not separable by the feature \(x_k\).\\
+	\(SIM_k\) is obtained by applying an threshold function to \(SDM_k\).
+	For instance, 
+	\begin{align*}
+		SIM_k(i, j) = 0 \quad if  \quad SDM_k(i, j) < SDM_{avg}(i, j)\\
+		SIM_k(i,j) = 1 \quad if  \quad SDM_k(i,j) \geq SDM_{avg}
+	\end{align*}
+	where \(SDM_{avg}\) is the element wise average of \(SDM_v\).
+	\(SIM_k\) is significant because it can be used to systematically determine the irrelevant features, i.e, features whose \(SIM_k = 0\), and/or redundant ones. %%TODO: ref SIM
+	
+	
+	\item \textbf{Classifiability: \(G(x_k)\)} \\\\
+	Although, conventional distance criterion reveal the separability of the feature distribution, %%TODO: ref SIM
+	 we are often more interested in, how effectively can a particular feature distinguish one class from another. This information is denoted \(G(x_k)\), the ' classifiability of a the feature \(x_k\) '.
+	 \(G(x_k)\) is computed by \ref{eq:G}.
+	 \begin{align}
+	 	G(x_k) = \sum_{i = 1}^{C}\sum_{j = 1}^{C}(SIM_k*WM_k) \label{eq:G}
+	 	\\ with \quad WM_k = SIM_k / \sum_{i=1}^{N}SIM_i
+	 \end{align}
+	 where * and / denote respectively element wise matrix multiplication and division.
+\end{enumerate}
+
+This method can be used to effectively and efficiently rank the features in a classification for subset selection or an a preliminary step in a hybrid filter-wrapper feature selection solution.  
+
 \subsection{Feature extraction}
 \subsubsection{Principal component analysis: PCA}
 \subsubsection{Linear discriminant analysis: LDA}
