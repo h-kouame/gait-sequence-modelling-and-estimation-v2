@@ -5,7 +5,7 @@ function experiment_optimal_number_of_features(body_part, test_prop)
         test_prop = 0.2;
     end
 
-    rng(8000,'twister');
+    rng('shuffle','twister');
 
     % Sort features by separability degree 
     [observ_seq, state_seq, feat_names] = get_all_data(body_part);
@@ -22,7 +22,6 @@ function experiment_optimal_number_of_features(body_part, test_prop)
        fs = featureIdxSortbySD(1:nfs(i));
        [varianceMCE(i), biasMCE(i)] = CKNN(make_data(observ_seq(:, fs), state_seq, feat_names(fs,:)), 1 - test_prop);
     end
-    
     
      plot(nfs, 100*varianceMCE, nfs, 100*biasMCE);
      xlabel('Number of Features');

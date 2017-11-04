@@ -1,19 +1,159 @@
 \chapter{Results}
-These are the results I found from my investigation.
 
-Present your results in a suitable format using tables and graphs where necessary. Remember to refer
-to them in text and caption them properly.
+\section{Experiement 1: The effect of a CHMM' observation dimensionality on its performance}
+
+\subsection{Aim of the experiement}
+The aim of this experiement is to investigate how the number of features impacts the accuracy of a Hidden Markov Model with continuous emission symbols (CHMM), in the abscence of enough training data. Thus, the hypothesis under investigation is:\\
+\textbf{\textit{In the absence of enough training data, a CHMM with observations of high dimensionality performs poorly.}}
+
+\subsection{Experiment apparatus}
+To perform this expereiment, the following materials are required:
+\begin{itemize}
+	\item \(\lambda\), a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
+	\item At least two sample data sets training the model and testing it.
+	\item A criterion to rank and select subsets of features.
+	\item A measure to evaluate the performance of the CHMM model.
+	\item Finally, a way to visualise the results of the experiments
+\end{itemize}
+
+\subsection{Experiment procedure}
+The expreriment was performed with the steps listed below:
+\begin{enumerate}
+	\item Step 0 - Preliminary data pre-processing: This step consisted in the data pre-processing as described in %%TODO: cross-ref data pre-processing section
+	\item Step 1 - Partitioning data into training and test sets: Here, the dataset was randomly sampled into training and test sets. The training set was relatively small, it was a sequence 539 observations. 
+	\item Step 2 -  Feature ranking: The features were sorted in a descending order based on their ability to discriminate the different states of the CHMM. The separability index method described in was used for this purpose. %%TODO: quote et cross-ref SIM
+	\item Step 3 - Data subset selection: Select the optimal feature subset, starting with 1 dimension. 
+	\item Step 4 - Model building and training: The CHMM model, \(\lambda\) was built and trained using with training dataset using the optimal feature subset.
+	\item Step 5 - Model testing and evaluation: The model was tested with the test dataset. The test consisted in decoding the most likely state sequence given a previously unseen sequence of observations. This path prediction was evaluated based on the evaluation criterion presented in %%TODO: cross-reference evaluation criterion.
+	\item Step 6 - Iteration: Step 3 through step 5 were repeated while varying the feature subset size until the maximum size, which is 18 in this case. In each iteration, the prediction accuracy was stored in an array for visualisation.
+	\item The different accuracies were finally ploted as a function of the observation dimensionality. Moreover, the observations were grouped based on the corresponding hidden state sequence and scattered in a 2-dimensional principal component space. This is to compare the decoded states against the ground-truth.
+\end{enumerate}
+
+\subsection{Experiment results}
+The results of the experiments are presented in figure \ref{fig:dim-acc}, \ref{fig:dim-log}, \ref{fig:gt-5dim}, \ref{fig:es-5dim}, \ref{fig:gt-18dim}, \ref{fig:es-18dim}.\\
+\ref{fig:dim-acc} and \ref{fig:dim-log} show how the hidden state decoding performance and the log-likelihood estimated by the CHMM model, train with just 539 observations, varies as the observation dimensionality increases.\\
+\ref{fig:gt-5dim} and \ref{fig:es-5dim}, \ref{fig:gt-18dim} and \ref{fig:es-18dim} illustrate how the estimated state sequences compare to reality for observation sequences of 5-dimensions and 18-dimensions.    
+5 and 18 dimensions were presented because they are the two extremes in terms of accuracy. Other dimensions may be found in the appendices, %%TODO: ref appendices
+\begin{figure}[ht!]
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/dimensionality-effect-acc}
+	\caption{The effect of CHMM's observation dimensionality the state sequence decoding accuracy}
+	\label{fig:dim-acc}
+\end{figure}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/dimensionality-effect-log}
+	\caption{The effect of CHMM's observation dimensionality the log-likelihood}
+	\label{fig:dim-log}
+\end{figure}
 
 
-\section{Aim}
-The objetive of this project is to design, implement and evaluate an algorithm, a model or a machine to predict the gait sequence of an animal (quadrupede or bipede) using Markov models.
-Thus, for a given state S, the model should be able to predict the next state S + 1, with a certain degree of confidence.
-\section{Apparatus}
-\section{Methods}
-\section{Results}
-\section{Analysis}
-\subsection{Discrete Probability density function duration d in state i}
-\subsection{Expected number of observations (duration) in a state}
+\begin{figure}[ht!]
+	\includegraphics{Figures/ground-truth-scatter-with-5-features}
+	\caption{Scatter plot of  5-dimensional observations grouped per state based on ground-truth state sequence}
+	\label{fig:gt-5dim}
+\end{figure}
+\begin{figure}[ht!]
+	\includegraphics{Figures/estimation-scatter-with-5-features}
+	\caption{Scatter plot of 5-dimensional observations grouped per state based on estimated state sequence}
+	\label{fig:es-5dim}
+\end{figure}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/ground-truth-scatter-with-18-features}
+	\caption{Scatter plot of 18-dimensional observations grouped per state based on ground-truth state sequence}
+	\label{fig:gt-18dim}
+\end{figure}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/estimation-scatter-with-18-features}
+	\caption{Scatter plot of 18-dimensional observations grouped per state based on estimated state sequence}
+	\label{fig:es-18dim}
+\end{figure}
+
+\subsection{Analysis of results}
+
+\subsection{Conclusions and recommendations of the experiment}
+
+\section{Experiement 2: The effect of dimensionality reduction on CHMM's performance}  \label{exp:dim}
+
+\subsection{Aim of the experiement}
+The aim of this experiment is to investigate the effect of dimensionality reduction on the performance of a continuous Hidden Markov Model (CHMM).
+The hypothesis under investigation is therefore the following:
+\textbf{\textit{Dimension reduction can cause an increase in a CHMM model performance when there is not enough training data.}}
+Thus, the performance of the CHMM without and with various dimensionality reduction are compared to test the hypothesis.
+
+\subsection{Experiment apparatus}
+The assets needed to perform the experiment are listed below.
+\begin{itemize}
+	\item \(\lambda\), a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
+	\item Dimensionality reduction methods. Two wrapper and two filter methods were considered. The wrapper methods were Principle Component Analysis (PCA), Linear Discriminant Analysis (LDA). The two filters methods were feature ranking with similarity index %%TODO cross-ref
+	and a combination of forward feature selection and similarity index.
+	\item A Performance metric. The metric used were the hidden state decoding accuracy and the log-likelihood of the EM algorithm.
+\end{itemize}
+
+\subsection{Experiment procedure}
+The experiment was performed as follows.
+First, the dataset was partition into two different set for training and testing using random sampling.
+Using the same traing dataset five different models were built and trained, \(\Lambda = (\lambda_{No Reduction}, \lambda_{PCA}, \lambda_{LDA}, \lambda_{SI}, \lambda_{SI-forward})\).
+Then the different models were tested with the same test dataset and the prediction accuracy as well as the EM algorithm loglikehood were recorded.
+The training and the testing were repeated while varying the proportion of training set used from \(10\%\) to \(90\%\) of the total dataset.
+The prediction accuracies and the EM algorithm likelihoods were finally plotted as a function of the training data size for each model.
+These findings are presented in the figures \ref{fig:size-acc} and \ref{fig:size-log}. 
+
+\subsection{Experiment results}
+Firstly, figure \ref{fig:size-acc} how the performances of the five CHMMs compare against each other as the training data size increases.
+Secondly, the loglikelihoods presented in \ref{fig:size-log} show how effectively can each model recognise an observation sequence generated by the underlying mechanism.
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/size-acc-2}
+	\caption{The effect of training datasize on the prediction accuracy}
+	\label{fig:size-acc}
+\end{figure}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/size-log-2}
+	\caption{The effect of training datasize on the log likelihood}
+	\label{fig:size-log}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics{Figures/bias-var}
+	\caption{Bias-Variance tradeoff analysis}
+	\label{fig:bias-var}
+\end{figure}
 
 
-\section{Experimental Results}
+\begin{figure}[ht!]
+	%\includegraphics{Figures/dimensionality-effect-log}
+	%\caption{The effect of CHMM's observation dimensionality the log-likelihood}
+	%\label{fig:dim-log}
+\end{figure}
+
+
+\begin{figure}[ht!]
+	%\includegraphics{Figures/ground-truth-scatter-with-5-features}
+	%\caption{Scatter plot of  5-dimensional observations grouped per state based on ground-truth state sequence}
+	%\label{fig:gt-5dim}
+\end{figure}
+\begin{figure}[ht!]
+	%\includegraphics{Figures/estimation-scatter-with-5-features}
+	%\caption{Scatter plot of 5-dimensional observations grouped per state based on estimated state sequence}
+	%\label{fig:es-5dim}
+\end{figure}
+
+\begin{figure}[ht!]
+	%\includegraphics{Figures/ground-truth-scatter-with-18-features}
+	%\caption{Scatter plot of 18-dimensional observations grouped per state based on ground-truth state sequence}
+	%\label{fig:gt-18dim}
+\end{figure}
+
+\begin{figure}[ht!]
+	%\includegraphics{Figures/estimation-scatter-with-18-features}
+	%\caption{Scatter plot of 18-dimensional observations grouped per state based on estimated state sequence}
+	%\label{fig:es-18dim}
+\end{figure}
+
+\subsection{Analysis of results}
+
+\subsection{Conclusions and recommendations of the experiment}

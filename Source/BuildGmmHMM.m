@@ -1,9 +1,9 @@
-function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
+function model = BuildGmmHMM(observ_seq, state_seq)
     if nargin < 1
-        [observ_seq, state_seq] = get_all_data('front');   
+        [observ_seq, state_seq] = get_all_data('front');  
     end
     
-    delfigs;
+    %delfigs;
     
     O = getstatesdata(observ_seq, state_seq);
     O1 = O{1};
@@ -11,19 +11,19 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
     O3 = O{3};
     O4 = O{4};
     
-    pi = [size(O1, 1) size(O2, 1) size(O3, 1) size(O4, 1)]/size(observ_seq, 1); 
+    model.pi = [size(O1, 1) size(O2, 1) size(O3, 1) size(O4, 1)]/size(observ_seq, 1); 
     
     state_num = 4;
     
 %     state transition probabilities estimation
     PSEUDOTR = ones(state_num, state_num)*1 + pi;
-    A = hmmestimate(state_seq, state_seq, 'PSEUDOTRANSITIONS',PSEUDOTR);
+    model.A = hmmestimate(state_seq, state_seq, 'PSEUDOTRANSITIONS',PSEUDOTR);
     
     feat_num = size(observ_seq, 2); %feature size
     %optimal mixture number
     data.observ = observ_seq;
     data.state = state_seq;
-    mix_num = optimal_mixture_component(data); %optimal_mixture_component(O3, feat_num);
+    mix_num = 2;%optimal_mixture_component(data); %optimal_mixture_component(O3, feat_num);
 %     GMM optimisation parameters
     iter_num = 10;
     options = statset('Display','off', 'MaxIter',1000, 'TolFun',1e-10);
@@ -77,4 +77,5 @@ function [pi, A, B] = BuildGmmHMM(observ_seq, state_seq)
     B.mu = means;
     B.Sigma = covariance;
     B.B = mix_prob;
+    model.phi = B;
 end

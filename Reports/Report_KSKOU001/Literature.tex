@@ -1,71 +1,173 @@
 \chapter{Literature Review}
-
-Once upon a time engineers and researchers believed... In this area of research, they used the following methods... \cite{jct2010}
-
-Write this section first as it will take you the longest. I suggest you start writing this as soon as you
-have done your initial research at the beginning of your project. You can then return to it once you
-have completed your work to edit and adjust it.
-
-A literature review forms the theoretical basis of your project. You need to read a large number of
-journal papers, sections in books, technical reports etc. relevant to your work at the start of project.
-This will give you a good idea of the field of research.
-
-When writing your review start of with the general concepts and move to the more specific aspects
-explaining the necessary theory as you go. This section is NOT a copy and paste from others work or a
-rewrite-but-change-one-word section. I suggest you read all your material, and then put it down and
-write this section, referring back to the work only when you need to check something.
-
-See your PCS textbook for more details on how to write a literature review.
-
-If you include a figure or a table in your text please see the example in Fig. \ref{fig:model} as to how to caption it.
-Please make sure that all text in your figures is readable and that you reference your figures if they are
-from another source.
-
-\begin{figure}[ht]
-\centering
-\includegraphics[width=0.7\textwidth]{model.png}
-\caption{A block diagram illustrating the connections to the IRQ pin on the MCS08GT16A microcontroller (Please
-note that your headings should be short descriptions of what is in the diagram not simply the figure title)}
-\label{fig:model}
-\end{figure}
 \section{Gait sequence modelling and estimation}
 \subsection{Quadrupede gait modelling}
 \subsubsection{Periodicity}
 \subsection{Quadrupede gait estimation}
 \section{Case study: Inertia Measurement Unit}
 \section{Hidden Markov Models}
-Assumption of statistical model: Signal can be parametrised as a parametric random process and that the parametrers of the stochastic process can be determined/estimated in a precise, well-defined manner.\\
-Observation is a probabilitistic function of the state - doubly embedded stochastic process.\\
-Each state characterised by the probability distribution of observations, and transitions between states are characterised by a state transition matrix.
-\subsubsection{First order Markov model - current and predecessor only considered}
-\subsection{Transition Probability Matrix}
-\subsection{Emission Probability Matrix}
-\subsection{Initial distribution}
-\subsection{Elements of an HMM}
+Hidden Markov Models (HMMs) are doubly embedded stochastic processes with a rich underlying statistical structure. Introduced at the end of the 1960s by Baum and colleagues, they have become one of the prefered techniques in speech recognition after the implementation of Baker and Jelinek in 1970s. HMMs have been successfully applied to various other engineering problems in pattern recognition for classification and fraud detection purposes, amongst others.\\
+%%TODO: ref: A tutorial on hidden Markov models and selected, Tool wear condition monitoring in drilling operations using, and Two-phase flow pattern identification using continuous hidden Markov model hidden Markov models (HMMs) and "Towards HMM based Human motion recogniion"
+The type of HMM depends on the possible connections between the states. Thus, an HMM in which a state can transition to any other state is an ergodic. Other types such as the Left-Right model or Bakis do not allow all possible transitions between the states.
+\subsection{HMM parameters specification}
+An HMM is fully specified by the following parameters 
 \begin{enumerate}
-	\item Number of states, N
-	\item Number of distinct observation symbols per state, M
-	%\item The state transition probability distribution A = \left\lbrace  a_{ij} \right\rbrace 
-	%\item The observation symbol probability distribution in state j, B = \left\lbrace  b_{j}(k) \right\rbrace 
-\item The initial state distribution, pi
+	\item N, the number of distinct states of the model. Together they form the set of individual states \(S = \{S_1, S_2, ..., S_N\}\).
+	\item T, the number of observations. A sample observation sequence is denoted as \(O = \{O_1, O_2, ..., O_T\}\).
+	\item \(Q = {q_t}\), the set of states with \(q_t\) denoting the current state at time instance, t such that \(q_t \epsilon S\) and \(t = 1, 2, ..., T\).
+	\item K, the number of distinct observation symbols per state. 
+	\item \(V = \{v_1, v_2, ..., v_K\}\), the feature set of K dimensions.
+	\item \(A =  \{a_{ij} \}\), the state transition probabilities. \(a_{ij}\)  denotes probability of transitioning from state \(S_i\) to state \(S_j\).
+	\item \(\Phi =   \{ \phi_{j}(k\}\), the probability distribution of observation symbols in state j.
+	\item The initial state distribution, \(\pi = {\pi_i}\)
 \end{enumerate}
-\subsection{Three fundamental problems for HMM design}
+For continuous HMM (CHMM), i.e, HMM with continuous-valued observations, \(\Phi\) consists in a probability distribution function. Many applications have succefully modelled such distributions with mixtures of Gaussian distributions. %%TODO: quote
+As such, \(\phi\) is approximated by a weighted sum of M multivariate Gaussian distributions \(\eta\). For a given, observation sequence, \(\phi\)  and \(\eta\) are therefore given by equations \ref{eq:phi} and \ref{eq:eta},
+
+\begin{align} 
+	\phi(O_t) = \sum_{m=1}^M \beta_{jm} \eta(\mu_{jm}, \Sigma_{jm}, O_t), \label{eq:phi} \\
+	\eta(\mu, \Sigma, O) = \frac{1}{\sqrt{(2\pi)^K|\Sigma|}}exp(-\frac{1}{2}(O-\mu)'\Sigma^{-1}(O-\mu) \label{eq:eta}
+\end{align} 
+\begin{align*}
+	1 \leq j \leq N; 1 \leq m  \leq M; \beta_{jm} \geq 0; \sum_{m=1}^{M}\beta_{jm} = 1
+\end{align*}
+where \(\beta_{jm}\) is the mixture composition coefficient; \(\mu_{jm}\), \(\Sigma_{jm}\), respectively the mean vector and covariance matrix of state j; M is the number of mixture components and K is the dimensionality of O.
+
+As a summary, the compact specification of a continous valued observation HMM is defined by \ref{eq:CHMM} and that of a discrete HMM in \ref{eq:DHMM}.
+\begin{align} 
+	CHMM = \lambda_C = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi) \label{eq:CHMM} \\
+	DHMM = \lambda_D = (A, b_j(k), \pi) \label{eq:DHMM}
+\end{align}
+
+\subsubsection{Basic assumptions of HMMs theory}
+HMM theory is built on three basic assumptions listed below.
 \begin{enumerate}
-	\item Number of states, N
-	\item Number of distinct observation symbols per state, M
-%	\item The state transition probability distribution A = \left\lbrace  a_{ij} \right\rbrace 
-%	\item The observation symbol probability distribution in state j, B = \left\lbrace  b_{j}(k) \right\rbrace 
-%	\item The initial state distribution, pi.
-\end{enumerate}
-\subsection{Types of HMM}
-\subsubsection{Ergodic model}
-\subsubsection{Left-Right model or Bakis model}
-\subsubsection{Evaluation of the probability of a sequence of observations}
-\subsubsection{The determination of a best sequence states}
-\subsubsection{The adjustment of model parameters to account for observed signal}
+\item \textit{The Markov assumption}: HMM assumes that the probability of being in the current	at any instance of time t, is uniquely dependent on the previous state, at time, t + 1. More specifically, \(a_{ij} = P[q_t = S_j|q_{t+1}=S_i]\). This assumption makes it unsuitable for long-range correlation capturing applications.
+\item \textit{The stationary assumption}: Furthermore, HMM state transition probabilities are assumed to be time-independent. Thus, the transition probabilities of two distinct time, \(t_1\) and \(t_2\) are identical, \(P[q_{t_1} = S_j|q_{t_1 -1} = S_i] = P[q{t_2}=S_i|q_{t_2-1} = S_i]\). HMMs can therefore effectively model mechanisms with stationary observations.
+\item \textit{The output/observation independence assumption}: The current observation also known as emission symbol is statistically independent of the previous observations. It is "emitted" only by the current state, \(P[O|q_1, q_2, ..., q_T, \lambda]=\prod_{t=1}^{T}P[O_t|q_t, \lambda]\).
+\end{enumerate} 
+The three assumptions make an HMM model a relatively simple graphic modelling to be implemented. This simplicity naturally comes with some limitations in modelling more complex problems, which however, may be modelled with higher order HMMs. %%Quote
+Futhermore, the three assumptions are very similar to those of a Markov chain. This is because the stochastic process of an HMM pertaining to the hidden states can be reduced to a Markov chain. In fact, an HMM is an extension of a Markov Chain. The essential difference between the two is that, with the former, there is no a one-to-one mapping between the states and the observation symbols. %%TODO: Quote biology book
+
+\subsection{The three basics  problems for HMM design}
+In %%TODO: quote: A tutorial on Hidden Markov
+, Lawrence argued that an HMM design needs to answer three fondamental problems. They are the \textit{training problem}, the \textit{evaluation problem}, and the \textit{decoding problem}. Each problem and its solution is discussed in greater details next. 
+
+\subsubsection{The evaluation problem}
+The evaluation problem is about answering this question:
+\textit{Given the observation sequence \(O = O_1O_2O_T\), and a model \(\lambda\), how do we efficiently compute \(P(O|\lambda\), the probability of the observation sequence?} %%TODO: quote tutorial on hmm, and others.
+The naive answer to this question is simply computing the \(P(O|\lambda)\) according to equation \ref{eq:P}:
+\begin{align}
+	P(O|\lambda) = \sum_{q_1}^{q_T}\pi_{q_1}b_{q_1}(O_1)a_{q_1q_2}b_{q_2}(O_2)...a_{q_{T-1}q_T}(O)) \label{eq:P}
+\end{align}
+This approach has two issues, it is not only, computationally too expensive because of the exponential complexity with respect to T, but also, intractable for very long sequence. In pactice, \(P(O|\lambda)\) is computed by an algorithm called \textit{forward-backward} procedure, which is a more efficient method.
+
+\subsubsection{The decoding problem}
+ The decoding problem can be reduced to this interrogation: \textit{Given the observation sequence \(O = O_1O_2O_T\), and the model \(\lambda\), how do we choose a corresponding state sequence \(Q = q_1q_2...Q_T\) which is optimal in some meaningful sense i.e, best "explains" the observations?}
+ Simply put, this problem is about deciphering the most likely hidden states that emitted the visible observation sequences.
+ This is done dynamically using the Viterbi algorithm. %%TODO: cite viterbi and explain further if need be
+\subsubsection{The training problem}
+Given the model, \(\lambda\), the training problem raises the following question: \textit{how do we adjust the model parameters \(\lambda\) to maximise the \(P(O|\lambda)\), the probability of the probability of the observation sequence?}
+This problem is usually solved by iterative learning algorithms called expectation-maximisation. Examples of this algorithms are Baum-Welch method or any gradient based method. %%TODO: quote Tool wear condition and others
+\\When using Baum-Welch algorithm, the parameters are initialised by guesses then re-estimated iteratively to find the parameters with maximum likelihood.
+This method is vulnerable to local maxima issues. To avoid such cases, it is advice to run it multiple times with different initial values in order to keep the estimation with the highest likelihood value.
+
+\subsubsection{Overfitting, order of markov, robustness: bias-var}
+
 \section{k-Nearest Neighbour}
-\section{Dimension reduction}
-\subsection{Feature selection}
+
+\section{Dimensionality reduction}
+Dimensionality or dimension reduction is used pattern recognition, machine learning and statistics to find the most compact representation of the dataset by removing redundant and irrelevant information. %%TODO: quote feature selection with efficient distance
+It is achieve by extracting principal features, i.e, feature extracting or by selecting the most relevant subset of the initial feature vector, i.e, feature selection, using a supervised or an unsupervised approach.
+
+\subsection{Motivations for dimensionality reduction}
+When building a model, the need for dimensionality is supported by several reasons. Some of the important ones are presented in three points.
+Firstly, by reducing the feature space's dimension, we can build model with higher quality. %%TODO: quote "A new hybrid filter wrapper for clustering based on ranking"
+In most classification problems, the feature domains contain variables with very little to no information for the purpose at hand.
+Thus, removing these features reduces the complexity of the problem which can in return, increases the model's accuracy.
+
+Secondly, working with hundreds to thousands of features can be diffult to conceptualise and visualise. By using dimensionality reduction, we can better understand the model and present it to others by comprehensive visualisation.%%TODO: quote "A new hybrid filter wrapper for clustering based on ranking"
+
+The third reason is about efficiency in terms of computational time and storage. In general, pattern recognition and machine learning algorithms computionally intense. Besides, storage capacity is limited in some engineering applications such as embedded systems. So, solving the problem only with the relevant features can alleviate these two problems. Consequently, the computional speed of the model can increased by using dimensionality reduction.
+%%TODO: quote "Hybrid feature selection by combining filters and wrappers"
+
+Various dimensionality reduction have been developed in literature, %%TODO: quote a bunch of papers on dimensionality reduction 
+the next section will present a handful of the ones used in the present work. 
+
+
+\subsection{Feature selection: filters and wrappers}
+Filters and wrappers are two major categories of feature selection methods. %%TODO:  quote all 3 papers and SIM
+The structure of both methods are illustrated by figure \ref{fig:filt} and figure \ref{fig:wrap} , respectively. %%TODO: quote figure from Hybrid feature selection
+\begin{figure}[ht!]
+	\centering
+	\includegraphics{Figures/filter}
+	\caption{The procedure of filters in dimensionality reduction}
+	\label{fig:filt}
+\end{figure}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics{Figures/wrapper}
+	\caption{The procedure of wrappers in dimensionality reduction}
+	\label{fig:wrap}
+\end{figure}
+They both require a mechanism for generating a subset of the original feature set and a stoppin criterion, which can be a distance measure, a measure of similarity between the features. However, wrappers identify the best feature subset using a learning algorithm usually by fully searching the feature space, whereas, filters use a simple measurement metric based on mutual information, correlation and other distance criteria. %%QUOTE: Hybrid feature selection paper and SIM
+As a result of the two different approaches, filters are fast and do not guarantee optimal classification accuracy. On the other hand, wrappers give accurate prediction results but are very slow.
+Both approaches are often combined to build effective and efficient feature selection methods. One such approach is shown in figure \ref{fig:filt-wrap}. %%TODO: quote figure from hybrid not the new hybrid
+\begin{figure}[ht!]
+	\centering
+	\includegraphics{Figures/filter-wrapper}
+	\caption{The procedure of hybrid filter-wrapper in dimensionality reductiony}
+	\label{fig:filt-wrap}
+\end{figure}
+In this approach, the filters are used as a preliminary stage to discard irrelevant features. A feature is deemed irrevant if it cannot discrinate between the different classes or if it contains redundant information. %%TODO: quote hybrid feature selection by combining filters and wrappers
+The output of the filter stage is a smaller set of relevant features which is fed into the wrapper to find the optimal final subset of features. Thus, the filter stage effectively reduces the search time of the wrapper. 
+In classification problems, using the seperability index matrix to determine the classification content or degree of the feature generally results in very good results. %%TODO: ref SIM 
+The next section gives a particular attention to this approach.
+
+\subsubsection{Feature ranking using separability index matrix}
+In this section, we dives into a systematic approach to determine the 'classifiability of a feature' as present in %%TODO: ref SIM 
+In their paper, Jeong-Su, Sang Wan Lee and Zeungnam Bien, proposed a new criterion called separability index matrix to identify features that can discriminate between the different classes of a classification problem.
+The important concepts of this method are here defined together with their significance.
+
+\begin{enumerate}
+	\item \textbf{Separability Degree Matrix (SDM)}\\\\
+	\(SDM_k\) is a CxC symmetric matrix of the separability measures between the different classes of classification problem of C distinct classes given a particular feature \(x_k\).
+	It is defined in \ref{eq:sdm}
+\subitem \[SDM_k = [J(w_i, w_j; {x_k})] \label{eq:sdm}\]  a 	
+\subitem where \(J(w_i, w_j; {x_k})\) denotes the separability or the distance value between class \(w_i\)  and class \(w_j\) when the criterion function \(J(\textbf{.})\) such as mahalanobis or eucludian, is applied to the feature \(x_k\). %%TODO: ref mahalanobis or eucludian and SIM
+	\(SDM_k\) is symmetric matrix with zero diagonal values, because for a given feature \(x_k\), \(J(w_i, w_j; {x_k}) = J(w_j, w_i; {x_k})\) and \(J(w_i, w_i; {x_k}) = 0\).
+	This observation can be exploited  to half the computation required to calculate \(SDM_v = {SDM_1, SDM_2, ..., SDM_N}\), the set of  all \(SDM\) for the feature set of size N.
+	 
+	\item \textbf{Separability Index Matrix (SIM)}\\\\
+	\(SIM_k = {c_{ij}}\) is a CxC matrix of binary values {0, 1}. if \(c_ij=0\), then the classes \(w_i\) and \(w_j\) are not separable by the feature \(x_k\).\\
+	\(SIM_k\) is obtained by applying an threshold function to \(SDM_k\).
+	For instance, 
+	\begin{align*}
+		SIM_k(i, j) = 0 \quad if  \quad SDM_k(i, j) < SDM_{avg}(i, j)\\
+		SIM_k(i,j) = 1 \quad if  \quad SDM_k(i,j) \geq SDM_{avg}
+	\end{align*}
+	where \(SDM_{avg}\) is the element wise average of \(SDM_v\).
+	\(SIM_k\) is significant because it can be used to systematically determine the irrelevant features, i.e, features whose \(SIM_k = 0\), and/or redundant ones. %%TODO: ref SIM
+	
+	
+	\item \textbf{Classifiability: \(G(x_k)\)} \\\\
+	Although, conventional distance criterion reveal the separability of the feature distribution, %%TODO: ref SIM
+	 we are often more interested in, how effectively can a particular feature distinguish one class from another. This information is denoted \(G(x_k)\), the ' classifiability of a the feature \(x_k\) '.
+	 \(G(x_k)\) is computed by \ref{eq:G}.
+	 \begin{align}
+	 	G(x_k) = \sum_{i = 1}^{C}\sum_{j = 1}^{C}(SIM_k*WM_k) \label{eq:G}
+	 	\\ with \quad WM_k = SIM_k / \sum_{i=1}^{N}SIM_i
+	 \end{align}
+	 where * and / denote respectively element wise matrix multiplication and division.
+\end{enumerate}
+
+This method can be used to effectively and efficiently rank the features in a classification for subset selection or an a preliminary step in a hybrid filter-wrapper feature selection solution.  
+
+\subsection{Feature extraction}
+\subsubsection{Principal component analysis: PCA}
+\subsubsection{Linear discriminant analysis: LDA}
+
+\subsection{Hybrid filter-wrapper methods}
+
 \section{Sufficiency of Training Data}
 \section{Techniques to increase Training Data}
 \subsection{Mirroring}

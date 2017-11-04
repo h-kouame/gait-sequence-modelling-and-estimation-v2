@@ -60,11 +60,11 @@ The observations are continous and the statistical property are assumed to be st
 \subsection{Quadrupede Gait sequence modelling}
 One of the objectives of this project is to effectively model the gait sequence dynamic of the dog from IMU measurements using HMM.
 Based on the fact that quadrupedes achieve inverted pendulum-like movements like humans, %%TODO: quote here
-their gait dynamic can be modelled as a succession of latent states observed by measurements such as IMU data. The states representing the footfalls and the observations, the outputs of the accelerometer, gyroscope and the magnetometer. Similar to human gait mechanism, it is sound to assume that the current state of a quadrupede is conditionally dependent on its previous state. 
-This inference combined with the statistical robustness of HMM makes it the best model candidate when the available dataset is not large enough.
+their gait dynamic can be modelled as a succession of latent states observed through the 'visible' IMU measurements. The states representing the footfalls and the observations, the outputs of the accelerometer, gyroscope and the magnetometer. Similar to human gait mechanism, it is sound to assume that the current state of a quadrupede is conditionally dependent on its previous state. 
+This inference combined with the statistical robustness of HMM makes it the best model candidate when the available dataset is not too large.
 
 \subsubsection{HMM model elements: states and observations properties}
-The problem at hand requires 16 distinct state that make up the state vector S, shown in equation \ref{eq:state}
+The problem at hand requires 16 distinct states that make up the state vector S, shown in equation \ref{eq:state}
 \begin{align} \label{eq:state}
 S &= {S_i} = \{(LF, RF, LB, RB)\} = \{0000, 0001, 0010, ..., 1111\}.
 \end{align}
@@ -74,27 +74,24 @@ S &= {S_i} = \{(LF, RF, LB, RB)\} = \{0000, 0001, 0010, ..., 1111\}.
 The 16 distinct states are derived from the combination of the four binary footfalls. In practice, the dataset may not reveal all the 16 states.
 
 The stream of IMU measurement form the observation sequence. An observation instance is a row vector of K dimensions. The initial K value before any dimensionality reduction is 18, from the 18 IMU measurements.
-Thus, an observation sequence O is a TxK matrix of continuous values as presented in \ref{eq:obs}. T is the total number of the successive measurements.
+Thus, an observation sequence O is a TxK matrix of continuous-valued voltages as presented in \ref{eq:obs}. T is the total number of the successive measurements.
 \begin{align} \label{eq:obs}
-O &= \{Ok_t\} = O1_t, O2_t, ..., O18_t. \\
+O_t &= \{O^k_t\} = O^1_t, O^2_t, ..., O^18_t. \\
 k &= 1, 2, ..., 18. \\
 t &= 1, 2, ..., T.
 \end{align}
 
 
 \subsubsection{Splitting the 16-states HMM in two 4-states HHMs}
-In order to simplify the problem, it was decided to split the the four legs in two sub-parts: two front legs and two back legs. This approach for spliting it was based on the two inverted-like movements for a quadrupede such as a dog has investigated in %%TODO: reference. 
-As a result, the initial 16-states HMM becomes, two distinct 4-states HMMs. These two models may be combined to get back the holistic 16-states model. 
-This design decision was motivated by the fact that it is a simpler task to dsicriminate between 4 distinct classses than 16 classes. From here onward, attention will be given to the 4-states HMM model.
+In order to simplify the problem, it was decided to split the four legs in two sub-parts: two front legs and two back legs. This decision exploits the fact that \textit{"fore and hind quarters of dogs behaved like two independent bipeds"} as demonstrated in.\\%%TODO: reference bio-paper. 
+As a result, the initial 16-states HMM becomes two distinct 4-states HMMs. These two models may be combined to reconstruct the holistic 16-states model. 
+With the two separate HHMs, we are faced a simpler task of dsicriminating between 4 distinct states instead of 16. A further benefit of this decision is that this work may well be applied to human gait estimation using IMU measurements. From here onward, we will focus on the 4-states HMM model.
  
 \subsubsection{Transition between states}
 %%TODO: fix the subscript
-This design assumes that a dog can transition from one state to any other possible state. So, for any transtion from S\_{i} to S\_{j} both S\_{i} and S\_{j} may be any of the element of the state space 
-
-\[S = \{S1, S2, S3, S4\}\].
-
+It was assumed that in its movement, a dog may transition from one state \(S_i\) to any other state \(S_j\) where \(i, j = 1, 2, 3, 4.\).
 For instance, if a dog has its left leg above ground and its right leg on ground, at time instance t, it may move to any of the 3 other possible positions or remain in the same state, in the next time instance, t + 1. 
-This consideration yielded in an ergodic HMM where, all the transitions are possible. The graphical model of the simplified HMM is illustrated by figure \ref{fig:model}
+Thus, we are dealing with an ergodic type HMM, where all the states transitions are allowed. The graphical model of the simplified HMM is illustrated by figure \ref{fig:model}
 
 \begin{figure}[ht]
 	\centering
@@ -104,7 +101,23 @@ This consideration yielded in an ergodic HMM where, all the transitions are poss
 \end{figure}
 %% TODO: Draw a simplified diagram of the 16 connected states with observations
 
-\subsection{Data pre-processing}
+\subsection{Pre-processing and increasing the dataset}
+Very little data pre-processing was required given that a relatively clean data was already available in Matlab files.
+So, this stage of the design consisted in three simple steps.
+\begin{enumerate}
+	\item \textbf{Extracting and labelling the feature vector}: In this step, the TxK observation matrix was formed using the 18 different variables listed in \ref{tab:dataset}, for a given gait sequence. Using, the footfalls as ground-truth, i.e, (LF, RF) and (LB, RB), each observation instance was correctly labelled. The labelling is useful to stratify the different into the four states whenever required in the training process.
+	
+	\item \textbf{Aggregating the gait sequences:} The individual gait sequence samples - for a walking, running and trotting dog - are very small in size, it was therefore decided to aggregate them in a single longer sequence. As such, the observation sequence becomes that of a dog walking, trot, then running or a similar combination of the three actions. The impact of such a decision on the model's parameter is that, instead of fitting a single action, it fits all the three types of actions. In theory, this loss of specificity can negatively affects the model's precision. Netherveless, the design a approach can be applied to a specific action if there is enough training data.
+	
+	\item \textbf{Increasing the data by mirroring}: The aggregated observation sequence amounts to 2695 different samples. In order, to further increase the dataset, the mirrored sequence was appended to the initial sequence. This decision works on the assumption that, given a gait sequence, the reverse sequence is also a valid sequence from the subject matter. %%TODO: ref validity of reverse sequence.
+	Practically speaking, each mirrored observation sample is a duplicate, no new sample is added. Moreover, the state distribution remains unchanged. However, as demonstrated in the results section \ref{exp:dim}, this increase in data size caused an increase in the model's performance.
+\end{enumerate}
+
+As a summary, the output of the pre-processing stage is an 18x5390 matrix where each row represents an observation sample and each column a particular feature.
+This dataset was fed directly into the HMM model or in the dimensionality reduction module to remove irrelevant or redundant features.
+The design of the dimensionality reduction stage is now explained.
+
+\subsection{Dimension reduction}
 
 \subsection{Model parameters estimation}
 As a reminder, a continuous HMM model is completely specified by its initial state distribution: \(\pi\) transition matrix: A; the mean covariance matrices: \(\mu\), \(\Sigma\) which can be combined into \(\Phi\). If the observations are modelled with gaussian mixture distributions, one addition parameter is required for the initial mixture distribution: \(\beta\). The next sub-sections discuss how each parameters was estimated in this project.
@@ -129,6 +142,15 @@ but differ in the input arguments considered.
 
 
 \subsubsection{Mean and covariance matrices: \(\mu\), \(\Sigma\) and \(\beta\)}
+%%TODO: justify use of Gaussian with this:
+\iffalse 
+Gaussian
+mixture models (GMMs) are powerful in modeling any
+desired continuous distribution and are used for example in
+speech processing successfully. Therefore, in this paper HMM
+with GMMs as output density functions is trained and used
+for human motion classification
+\fi
 The observations were modelled using mixture Gaussian distributions, characterised by a KxMxN mean matrix: \(\mu\) and a KxKxMxN co-variance matrix: \(\Sigma\).
 where: \\ \(K = number \quad of \quad features, \quad M = mixture \quad number, \quad and \quad N = number \quad of \quad states\).
 The observations were grouped K classes following based on the ground-truth represented by the state sequence.
@@ -158,8 +180,21 @@ The maximum number of iteration of the EM algorithm was empirically set to 1000.
 \subsubsection{Inital state distribution: \(\pi\)}
 The initial state distribution was estimated using the probability of occurence of each state in the training data sample.
 Thus, \(\pi = \{\pi_i\} = \frac{|S_i|}{T} \)
-\subsection{Dimension reduction}
-\subsubsection{From 18 to 4 features using classification with knn}
-\subsection{Continuous observations/features to Discrete observations/features}
+
+\subsubsection{Optimal number of features}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/MCE}
+	\caption{Misclassification error vs feature number using separability index and KNN}
+	\label{fig:opt-dim}
+\end{figure}
+
+\subsubsection{Optimal PCA component number}
+\begin{figure}[ht!]
+	\includegraphics{Figures/best_PCA}
+	\caption{Optimal PCA component number}
+	\label{fig:opt-pca}
+\end{figure}
 
 \section{HMM implementation}
+\subsection{Proving learning ability by increasing loglik for many iteration: check one of papers}

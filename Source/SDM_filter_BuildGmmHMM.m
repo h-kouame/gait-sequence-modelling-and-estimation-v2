@@ -4,7 +4,7 @@ function model = SDM_filter_BuildGmmHMM(data)
         data = make_data(observ_seq, state_seq, feat_names);
     end
 %     best_feat_num = 4; use experiment
-%     [selected_observ, feat_out] = featselect(data, best_feat_num); %     result below
+%     [selected_observ, feat_out] = sdm_filterselect(data, best_feat_num); %     result below
     
         feat_out = {'magFront_cal'; 'magBack_cal'; 'magFront_cal3'; 'FrontYaw'};
     sel_observ = get_selected_features(data.observ, data.feat, feat_out);
