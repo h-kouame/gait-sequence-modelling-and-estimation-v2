@@ -16,7 +16,7 @@ function [p_start, A, phi, loglik] = ChmmGMM(body_part)
 %     iter_num = 1000;
     
 %     estimate initial parameters based on data
-    [p_start, A, phi] = BuildGmmHMM(observ_seq, state_seq);
+    model = BuildGmmHMM(observ_seq, state_seq);
 %     mu = phi.mu;
 %     state_num = size(mu, 3);
 %     mixture_num = size(mu, 2);
@@ -25,9 +25,9 @@ function [p_start, A, phi, loglik] = ChmmGMM(body_part)
 %     [p_start1, A1, phi1, loglik] = ChmmGmm(data, state_num, mixture_num, 'p_start0', p_start, 'A0', A, 'phi0', phi, 'iter_num', iter_num, 'cov_type', 'diag', 'cov_thresh', 1e-4);
     
     
-    logp_xn_given_zn = Gmm_logp_xn_given_zn(data{1}, phi);
-    [~,~, loglik] = LogForwardBackward(logp_xn_given_zn, p_start, A);
-    path = LogViterbiDecode(logp_xn_given_zn, p_start, A);
+    logp_xn_given_zn = Gmm_logp_xn_given_zn(data{1}, model.phi);
+    [~,~, loglik] = LogForwardBackward(logp_xn_given_zn, model.pi, model.A);
+    path = LogViterbiDecode(logp_xn_given_zn, model.pi, model.A);
     
     accuracy = evaluate(state_seq, path)
     loglik

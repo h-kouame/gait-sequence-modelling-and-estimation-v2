@@ -5,7 +5,6 @@ function [G_x_k, wm_k, sim_d_k, sdm_avg, sdm] = SDM(data)
     end
     
     prwaitbar off                % waitbar not needed here
-    randreset(1);                % takes care of reproducility
     
 %     create prtools dataset 
     dataset = getprdataset(data);

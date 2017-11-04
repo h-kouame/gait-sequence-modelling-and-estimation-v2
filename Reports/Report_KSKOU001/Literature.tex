@@ -57,7 +57,7 @@ The evaluation problem is about answering this question:
 \textit{Given the observation sequence \(O = O_1O_2O_T\), and a model \(\lambda\), how do we efficiently compute \(P(O|\lambda\), the probability of the observation sequence?} %%TODO: quote tutorial on hmm, and others.
 The naive answer to this question is simply computing the \(P(O|\lambda)\) according to equation \ref{eq:P}:
 \begin{align}
-	P(O|\lambda = \sum_{q_1}^{q_T}\pi_{q_1}b_{q_1}(O_1)a_{q_1q_2}b_{q_2}(O_2)...a_{q_{T-1}q_T}(O)) \label{eq:P}
+	P(O|\lambda) = \sum_{q_1}^{q_T}\pi_{q_1}b_{q_1}(O_1)a_{q_1q_2}b_{q_2}(O_2)...a_{q_{T-1}q_T}(O)) \label{eq:P}
 \end{align}
 This approach has two issues, it is not only, computationally too expensive because of the exponential complexity with respect to T, but also, intractable for very long sequence. In pactice, \(P(O|\lambda)\) is computed by an algorithm called \textit{forward-backward} procedure, which is a more efficient method.
 

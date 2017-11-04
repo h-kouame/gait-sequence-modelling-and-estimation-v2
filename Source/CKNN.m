@@ -4,9 +4,6 @@ function [test_err, train_err] = CKNN(data, train_prop)
         data = make_data(obs, states, feats);
         train_prop = 0.5;
     end
-    
-    prwaitbar off                % waitbar not needed here
-    randreset(1);                % takes care of reproducility
    
 %     [dataset, ~ , state_seq, feat_labels] = getprdataset(data);
     dataset = getprdataset(data);
@@ -21,11 +18,11 @@ function [test_err, train_err] = CKNN(data, train_prop)
     DT = T*KNN;
     train_err = DT*testc
     
-%     evaluate variance error
+%     evaluate test error
     DS = S*KNN;
     test_err = DS*testc
         
-%     post_prob = +knn_map(dataset, KNN);
+     post_prob = +knn_map(dataset, KNN);
 %     MOGC = mogc(post_prob, 2);
 %     
 %     DT = post_prob*MOGC;
