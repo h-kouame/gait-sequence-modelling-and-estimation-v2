@@ -22,7 +22,7 @@ function [test_err, train_err] = CKNN(data, train_prop)
     DS = S*KNN;
     test_err = DS*testc
         
-     post_prob = +knn_map(dataset, KNN);
+%      post_prob = +knn_map(dataset, KNN);
 %     MOGC = mogc(post_prob, 2);
 %     
 %     DT = post_prob*MOGC;

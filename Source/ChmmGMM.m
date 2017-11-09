@@ -27,7 +27,7 @@ function [p_start, A, phi, loglik] = ChmmGMM(body_part)
     
     logp_xn_given_zn = Gmm_logp_xn_given_zn(data{1}, model.phi);
     [~,~, loglik] = LogForwardBackward(logp_xn_given_zn, model.pi, model.A);
-    path = LogViterbiDecode(logp_xn_given_zn, model.pi, model.A);
+    [path, post] = LogViterbiDecode(logp_xn_given_zn, model.pi, model.A);
     
     accuracy = evaluate(state_seq, path)
     loglik

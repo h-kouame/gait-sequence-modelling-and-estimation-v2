@@ -2,7 +2,7 @@ function [selected_observ_seq, out_feat_labels] = SDM_filter_featsel(data, num_f
     if nargin < 1
         [observ_seq, state_seq, feat_names] = get_all_data();
         data = make_data(observ_seq, state_seq, feat_names);
-        num_feat_out = 0;
+        num_feat_out = 4;
     end
 
     rng('shuffle','twister');

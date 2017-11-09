@@ -11,28 +11,32 @@ function model = BuildGmmHMM(observ_seq, state_seq)
     O3 = O{3};
     O4 = O{4};
     
-    model.pi = [size(O1, 1) size(O2, 1) size(O3, 1) size(O4, 1)]/size(observ_seq, 1); 
+    state_distr = [size(O1, 1) size(O2, 1) size(O3, 1) size(O4, 1)]; 
+    model.pi = state_distr/size(observ_seq, 1);
     
     state_num = 4;
     
 %     state transition probabilities estimation
-    PSEUDOTR = ones(state_num, state_num)*1 + pi;
+    PSEUDOTR = ones(state_num, state_num)*1 + state_distr;
     model.A = hmmestimate(state_seq, state_seq, 'PSEUDOTRANSITIONS',PSEUDOTR);
     
     feat_num = size(observ_seq, 2); %feature size
     %optimal mixture number
     data.observ = observ_seq;
     data.state = state_seq;
-    mix_num = 2;%optimal_mixture_component(data); %optimal_mixture_component(O3, feat_num);
+    mix_num = optimal_mixture_component(data); %optimal_mixture_component(O3, feat_num);
 %     GMM optimisation parameters
     iter_num = 10;
     options = statset('Display','off', 'MaxIter',1000, 'TolFun',1e-10);
+%     Do not restrict covariance matrices to be the same
     sharedCov = false;
     
     covariance = zeros(feat_num, feat_num, mix_num, state_num);
     means = zeros(feat_num, mix_num, state_num);
     mix_prob = zeros(mix_num, state_num); %probability of mixture m given a state k.
     regularization = 1e-10;
+%     ProbabilityTolerance for posterior probabilities not larger than zero
+%     Used default ProbabilityTolerance = 1e-8; 
       
     if isempty(O1) 
         means(:,:, 1) = zeros(feat_num, mix_num);
