@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  9 NOV 2017 11:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  9 NOV 2017 19:58
 entering extended mode
 **"./Project Report Template.tex"
 ("Project Report Template.tex"
@@ -874,11 +874,11 @@ No file Experimental.tex.
  (Results.tex
 Chapter 5.
 Package epstopdf Info: Source file: <Figures/front-comb-acc.eps>
-(epstopdf)                    date: 2017-11-09 11:14:32
-(epstopdf)                    size: 19425 bytes
+(epstopdf)                    date: 2017-11-09 19:54:13
+(epstopdf)                    size: 19406 bytes
 (epstopdf)             Output file: <Figures/front-comb-acc-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2017-11-09 11:14:08
+(epstopdf)                    date: 2017-11-09 11:14:47
 (epstopdf)                    size: 3956 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/front-comb-acc-eps-
 converted-to.pdf Figures/front-comb-acc.eps>
@@ -888,8 +888,8 @@ s/front-comb-acc.eps)...executed (allowed).
 
 Package epstopdf Info: Result file: <Figures/front-comb-acc-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2017-11-09 11:14:47
-(epstopdf)                    size: 3956 bytes.
+(epstopdf)                    date: 2017-11-09 19:58:40
+(epstopdf)                    size: 3954 bytes.
 
 <Figures/front-comb-acc-eps-converted-to.pdf, id=822, 421.575pt x 316.18124pt>
 File: Figures/front-comb-acc-eps-converted-to.pdf Graphic file (type pdf)
@@ -899,12 +899,12 @@ Package pdftex.def Info: Figures/front-comb-acc-eps-converted-to.pdf used on in
 put line 6.
 (pdftex.def)             Requested size: 452.97844pt x 339.73383pt.
 Package epstopdf Info: Source file: <Figures/front-comb-log.eps>
-(epstopdf)                    date: 2017-11-09 11:14:39
-(epstopdf)                    size: 19498 bytes
+(epstopdf)                    date: 2017-11-09 19:55:40
+(epstopdf)                    size: 19495 bytes
 (epstopdf)             Output file: <Figures/front-comb-log-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2017-11-09 11:14:10
-(epstopdf)                    size: 4252 bytes
+(epstopdf)                    date: 2017-11-09 11:14:48
+(epstopdf)                    size: 4257 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/front-comb-log-eps-
 converted-to.pdf Figures/front-comb-log.eps>
 (epstopdf)             \includegraphics on input line 12.
@@ -913,8 +913,8 @@ s/front-comb-log.eps)...executed (allowed).
 
 Package epstopdf Info: Result file: <Figures/front-comb-log-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2017-11-09 11:14:48
-(epstopdf)                    size: 4257 bytes.
+(epstopdf)                    date: 2017-11-09 19:58:41
+(epstopdf)                    size: 4246 bytes.
 
 <Figures/front-comb-log-eps-converted-to.pdf, id=823, 421.575pt x 316.18124pt>
 File: Figures/front-comb-log-eps-converted-to.pdf Graphic file (type pdf)
@@ -1260,7 +1260,7 @@ eX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on "Project Report Template.pdf" (61 pages, 1822522 bytes).
+Output written on "Project Report Template.pdf" (61 pages, 1822511 bytes).
 PDF statistics:
  1094 PDF objects out of 1200 (max. 8388607)
  272 named destinations out of 1000 (max. 500000)

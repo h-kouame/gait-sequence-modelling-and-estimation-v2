@@ -23,7 +23,6 @@ function [accuracies, logliks] = exper_combining_front_back(traindata, testdata)
     meth_num = 2;
     accuracies = zeros(1, meth_num);
     logliks = zeros(1, meth_num);
-    reduc_data = cell(1, meth_num);
     estimated_paths = zeros(size(testdata.state, 1), meth_num);
 
 %     Perform predictions

@@ -7,18 +7,18 @@ function [observations, states, feature_labels] = getdata(datapath, body_part)
     end
     
     data = load(datapath);
-    states = [data.LB, data.RB];
-    states = bin2dec(num2str(states)) + 1;
         
 %     double states sequence by mirroring
 %     states = [states; flipud(states)];
 
     if(strcmp(body_part, 'front'))
+         states = [data.LF, data.RF];
          fields = {'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
     else
+         states = [data.LB, data.RB];
          fields = {'numFrontCRC', 'numBackCRC', 'LF', 'LB', 'RF', 'RB'};
     end
-    
+    states = bin2dec(num2str(states)) + 1;
     try 
         z = data.z;
         fields = [fields, 'z'];

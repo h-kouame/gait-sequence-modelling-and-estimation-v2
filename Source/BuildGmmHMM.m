@@ -11,8 +11,9 @@ function model = BuildGmmHMM(observ_seq, state_seq)
     O3 = O{3};
     O4 = O{4};
     
-    state_distr = [size(O1, 1) size(O2, 1) size(O3, 1) size(O4, 1)]; 
-    model.pi = state_distr/size(observ_seq, 1);
+    C = 1;
+    state_distr = [size(O1, 1) size(O2, 1) size(O3, 1) size(O4, 1)] + C; 
+    model.pi = state_distr/(C + size(observ_seq, 1));
     
     state_num = 4;
     
@@ -37,46 +38,38 @@ function model = BuildGmmHMM(observ_seq, state_seq)
     regularization = 1e-10;
 %     ProbabilityTolerance for posterior probabilities not larger than zero
 %     Used default ProbabilityTolerance = 1e-8; 
-      
+    rng('shuffle', 'twister');
     if isempty(O1) 
-        means(:,:, 1) = zeros(feat_num, mix_num);
-        covariance(:, :, :, 1) = ones(feat_num, feat_num, mix_num)/2;
-    else
-        gmm1 = fitgmdist(O1, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
-        means(:, :, 1) = gmm1.mu.';
-        covariance(:, :, :, 1) = gmm1.Sigma;
-        mix_prob(:, 1) = gmm1.ComponentProportion;
+        O1 = (-10 + (10+10))*rand(mix_num + C, feat_num);
     end
+    gmm1 = fitgmdist(O1, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
+    means(:, :, 1) = gmm1.mu.';
+    covariance(:, :, :, 1) = gmm1.Sigma;
+    mix_prob(:, 1) = gmm1.ComponentProportion;
     
     if isempty(O2) 
-        means(:, :, 2) = zeros(feat_num, mix_num);
-        covariance(:, :, :, 2) = ones(feat_num, feat_num, mix_num)/2;
-    else
-        gmm2 = fitgmdist(O2, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
-        means(:, :, 2) = gmm2.mu.';
-        covariance(:, :, :, 2) = gmm2.Sigma;
-        mix_prob(:, 2) = gmm2.ComponentProportion;
+        O2 = (-10 + (10+10))*rand(mix_num + C, feat_num);
     end
+    gmm2 = fitgmdist(O2, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
+    means(:, :, 2) = gmm2.mu.';
+    covariance(:, :, :, 2) = gmm2.Sigma;
+    mix_prob(:, 2) = gmm2.ComponentProportion;
     
     if isempty(O3) 
-        means(:, 3) = zeros(feat_num, mix_num);
-        covariance(:, :, 3) = ones(feat_num, feat_num, mix_num)/2;
-    else
-        gmm3 = fitgmdist(O3, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
-        means(:, :, 3) = gmm3.mu.';
-        covariance(:, :, :, 3) = gmm3.Sigma;
-        mix_prob(:, 3) = gmm3.ComponentProportion;
+        O3 = (-10 + (10+10))*rand(mix_num + C, feat_num);
     end
+    gmm3 = fitgmdist(O3, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
+    means(:, :, 3) = gmm3.mu.';
+    covariance(:, :, :, 3) = gmm3.Sigma;
+    mix_prob(:, 3) = gmm3.ComponentProportion;
     
     if isempty(O4) 
-        means(:, :, 4) = zeros(feat_num, mix_num);
-        covariance(:, :, :, 4) = ones(feat_num, feat_num, mix_num)/2;  
-    else
-        gmm4 = fitgmdist(O4, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
-        means(:, :, 4) = gmm4.mu.';
-        covariance(:, :, :, 4) = gmm4.Sigma; 
-        mix_prob(:, 4) = gmm4.ComponentProportion;
+        O4 = (-10 + (10+10))*rand(mix_num + C, feat_num); 
     end
+    gmm4 = fitgmdist(O4, mix_num, 'Replicates',iter_num, 'Options',options, 'SharedCovariance',sharedCov, 'Regularize', regularization);
+    means(:, :, 4) = gmm4.mu.';
+    covariance(:, :, :, 4) = gmm4.Sigma; 
+    mix_prob(:, 4) = gmm4.ComponentProportion;
     
     B.mu = means;
     B.Sigma = covariance;

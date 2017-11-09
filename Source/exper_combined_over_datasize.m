@@ -14,8 +14,7 @@ logliks = zeros(test_prop, meth_num);
 for i = test_prop:-1:1
     testdata_proportion = i/10;
     [traindata, testdata] = splitdataset(observ_seq, state_seq, feat_names, testdata_proportion);
-    [accuracies(i, :), logliks(i,:)] = exper_combining_front_back(traindata, testdata);
-    
+    [accuracies(i, :), logliks(i,:)] = exper_combining_front_back(traindata, testdata);  
 end
 N = size(observ_seq, 1);
 incr = 0.1*N;
