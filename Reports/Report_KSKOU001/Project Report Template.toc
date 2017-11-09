@@ -81,23 +81,24 @@
 \contentsline {subsection}{\numberline {4.9.3}Proving learning ability by increasing loglik for many iteration: check one of papers}{31}{subsection.4.9.3}
 \contentsline {subsection}{\numberline {4.9.4}Prove that prior affects the prediction accuracy}{31}{subsection.4.9.4}
 \contentsline {chapter}{\numberline {5}Results}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Experiement 1: The effect of a CHMM' observation dimensionality on its performance}{33}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Aim of the experiement}{33}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Experiment apparatus}{33}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Experiment procedure}{34}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Experiment results}{35}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Analysis of results}{38}{subsection.5.1.5}
-\contentsline {subsection}{\numberline {5.1.6}Conclusions and recommendations of the experiment}{38}{subsection.5.1.6}
-\contentsline {section}{\numberline {5.2}Experiement 2: The effect of dimensionality reduction on CHMM's performance}{38}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Aim of the experiement}{38}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Experiment apparatus}{39}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Experiment procedure}{39}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Experiment results}{39}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Analysis of results}{40}{subsection.5.2.5}
-\contentsline {subsection}{\numberline {5.2.6}Conclusions and recommendations of the experiment}{40}{subsection.5.2.6}
-\contentsline {chapter}{\numberline {6}Discussion}{43}{chapter.6}
-\contentsline {chapter}{\numberline {7}Conclusions}{44}{chapter.7}
-\contentsline {chapter}{\numberline {8}Recommendations}{45}{chapter.8}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{48}{appendix.A}
-\contentsline {chapter}{\numberline {B}Addenda}{49}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{49}{section.B.1}
+\contentsline {section}{\numberline {5.1}Experiement 1: The effect of aggregating both front and back sonsor measurements}{33}{section.5.1}
+\contentsline {section}{\numberline {5.2}Experiement 2: The effect of a CHMM' observation dimensionality on its performance}{34}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Aim of the experiement}{34}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Experiment apparatus}{34}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Experiment procedure}{35}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Experiment results}{36}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Analysis of results}{39}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Conclusions and recommendations of the experiment}{39}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}Experiement 3: The effect of dimensionality reduction on CHMM's performance}{39}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Aim of the experiement}{39}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Experiment apparatus}{40}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Experiment procedure}{40}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Experiment results}{40}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Analysis of results}{41}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}Conclusions and recommendations of the experiment}{41}{subsection.5.3.6}
+\contentsline {chapter}{\numberline {6}Discussion}{44}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusions}{45}{chapter.7}
+\contentsline {chapter}{\numberline {8}Recommendations}{46}{chapter.8}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{49}{appendix.A}
+\contentsline {chapter}{\numberline {B}Addenda}{50}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{50}{section.B.1}

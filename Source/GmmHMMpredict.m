@@ -13,7 +13,7 @@ function [accuracy, path, loglik] = GmmHMMpredict(model, testdata)
     logp_xn_given_zn = Gmm_logp_xn_given_zn(testdata.observ, phi);
     %
     [~,~, loglik] = LogForwardBackward(logp_xn_given_zn, p_start, A);
-    path = LogViterbiDecode(logp_xn_given_zn, p_start, A);
+    [path, post] = LogViterbiDecode(logp_xn_given_zn, p_start, A);
     
     accuracy = evaluate(testdata.state, path)
     loglik

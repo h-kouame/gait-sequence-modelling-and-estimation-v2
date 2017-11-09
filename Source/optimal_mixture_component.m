@@ -25,16 +25,16 @@ function [numComponents, AIC] = byAIC(data)
     numComponents
     minAIC
     
-    figure;
-    plot(1:max_mixt_num, AIC,... 
-         1:max_mixt_num, BIC, 'LineWidth',2, 'MarkerSize',10);
-    legend({'AIC', 'BIC'}, 'Location','NE');
-    xlabel('Number of mixtures');
-    ylabel('AIC/BIC value');
-    figtitle = 'Optimal number of mixture components';
-    title(figtitle);
-    figpath = strcat('C:\School\EEE4022S\Gait Sequence Estimation\Figures\', figtitle);
-    print(figpath, '-depsc');
+%     figure;
+%     plot(1:max_mixt_num, AIC,... 
+%          1:max_mixt_num, BIC, 'LineWidth',2, 'MarkerSize',10);
+%     legend({'AIC', 'BIC'}, 'Location','NE');
+%     xlabel('Number of mixtures');
+%     ylabel('AIC/BIC value');
+%     figtitle = 'Optimal number of mixture components';
+%     title(figtitle);
+%     figpath = strcat('C:\School\EEE4022S\Gait Sequence Estimation\Figures\', figtitle);
+%     print(figpath, '-depsc');
 end
 
 function best_mix_num = byMOGC(data)
