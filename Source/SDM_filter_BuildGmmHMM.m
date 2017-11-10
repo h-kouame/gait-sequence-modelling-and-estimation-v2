@@ -8,6 +8,5 @@ function model = SDM_filter_BuildGmmHMM(data)
     
         feat_out = {'magFront_cal'; 'magBack_cal'; 'magFront_cal3'; 'FrontYaw'};
     sel_observ = get_selected_features(data.observ, data.feat, feat_out);
-    [pi, A, phi] = BuildGmmHMM(sel_observ, data.state);
-    model.pi = pi; model.A = A; model.phi = phi;
+    model = BuildGmmHMM(sel_observ, data.state);
 end

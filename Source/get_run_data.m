@@ -27,6 +27,12 @@ function data = get_run_data(body_part)
     observ_seq = [observ_seq; flipud(observ_seq)];
     state_seq = [state_seq; flipud(state_seq)];
     
+    observ_seq = [observ_seq; flipud(observ_seq)];
+    state_seq = [state_seq; flipud(state_seq)];
+
+    observ_seq = [observ_seq; flipud(observ_seq)];
+    state_seq = [state_seq; flipud(state_seq)];
+
     data.observ = observ_seq;
     data.state = state_seq;
     data.feat = feat_names;

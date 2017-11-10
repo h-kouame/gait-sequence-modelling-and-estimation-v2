@@ -9,8 +9,8 @@ The objective of this experiment is to determine whether or not it is necessary 
 \subsection{Experiment apparatus}
 To perform this experiment, the following materials are required:
 \begin{itemize}
-	\item \(\lambda_f\) and \(\lambda_b\), two continuous Hidden Markov Models for the front and back limbs respectively specified by \(\lambda_f = (A_f, \beta_{jm_f}, \mu_{jm_f}, \Sigma_{jm_f}, \pi_f)\) and \(\lambda_b = (A_b, \beta_{jm_b}, \mu_{jm_b}, \Sigma_{jm_b}, \pi_b)\).
-	\item At least four data samples: two training sets and two testing sets for the two models, where each contains both the front and back IMU measurements.
+	\item \(\lambda_f\) and \(\lambda_b\), two continuous Hidden Markov Models for the front and back limbs respectively specified by \(\lambda_f = (A_f, \beta_{jm_f}, \mu_{jm_f}, \Sigma_{jm_f}, \pi_f)\) and \(\lambda_b = (A_b, \beta_{jm_b}, \mu_{jm_b}, \Sigma_{jm_b}, \pi_b)\). These models will be further split into two.
+	\item Four data samples: two distinct training sets and two distinct test sets for the two models, where each contains both the front and back IMU measurements.
 	\item A measure to evaluate the performance of the CHMM model.
 	\item Finally, a way to visualise the results of the experiments
 \end{itemize}
@@ -215,34 +215,75 @@ Secondly, the loglikelihoods presented in \ref{fig:size-log} show how effectivel
 \subsection{Aim of the experiement}
 This experiment is about using IMU based HMM to identfy a particular action of the dog. The three actions considered are: running, walking and trotting.
 The hypothesis under investigation is therefore the following:
-\textbf{\textit{IMU based HMMs can be used to successfully perform motion recognition.}}
+\textbf{\textit{IMU based HMMs can be used to successfully perform action recognition.}}
 
 \subsection{Experiment apparatus}
-The assets needed to perform the experiment are listed below.
+The main tools required to perform the experiment are listed next. Note that the experiment was performed for the front limbs only.
 \begin{itemize}
-	\item \(\lambda\), a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
-	\item Dimensionality reduction methods. Two wrapper and two filter methods were considered. The wrapper methods were Principle Component Analysis (PCA), Linear Discriminant Analysis (LDA). The two filters methods were feature ranking with similarity index %%TODO cross-ref
-	and a combination of forward feature selection and similarity index.
-	\item A Performance metric. The metric used were the hidden state decoding accuracy and the log-likelihood of the EM algorithm.
+	\item Three distinct CHMM models: \(\lambda_{running}\), \(\lambda_{walking}\) and \(\lambda_{trotting}\) to model the dog's run, walk and trot.
+	\item Three separate IMU datasets for the three action denoted by \(D_r, D_w, D_t\) respectively for running, walking and trotting.
+	\item An action recognition criterion. In this experience, the prediction accuracies confusion matrix and the log-likelihood values were used.
 \end{itemize}
 
 \subsection{Experiment procedure}
-The experiment was performed as follows.
-First, the dataset was partition into two different set for training and testing using random sampling.
-Using the same traing dataset five different models were built and trained, \(\Lambda = (\lambda_{No Reduction}, \lambda_{PCA}, \lambda_{LDA}, \lambda_{SI}, \lambda_{SI-forward})\).
-Then the different models were tested with the same test dataset and the prediction accuracy as well as the EM algorithm loglikehood were recorded.
-The training and the testing were repeated while varying the proportion of training set used from \(10\%\) to \(90\%\) of the total dataset.
-The prediction accuracies and the EM algorithm likelihoods were finally plotted as a function of the training data size for each model.
-These findings are presented in the figures \ref{fig:size-acc} and \ref{fig:size-log}. 
+The following steps were followed to run the experiement.
+
+\begin{enumerate}
+	\item Extracting the three distinct datasets: This step is very similar to the pre-processing described here \ref{sec:pre-proc}. The only difference is, the data for the dog's run, walk and trot were separated to obtain the three distinct sets. The initial sequences were mirrored three times for running walking motions and four times for the trotting action, to obtained large enough samples (please refer to this section \ref{sec:mirror} for more details on the mirroring process).
+	
+	\item Constructing and training the models: 65\% of the three distinct datasets were used to build and estimate the parameters of \(\lambda_{running}\), \(\lambda_{walking}\) and \(\lambda_{trotting}\).
+	
+	\item Testing and evaluating the models: Each model was tested three times with the remaining 35\% of the three distinct datasets. The prediction accuracies as well as the log-likelihood were recorded and tabulated as presented in the results sub-section.\\
+	The log-likelihood value \ref{tab:action-recogn-log} measure the likelihood of the IMU measurement sequence having been emitted by the CHMM model in question.
+	Thus, for a given sequence of measurements, can be attributed to the model that outputs the highest log-likelihood value. %%TODO: ref continuous and chest mounted imu papers 
+	The same purpose can be achieved by using the prediction accuracy confusion matrix, where the best candidate model is the model  with the highest accuracy for given an observation sequence.
+\end{enumerate} 
 
 \subsection{Experiment results}
-Firstly, figure \ref{fig:size-acc} how the performances of the five CHMMs compare against each other as the training data size increases.
-Secondly, the loglikelihoods presented in \ref{fig:size-log} show how effectively can each model recognise an observation sequence generated by the underlying mechanism.
 
+Table \ref{tab:action-recogn-log}: the hidden state decoding accuracy and \ref{tab:action-recogn-acc}: the log-likelihood values, summary the results of the experiment.\\
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|c|} 	
+		\hline	
+		& \(D_r\) &  \(D_w\) & \(D_t\)\\ 
+		\hline
+		\(\lambda_{running}\) & 91.16\% & 2.06\% & 0.22\% \\ 
+		\hline
+		\(\lambda_{walking}\) & 21.06\% & 100.00\% & 75.53\% \\ 
+		\hline
+		\(\lambda_{trotting}\) & 27.40\% & 45.72\% & 100.00\%\\
+		\hline	   	
+	\end{tabular}
+	\caption{Footfall prediction confusion matrix (\% accuracy )}
+	\label{tab:action-recogn-acc}
+\end{table}
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|c|} 	
+		\hline	
+		& \(D_r\) &  \(D_w\) & \(D_t\)\\ 
+		\hline
+		\(\lambda_{running}\) & 0.00  & -0.00\(\times10^{14}\)   & -0.00\(\times10^{14}\)\\ 
+		\hline
+		\(\lambda_{walking}\)  & -0.00\(\times10^{14}\)  &  0.00  & -0.00\(\times10^{14}\)\\ 
+		\hline
+		\(\lambda_{trotting}\)  & -1.44\(\times10^{12}\)  &  -0.1302  & 0.00\\
+		\hline	   	
+	\end{tabular}
+	\caption{Footfall sequence log-likelihood}
+	\label{tab:action-recogn-log}
+\end{table}
 
 \subsection{Analysis of results}
+By inspection, we can observ that, the principal diagonal of the confusion matrix generates the highest accuracies in \ref{tab:action-recogn-acc}. It can therefore, be concluded that the different models effectively recognise their corresponding motion type. This fact is confirmed by the log-likelihood table with the highest values on the main diagonal. Please note that the values -0.00\(\times10^{14}\) are very tiny non-zero quantities.\\
+It is worth mentioning the 100\% accuracies when the unseen walking and trotting dataset were used to test their corresponding models. Strictly speaking, the 100\% accuracies might have been obatined because the transition errors were ignored (ref. \ref{sec:eval}). \\ Regardless, this is a better performance on unseen dataset compared to the performance seen thus far when the dataset from three actions are aggregated (ref. \ref{sec:aggregate}). Naturally, the non-aggregated training dataset better models a particular action than building a common model that fits all the three action types.
 
-\subsection{Conclusions and recommendations of the experiment}
+\subsection{Conclusions of the experiment}
+On the account of the findings discussed in the above subsection, the following conclusions can be drawn.
+Indeed, IMU based CHMM can be used to successfully perform motion type recognition. 
 
 
 \section{Experiement 5: Comparing the back and front gait of the dog}  \label{exp:front-back}

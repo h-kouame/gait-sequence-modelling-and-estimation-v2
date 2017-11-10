@@ -107,15 +107,15 @@
 \contentsline {section}{\numberline {5.4}Experiement 4: Motion or action recognition}{46}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Aim of the experiement}{46}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2}Experiment apparatus}{47}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Experiment procedure}{48}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Experiment results}{48}{subsection.5.4.4}
+\contentsline {subsection}{\numberline {5.4.3}Experiment procedure}{47}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Experiment results}{49}{subsection.5.4.4}
 \contentsline {subsection}{\numberline {5.4.5}Analysis of results}{49}{subsection.5.4.5}
-\contentsline {subsection}{\numberline {5.4.6}Conclusions and recommendations of the experiment}{49}{subsection.5.4.6}
-\contentsline {section}{\numberline {5.5}Experiement 5: Comparing the back and front gait of the dog}{49}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Aim of the experiement}{49}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Experiment apparatus}{49}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.4.6}Conclusions of the experiment}{49}{subsection.5.4.6}
+\contentsline {section}{\numberline {5.5}Experiement 5: Comparing the back and front gait of the dog}{50}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Aim of the experiement}{50}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Experiment apparatus}{50}{subsection.5.5.2}
 \contentsline {subsection}{\numberline {5.5.3}Experiment procedure}{50}{subsection.5.5.3}
-\contentsline {subsection}{\numberline {5.5.4}Experiment results}{50}{subsection.5.5.4}
+\contentsline {subsection}{\numberline {5.5.4}Experiment results}{51}{subsection.5.5.4}
 \contentsline {subsection}{\numberline {5.5.5}Analysis of results}{52}{subsection.5.5.5}
 \contentsline {subsection}{\numberline {5.5.6}Conclusions and recommendations of the experiment}{52}{subsection.5.5.6}
 \contentsline {chapter}{\numberline {6}Discussion}{53}{chapter.6}

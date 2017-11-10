@@ -21,8 +21,10 @@ function [accuracies, logliks] = exper_effect_of_dim_red(traindata, testdata)
 %     Build model with Filter methods: NN, SIM
     sdm_model = SDM_BuildGmmHMM(traindata); %SDM
     for_filter_model = SDM_filter_BuildGmmHMM(traindata); %SDM and forward selection
+    
+    [full_search_model, full_search_build_data] = FullSearch_BuildGmmHMM(traindata); %requires selected features training data to test
 
-    meth_num = 5;
+    meth_num = 6;
     accuracies = zeros(1, meth_num);
     logliks = zeros(1, meth_num);
     reduc_data = cell(1, meth_num);
@@ -39,6 +41,8 @@ function [accuracies, logliks] = exper_effect_of_dim_red(traindata, testdata)
     [accuracies(4), estimated_paths(:, 4), logliks(:, 4)] = SDM_GmmHMMpredict(sdm_model, testdata);
     disp('Forward feature selection');
     [accuracies(5), estimated_paths(:, 5), logliks(:, 5)] = SDM_filter_GmmHMMpredict(for_filter_model, testdata);
+    disp('Full search feature selection');
+    [accuracies(5), estimated_paths(:, 6), logliks(:, 6)] = FullSearch_GmmHMMpredict(for_filter_model, testdata, full_search_build_data);
 
 %   Plot the accuracy of the different runs
 %     figure;

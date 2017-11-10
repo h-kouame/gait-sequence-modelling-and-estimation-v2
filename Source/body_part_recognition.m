@@ -44,6 +44,6 @@ function body_part_recognition()
         corr_coef_accuracies(:,:,i) = corrcoef(accuracies(:,:,i));
         corr_coef_logliks(:,:,i) = corrcoef(logliks(:,:,i));
     end
-    variable_path = 'C:\School\EEE4022S\Gait Sequence Estimation\Output\Motion-Recogn\accuracies-logliks.mat';
+    variable_path = 'C:\School\EEE4022S\Gait Sequence Estimation\Output\Motion-Recogn\body-part-accuracies-logliks.mat';
     save(variable_path, 'accuracies', 'logliks', 'corr_coef_accuracies', 'corr_coef_logliks');
 end
