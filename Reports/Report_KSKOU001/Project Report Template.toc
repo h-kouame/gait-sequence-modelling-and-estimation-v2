@@ -101,26 +101,30 @@
 \contentsline {subsection}{\numberline {5.3.1}Aim of the experiement}{44}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Experiment apparatus}{45}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Experiment procedure}{45}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Experiment results}{45}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Analysis of results}{46}{subsection.5.3.5}
-\contentsline {subsection}{\numberline {5.3.6}Conclusions and recommendations of the experiment}{46}{subsection.5.3.6}
-\contentsline {section}{\numberline {5.4}Experiement 4: Motion or action recognition}{46}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Aim of the experiement}{46}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Experiment apparatus}{47}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Experiment procedure}{47}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Experiment results}{49}{subsection.5.4.4}
-\contentsline {subsection}{\numberline {5.4.5}Analysis of results}{49}{subsection.5.4.5}
-\contentsline {subsection}{\numberline {5.4.6}Conclusions of the experiment}{49}{subsection.5.4.6}
-\contentsline {section}{\numberline {5.5}Experiement 5: Comparing the back and front gait of the dog}{50}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Aim of the experiement}{50}{subsection.5.5.1}
-\contentsline {subsection}{\numberline {5.5.2}Experiment apparatus}{50}{subsection.5.5.2}
-\contentsline {subsection}{\numberline {5.5.3}Experiment procedure}{50}{subsection.5.5.3}
-\contentsline {subsection}{\numberline {5.5.4}Experiment results}{51}{subsection.5.5.4}
-\contentsline {subsection}{\numberline {5.5.5}Analysis of results}{52}{subsection.5.5.5}
-\contentsline {subsection}{\numberline {5.5.6}Conclusions and recommendations of the experiment}{52}{subsection.5.5.6}
-\contentsline {chapter}{\numberline {6}Discussion}{53}{chapter.6}
-\contentsline {chapter}{\numberline {7}Conclusions}{54}{chapter.7}
-\contentsline {chapter}{\numberline {8}Recommendations}{55}{chapter.8}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{58}{appendix.A}
-\contentsline {chapter}{\numberline {B}Addenda}{59}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{59}{section.B.1}
+\contentsline {subsection}{\numberline {5.3.4}Experiment results}{46}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Analysis and discusion of results}{47}{subsection.5.3.5}
+\contentsline {subsubsection}{No reduction vs feature Ranking: SI Ranking}{47}{section*.16}
+\contentsline {subsubsection}{No reduction vs forward feature selection: SI-forward}{48}{section*.17}
+\contentsline {subsubsection}{No reduction vs PCA and LDA}{49}{section*.18}
+\contentsline {subsubsection}{Bias variance error analysis}{49}{section*.19}
+\contentsline {subsection}{\numberline {5.3.6}Conclusions and recommendations of the experiment}{49}{subsection.5.3.6}
+\contentsline {section}{\numberline {5.4}Experiement 4: Motion or action recognition}{50}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Aim of the experiement}{50}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Experiment apparatus}{50}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Experiment procedure}{50}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Experiment results}{51}{subsection.5.4.4}
+\contentsline {subsection}{\numberline {5.4.5}Analysis of results}{51}{subsection.5.4.5}
+\contentsline {subsection}{\numberline {5.4.6}Conclusions of the experiment}{52}{subsection.5.4.6}
+\contentsline {section}{\numberline {5.5}Experiement 5: Comparing the back and front gait of the dog}{52}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Aim of the experiement}{52}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Experiment apparatus}{52}{subsection.5.5.2}
+\contentsline {subsection}{\numberline {5.5.3}Experiment procedure}{53}{subsection.5.5.3}
+\contentsline {subsection}{\numberline {5.5.4}Experiment results}{53}{subsection.5.5.4}
+\contentsline {subsection}{\numberline {5.5.5}Analysis of results}{55}{subsection.5.5.5}
+\contentsline {subsection}{\numberline {5.5.6}Conclusions and recommendations of the experiment}{55}{subsection.5.5.6}
+\contentsline {chapter}{\numberline {6}Discussion}{56}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusions}{57}{chapter.7}
+\contentsline {chapter}{\numberline {8}Recommendations}{58}{chapter.8}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{61}{appendix.A}
+\contentsline {chapter}{\numberline {B}Addenda}{62}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{62}{section.B.1}
