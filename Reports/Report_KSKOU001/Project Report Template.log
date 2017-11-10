@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  4 NOV 2017 14:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  10 NOV 2017 22:30
 entering extended mode
 **"./Project Report Template.tex"
 ("Project Report Template.tex"
@@ -407,9 +407,13 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@loff=\dimen141
 \@vwid@roff=\dimen142
 ))
-("Project Report Template.aux" (Introduction.aux) (Literature.aux)
-(Methodology.aux) (Results.aux) (Discussion.aux) (Conclusions.aux)
-(Recommendations.aux) (References.aux) (appendixa.aux) (appendixb.aux))
+("Project Report Template.aux" (Introduction.aux) (Literature.aux
+
+LaTeX Warning: Label `alg:EM' multiply defined.
+
+) (Methodology.aux) (Design.aux) (Experimental.aux) (Results.aux)
+(Discussion.aux) (Conclusions.aux) (Recommendations.aux) (References.aux)
+(appendixa.aux) (appendixb.aux))
 \openout1 = `"Project Report Template.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
@@ -511,7 +515,7 @@ LaTeX Info: Redefining \nameref on input line 67.
 
 \c@lstlisting=\count137
 
-<uctLogo.png, id=215, 418.56375pt x 425.59pt>
+<uctLogo.png, id=451, 418.56375pt x 425.59pt>
 File: uctLogo.png Graphic file (type png)
  <use uctLogo.png>
 Package pdftex.def Info: uctLogo.png used on input line 81.
@@ -519,27 +523,27 @@ Package pdftex.def Info: uctLogo.png used on input line 81.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./uctLogo.png>] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 196--196
+Underfull \hbox (badness 10000) in paragraph at lines 198--198
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 196--196
+Underfull \hbox (badness 10000) in paragraph at lines 198--198
 
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 196--196
+Underfull \hbox (badness 10000) in paragraph at lines 198--198
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 196.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 198.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 196.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 198.
  [2]
 ("Project Report Template.toc"
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
@@ -553,24 +557,24 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3
 
-] [4]
-Overfull \hbox (11.62735pt too wide) in paragraph at lines 60--60
- [][] [][]\OT1/cmr/m/n/12 Experiement 2: The effect of dimensionality reduction
+] [4] [5] [6]
+Overfull \hbox (11.62735pt too wide) in paragraph at lines 100--100
+ [][] [][]\OT1/cmr/m/n/12 Experiement 3: The effect of dimensionality reduction
  on CHMM's performance[] [][]  
  []
 
-[5])
+[7])
 \tf@toc=\write4
 \openout4 = `"Project Report Template.toc"'.
 
- [6]
+ [8] [9]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 196.
+less on input line 198.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 196.
+less on input line 198.
 
 \openout2 = `Introduction.aux'.
 
@@ -588,7 +592,7 @@ ll-eps-converted-to.pdf Figures/BackPitch_vs_BackRoll.eps>
 (epstopdf)             \includegraphics on input line 5.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=320, 357.335pt x 302.12
+<Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf, id=628, 357.335pt x 302.12
 875pt>
 File: Figures/BackPitch_vs_BackRoll-eps-converted-to.pdf Graphic file (type pdf
 )
@@ -633,7 +637,7 @@ d in the study. Limitations
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.196 }
+l.198 }
         [3]
 \openout2 = `Literature.aux'.
 
@@ -649,95 +653,94 @@ Overfull \hbox (1.48175pt too wide) in paragraph at lines 23--25
 rvations, $$ consists
  []
 
-[5] [6] [7] [8] <Figures/filter.jpg, id=397, 216.81pt x 108.08522pt>
+[5] [6] [7] [8] <Figures/filter.jpg, id=706, 216.81pt x 108.08522pt>
 File: Figures/filter.jpg Graphic file (type jpg)
 
 <use Figures/filter.jpg>
-Package pdftex.def Info: Figures/filter.jpg used on input line 102.
+Package pdftex.def Info: Figures/filter.jpg used on input line 109.
 (pdftex.def)             Requested size: 216.80946pt x 108.08495pt.
- <Figures/wrapper.jpg, id=398, 216.81pt x 108.08522pt>
+ <Figures/wrapper.jpg, id=707, 216.81pt x 108.08522pt>
 File: Figures/wrapper.jpg Graphic file (type jpg)
 
 <use Figures/wrapper.jpg>
-Package pdftex.def Info: Figures/wrapper.jpg used on input line 108.
+Package pdftex.def Info: Figures/wrapper.jpg used on input line 115.
 (pdftex.def)             Requested size: 216.80946pt x 108.08495pt.
 
-<Figures/filter-wrapper.jpg, id=400, 154.13336pt x 201.46062pt>
+<Figures/filter-wrapper.jpg, id=709, 154.13336pt x 201.46062pt>
 File: Figures/filter-wrapper.jpg Graphic file (type jpg)
 
 <use Figures/filter-wrapper.jpg>
-Package pdftex.def Info: Figures/filter-wrapper.jpg used on input line 117.
+Package pdftex.def Info: Figures/filter-wrapper.jpg used on input line 124.
 (pdftex.def)             Requested size: 154.13298pt x 201.46011pt.
- [9 <./Figures/filter.jpg> <./Figures/wrapper.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 132--135
-
- []
-
-[10 <./Figures/filter-wrapper.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 140--144
+ [9 <./Figures/filter.jpg>] [10 <./Figures/wrapper.jpg> <./Figures/filter-wrapp
+er.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 139--142
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--156
+Underfull \hbox (badness 10000) in paragraph at lines 147--151
 
  []
 
-[11]) [12]
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--163
+
+ []
+
+[11]
+
+Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
+ on input line 177.
+
+[12]) [13]
 \openout2 = `Methodology.aux'.
 
  (Methodology.tex
 Chapter 3.
+) [14
+
+
+
+]
+Overfull \vbox (272.21649pt too high) has occurred while \output is active []
+
+
+[15]
+\openout2 = `Design.aux'.
+
+ (Design.tex
+Chapter 4.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13
+
+Overfull \hbox (2.37987pt too wide) in paragraph at lines 57--57
+[]\OT1/cmr/bx/n/17.28 Quadrupede Gait sequence modelling with HMM 
+ []
+
+[16
 
 
 
-] [14] <model.png, id=448, 650.43pt x 396.48125pt>
+] [17] <model.png, id=768, 650.43pt x 396.48125pt>
 File: model.png Graphic file (type png)
  <use model.png>
-Package pdftex.def Info: model.png used on input line 98.
+Package pdftex.def Info: model.png used on input line 93.
 (pdftex.def)             Requested size: 317.07614pt x 193.28534pt.
- [15]
-Overfull \hbox (4.75157pt too wide) in paragraph at lines 112--114
-[]\OT1/cmr/bx/n/12 Increasing the data by mirroring\OT1/cmr/m/n/12 : The aggreg
-ated observation sequence amounts
+ [18]
+Overfull \hbox (7.36266pt too wide) in paragraph at lines 107--109
+[]\OT1/cmr/bx/n/12 Increasing the data by mirroring []\OT1/cmr/m/n/12 : The agg
+regated observation sequence amounts
  []
 
 
-Overfull \hbox (7.3227pt too wide) in paragraph at lines 112--114
+Overfull \hbox (7.3227pt too wide) in paragraph at lines 107--109
 \OT1/cmr/m/n/12 sequence was appended to the initial sequence. This decision wo
 rks on the assumption
  []
 
-[16 <./model.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 131--137
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--137
-
- []
-
-[17]
-Overfull \hbox (5.84772pt too wide) in paragraph at lines 138--141
-\OT1/cmr/m/n/12 expectation algorithm such as Welch-Baum algorithm. and describ
-ed in the literature
- []
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-Overfull \hbox (20.93217pt too wide) in paragraph at lines 154--162
-\OML/cmm/m/it/12 K \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 number of features;  M \O
-T1/cmr/m/n/12 = \OML/cmm/m/it/12 mixture number;  and N \OT1/cmr/m/n/12 = \OML/
-cmm/m/it/12 number of states$\OT1/cmr/m/n/12 .
- []
-
-[18]
+[19 <./model.png>] [20]
 Package epstopdf Info: Source file: <Figures/MCE.eps>
 (epstopdf)                    date: 2017-11-02 10:19:12
 (epstopdf)                    size: 18902 bytes
@@ -746,15 +749,28 @@ Package epstopdf Info: Source file: <Figures/MCE.eps>
 (epstopdf)                    size: 3854 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/MCE-eps-converted-t
 o.pdf Figures/MCE.eps>
-(epstopdf)             \includegraphics on input line 187.
+(epstopdf)             \includegraphics on input line 143.
 Package epstopdf Info: Output file is already uptodate.
- <Figures/MCE-eps-converted-to.pdf, id=495, 361.35pt x 302.12875pt>
+
+<Figures/MCE-eps-converted-to.pdf, id=796, 361.35pt x 302.12875pt>
 File: Figures/MCE-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/MCE-eps-converted-to.pdf>
-Package pdftex.def Info: Figures/MCE-eps-converted-to.pdf used on input line 18
-7.
+Package pdftex.def Info: Figures/MCE-eps-converted-to.pdf used on input line 14
+3.
 (pdftex.def)             Requested size: 361.34912pt x 302.128pt.
+ [21 <./Figures/MCE-eps-converted-to.pdf>]
+Overfull \hbox (4.2631pt too wide) in paragraph at lines 158--167
+\OT1/cmr/m/n/12 In this project, 1-Nearest Neighbour (1-NN) was used as evaluat
+ion criterion. Furthermore,
+ []
+
+[22]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 170.
+
 Package epstopdf Info: Source file: <Figures/best_PCA.eps>
 (epstopdf)                    date: 2017-11-02 12:19:44
 (epstopdf)                    size: 18573 bytes
@@ -763,41 +779,251 @@ Package epstopdf Info: Source file: <Figures/best_PCA.eps>
 (epstopdf)                    size: 3700 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/best_PCA-eps-conver
 ted-to.pdf Figures/best_PCA.eps>
-(epstopdf)             \includegraphics on input line 194.
+(epstopdf)             \includegraphics on input line 180.
 Package epstopdf Info: Output file is already uptodate.
-
-<Figures/best_PCA-eps-converted-to.pdf, id=496, 361.35pt x 288.07625pt>
+<Figures/best_PCA-eps-converted-to.pdf, id=819, 361.35pt x 288.07625pt>
 File: Figures/best_PCA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/best_PCA-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/best_PCA-eps-converted-to.pdf used on input li
-ne 194.
+ne 180.
 (pdftex.def)             Requested size: 361.34912pt x 288.07553pt.
+ [23] [24 <./Figures/best_PCA-eps-converted-to.pdf>]
+Overfull \hbox (18.01224pt too wide) in paragraph at lines 202--210
+[]\OT1/cmr/bx/it/12 Approach 1: EM algorithm using ground-truth\OT1/cmr/m/n/12 
+: This technique takes advantage
+ []
 
-Overfull \hbox (31.72142pt too wide) in paragraph at lines 200--200
+
+Overfull \hbox (4.62457pt too wide) in paragraph at lines 202--210
+\OT1/cmr/m/n/12 To make the transition matrix more representation of the state 
+transition machanism,
+ []
+
+
+Overfull \hbox (12.93214pt too wide) in paragraph at lines 202--210
+\OT1/cmr/m/n/12 probability as follows: $\OML/cmm/m/it/12 A \OT1/cmr/m/n/12 = \
+OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 a[]\OMS/cmsy/m/n/12 g \OT1/cmr/m/n/12 = \OMS/
+cmsy/m/n/12 f\OML/cmm/m/it/12 a[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 prior[]\OM
+S/cmsy/m/n/12 g$\OT1/cmr/m/n/12 . In this work,the pseudocount,
+ []
+
+
+Overfull \hbox (2.6284pt too wide) in paragraph at lines 214--220
+\OT1/cmr/m/n/12 states. Then, the three GMM parameters were estimated for each 
+state using a expectation
+ []
+
+[25] ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 242.
+ [26]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 251.
+Package epstopdf Info: Source file: <Figures/optimal-mix.eps>
+(epstopdf)                    date: 2017-11-08 13:40:29
+(epstopdf)                    size: 19467 bytes
+(epstopdf)             Output file: <Figures/optimal-mix-eps-converted-to.pdf>
+(epstopdf)                    date: 2017-11-08 13:48:38
+(epstopdf)                    size: 4310 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/optimal-mix-eps-con
+verted-to.pdf Figures/optimal-mix.eps>
+(epstopdf)             \includegraphics on input line 263.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figures/optimal-mix-eps-converted-to.pdf, id=851, 421.575pt x 316.18124pt>
+File: Figures/optimal-mix-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Figures/optimal-mix-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/optimal-mix-eps-converted-to.pdf used on input
+ line 263.
+(pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
+ [27 <./Figures/optimal-mix-eps-converted-to.pdf>]
+Overfull \hbox (1.85025pt too wide) in paragraph at lines 285--288
+\OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 q[]$ \OT1/cmr/m/n/12 wh
+en in state $\OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 q[]$\OT1/c
+mr/m/n/12 . This simplification follows from the \OT1/cmr/m/it/12 Markov assump
+tion
+ []
+
+[28] [29]
+Overfull \hbox (15.32346pt too wide) in paragraph at lines 327--358
+ [][] 
+ []
+
+
+Overfull \hbox (31.72142pt too wide) in paragraph at lines 365--365
 []\OT1/cmr/bx/n/14.4 Proving learning ability by increasing loglik for many ite
 ration:
  []
 
-) [19 <./Figures/MCE-eps-converted-to.pdf>] [20 <./Figures/best_PCA-eps-convert
-ed-to.pdf>]
-\openout2 = `Results.aux'.
+) [30] [31]
+\openout2 = `Experimental.aux'.
 
- (Results.tex
-Chapter 4.
 
-Overfull \hbox (20.44774pt too wide) in paragraph at lines 3--3
-[]\OT1/cmr/bx/n/17.28 Experiement 1: The effect of a CHMM' observation
- []
-
-[21
+No file Experimental.tex.
+[32
 
 
 
 ]
-Overfull \hbox (28.38544pt too wide) in paragraph at lines 29--30
-[]\OT1/cmr/m/n/12 The different accuracies were finally ploted as a function of
- the observation dimensionality.
+\openout2 = `Results.aux'.
+
+ (Results.tex
+Chapter 5.
+
+Overfull \hbox (34.72627pt too wide) in paragraph at lines 12--13
+\OT1/cmr/m/n/12 respectively specified by $\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12
+ = (\OML/cmm/m/it/12 A[]; []; []; \OT1/cmr/m/n/12 []\OML/cmm/m/it/12 ; []\O
+T1/cmr/m/n/12 )$ and $\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12 
+A[]; []; []; \OT1/cmr/m/n/12 []\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 )$.
+ []
+
+[33
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 19--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--25
+
+ []
+
+Package epstopdf Info: Source file: <Figures/front-comb-acc.eps>
+(epstopdf)                    date: 2017-11-10 12:06:59
+(epstopdf)                    size: 19693 bytes
+(epstopdf)             Output file: <Figures/front-comb-acc-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2017-11-10 12:09:16
+(epstopdf)                    size: 3964 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/front-comb-acc-eps-
+converted-to.pdf Figures/front-comb-acc.eps>
+(epstopdf)             \includegraphics on input line 30.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figures/front-comb-acc-eps-converted-to.pdf, id=934, 421.575pt x 316.18124pt>
+File: Figures/front-comb-acc-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Figures/front-comb-acc-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/front-comb-acc-eps-converted-to.pdf used on in
+put line 30.
+(pdftex.def)             Requested size: 452.97844pt x 339.73383pt.
+Package epstopdf Info: Source file: <Figures/front-comb-log.eps>
+(epstopdf)                    date: 2017-11-10 12:06:38
+(epstopdf)                    size: 19952 bytes
+(epstopdf)             Output file: <Figures/front-comb-log-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2017-11-10 12:09:16
+(epstopdf)                    size: 4265 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/front-comb-log-eps-
+converted-to.pdf Figures/front-comb-log.eps>
+(epstopdf)             \includegraphics on input line 36.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figures/front-comb-log-eps-converted-to.pdf, id=935, 421.575pt x 316.18124pt>
+File: Figures/front-comb-log-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Figures/front-comb-log-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/front-comb-log-eps-converted-to.pdf used on in
+put line 36.
+(pdftex.def)             Requested size: 452.97844pt x 339.73383pt.
+Package epstopdf Info: Source file: <Figures/back-comb-acc.eps>
+(epstopdf)                    date: 2017-11-10 12:00:24
+(epstopdf)                    size: 19691 bytes
+(epstopdf)             Output file: <Figures/back-comb-acc-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2017-11-10 12:24:28
+(epstopdf)                    size: 3951 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/back-comb-acc-eps-c
+onverted-to.pdf Figures/back-comb-acc.eps>
+(epstopdf)             \includegraphics on input line 42.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figures/back-comb-acc-eps-converted-to.pdf, id=936, 421.575pt x 316.18124pt>
+File: Figures/back-comb-acc-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Figures/back-comb-acc-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/back-comb-acc-eps-converted-to.pdf used on inp
+ut line 42.
+(pdftex.def)             Requested size: 452.97844pt x 339.73383pt.
+Package epstopdf Info: Source file: <Figures/back-comb-log.eps>
+(epstopdf)                    date: 2017-11-10 12:00:48
+(epstopdf)                    size: 19236 bytes
+(epstopdf)             Output file: <Figures/back-comb-log-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2017-11-10 12:24:29
+(epstopdf)                    size: 4229 bytes
+(epstopdf)             Command: <epstopdf --outfile=Figures/back-comb-log-eps-c
+onverted-to.pdf Figures/back-comb-log.eps>
+(epstopdf)             \includegraphics on input line 48.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figures/back-comb-log-eps-converted-to.pdf, id=937, 421.575pt x 316.18124pt>
+File: Figures/back-comb-log-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Figures/back-comb-log-eps-converted-to.pdf>
+Package pdftex.def Info: Figures/back-comb-log-eps-converted-to.pdf used on inp
+ut line 48.
+(pdftex.def)             Requested size: 452.97844pt x 339.73383pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
+ Make it at least 27.05003pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
+
+ []
+
+[35 <./Figures/front-comb-acc-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
+
+ []
+
+[36 <./Figures/front-comb-log-eps-converted-to.pdf>]
+Overfull \hbox (2.29636pt too wide) in paragraph at lines 73--76
+\OT1/cmr/m/n/12 how well can the back sensors measurement be used to predict th
+e front footfalls. Similarly,
+ []
+
+[37 <./Figures/back-comb-acc-eps-converted-to.pdf>]
+Overfull \hbox (20.44774pt too wide) in paragraph at lines 77--77
+[]\OT1/cmr/bx/n/17.28 Experiement 2: The effect of a CHMM' observation
+ []
+
+[38 <./Figures/back-comb-log-eps-converted-to.pdf>]
+
+Package Fancyhdr Warning: \headheight is too small (27.05003pt): 
+ Make it at least 27.18335pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[39]
+Overfull \hbox (15.19946pt too wide) in paragraph at lines 100--101
+\OT1/cmr/m/n/12 tested with the same test dataset with the correct feature subs
+ets and their performance
  []
 
 Package epstopdf Info: Source file: <Figures/dimensionality-effect-acc.eps>
@@ -809,25 +1035,17 @@ erted-to.pdf>
 (epstopdf)                    size: 3626 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/dimensionality-effe
 ct-acc-eps-converted-to.pdf Figures/dimensionality-effect-acc.eps>
-(epstopdf)             \includegraphics on input line 38.
+(epstopdf)             \includegraphics on input line 111.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/dimensionality-effect-acc-eps-converted-to.pdf, id=535, 361.35pt x 291
-.0875pt>
+<Figures/dimensionality-effect-acc-eps-converted-to.pdf, id=1004, 361.35pt x 29
+1.0875pt>
 File: Figures/dimensionality-effect-acc-eps-converted-to.pdf Graphic file (type
  pdf)
  <use Figures/dimensionality-effect-acc-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/dimensionality-effect-acc-eps-converted-to.pdf
- used on input line 38.
+ used on input line 111.
 (pdftex.def)             Requested size: 452.9711pt x 364.89336pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
- Make it at least 27.18335pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[22]
 Package epstopdf Info: Source file: <Figures/dimensionality-effect-log.eps>
 (epstopdf)                    date: 2017-11-01 15:15:02
 (epstopdf)                    size: 18527 bytes
@@ -837,16 +1055,16 @@ erted-to.pdf>
 (epstopdf)                    size: 3977 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/dimensionality-effe
 ct-log-eps-converted-to.pdf Figures/dimensionality-effect-log.eps>
-(epstopdf)             \includegraphics on input line 44.
+(epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/dimensionality-effect-log-eps-converted-to.pdf, id=549, 365.365pt x 30
-1.125pt>
+<Figures/dimensionality-effect-log-eps-converted-to.pdf, id=1005, 365.365pt x 3
+01.125pt>
 File: Figures/dimensionality-effect-log-eps-converted-to.pdf Graphic file (type
  pdf)
  <use Figures/dimensionality-effect-log-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/dimensionality-effect-log-eps-converted-to.pdf
- used on input line 44.
+ used on input line 117.
 (pdftex.def)             Requested size: 365.3641pt x 301.12425pt.
 Package epstopdf Info: Source file: <Figures/ground-truth-scatter-with-5-featur
 es.eps>
@@ -859,17 +1077,17 @@ es-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/ground-truth-scatte
 r-with-5-features-eps-converted-to.pdf Figures/ground-truth-scatter-with-5-feat
 ures.eps>
-(epstopdf)             \includegraphics on input line 51.
+(epstopdf)             \includegraphics on input line 124.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf, id=550, 376
-.40625pt x 288.07625pt>
+<Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf, id=1006, 37
+6.40625pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf Graphic
  file (type pdf)
 
 <use Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/ground-truth-scatter-with-5-features-eps-conve
-rted-to.pdf used on input line 51.
+rted-to.pdf used on input line 124.
 (pdftex.def)             Requested size: 376.40532pt x 288.07553pt.
 Package epstopdf Info: Source file: <Figures/estimation-scatter-with-5-features
 .eps>
@@ -882,17 +1100,17 @@ Package epstopdf Info: Source file: <Figures/estimation-scatter-with-5-features
 (epstopdf)             Command: <epstopdf --outfile=Figures/estimation-scatter-
 with-5-features-eps-converted-to.pdf Figures/estimation-scatter-with-5-features
 .eps>
-(epstopdf)             \includegraphics on input line 56.
+(epstopdf)             \includegraphics on input line 129.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-5-features-eps-converted-to.pdf, id=551, 376.4
-0625pt x 288.07625pt>
+<Figures/estimation-scatter-with-5-features-eps-converted-to.pdf, id=1007, 376.
+40625pt x 288.07625pt>
 File: Figures/estimation-scatter-with-5-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
 
 <use Figures/estimation-scatter-with-5-features-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/estimation-scatter-with-5-features-eps-convert
-ed-to.pdf used on input line 56.
+ed-to.pdf used on input line 129.
 (pdftex.def)             Requested size: 376.40532pt x 288.07553pt.
 Package epstopdf Info: Source file: <Figures/ground-truth-scatter-with-18-featu
 res.eps>
@@ -905,17 +1123,17 @@ res-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/ground-truth-scatte
 r-with-18-features-eps-converted-to.pdf Figures/ground-truth-scatter-with-18-fe
 atures.eps>
-(epstopdf)             \includegraphics on input line 62.
+(epstopdf)             \includegraphics on input line 135.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf, id=552, 38
-2.42876pt x 288.07625pt>
+<Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf, id=1008, 3
+82.42876pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf Graphi
 c file (type pdf)
 
 <use Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/ground-truth-scatter-with-18-features-eps-conv
-erted-to.pdf used on input line 62.
+erted-to.pdf used on input line 135.
 (pdftex.def)             Requested size: 382.42781pt x 288.07553pt.
 Package epstopdf Info: Source file: <Figures/estimation-scatter-with-18-feature
 s.eps>
@@ -928,46 +1146,52 @@ s-eps-converted-to.pdf>
 (epstopdf)             Command: <epstopdf --outfile=Figures/estimation-scatter-
 with-18-features-eps-converted-to.pdf Figures/estimation-scatter-with-18-featur
 es.eps>
-(epstopdf)             \includegraphics on input line 68.
+(epstopdf)             \includegraphics on input line 141.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-18-features-eps-converted-to.pdf, id=553, 382.
-42876pt x 288.07625pt>
+<Figures/estimation-scatter-with-18-features-eps-converted-to.pdf, id=1009, 382
+.42876pt x 288.07625pt>
 File: Figures/estimation-scatter-with-18-features-eps-converted-to.pdf Graphic 
 file (type pdf)
 
 <use Figures/estimation-scatter-with-18-features-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/estimation-scatter-with-18-features-eps-conver
-ted-to.pdf used on input line 68.
+ted-to.pdf used on input line 141.
 (pdftex.def)             Requested size: 382.42781pt x 288.07553pt.
+ [40]
+[41 <./Figures/dimensionality-effect-acc-eps-converted-to.pdf>]
 
-Overfull \hbox (41.76976pt too wide) in paragraph at lines 77--77
-[]\OT1/cmr/bx/n/17.28 Experiement 2: The effect of dimensionality reduction
+LaTeX Warning: Text page 42 contains only floats.
+
+[42 <./Figures/dimensionality-effect-log-eps-converted-to.pdf> <./Figures/groun
+d-truth-scatter-with-5-features-eps-converted-to.pdf>]
+
+LaTeX Warning: Text page 43 contains only floats.
+
+[43 <./Figures/estimation-scatter-with-5-features-eps-converted-to.pdf> <./Figu
+res/ground-truth-scatter-with-18-features-eps-converted-to.pdf>]
+Overfull \hbox (41.76976pt too wide) in paragraph at lines 158--158
+[]\OT1/cmr/bx/n/17.28 Experiement 3: The effect of dimensionality reduction
  []
 
 
-Overfull \hbox (1.08594pt too wide) in paragraph at lines 80--84
+Overfull \hbox (1.08594pt too wide) in paragraph at lines 161--165
 \OT1/cmr/m/n/12 investigation is therefore the following: \OT1/cmr/bx/it/12 Dim
 ension reduction can cause an increase
  []
 
-[23 <./Figures/dimensionality-effect-acc-eps-converted-to.pdf>]
-
-LaTeX Warning: Text page 24 contains only floats.
-
-[24 <./Figures/dimensionality-effect-log-eps-converted-to.pdf> <./Figures/groun
-d-truth-scatter-with-5-features-eps-converted-to.pdf>]
-
-LaTeX Warning: Text page 25 contains only floats.
-
-[25 <./Figures/estimation-scatter-with-5-features-eps-converted-to.pdf> <./Figu
-res/ground-truth-scatter-with-18-features-eps-converted-to.pdf>] [26 <./Figures
-/estimation-scatter-with-18-features-eps-converted-to.pdf>]
-Overfull \hbox (49.525pt too wide) in paragraph at lines 95--102
-\OT1/cmr/m/n/12 dataset five different models were built and trained, $ = (\OM
-L/cmm/m/it/12 []; []; []; []; []\OT1/cmr/m/n/12 )$.
+[44 <./Figures/estimation-scatter-with-18-features-eps-converted-to.pdf>]
+Overfull \hbox (23.09253pt too wide) in paragraph at lines 171--172
+[]\OT1/cmr/m/n/12 A performance measure to compare the different models with an
+d without dimensionality
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--183
+
+ []
+
+[45]
 Package epstopdf Info: Source file: <Figures/size-acc-2.eps>
 (epstopdf)                    date: 2017-11-02 13:50:54
 (epstopdf)                    size: 19914 bytes
@@ -976,14 +1200,15 @@ Package epstopdf Info: Source file: <Figures/size-acc-2.eps>
 (epstopdf)                    size: 4130 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/size-acc-2-eps-conv
 erted-to.pdf Figures/size-acc-2.eps>
-(epstopdf)             \includegraphics on input line 108.
+(epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/size-acc-2-eps-converted-to.pdf, id=598, 421.575pt x 316.18124pt>
+
+<Figures/size-acc-2-eps-converted-to.pdf, id=1074, 421.575pt x 316.18124pt>
 File: Figures/size-acc-2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/size-acc-2-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/size-acc-2-eps-converted-to.pdf used on input 
-line 108.
+line 190.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 Package epstopdf Info: Source file: <Figures/size-log-2.eps>
 (epstopdf)                    date: 2017-11-02 13:51:20
@@ -993,15 +1218,15 @@ Package epstopdf Info: Source file: <Figures/size-log-2.eps>
 (epstopdf)                    size: 4451 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/size-log-2-eps-conv
 erted-to.pdf Figures/size-log-2.eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 196.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/size-log-2-eps-converted-to.pdf, id=599, 421.575pt x 316.18124pt>
+<Figures/size-log-2-eps-converted-to.pdf, id=1075, 421.575pt x 316.18124pt>
 File: Figures/size-log-2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/size-log-2-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/size-log-2-eps-converted-to.pdf used on input 
-line 114.
+line 196.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
 Package epstopdf Info: Source file: <Figures/bias-var.eps>
 (epstopdf)                    date: 2017-11-02 20:06:45
@@ -1011,29 +1236,105 @@ Package epstopdf Info: Source file: <Figures/bias-var.eps>
 (epstopdf)                    size: 3826 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/bias-var-eps-conver
 ted-to.pdf Figures/bias-var.eps>
-(epstopdf)             \includegraphics on input line 121.
+(epstopdf)             \includegraphics on input line 203.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/bias-var-eps-converted-to.pdf, id=600, 1028.84375pt x 335.2525pt>
+<Figures/bias-var-eps-converted-to.pdf, id=1076, 1028.84375pt x 335.2525pt>
 File: Figures/bias-var-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/bias-var-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/bias-var-eps-converted-to.pdf used on input li
-ne 121.
+ne 203.
 (pdftex.def)             Requested size: 1028.84125pt x 335.25168pt.
 
-Overfull \hbox (575.87335pt too wide) in paragraph at lines 121--122
+Overfull \hbox (575.87335pt too wide) in paragraph at lines 203--204
  [][] 
  []
 
-) [27] [28 <./Figures/size-acc-2-eps-converted-to.pdf>] [29 <./Figures/size-log
--2-eps-converted-to.pdf>] [30 <./Figures/bias-var-eps-converted-to.pdf>]
+
+Overfull \hbox (5.40373pt too wide) in paragraph at lines 209--210
+\OT1/cmr/m/n/12 In the sub-sections below, the effect of each dimensionality re
+duction technique is discussed. 
+ []
+
+[46 <./Figures/size-acc-2-eps-converted-to.pdf>]
+Overfull \hbox (8.60648pt too wide) in paragraph at lines 212--216
+\OT1/cmr/m/n/12 subset selection using feature ranking outperforms the model wi
+th dimensionality reduction.
+ []
+
+[47 <./Figures/size-log-2-eps-converted-to.pdf>] [48 <./Figures/bias-var-eps-co
+nverted-to.pdf>] [49]
+Overfull \hbox (8.88101pt too wide) in paragraph at lines 247--248
+[]\OT1/cmr/m/n/12 An action recognition criterion. In this experience, the pred
+iction accuracies confusion
+ []
+
+
+Overfull \hbox (5.133pt too wide) in paragraph at lines 258--262
+\OT1/cmr/m/n/12 The log-likelihood value []5.2[] measure the likelihood of the 
+IMU measurement sequence
+ []
+
+
+Overfull \hbox (0.14221pt too wide) in paragraph at lines 258--262
+\OT1/cmr/m/n/12 likelihood value. The same purpose can be achieved by using the
+ prediction accuracy
+ []
+
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+
+Overfull \hbox (0.34685pt too wide) in paragraph at lines 303--305
+\OT1/cmr/m/n/12 By inspection, we can observ that, the principal diagonal of th
+e confusion matrix generates
+ []
+
+[51] [52]
+Overfull \hbox (49.525pt too wide) in paragraph at lines 328--335
+\OT1/cmr/m/n/12 dataset five different models were built and trained, $ = (\OM
+L/cmm/m/it/12 []; []; []; []; []\OT1/cmr/m/n/12 )$.
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [53] [54] [55]
 \openout2 = `Discussion.aux'.
 
-
-(Discussion.tex
-Chapter 5.
-) [31
+ (Discussion.tex
+Chapter 6.
+) [56
 
 
 
@@ -1041,8 +1342,8 @@ Chapter 5.
 \openout2 = `Conclusions.aux'.
 
  (Conclusions.tex
-Chapter 6.
-) [32
+Chapter 7.
+) [57
 
 
 
@@ -1050,25 +1351,34 @@ Chapter 6.
 \openout2 = `Recommendations.aux'.
 
  (Recommendations.tex
-Chapter 7.
-) [33
+Chapter 8.
+) [58
 
 
 
 ]
 \openout2 = `References.aux'.
 
- (References.tex [34
+ (References.tex [59
 
 
-]) [35
+]
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no ¤ in font cmr12!
+
+Underfull \hbox (badness 5667) in paragraph at lines 9--10
+[]\OT1/cmr/m/n/12 Ghazaleh Panahandeh, Nasser Mohammadiha, Arne Leijon, Peter H
+ndel,
+ []
+
+) [60
 
 ]
 \openout2 = `appendixa.aux'.
 
  (appendixa.tex
 Appendix A.
-) [36
+) [61
 
 
 
@@ -1077,39 +1387,37 @@ Appendix A.
 
  (appendixb.tex
 Appendix B.
-) [37
+) [62
 
 
 
 ] 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 197.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 199.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
 ("Project Report Template.aux" (Introduction.aux) (Literature.aux)
-(Methodology.aux) (Results.aux) (Discussion.aux) (Conclusions.aux)
-(Recommendations.aux) (References.aux) (appendixa.aux) (appendixb.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 197.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 197.
+(Methodology.aux) (Design.aux) (Experimental.aux) (Results.aux) (Discussion.aux
+) (Conclusions.aux) (Recommendations.aux) (References.aux) (appendixa.aux)
+(appendixb.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 199.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 199.
+Package rerunfilecheck Info: File `"Project Report Template".out' has not chang
+ed.
+(rerunfilecheck)             Checksum: 9FDD569C687CB46888A0662B8120BD44;9164.
 
 
-Package rerunfilecheck Warning: File `"Project Report Template".out' has change
-d.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were multiply-defined labels.
 
-Package rerunfilecheck Info: Checksums for `"Project Report Template".out':
-(rerunfilecheck)             Before: 436B0A00D0AABB04745165F0C9EAB0A6;4081
-(rerunfilecheck)             After:  4516A16CDB25327121A73FA484D28B89;4081.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 197.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 199.
  ) 
 Here is how much of TeX's memory you used:
- 9944 strings out of 493333
- 143754 string characters out of 3139192
- 304542 words of memory out of 3000000
- 13025 multiletter control sequences out of 15000+200000
- 11736 words of font info for 43 fonts, out of 3000000 for 9000
+ 10245 strings out of 493333
+ 148668 string characters out of 3139192
+ 370309 words of memory out of 3000000
+ 13170 multiletter control sequences out of 15000+200000
+ 13435 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,12n,77p,737b,1699s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,12n,77p,811b,2452s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/Mi
@@ -1123,10 +1431,11 @@ Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fo
 nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmti12.pfb>
-Output written on "Project Report Template.pdf" (46 pages, 1739305 bytes).
+/public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb>
+Output written on "Project Report Template.pdf" (74 pages, 1884340 bytes).
 PDF statistics:
- 754 PDF objects out of 1000 (max. 8388607)
- 192 named destinations out of 1000 (max. 500000)
- 510 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1332 PDF objects out of 1440 (max. 8388607)
+ 329 named destinations out of 1000 (max. 500000)
+ 1007 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -30,7 +30,7 @@ As such, \(\phi\) is approximated by a weighted sum of M multivariate Gaussian d
 \begin{align*}
 	1 \leq j \leq N; 1 \leq m  \leq M; \beta_{jm} \geq 0; \sum_{m=1}^{M}\beta_{jm} = 1
 \end{align*}
-where \(\beta_{jm}\) is the mixture composition coefficient; \(\mu_{jm}\), \(\Sigma_{jm}\), respectively the mean vector and covariance matrix of state j; M is the number of mixture components and K is the dimensionality of O.
+where \(\beta_{jm}\) is the mixture composition coefficient; \(\mu_{jm}\), \(\Sigma_{jm}\), respectively the mean vector and covariance matrix of state j; M is the number of mixture components and K is the dimensionality of O. In practice, the log-likelihood of \(\phi(O_t)\) is rather computed to avoid overflow when implemented on a machine. %%TODO: ref this fact
 
 As a summary, the compact specification of a continous valued observation HMM is defined by \ref{eq:CHMM} and that of a discrete HMM in \ref{eq:DHMM}.
 \begin{align} 
@@ -41,14 +41,16 @@ As a summary, the compact specification of a continous valued observation HMM is
 \subsubsection{Basic assumptions of HMMs theory}
 HMM theory is built on three basic assumptions listed below.
 \begin{enumerate}
-\item \textit{The Markov assumption}: HMM assumes that the probability of being in the current	at any instance of time t, is uniquely dependent on the previous state, at time, t + 1. More specifically, \(a_{ij} = P[q_t = S_j|q_{t+1}=S_i]\). This assumption makes it unsuitable for long-range correlation capturing applications.
+\label{con:markov} \item \textit{The Markov assumption}: HMM assumes that the probability of being in the current	at any instance of time t, is uniquely dependent on the previous state, at time, t + 1. More specifically, \(a_{ij} = P[q_t = S_j|q_{t+1}=S_i]\). This assumption makes it unsuitable for long-range correlation capturing applications.
+
 \item \textit{The stationary assumption}: Furthermore, HMM state transition probabilities are assumed to be time-independent. Thus, the transition probabilities of two distinct time, \(t_1\) and \(t_2\) are identical, \(P[q_{t_1} = S_j|q_{t_1 -1} = S_i] = P[q{t_2}=S_i|q_{t_2-1} = S_i]\). HMMs can therefore effectively model mechanisms with stationary observations.
+
 \item \textit{The output/observation independence assumption}: The current observation also known as emission symbol is statistically independent of the previous observations. It is "emitted" only by the current state, \(P[O|q_1, q_2, ..., q_T, \lambda]=\prod_{t=1}^{T}P[O_t|q_t, \lambda]\).
 \end{enumerate} 
 The three assumptions make an HMM model a relatively simple graphic modelling to be implemented. This simplicity naturally comes with some limitations in modelling more complex problems, which however, may be modelled with higher order HMMs. %%Quote
 Futhermore, the three assumptions are very similar to those of a Markov chain. This is because the stochastic process of an HMM pertaining to the hidden states can be reduced to a Markov chain. In fact, an HMM is an extension of a Markov Chain. The essential difference between the two is that, with the former, there is no a one-to-one mapping between the states and the observation symbols. %%TODO: Quote biology book
 
-\subsection{The three basics  problems for HMM design}
+\subsection{The three basics problems for HMM design}
 In %%TODO: quote: A tutorial on Hidden Markov
 , Lawrence argued that an HMM design needs to answer three fondamental problems. They are the \textit{training problem}, the \textit{evaluation problem}, and the \textit{decoding problem}. Each problem and its solution is discussed in greater details next. 
 
@@ -65,6 +67,7 @@ This approach has two issues, it is not only, computationally too expensive beca
  The decoding problem can be reduced to this interrogation: \textit{Given the observation sequence \(O = O_1O_2O_T\), and the model \(\lambda\), how do we choose a corresponding state sequence \(Q = q_1q_2...Q_T\) which is optimal in some meaningful sense i.e, best "explains" the observations?}
  Simply put, this problem is about deciphering the most likely hidden states that emitted the visible observation sequences.
  This is done dynamically using the Viterbi algorithm. %%TODO: cite viterbi and explain further if need be
+ 
 \subsubsection{The training problem}
 Given the model, \(\lambda\), the training problem raises the following question: \textit{how do we adjust the model parameters \(\lambda\) to maximise the \(P(O|\lambda)\), the probability of the probability of the observation sequence?}
 This problem is usually solved by iterative learning algorithms called expectation-maximisation. Examples of this algorithms are Baum-Welch method or any gradient based method. %%TODO: quote Tool wear condition and others
@@ -72,6 +75,10 @@ This problem is usually solved by iterative learning algorithms called expectati
 This method is vulnerable to local maxima issues. To avoid such cases, it is advice to run it multiple times with different initial values in order to keep the estimation with the highest likelihood value.
 
 \subsubsection{Overfitting, order of markov, robustness: bias-var}
+
+\section{Expection maximasiation algorithm} \label{alg:EM}
+
+\section{The Viterbi algorithm} \label{alg:EM}
 
 \section{k-Nearest Neighbour}
 
@@ -149,7 +156,7 @@ The important concepts of this method are here defined together with their signi
 	\(SIM_k\) is significant because it can be used to systematically determine the irrelevant features, i.e, features whose \(SIM_k = 0\), and/or redundant ones. %%TODO: ref SIM
 	
 	
-	\item \textbf{Classifiability: \(G(x_k)\)} \\\\
+	\item \textbf{Classifiability: \(G(x_k)\)} \label{con:class}\\\\
 	Although, conventional distance criterion reveal the separability of the feature distribution, %%TODO: ref SIM
 	 we are often more interested in, how effectively can a particular feature distinguish one class from another. This information is denoted \(G(x_k)\), the ' classifiability of a the feature \(x_k\) '.
 	 \(G(x_k)\) is computed by \ref{eq:G}.
@@ -163,8 +170,20 @@ The important concepts of this method are here defined together with their signi
 This method can be used to effectively and efficiently rank the features in a classification for subset selection or an a preliminary step in a hybrid filter-wrapper feature selection solution.  
 
 \subsection{Feature extraction}
-\subsubsection{Principal component analysis: PCA}
-\subsubsection{Linear discriminant analysis: LDA}
+In this work, two distinct feature extraction tools were explored namely, the linear discriminant analysis and the principal component analysis.
+Each technique is further explained in the next two subsections.
+ 
+\subsubsection{Linear discriminant analysis}
+Linear discrimant analysis maps a K-dimensional dataset, \(O \in \Bbb R^{K}\) into a subspace that maximizes the class between scatter with regards to the class within scatter. %%TODO: quote prtools technical report on dimensionality reduction: http://37steps.com/prtools/examples/dimension-reduction/
+In order words, PCA finds the linear transformation - of the dataset into a lower dimensional space - that maximises the between class discrimination. %%TODO: ref http://www.sciencedirect.com/science/article/pii/S0031320314005214
+It is a well received dimensionality reduction tool for classification problems by the computer vision and pattern recognition community. %%TODO: ref http://www.sciencedirect.com/science/article/pii/S0031320314005214
+
+ LDA is a supervised dimensionality reduction method, it does require the dataset to be labeled. On the other hand, PCA, the next feature extraction method is unsupervised method. %%TODO: quote prtools technical report on dimensionality reduction: http://37steps.com/prtools/examples/dimension-reduction/
+ 
+\subsubsection{Principal component analysis}
+ Principle component analysis (PCA) is an orthogonal linear transformation of a dataset of T K-dimensional observations, \(O \in \Bbb R^{TxK}\), into a so-called PC-space defined by the principal components (PC).  %%TODO: quote Using data dimensionality reduction for recognition of incomplete dynamic gestures
+ Naturally, the dimension of the new space is smaller or equal to K, the original set's dimensionality. The components are ordered according to the variance of the features of the observation set. The principle components represent the eigenvectors of the covariance matrices of the features and the eigenvalues are measures of the features' variances. Thus, the first component corresponds to the feature with highest variance under the orthogonality constraint. %%TODO: quote Using data dimensionality reduction for recognition of incomplete dynamic gestures
+ In effect, PCA is not transforms the original observation set to a different space but also, ranks the features according to their variability. It is there be used as am unsupervised dimensionality reduction technique by simply discarding the features with low variance after finding the principal components.
 
 \subsection{Hybrid filter-wrapper methods}
 

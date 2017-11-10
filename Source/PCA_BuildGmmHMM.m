@@ -6,6 +6,5 @@ function model = PCA_BuildGmmHMM(data, comp_num)
     end
     
     pca_data = pca_featsel(data, comp_num);
-    [pi, A, phi] = BuildGmmHMM(pca_data.observ, pca_data.state);
-    model.pi = pi; model.A = A; model.phi = phi;
+    model = BuildGmmHMM(pca_data.observ, pca_data.state);
 end

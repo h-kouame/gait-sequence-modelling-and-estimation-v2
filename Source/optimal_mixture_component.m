@@ -27,7 +27,7 @@ function [numComponents, AIC] = byAIC(data)
     
 %     figure;
 %     plot(1:max_mixt_num, AIC,... 
-%          1:max_mixt_num, BIC);
+%          1:max_mixt_num, BIC, 'LineWidth',2, 'MarkerSize',10);
 %     legend({'AIC', 'BIC'}, 'Location','NE');
 %     xlabel('Number of mixtures');
 %     ylabel('AIC/BIC value');

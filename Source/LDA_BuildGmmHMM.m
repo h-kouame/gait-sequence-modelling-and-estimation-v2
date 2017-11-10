@@ -6,6 +6,5 @@ function model = LDA_BuildGmmHMM(data, feat_num)
     end
     
     lda_data = lda_featsel(data, feat_num);
-    [pi, A, phi] = BuildGmmHMM(lda_data.observ, lda_data.state);
-    model.pi = pi; model.A = A; model.phi = phi;
+    model = BuildGmmHMM(lda_data.observ, lda_data.state);
 end

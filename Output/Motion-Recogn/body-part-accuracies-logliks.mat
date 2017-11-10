@@ -1,0 +1,92 @@
+Trial>> v = load('C:\School\EEE4022S\Gait Sequence Estimation\Output\Motion-Recogn\accuracies-logliks.mat')
+
+v = 
+
+  struct with fields:
+
+              accuracies: [2×2×3 double]
+                 logliks: [2×2×3 double]
+    corr_coef_accuracies: [2×2×3 double]
+       corr_coef_logliks: [2×2×3 double]
+
+Trial>> v.accuracies
+
+ans(:,:,1) =
+
+   88.9210   17.4678
+   14.3545   89.5708
+
+
+ans(:,:,2) =
+
+  100.0000   55.8629
+   55.7803  100.0000
+
+
+ans(:,:,3) =
+
+  100.0000   74.6082
+   74.6082  100.0000
+
+Trial>> v.logliks
+
+ans(:,:,1) =
+
+   1.0e+04 *
+
+    8.4012    4.2653
+    7.9955    8.6471
+
+
+ans(:,:,2) =
+
+   1.0e+05 *
+
+    2.6346    2.6346
+    2.6025    2.6025
+
+
+ans(:,:,3) =
+
+   1.0e+04 *
+
+    7.0234    7.0234
+    6.8193    6.8193
+
+Trial>> v.corr_coef_accuracies
+
+ans(:,:,1) =
+
+     1    -1
+    -1     1
+
+
+ans(:,:,2) =
+
+    1.0000   -1.0000
+   -1.0000    1.0000
+
+
+ans(:,:,3) =
+
+     1    -1
+    -1     1
+
+Trial>> v.corr_coef_logliks
+
+ans(:,:,1) =
+
+     1    -1
+    -1     1
+
+
+ans(:,:,2) =
+
+     1     1
+     1     1
+
+
+ans(:,:,3) =
+
+     1     1
+     1     1
