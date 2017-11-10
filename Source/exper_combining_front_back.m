@@ -1,10 +1,11 @@
-function [accuracies, logliks] = exper_combining_front_back(traindata, testdata)
+function [accuracies, logliks] = exper_combining_front_back(traindata, testdata, body_part)
     rng('shuffle', 'twister');    
     if nargin < 1
         %     get common training and test data
         proportion = 0.9; % Test data proportion
         [observ_seq, state_seq, feat_names] = get_all_data();
         [traindata, testdata] = splitdataset(observ_seq, state_seq, feat_names, proportion);
+        body_part = 'front';
     end
     
 %     build model with combined front and back measurements to predict
@@ -12,7 +13,11 @@ function [accuracies, logliks] = exper_combining_front_back(traindata, testdata)
     front_combined_model = BuildGmmHMM(traindata.observ, traindata.state);
 
 %     build model with just front measurements
-    front_model = Just_Front_BuildGmmHMM(traindata);
+    if strcmp(body_part, 'front')
+        front_model = Just_Front_BuildGmmHMM(traindata);
+    else
+        back_model = Just_Back_BuildGmmHMM(traindata);
+    end
 
 % %     build model with combined front and back measurements to predict back
 %     back_combined_model = BuildGmmHMM(traindata.observ, traindata.state);
@@ -27,9 +32,15 @@ function [accuracies, logliks] = exper_combining_front_back(traindata, testdata)
 
 %     Perform predictions
     disp('Front Combined');
-    [accuracies(1), estimated_paths(:, 1), logliks(:, 1)] = GmmHMMpredict( front_combined_model, testdata);
-    disp('Front - Not combined');
-    [accuracies(2), estimated_paths(:, 2), logliks(:, 2)] = Just_Front_GmmHMMpredict(front_model, testdata);
+    [accuracies(1), estimated_paths(:, 1), logliks(:, 1)] = GmmHMMpredict(front_combined_model, testdata);
+    if strcmp(body_part, 'front')
+        disp('Front - Not combined');
+        [accuracies(2), estimated_paths(:, 2), logliks(:, 2)] = Just_Front_GmmHMMpredict(front_model, testdata);
+    else
+        disp('Back - Not combined');
+        [accuracies(2), estimated_paths(:, 2), logliks(:, 2)] = Just_Back_GmmHMMpredict(back_model, testdata);
+    end
+
 
 %   Plot the accuracy of the different runs
 %     figure;
