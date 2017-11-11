@@ -16,11 +16,11 @@ To perform this experiment, the following materials are required:
 \end{itemize}
 
 \subsection{Experiment procedure}
-To verify our hypothesis, similar experiments to predict the back and front footfalls of the dogs were performed. Further details are given next.\\\\
+To verify our hypothesis, similar experiments to predict the back and front footfalls of the dogs were performed. Further details are given next.\\
 First of all, two front and back models: \(\lambda_{f_{combined}}\) and \(\lambda_{b_{combined}}\) were constructed by using the combined IMU data from two sensor sets.\\
-Furthermore, two other front and back models: \(\lambda_{f_{just-front}}\) and \(\lambda_{b_{just-back}}\) were built using only the front IMU and back IMU measurements, respectively. \\Thus, we have two couples of models to be compared: \(( \lambda_{f_{combined}} vs. \lambda_{f_{just-front}})\) and \((\lambda_{b_{combined}} vs. \lambda_{b_{just-back}})\) \\\\
-Secondly, the models to be compared were trained using the same training dataset, where, the back or front IMU measurements were removed for \(\lambda_{f_{just-front}}\) and \(\lambda_{b_{just-back}}\), respectively. \\\\
-Finally, the models were tested with their corresponding training datasets. This was done purposefully since the relative comparison of the models with 'combined' and 'separate' IMU data is the subject matter, not the individual performances.\\\\
+Furthermore, two other front and back models: \(\lambda_{f_{just-front}}\) and \(\lambda_{b_{just-back}}\) were built using only the front IMU and back IMU measurements, respectively. \\Thus, we have two couples of models to be compared: \(( \lambda_{f_{combined}} vs. \lambda_{f_{just-front}})\) and \((\lambda_{b_{combined}} vs. \lambda_{b_{just-back}})\) \\
+Secondly, the models to be compared were trained using the same training dataset, where, the back or front IMU measurements were removed for \(\lambda_{f_{just-front}}\) and \(\lambda_{b_{just-back}}\), respectively. \\
+Finally, the models were tested with their corresponding training datasets. This was done purposefully since the relative comparison of the models with 'combined' and 'separate' IMU data is the subject matter, not the individual performances.\\
 Iteratively, the experiments was performed while varying the size of training dataset. The state decoding accuracies and the corresponding log-likelihood were recorded. They are presented in the following sub-section.
 
 \subsection{Experiment results}

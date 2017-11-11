@@ -1,9 +1,10 @@
 \chapter{Literature Review}
 \section{Gait sequence modelling and estimation}
+
 \subsection{Quadrupede gait modelling}
 \subsubsection{Periodicity}
 \subsection{Quadrupede gait estimation}
-\section{Case study: Inertia Measurement Unit}
+
 \section{Hidden Markov Models}
 Hidden Markov Models (HMMs) are doubly embedded stochastic processes with a rich underlying statistical structure. Introduced at the end of the 1960s by Baum and colleagues, they have become one of the prefered techniques in speech recognition after the implementation of Baker and Jelinek in 1970s. HMMs have been successfully applied to various other engineering problems in pattern recognition for classification and fraud detection purposes, amongst others \cite{tuto1989} \cite{tool2001} \cite{towa2009} \cite{twop2008}.\\
 The type of HMM depends on the possible connections between the states. Thus, an HMM in which a state can transition to any other state is an ergodic. Other types such as the Left-Right model or Bakis do not allow all possible transitions between the states.
@@ -74,7 +75,7 @@ This method is vulnerable to local maxima issues. To avoid such cases, it is adv
 
 \subsubsection{Overfitting, order of markov, robustness: bias-var}
 
-\section{Expection maximasiation algorithm} \label{alg:EM}
+\section{Expection maximisation algorithm} \label{alg:EM}
 
 \section{The Viterbi algorithm} \label{alg:Viterbi}
 
@@ -136,7 +137,7 @@ The important concepts of this method are here defined together with their signi
 	\item \textbf{Separability Degree Matrix (SDM)}\\\\
 	\(SDM_k\) is a CxC symmetric matrix of the separability measures between the different classes of classification problem of C distinct classes given a particular feature \(x_k\).
 	It is defined in \ref{eq:sdm}
-\subitem \[SDM_k = [J(w_i, w_j; {x_k})] \label{eq:sdm}\]  a 	
+\subitem \[SDM_k = [J(w_i, w_j; {x_k})] \label{eq:sdm}\]	
 \subitem where \(J(w_i, w_j; {x_k})\) denotes the separability or the distance value between class \(w_i\)  and class \(w_j\) when the criterion function \(J(\textbf{.})\) such as mahalanobis \cite{maha2013} or eucludian, is applied to the feature \(x_k\) \cite{sima2013}. 
 	\(SDM_k\) is symmetric matrix with zero diagonal values, because for a given feature \(x_k\), \(J(w_i, w_j; {x_k}) = J(w_j, w_i; {x_k})\) and \(J(w_i, w_i; {x_k}) = 0\).
 	This observation can be exploited  to half the computation required to calculate \(SDM_v = {SDM_1, SDM_2, ..., SDM_N}\), the set of  all \(SDM\) for the feature set of size N.
@@ -180,10 +181,4 @@ It is a well received dimensionality reduction tool for classification problems 
 \subsubsection{Principal component analysis}
  Principle component analysis (PCA) is an orthogonal linear transformation of a dataset of T K-dimensional observations, \(O \in \Bbb R^{TxK}\), into a so-called PC-space defined by the principal components (PC) \cite{dime2017}.
  Naturally, the dimension of the new space is smaller or equal to K, the original set's dimensionality. The components are ordered according to the variance of the features of the observation set. The principle components represent the eigenvectors of the covariance matrices of the features and the eigenvalues are measures of the features' variances. Thus, the first component corresponds to the feature with highest variance under the orthogonality constraint \cite{dime2017}.
- In effect, PCA is not transforms the original observation set to a different space but also, ranks the features according to their variability. It is there be used as am unsupervised dimensionality reduction technique by simply discarding the features with low variance after finding the principal components.
-
-\subsection{Hybrid filter-wrapper methods}
-
-\section{Sufficiency of Training Data}
-\section{Techniques to increase Training Data}
-\subsection{Mirroring}
+ In effect, PCA is not transforms the original observation set to a different space but also, ranks the features according to their variability. It can therefore be used as an unsupervised dimensionality reduction technique by simply discarding the features with low variance after finding the principal components.
