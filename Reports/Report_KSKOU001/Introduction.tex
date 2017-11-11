@@ -1,37 +1,22 @@
 \chapter{Introduction}
 
-\begin{figure}
-	\centering
-	\includegraphics{Figures/BackPitch_vs_BackRoll}
-%	\caption{accBackX_accBackY}
-\end{figure}
 \section{Background to the study}
-A very brief background to your area of research. Start off with a general introduction to the area and
-then narrow it down to your focus area. Used to set the scene \cite{smt2011}.
-
-Bio-inspired robotics uses nature to inform real-world engineering
-systems. Research has been conducted at UCT to investigate the
-manner in which a cheetah uses its tail for stability during high
-acceleration, quick turns and sudden braking, with an aim to
-incorporating identified mechanisms into sophisticated robot designs.
-One way to acquire useful data is to strap an inertial measurement unit
-(IMU) to an animal, and log the sensor data while certain actions are
-being performed. We currently have such a dataset of a dog moving,
-along with corresponding video data.						
+Bio-inspired robotics identifies useful mechanisms from nature to inform real-worl engineering systems. Similarly, the University of Cape Town (UCT) has set out to investigate how a cheetah uses its tail for stability during high acceleration, quick turns and sudden braking for sophisticated robots design. \\
+To achieve this purpose, inertial measurement unit (IMU) data for a dog running, walking and trotting was acquired and labeled with the corresponding footfalls.\\
+This dataset can therefore be used to perform gait sequence modelling and analysis using Hidden Markov Models (HMM), given its relatively small size. 						
 
 \section{Objectives of this study}
-The objective of this project is to design, implement, and test Hidden Markov Models (HMM) for estimating gait sequence from Inertia Measurement Unit (IMU) data.
+The objective of the present work as stated in its outline is to "design, implement, and test (Hidden Markov Models) for estimating the gait sequence
+from IMU data, so that specific models can be formulated and their
+parameters estimated and interrogated." Thus, four main sub-objectives are formulated.
+\begin{enumerate}
+	\item Formulate HMM models to estimate the gait sequence of a dog from the labeled IMU measurements.
+	\item Implement, test and evaluate the formulated models in order to estimate their parameters.
+	\item Investigate how dimensionality reduction affects the performance of the designed models.
+	\item Using the implemented models, perform useful gait pattern analysis such as motion recognition.
+\end{enumerate}
 
-so that specific models can be formulated and their
-parameters estimated and interrogated. The project can be extended to
-include any other useful analysis of gait patterns from similar sensor
-measurements
 
-
-1 - formulate model
-2 - estimate its parameters
-3 - Interrogate its parameters
-4 - Useful analysis of gait patterns from IMU measurements
 \subsection{Problems to be investigated}
 Description of the main questions to be investigated in this study.
 
@@ -44,15 +29,14 @@ The main questions to be answered are the following:
 Give the significance of investigating these problems. It must be obvious why you are doing this study
 and why it is relevant.
 
-\section{Scope and Limitations}
-Scope indicates to the reader what has and has not been included in the study. Limitations tell the
-reader what factors influenced the study such as sample size, time etc. It is not a section for excuses as
-to why your project may or may not have worked.
+\section{Scope and limitations}
+The project was proposed with a very broad and flexible scope. In order to ensure completion of the project in the allocated time, its scope was therefore reduced to the essential.\\
+More specifically, this project focuses on the design, the implementation and the performance evaluation of HMM models to identify the dog's footfalls from IMU measurements.\\
+Moreover, particular attention was given to the design of dimensionality reduction techniques design and how they affect the performance of the HMM models when the training dataset is not large.\\
+Furthermore, using the implemented models, motion type recognition was performed using the implemented HMM models.
 
-1 - Does not include data collection
-2 - Focus on design of HMM only
-3 - Focus on analysis of the model
-4 - Focus on impact of dimensionality reduction
+The main constraint of this project was the relatively small size of the available IMU data.  
+Besides, the capturing and calibration of the IMU data is not part of the scope of this project.
 
 \section{Plan of development}
 Here you tell the reader how your report has been organised and what is included in each

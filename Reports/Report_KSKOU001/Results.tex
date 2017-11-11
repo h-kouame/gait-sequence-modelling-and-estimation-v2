@@ -74,6 +74,7 @@ In light of the finding above, it can be concluded that: using all the front and
 The formulated hypothesis is therefore rejected based on this experiment.\\
 An improvement to this experiment would be to explore how the dimensionality reduction of the different datasets would influence the outcome. Moreover, a futher investigation how well can the back sensors measurement be used to predict the front footfalls. Similarly, how well can the front sensors be used to predict the back footfalls.
 
+\newpage
 \section{Experiement 2: The effect of a CHMM' observation dimensionality on its performance} \label{exp:feat-size}
 
 \subsection{Aim of the experiement}
@@ -155,6 +156,7 @@ This fact is further shown by \ref{fig:gt-5dim}, \ref{fig:es-5dim}, \ref{fig:gt-
 \subsection{Conclusions and recommendations of the experiment}
 Based on the above results and discussions, it can be concluded that in the absence of enough training data, a CHMM performs very poorly. This validates the hypothesis formulated. It is therefore necessary to further explore the effect of dimensionality reduction with more robust techniques. This investigation is performed in the next experiment with various dimensionality reduction technique and varying data sizes.
 
+\newpage
 \section{Experiement 3: The effect of dimensionality reduction on CHMM's performance}  \label{exp:dim}
 
 \subsection{Aim of the experiement}
@@ -220,8 +222,8 @@ From these similar results, we can conclude that the very fast feature ranking \
 
 \subsubsection{No reduction vs PCA and LDA}
 
-The two feature extraction methods decreased the performance of the models for all data sizes. In addition, their performances do not consistently increase with the increase in data size. The nature of IMU measurements is not suited to these two feature extraction methods. The experiment could have been better with other successful feature extraction methods found in literature such as FFT, %%TODO: ref IMU paper: Towards HMM based Human,
-Time-frequency domain analysis. %%TODO: ref chest-mounted paper
+The two feature extraction methods decreased the performance of the models for all data sizes. In addition, their performances do not consistently increase with the increase in data size. The nature of IMU measurements is not suited to these two feature extraction methods. The experiment could have been better with other successful feature extraction methods found in literature such as FFT \cite{towa2009},
+Time-frequency domain analysis \cite{ches2012}.
 
 \subsubsection{Bias variance error analysis}
 The presented results in \ref{fig:bias-var} is for a dataset with 539 samples.
@@ -232,7 +234,8 @@ By looking at the test errors and the bias errors, the best model appear to be t
 \subsection{Conclusions and recommendations of the experiment}
 Considering the above findings, we can effectively confirm that dimensionality reduction can effectively improve the performance of an IMU based CHMM when the dataset is not large enough. However, this does not apply to every dimensionality reduction method. A large range of technique should be explored to select the most appropriate such as the forward feature selection and the feature ranking methods.
 
-\section{Experiement 4: Motion or action recognition}  \label{exp:motion}
+\newpage
+\section{Experiement 4: Motion type recognition}  \label{exp:motion}
 
 \subsection{Aim of the experiement}
 This experiment is about using IMU based HMM to identfy a particular action of the dog. The three actions considered are: running, walking and trotting.
@@ -257,7 +260,7 @@ The following steps were followed to run the experiement.
 	
 	\item Testing and evaluating the models: Each model was tested three times with the remaining 35\% of the three distinct datasets. The prediction accuracies as well as the log-likelihood were recorded and tabulated as presented in the results sub-section.\\
 	The log-likelihood value \ref{tab:action-recogn-log} measure the likelihood of the IMU measurement sequence having been emitted by the CHMM model in question.
-	Thus, for a given sequence of measurements, can be attributed to the model that outputs the highest log-likelihood value. %%TODO: ref continuous and chest mounted imu papers 
+	Thus, for a given sequence of measurements, can be attributed to the model that outputs the highest log-likelihood value \cite{cont2013}.
 	The same purpose can be achieved by using the prediction accuracy confusion matrix, where the best candidate model is the model  with the highest accuracy for given an observation sequence.
 \end{enumerate} 
 
@@ -308,6 +311,7 @@ On the account of the findings discussed in the above subsection, the following 
 Indeed, IMU based CHMM can be used to successfully perform motion type recognition. 
 
 
+\newpage
 \section{Experiement 5: Comparing the back and front gait of the dog}  \label{exp:front-back}
 
 \subsection{Aim of the experiement}
@@ -319,8 +323,8 @@ The hypothesis below was therefore formulated.
 The assets needed to perform the experiment are listed below.
 \begin{itemize}
 	\item \(\lambda\), a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
-	\item Dimensionality reduction methods. Two wrapper and two filter methods were considered. The wrapper methods were Principle Component Analysis (PCA), Linear Discriminant Analysis (LDA). The two filters methods were feature ranking with similarity index %%TODO cross-ref
-	and a combination of forward feature selection and similarity index.
+	\item Dimensionality reduction methods. Two wrapper and two filter methods were considered. The wrapper methods were Principle Component Analysis (PCA), Linear Discriminant Analysis (LDA). The two feature selection methods were feature ranking with separability index \ref{sec:rank}
+	and a combination of forward feature selection and separability index \ref{sec:forw}
 	\item A Performance metric. The metric used were the hidden state decoding accuracy and the log-likelihood of the EM algorithm.
 \end{itemize}
 
