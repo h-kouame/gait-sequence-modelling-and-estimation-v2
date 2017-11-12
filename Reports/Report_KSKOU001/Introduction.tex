@@ -1,4 +1,4 @@
-\chapter{Introduction}
+\chapter{Introduction} \label{chap:intro}
 
 Human motion analysis is an important research topic motivated by medical, artistic or scientific purposes \cite{towa2009}. Among others reasons, it is investigated for human activity monitoring, fall detection, gesture recognition, balance control evaluation, and abnormal behaviour detection \cite{cont2013}. To carry out these studies, micro-electro-mechanical inertial measurement units (IMUs) are increasingly used to capture motion data. Primarily, because they are lightweight and cheap \cite{ches2012} \cite{towa2009} \cite{cont2013}.\\
 Gait analysis requires the identification of latent gait states \cite{cont2013}. A gait state being a particular stance in a given gait activity.
@@ -9,7 +9,7 @@ used, lack robustnes \cite{cont2013}. Thus, a more robust probabilistic techniqu
 
 
 \section{Background to the study}
-Bio-inspired robotics identifies useful mechanisms from nature to inform real-world engineering systems. In this vein, the University of Cape Town (UCT) set out to investigate how a cheetah uses its tail for stability during high acceleration, quick turns and sudden braking for sophisticated robots design. \\
+Bio-inspired robotics identifies useful mechanisms in nature to inform real-world engineering systems. In this vein, the University of Cape Town (UCT) set out to investigate how a cheetah uses its tail for stability during high acceleration, quick turns and sudden braking for sophisticated robots design. \\
 To achieve this purpose, inertial measurement unit (IMU) data for a dog running, walking and trotting was acquired and labelled with the corresponding footfalls.\\
 This dataset can, therefore, be used to perform gait sequence modelling and analysis using Hidden Markov Models (HMM), given its relatively small size. 	%%TODO: add to gain more insight into a dog's gait to mimic a cheetah					
 
@@ -34,12 +34,23 @@ To achieve the above objectives the hypotheses have been formulated:
 
 
 \section{Scope and limitations}
-The project was proposed with a very broad scope. In order to ensure completion of the project in the allocated time, its scope was therefore reduced to the most essential aspects.\\
-Thus the project focues on the design, the implementation, and the performance evaluation of HMM models to identify the dog's footfalls from IMU measurements.\\
+The project was proposed with a very broad scope. In order to ensure completion of the project in the allocated time, its scope was therefore reduced to the essential aspects.\\
+Thus, the scope includes the continuous review of literature relevant to the completion of the project.
+Moreover, the project focuses on the design, the implementation, and the performance evaluation of HMM models to identify the dog's footfalls from IMU measurements. This involved the learning of programming tool sets necessary to carry out the implementation task.\\
 Moreover, particular attention was paid to the design of dimensionality reduction techniques and how they affect the performance of the HMM models when the training dataset is not large.\\
-Furthermore, using the implemented models, motion type recognition was performed using the implemented HMM models. However, the capturing and calibration of the IMU data is not part of the scope of this project.
+Furthermore, motion type recognition was performed using the implemented HMM models.
+ 
+The capturing and the calibration of the IMU data is not part of the scope of this project. Furthermore, new implementation of standard algorithms falls ouside of the scope of this project. 
 
-The main constraint of this project was the relatively small size of the available IMU data.
+The main constraint of this project was the relatively small size of the available IMU data. In addition, the timespan of the project was just over 12 weeks.
 \section{Plan of development}
-Here you tell the reader how your report has been organised and what is included in each
-chapter.
+The present report is organised as follows:
+\begin{itemize}
+	\item \textit{Chapter 1} - \textbf{Introduction:} This chapter sets out the scene of the project\ref{chap:intro}. 
+	\item \textit{Chapter 2} - \textbf{Literature review and basic theory:} This section presents the basic theory on HMMs and dimensionality reduction based on the information found in literature\ref{chap:lit}.
+	\item \textit{Chapter 3} - \textbf{HMM and dimensionality reduction methods design:} This is the design section where the HMM models are discussed. The practical implementation is also discussed here.\ref{chap:design}.
+	\item \textit{Chapter 4} - \textbf{Experiments and results:} In this chapter, experiments are performed, results are presented, discussed and conclusions are drawn in an isolated manner.\ref{sec:results}.
+	\item \textit{Chapter 5} - \textbf{General discussions:} This section ties the outcomes of the experiments togther in a broader sense according to the objectives of the project.
+	\item \textit{Chapter 6} - \textbf{General conclusions:} The projects hypotheses are evaluated in light of the results and the discussions.
+	\item \textit{Chapter 7} - \textbf{Recommendations for future work:} In the final chapter, recommendations are made for possible improvements and future work.
+\end{itemize}
