@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  11 NOV 2017 20:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  12 NOV 2017 01:56
 entering extended mode
 **"./Project Report Template.tex"
 ("Project Report Template.tex"
@@ -357,10 +357,9 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 147.
 )
-("Project Report Template.aux" (Introduction.aux) (Literature.aux)
-(Methodology.aux) (Design.aux) (Experimental.aux) (Results.aux) (Discussion.aux
-) (Conclusions.aux) (Recommendations.aux) (References.aux) (appendixa.aux)
-(appendixb.aux))
+("Project Report Template.aux" (Introduction.aux) (Literature.aux) (Design.aux)
+(Experimental.aux) (Results.aux) (Discussion.aux) (Conclusions.aux)
+(Recommendations.aux) (References.aux) (appendixa.aux) (appendixb.aux))
 \openout1 = `"Project Report Template.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
@@ -462,7 +461,7 @@ LaTeX Info: Redefining \nameref on input line 66.
 
 \c@lstlisting=\count134
 
-<uctLogo.png, id=427, 418.56375pt x 425.59pt>
+<uctLogo.png, id=331, 418.56375pt x 425.59pt>
 File: uctLogo.png Graphic file (type png)
  <use uctLogo.png>
 Package pdftex.def Info: uctLogo.png used on input line 80.
@@ -470,17 +469,17 @@ Package pdftex.def Info: uctLogo.png used on input line 80.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./uctLogo.png>] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 190--190
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 190--190
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
 
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 190--190
+Underfull \hbox (badness 10000) in paragraph at lines 189--189
 
  []
 
@@ -496,51 +495,69 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 2.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3
 
-] [4] [5] [6]
-Overfull \hbox (11.62735pt too wide) in paragraph at lines 97--97
- [][] [][]\OT1/cmr/m/n/12 Experiement 3: The effect of dimensionality reduction
- on CHMM's performance[] [][]  
+] [4] [5]
+Overfull \hbox (6.40518pt too wide) in paragraph at lines 68--68
+ [][] [][]\OT1/cmr/m/n/12 Experiment 3: The effect of dimensionality reduction 
+on CHMM's performance[] [][]  
  []
 
-[7])
+[6])
 \tf@toc=\write4
 \openout4 = `"Project Report Template.toc"'.
 
- [8] ("Project Report Template.lof"
-Overfull \hbox (12.9676pt too wide) in paragraph at lines 17--17
+ [7] ("Project Report Template.lof"
+Overfull \hbox (12.9676pt too wide) in paragraph at lines 16--16
  [][] [][]\OT1/cmr/m/n/12 The effect of CHMM's observation dimensionality the s
 tate sequence decoding 
  []
 
-[9
+[8
 
-])
+]
+Overfull \hbox (11.93567pt too wide) in paragraph at lines 19--19
+ [][] [][]\OT1/cmr/m/n/12 Scatter plot of 5-dimensional observations grouped ac
+cording to the estimated 
+ []
+
+
+Overfull \hbox (7.95377pt too wide) in paragraph at lines 20--20
+ [][] [][]\OT1/cmr/m/n/12 Scatter plot of 18-dimensional observations grouped a
+ccording to the ground- 
+ []
+
+
+Overfull \hbox (17.81061pt too wide) in paragraph at lines 21--21
+ [][] [][]\OT1/cmr/m/n/12 Scatter plot of 18-dimensional observations grouped a
+ccording to the estimated 
+ []
+
+)
 \tf@lof=\write5
 \openout5 = `"Project Report Template.lof"'.
 
- [10] ("Project Report Template.lot" [11
+ [9] ("Project Report Template.lot" [10
 
 ])
 \tf@lot=\write6
 \openout6 = `"Project Report Template.lot"'.
 
- [12]
+ [11]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 190.
+less on input line 189.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 190.
+less on input line 189.
 
 \openout2 = `Introduction.aux'.
 
 (Introduction.tex
 Chapter 1.
 
-Overfull \hbox (16.27446pt too wide) in paragraph at lines 4--7
+Overfull \hbox (22.80217pt too wide) in paragraph at lines 4--7
 \OT1/cmr/m/n/12 Bio-inspired robotics identifies useful mechanisms from nature 
-to inform real-worl engineering
+to inform real-world engineering
  []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -553,9 +570,9 @@ l.15 	\item I
 
 
 ]
-Overfull \hbox (13.30226pt too wide) in paragraph at lines 33--37
+Overfull \hbox (16.82722pt too wide) in paragraph at lines 33--37
 \OT1/cmr/m/n/12 More specifically, this project focuses on the design, the impl
-ementation and the performance
+ementation, and the performance
  []
 
 
@@ -574,12 +591,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 
-      [2])pdfTeX warning (ext4): destination with the same identifier (name{pag
-e.3}) has been already used, duplicate ignored
+l.38 T
+      he main constraint of this project was the relatively small size of th...
+[2])pdfTeX warning (ext4): destination with the same identifier (name{page.3}) 
+has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.190 }
+l.189 }
         [3]
 \openout2 = `Literature.aux'.
 
@@ -590,107 +608,95 @@ Chapter 2.
 
 
 ]
-Overfull \hbox (1.48175pt too wide) in paragraph at lines 23--25
+Overfull \hbox (1.48175pt too wide) in paragraph at lines 18--20
 \OT1/cmr/m/n/12 For continuous HMM (CHMM), i.e, HMM with continuous-valued obse
 rvations, $$ consists
  []
 
-[5] [6] [7] [8] <Figures/filter.png, id=805, 523.20468pt x 289.83281pt>
+[5]
+Overfull \hbox (0.30249pt too wide) in paragraph at lines 45--47
+\OT1/cmr/m/n/12 The three assumptions make an HMM a relatively simple graphical
+ model to implemented.
+ []
+
+[6]
+Overfull \hbox (2.60098pt too wide) in paragraph at lines 66--70
+\OT1/cmr/m/n/12 times with different initial values in order to keep the estima
+tion with the highest likelihood
+ []
+
+[7] <Figures/filter.png, id=671, 523.20468pt x 289.83281pt>
 File: Figures/filter.png Graphic file (type png)
 
 <use Figures/filter.png>
-Package pdftex.def Info: Figures/filter.png used on input line 107.
+Package pdftex.def Info: Figures/filter.png used on input line 94.
 (pdftex.def)             Requested size: 523.2034pt x 289.83209pt.
 
-Overfull \hbox (70.2355pt too wide) in paragraph at lines 107--108
+Overfull \hbox (70.2355pt too wide) in paragraph at lines 94--95
  [][] 
  []
 
-<Figures/wrapper.png, id=807, 522.45187pt x 269.50688pt>
+<Figures/wrapper.png, id=673, 522.45187pt x 269.50688pt>
 File: Figures/wrapper.png Graphic file (type png)
 
 <use Figures/wrapper.png>
-Package pdftex.def Info: Figures/wrapper.png used on input line 113.
+Package pdftex.def Info: Figures/wrapper.png used on input line 100.
 (pdftex.def)             Requested size: 522.45059pt x 269.50621pt.
 
-Overfull \hbox (69.4827pt too wide) in paragraph at lines 113--114
+Overfull \hbox (69.4827pt too wide) in paragraph at lines 100--101
  [][] 
  []
 
-<Figures/filter-wrapper.png, id=812, 367.3725pt x 451.6875pt>
+<Figures/filter-wrapper.png, id=678, 367.3725pt x 451.6875pt>
 File: Figures/filter-wrapper.png Graphic file (type png)
 
 <use Figures/filter-wrapper.png>
-Package pdftex.def Info: Figures/filter-wrapper.png used on input line 122.
+Package pdftex.def Info: Figures/filter-wrapper.png used on input line 109.
 (pdftex.def)             Requested size: 367.37158pt x 451.68639pt.
- [9 <./Figures/filter.png>] [10 <./Figures/wrapper.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 137--140
-
- []
-
-[11 <./Figures/filter-wrapper.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 145--149
+ [8] [9 <./Figures/filter.png> <./Figures/wrapper.png>] [10 <./Figures/filter-w
+rapper.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--161
+Underfull \hbox (badness 10000) in paragraph at lines 132--136
 
  []
 
-[12]
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 144--148
+
+ []
+
 
 Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 175.
+ on input line 162.
 
-) [13] [14]
-\openout2 = `Methodology.aux'.
+[12]) [13]
+\openout2 = `Design.aux'.
 
- (Methodology.tex
+ (Design.tex
 Chapter 3.
-) [15
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14
 
 
 
 ]
-Overfull \vbox (272.21649pt too high) has occurred while \output is active []
-
-
-[16]
-\openout2 = `Design.aux'.
-
- (Design.tex
-Chapter 4.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Overfull \hbox (2.37987pt too wide) in paragraph at lines 57--57
-[]\OT1/cmr/bx/n/17.28 Quadrupede Gait sequence modelling with HMM 
+Overfull \hbox (0.71175pt too wide) in paragraph at lines 56--58
+[]\OT1/cmr/m/n/12 The stream of IMU measurement forms the observation sequence.
+ An observation instance
  []
 
-[17
-
-
-
-] [18] <model.png, id=896, 650.43pt x 396.48125pt>
+[15] <model.png, id=755, 650.43pt x 396.48125pt>
 File: model.png Graphic file (type png)
  <use model.png>
-Package pdftex.def Info: model.png used on input line 92.
+Package pdftex.def Info: model.png used on input line 76.
 (pdftex.def)             Requested size: 317.07614pt x 193.28534pt.
- [19]
-Overfull \hbox (7.36266pt too wide) in paragraph at lines 106--108
-[]\OT1/cmr/bx/n/12 Increasing the data by mirroring []\OT1/cmr/m/n/12 : The agg
-regated observation sequence amounts
- []
-
-
-Overfull \hbox (7.3227pt too wide) in paragraph at lines 106--108
-\OT1/cmr/m/n/12 sequence was appended to the initial sequence. This decision wo
-rks on the assumption
- []
-
-[20 <./model.png>] [21]
+ [16] [17 <./model.png>] [18]
 Package epstopdf Info: Source file: <Figures/MCE.eps>
 (epstopdf)                    date: 2017-11-02 10:19:12
 (epstopdf)                    size: 18902 bytes
@@ -699,27 +705,27 @@ Package epstopdf Info: Source file: <Figures/MCE.eps>
 (epstopdf)                    size: 3854 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/MCE-eps-converted-t
 o.pdf Figures/MCE.eps>
-(epstopdf)             \includegraphics on input line 142.
+(epstopdf)             \includegraphics on input line 126.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/MCE-eps-converted-to.pdf, id=926, 361.35pt x 302.12875pt>
+<Figures/MCE-eps-converted-to.pdf, id=786, 361.35pt x 302.12875pt>
 File: Figures/MCE-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/MCE-eps-converted-to.pdf>
-Package pdftex.def Info: Figures/MCE-eps-converted-to.pdf used on input line 14
-2.
+Package pdftex.def Info: Figures/MCE-eps-converted-to.pdf used on input line 12
+6.
 (pdftex.def)             Requested size: 361.34912pt x 302.128pt.
- [22 <./Figures/MCE-eps-converted-to.pdf>]
-Overfull \hbox (25.15178pt too wide) in paragraph at lines 157--165
-\OT1/cmr/m/n/12 In this project, 1-Nearest Neighbour (1-NN) [[]] was used as ev
-aluation criterion. Furthermore,
+ [19 <./Figures/MCE-eps-converted-to.pdf>]
+Overfull \hbox (20.19072pt too wide) in paragraph at lines 141--149
+\OT1/cmr/m/n/12 In this project, the evaluation criterion used is 1-Nearest Nei
+ghbour (1-NN) [[]]. Furthermore,
  []
 
-[23]
+[20]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 168.
+(amsmath)                 on input line 152.
 
 Package epstopdf Info: Source file: <Figures/best_PCA.eps>
 (epstopdf)                    date: 2017-11-02 12:19:44
@@ -729,49 +735,49 @@ Package epstopdf Info: Source file: <Figures/best_PCA.eps>
 (epstopdf)                    size: 3700 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/best_PCA-eps-conver
 ted-to.pdf Figures/best_PCA.eps>
-(epstopdf)             \includegraphics on input line 176.
+(epstopdf)             \includegraphics on input line 160.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/best_PCA-eps-converted-to.pdf, id=953, 361.35pt x 288.07625pt>
+<Figures/best_PCA-eps-converted-to.pdf, id=812, 361.35pt x 288.07625pt>
 File: Figures/best_PCA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/best_PCA-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/best_PCA-eps-converted-to.pdf used on input li
-ne 176.
+ne 160.
 (pdftex.def)             Requested size: 361.34912pt x 288.07553pt.
- [24] [25 <./Figures/best_PCA-eps-converted-to.pdf>]
-Overfull \hbox (18.01224pt too wide) in paragraph at lines 200--207
+
+Overfull \hbox (4.00468pt too wide) in paragraph at lines 168--169
+\OT1/cmr/m/n/12 combined into $$. When the observations are modeled with Gauss
+ian mixture distributions,
+ []
+
+[21] [22 <./Figures/best_PCA-eps-converted-to.pdf>]
+Overfull \hbox (18.01224pt too wide) in paragraph at lines 184--191
 []\OT1/cmr/bx/it/12 Approach 1: EM algorithm using ground-truth\OT1/cmr/m/n/12 
 : This technique takes advantage
  []
 
 
-Overfull \hbox (4.62457pt too wide) in paragraph at lines 200--207
+Overfull \hbox (3.9718pt too wide) in paragraph at lines 184--191
 \OT1/cmr/m/n/12 To make the transition matrix more representation of the state 
-transition machanism,
+transition mechanism,
  []
 
-
-Overfull \hbox (2.6284pt too wide) in paragraph at lines 210--216
-\OT1/cmr/m/n/12 states. Then, the three GMM parameters were estimated for each 
-state using a expectation
- []
-
-[26]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 218.
+[23]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 202.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 218.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 202.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
-) [27]
+) [24]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 238.
+nput line 222.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 247.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 231.
 Package epstopdf Info: Source file: <Figures/optimal-mix.eps>
 (epstopdf)                    date: 2017-11-08 13:40:29
 (epstopdf)                    size: 19467 bytes
@@ -780,48 +786,53 @@ Package epstopdf Info: Source file: <Figures/optimal-mix.eps>
 (epstopdf)                    size: 4310 bytes
 (epstopdf)             Command: <epstopdf --outfile=Figures/optimal-mix-eps-con
 verted-to.pdf Figures/optimal-mix.eps>
-(epstopdf)             \includegraphics on input line 259.
+(epstopdf)             \includegraphics on input line 243.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/optimal-mix-eps-converted-to.pdf, id=1003, 421.575pt x 316.18124pt>
+<Figures/optimal-mix-eps-converted-to.pdf, id=862, 421.575pt x 316.18124pt>
 File: Figures/optimal-mix-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/optimal-mix-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/optimal-mix-eps-converted-to.pdf used on input
- line 259.
+ line 243.
 (pdftex.def)             Requested size: 421.57396pt x 316.18047pt.
- [28 <./Figures/optimal-mix-eps-converted-to.pdf>]
-Overfull \hbox (1.85025pt too wide) in paragraph at lines 280--283
+ [25 <./Figures/optimal-mix-eps-converted-to.pdf>]
+Overfull \hbox (1.85025pt too wide) in paragraph at lines 264--267
 \OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 q[]$ \OT1/cmr/m/n/12 wh
 en in state $\OML/cmm/m/it/12 Q[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 q[]$\OT1/c
 mr/m/n/12 . This simplification follows from the \OT1/cmr/m/it/12 Markov assump
 tion
  []
 
-[29] [30]
-Overfull \hbox (66.10072pt too wide) in paragraph at lines 317--346
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 269--271
+
+ []
+
+
+Overfull \hbox (1.47415pt too wide) in paragraph at lines 273--277
+\OT1/cmr/m/n/12 Differently put, the classification error is the percentage of 
+misclassified footfalls. However,
+ []
+
+[27]
+Overfull \hbox (66.10072pt too wide) in paragraph at lines 306--335
  [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 356.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 345.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 356.
- [31] [32]
-Overfull \hbox (31.72142pt too wide) in paragraph at lines 419--419
-[]\OT1/cmr/bx/n/14.4 Proving learning ability by increasing loglik for many ite
-ration:
- []
-
-) [33]
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 345.
+ [28] [29]) [30]
 \openout2 = `Experimental.aux'.
 
 
 No file Experimental.tex.
-[34
+[31
 
 
 
@@ -829,7 +840,7 @@ No file Experimental.tex.
 \openout2 = `Results.aux'.
 
  (Results.tex
-Chapter 5.
+Chapter 4.
 
 Overfull \hbox (34.72627pt too wide) in paragraph at lines 12--13
 \OT1/cmr/m/n/12 respectively specified by $\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12
@@ -838,7 +849,7 @@ T1/cmr/m/n/12 )$ and $\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12
 A[]; []; []; \OT1/cmr/m/n/12 []\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 )$.
  []
 
-[35
+[32
 
 
 ]
@@ -854,7 +865,7 @@ converted-to.pdf Figures/front-comb-acc.eps>
 (epstopdf)             \includegraphics on input line 30.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/front-comb-acc-eps-converted-to.pdf, id=1175, 421.575pt x 316.18124pt>
+<Figures/front-comb-acc-eps-converted-to.pdf, id=1033, 421.575pt x 316.18124pt>
 File: Figures/front-comb-acc-eps-converted-to.pdf Graphic file (type pdf)
 <use Figures/front-comb-acc-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/front-comb-acc-eps-converted-to.pdf used on in
@@ -872,7 +883,7 @@ converted-to.pdf Figures/front-comb-log.eps>
 (epstopdf)             \includegraphics on input line 36.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/front-comb-log-eps-converted-to.pdf, id=1176, 421.575pt x 316.18124pt>
+<Figures/front-comb-log-eps-converted-to.pdf, id=1034, 421.575pt x 316.18124pt>
 File: Figures/front-comb-log-eps-converted-to.pdf Graphic file (type pdf)
 <use Figures/front-comb-log-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/front-comb-log-eps-converted-to.pdf used on in
@@ -890,7 +901,7 @@ onverted-to.pdf Figures/back-comb-acc.eps>
 (epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/back-comb-acc-eps-converted-to.pdf, id=1177, 421.575pt x 316.18124pt>
+<Figures/back-comb-acc-eps-converted-to.pdf, id=1035, 421.575pt x 316.18124pt>
 File: Figures/back-comb-acc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/back-comb-acc-eps-converted-to.pdf>
@@ -909,7 +920,7 @@ onverted-to.pdf Figures/back-comb-log.eps>
 (epstopdf)             \includegraphics on input line 48.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/back-comb-log-eps-converted-to.pdf, id=1178, 421.575pt x 316.18124pt>
+<Figures/back-comb-log-eps-converted-to.pdf, id=1036, 421.575pt x 316.18124pt>
 File: Figures/back-comb-log-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/back-comb-log-eps-converted-to.pdf>
@@ -932,21 +943,15 @@ Package Fancyhdr Warning: \headheight is too small (14.49998pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[36] [37 <./Figures/front-comb-acc-eps-converted-to.pdf>]
+[33] [34 <./Figures/front-comb-acc-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
 
-[38 <./Figures/front-comb-log-eps-converted-to.pdf>]
-Overfull \hbox (2.29636pt too wide) in paragraph at lines 73--76
-\OT1/cmr/m/n/12 how well can the back sensors measurement be used to predict th
-e front footfalls. Similarly,
- []
-
-[39 <./Figures/back-comb-acc-eps-converted-to.pdf>] [40 <./Figures/back-comb-lo
-g-eps-converted-to.pdf>]
-Overfull \hbox (20.44774pt too wide) in paragraph at lines 78--78
-[]\OT1/cmr/bx/n/17.28 Experiement 2: The effect of a CHMM' observation
+[35 <./Figures/front-comb-log-eps-converted-to.pdf>] [36 <./Figures/back-comb-a
+cc-eps-converted-to.pdf>] [37 <./Figures/back-comb-log-eps-converted-to.pdf>]
+Overfull \hbox (11.57774pt too wide) in paragraph at lines 78--78
+[]\OT1/cmr/bx/n/17.28 Experiment 2: The effect of a CHMM' observation
  []
 
 
@@ -955,7 +960,7 @@ Package Fancyhdr Warning: \headheight is too small (27.05003pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[41]
+[38]
 Overfull \hbox (15.19946pt too wide) in paragraph at lines 101--102
 \OT1/cmr/m/n/12 tested with the same test dataset with the correct feature subs
 ets and their performance
@@ -973,7 +978,7 @@ ct-acc-eps-converted-to.pdf Figures/dimensionality-effect-acc.eps>
 (epstopdf)             \includegraphics on input line 112.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/dimensionality-effect-acc-eps-converted-to.pdf, id=1241, 361.35pt x 29
+<Figures/dimensionality-effect-acc-eps-converted-to.pdf, id=1099, 361.35pt x 29
 1.0875pt>
 File: Figures/dimensionality-effect-acc-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -993,7 +998,7 @@ ct-log-eps-converted-to.pdf Figures/dimensionality-effect-log.eps>
 (epstopdf)             \includegraphics on input line 118.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/dimensionality-effect-log-eps-converted-to.pdf, id=1242, 365.365pt x 3
+<Figures/dimensionality-effect-log-eps-converted-to.pdf, id=1100, 365.365pt x 3
 01.125pt>
 File: Figures/dimensionality-effect-log-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1015,7 +1020,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 125.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf, id=1243, 37
+<Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf, id=1101, 37
 6.40625pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -1038,7 +1043,7 @@ with-5-features-eps-converted-to.pdf Figures/estimation-scatter-with-5-features
 (epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-5-features-eps-converted-to.pdf, id=1244, 376.
+<Figures/estimation-scatter-with-5-features-eps-converted-to.pdf, id=1102, 376.
 40625pt x 288.07625pt>
 File: Figures/estimation-scatter-with-5-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -1061,7 +1066,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 136.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf, id=1245, 3
+<Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf, id=1103, 3
 82.42876pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -1084,7 +1089,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 142.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-18-features-eps-converted-to.pdf, id=1246, 382
+<Figures/estimation-scatter-with-18-features-eps-converted-to.pdf, id=1104, 382
 .42876pt x 288.07625pt>
 File: Figures/estimation-scatter-with-18-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -1093,21 +1098,21 @@ file (type pdf)
 Package pdftex.def Info: Figures/estimation-scatter-with-18-features-eps-conver
 ted-to.pdf used on input line 142.
 (pdftex.def)             Requested size: 382.42781pt x 288.07553pt.
- [42]
-[43 <./Figures/dimensionality-effect-acc-eps-converted-to.pdf>]
+ [39]
+[40 <./Figures/dimensionality-effect-acc-eps-converted-to.pdf>]
 
-LaTeX Warning: Text page 44 contains only floats.
+LaTeX Warning: Text page 41 contains only floats.
 
-[44 <./Figures/dimensionality-effect-log-eps-converted-to.pdf> <./Figures/groun
+[41 <./Figures/dimensionality-effect-log-eps-converted-to.pdf> <./Figures/groun
 d-truth-scatter-with-5-features-eps-converted-to.pdf>]
 
-LaTeX Warning: Text page 45 contains only floats.
+LaTeX Warning: Text page 42 contains only floats.
 
-[45 <./Figures/estimation-scatter-with-5-features-eps-converted-to.pdf> <./Figu
-res/ground-truth-scatter-with-18-features-eps-converted-to.pdf>] [46 <./Figures
+[42 <./Figures/estimation-scatter-with-5-features-eps-converted-to.pdf> <./Figu
+res/ground-truth-scatter-with-18-features-eps-converted-to.pdf>] [43 <./Figures
 /estimation-scatter-with-18-features-eps-converted-to.pdf>]
-Overfull \hbox (41.76976pt too wide) in paragraph at lines 160--160
-[]\OT1/cmr/bx/n/17.28 Experiement 3: The effect of dimensionality reduction
+Overfull \hbox (32.89977pt too wide) in paragraph at lines 160--160
+[]\OT1/cmr/bx/n/17.28 Experiment 3: The effect of dimensionality reduction
  []
 
 
@@ -1127,7 +1132,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--185
 
  []
 
-[47]
+[44]
 Package epstopdf Info: Source file: <Figures/size-acc-2.eps>
 (epstopdf)                    date: 2017-11-02 13:50:54
 (epstopdf)                    size: 19914 bytes
@@ -1139,7 +1144,7 @@ erted-to.pdf Figures/size-acc-2.eps>
 (epstopdf)             \includegraphics on input line 192.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/size-acc-2-eps-converted-to.pdf, id=1305, 421.575pt x 316.18124pt>
+<Figures/size-acc-2-eps-converted-to.pdf, id=1163, 421.575pt x 316.18124pt>
 File: Figures/size-acc-2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/size-acc-2-eps-converted-to.pdf>
@@ -1157,7 +1162,7 @@ erted-to.pdf Figures/size-log-2.eps>
 (epstopdf)             \includegraphics on input line 198.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/size-log-2-eps-converted-to.pdf, id=1306, 421.575pt x 316.18124pt>
+<Figures/size-log-2-eps-converted-to.pdf, id=1164, 421.575pt x 316.18124pt>
 File: Figures/size-log-2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/size-log-2-eps-converted-to.pdf>
@@ -1175,7 +1180,7 @@ ted-to.pdf Figures/bias-var.eps>
 (epstopdf)             \includegraphics on input line 205.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/bias-var-eps-converted-to.pdf, id=1307, 1028.84375pt x 335.2525pt>
+<Figures/bias-var-eps-converted-to.pdf, id=1165, 1028.84375pt x 335.2525pt>
 File: Figures/bias-var-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/bias-var-eps-converted-to.pdf>
@@ -1199,8 +1204,8 @@ Overfull \hbox (8.60648pt too wide) in paragraph at lines 214--218
 th dimensionality reduction.
  []
 
-[48] [49 <./Figures/size-acc-2-eps-converted-to.pdf>] [50 <./Figures/size-log-2
--eps-converted-to.pdf>] [51 <./Figures/bias-var-eps-converted-to.pdf>] [52]
+[45] [46 <./Figures/size-acc-2-eps-converted-to.pdf>] [47 <./Figures/size-log-2
+-eps-converted-to.pdf>] [48 <./Figures/bias-var-eps-converted-to.pdf>]
 Overfull \hbox (8.88101pt too wide) in paragraph at lines 250--251
 []\OT1/cmr/m/n/12 An action recognition criterion. In this experience, the pred
 iction accuracies confusion
@@ -1208,25 +1213,19 @@ iction accuracies confusion
 
 
 Overfull \hbox (5.133pt too wide) in paragraph at lines 261--265
-\OT1/cmr/m/n/12 The log-likelihood value []5.2[] measure the likelihood of the 
+\OT1/cmr/m/n/12 The log-likelihood value []4.2[] measure the likelihood of the 
 IMU measurement sequence
  []
 
-[53]
+[49]
 Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
-
-Overfull \hbox (0.34685pt too wide) in paragraph at lines 306--308
-\OT1/cmr/m/n/12 By inspection, we can observ that, the principal diagonal of th
-e confusion matrix generates
- []
-
-[54] [55]
-Overfull \hbox (1.99686pt too wide) in paragraph at lines 326--328
-\OT1/cmr/m/n/12 Linear Discriminant Analysis (LDA). The two feature selection m
-ethods were feature
+[50] [51]
+Overfull \hbox (0.30333pt too wide) in paragraph at lines 326--328
+[]\OT1/cmr/m/n/12 Dimensionality reduction methods. Two feature extraction meth
+ods and two feature
  []
 
 
@@ -1235,7 +1234,7 @@ Overfull \hbox (49.525pt too wide) in paragraph at lines 332--339
 L/cmm/m/it/12 []; []; []; []; []\OT1/cmr/m/n/12 )$.
  []
 
-[56]
+[52]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1254,12 +1253,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [57] [58]
+) [53] [54]
 \openout2 = `Discussion.aux'.
 
  (Discussion.tex
-Chapter 6.
-) [59
+Chapter 5.
+) [55
 
 
 
@@ -1267,8 +1266,8 @@ Chapter 6.
 \openout2 = `Conclusions.aux'.
 
  (Conclusions.tex
-Chapter 7.
-) [60
+Chapter 6.
+) [56
 
 
 
@@ -1276,8 +1275,8 @@ Chapter 7.
 \openout2 = `Recommendations.aux'.
 
  (Recommendations.tex
-Chapter 8.
-) [61
+Chapter 7.
+) [57
 
 
 
@@ -1313,16 +1312,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 ailable:
  []
 
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¤ in font cmr12!
 
-Underfull \hbox (badness 5667) in paragraph at lines 9--10
+Underfull \hbox (badness 4120) in paragraph at lines 9--10
 []\OT1/cmr/m/n/12 Ghazaleh Panahandeh, Nasser Mohammadiha, Arne Leijon, Peter H
-ndel,
+andel,
  []
 
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¤ in font cmr12!
 
 Underfull \hbox (badness 1281) in paragraph at lines 13--14
 \OT1/cmr/m/it/12 Technology Conference Proceedings\OT1/cmr/m/n/12 , pp. 991-995
@@ -1353,15 +1348,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 ]. Available:
  []
 
-[62
+[58
 
 
 
 ]
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no º in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no ¡ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
 Missing character: There is no Ã in font cmr12!
@@ -1458,31 +1449,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 ]. Available:
  []
 
-[63]
+[59]
 Underfull \hbox (badness 10000) in paragraph at lines 38--39
 []\OT1/cmr/m/n/12 Feature Selection - MathWorks.[Online]. Available:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 42--43
-[]\OT1/cmr/m/n/12 hmmestimate - MathWorks .[Online]. Available:
+Overfull \hbox (124.8525pt too wide) in paragraph at lines 42--43
+[]\OT1/cmr/m/n/12 hmmestimate - MathWorks.[Online]. Available: https://www.math
+works.com/help/stats/hmmestimate.html 
  []
 
 
-Overfull \hbox (80.46407pt too wide) in paragraph at lines 46--47
-[]\OT1/cmr/m/n/12 fitgmdist - MathWorks .[Online]. Available: https://www.mathw
-orks.com/help/stats/fitgmdist.html 
+Overfull \hbox (77.85298pt too wide) in paragraph at lines 46--47
+[]\OT1/cmr/m/n/12 fitgmdist - MathWorks.[Online]. Available: https://www.mathwo
+rks.com/help/stats/fitgmdist.html 
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 52--53
-[]\OT1/cmr/m/n/12 Bayes Information Criterion - MATLAB - MathWorks .[Online]. A
-vailable:
+Underfull \hbox (badness 1253) in paragraph at lines 50--51
+[]\OT1/cmr/m/n/12 Akaike's Information Criterion for estimated model - MATLAB a
+ic.[Online].
+ []
+
+
+Underfull \hbox (badness 4108) in paragraph at lines 52--53
+[]\OT1/cmr/m/n/12 Bayes Information Criterion - MATLAB - MathWorks.[Online]. Av
+ailable:
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 54--55
-[]\OT1/cmr/m/n/12 Qiuqiang Kong, "matlab-hmm" .[Online]. Available:
+[]\OT1/cmr/m/n/12 Qiuqiang Kong, "matlab-hmm".[Online]. Available:
  []
 
 
@@ -1496,12 +1494,18 @@ Underfull \hbox (badness 3396) in paragraph at lines 62--63
  Pattern
  []
 
-[64]) [65]
+[60]
+Underfull \hbox (badness 1132) in paragraph at lines 70--71
+[]\OT1/cmr/m/n/12 Statistics and Machine Learning Toolbox - MATLAB - MathWorks.
+[Online].
+ []
+
+) [61]
 \openout2 = `appendixa.aux'.
 
  (appendixa.tex
 Appendix A.
-) [66
+) [62
 
 
 
@@ -1510,52 +1514,51 @@ Appendix A.
 
  (appendixb.tex
 Appendix B.
-<Figures/ethics-form.pdf, id=1434, 845.0471pt x 597.50829pt>
+<Figures/ethics-form.pdf, id=1289, 845.0471pt x 597.50829pt>
 File: Figures/ethics-form.pdf Graphic file (type pdf)
 
 <use Figures/ethics-form.pdf>
-Package pdftex.def Info: Figures/ethics-form.pdf used on input line 5.
+Package pdftex.def Info: Figures/ethics-form.pdf used on input line 6.
 (pdftex.def)             Requested size: 679.45184pt x 480.44157pt.
 
-Overfull \hbox (27.47368pt too wide) in paragraph at lines 5--8
+Overfull \hbox (27.47368pt too wide) in paragraph at lines 6--9
 [][] 
  []
 
-) [67
+) [63
 
 
 
 ]
 
-LaTeX Warning: Text page 68 contains only floats.
+LaTeX Warning: Text page 64 contains only floats.
 
 
 Overfull \vbox (6.94498pt too high) has occurred while \output is active []
 
 
-[68 <./Figures/ethics-form.pdf>] 
+[64 <./Figures/ethics-form.pdf>] 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
-("Project Report Template.aux" (Introduction.aux) (Literature.aux)
-(Methodology.aux) (Design.aux) (Experimental.aux) (Results.aux) (Discussion.aux
-) (Conclusions.aux) (Recommendations.aux) (References.aux) (appendixa.aux)
-(appendixb.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 191.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 190.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 190.
+("Project Report Template.aux" (Introduction.aux) (Literature.aux) (Design.aux)
+(Experimental.aux) (Results.aux) (Discussion.aux) (Conclusions.aux)
+(Recommendations.aux) (References.aux) (appendixa.aux) (appendixb.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 190.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 190.
 Package rerunfilecheck Info: File `"Project Report Template".out' has not chang
 ed.
-(rerunfilecheck)             Checksum: F96F28C074857056C348D9962A1182D2;8709.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
+(rerunfilecheck)             Checksum: F8229393DC8813F1BA9A992A71C6374E;6683.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 190.
  ) 
 Here is how much of TeX's memory you used:
- 9702 strings out of 493333
- 139513 string characters out of 3139192
- 432704 words of memory out of 3000000
- 12556 multiletter control sequences out of 15000+200000
+ 9637 strings out of 493333
+ 138621 string characters out of 3139192
+ 428674 words of memory out of 3000000
+ 12530 multiletter control sequences out of 15000+200000
  13435 words of font info for 51 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,12n,45p,811b,1847s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,12n,45p,807b,1845s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/Mi
@@ -1572,9 +1575,9 @@ onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb>
-Output written on "Project Report Template.pdf" (83 pages, 1762325 bytes).
+Output written on "Project Report Template.pdf" (78 pages, 1721760 bytes).
 PDF statistics:
- 1589 PDF objects out of 1728 (max. 8388607)
- 426 named destinations out of 1000 (max. 500000)
- 959 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1438 PDF objects out of 1440 (max. 8388607)
+ 394 named destinations out of 1000 (max. 500000)
+ 767 words of extra memory for PDF output out of 10000 (max. 10000000)
 

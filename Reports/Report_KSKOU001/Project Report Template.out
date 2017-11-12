@@ -5,102 +5,78 @@
 \BOOKMARK [2][-]{subsection.1.2.2}{Purpose of the study}{section.1.2}% 5
 \BOOKMARK [1][-]{section.1.3}{Scope and limitations}{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.4}{Plan of development}{chapter.1}% 7
-\BOOKMARK [0][-]{chapter.2}{Literature Review}{}% 8
-\BOOKMARK [1][-]{section.2.1}{Gait sequence modelling and estimation}{chapter.2}% 9
-\BOOKMARK [2][-]{subsection.2.1.1}{Quadrupede gait modelling}{section.2.1}% 10
-\BOOKMARK [2][-]{subsection.2.1.2}{Quadrupede gait estimation}{section.2.1}% 11
-\BOOKMARK [1][-]{section.2.2}{Hidden Markov Models}{chapter.2}% 12
-\BOOKMARK [2][-]{subsection.2.2.1}{HMM parameters specification}{section.2.2}% 13
-\BOOKMARK [2][-]{subsection.2.2.2}{The three basics problems for HMM design}{section.2.2}% 14
-\BOOKMARK [1][-]{section.2.3}{Expection maximisation algorithm}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.4}{The Viterbi algorithm}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.5}{k-Nearest Neighbour}{chapter.2}% 17
-\BOOKMARK [1][-]{section.2.6}{Dimensionality reduction}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.6.1}{Motivations for dimensionality reduction}{section.2.6}% 19
-\BOOKMARK [2][-]{subsection.2.6.2}{Feature selection: filters and wrappers}{section.2.6}% 20
-\BOOKMARK [2][-]{subsection.2.6.3}{Feature extraction}{section.2.6}% 21
-\BOOKMARK [0][-]{chapter.3}{Design methodology}{}% 22
-\BOOKMARK [1][-]{section.3.1}{Engineering design adopted}{chapter.3}% 23
-\BOOKMARK [1][-]{section.3.2}{Understanding the problem}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.3}{Understanding the dataset}{chapter.3}% 25
-\BOOKMARK [1][-]{section.3.4}{Relevant literature}{chapter.3}% 26
-\BOOKMARK [1][-]{section.3.5}{Testing the ability of the dataset to classify the states}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.5.1}{Simple 16-states classifier using KNN}{section.3.5}% 28
-\BOOKMARK [2][-]{subsection.3.5.2}{Predicting the successor using KNN}{section.3.5}% 29
-\BOOKMARK [1][-]{section.3.6}{Design approaches}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.6.1}{Turning the problem into a discrete problem}{section.3.6}% 31
-\BOOKMARK [2][-]{subsection.3.6.2}{Splitting the problem into four smaller modules}{section.3.6}% 32
-\BOOKMARK [2][-]{subsection.3.6.3}{Purely continuous approach}{section.3.6}% 33
-\BOOKMARK [2][-]{subsection.3.6.4}{Splitting the problem into two little problems}{section.3.6}% 34
-\BOOKMARK [2][-]{subsection.3.6.5}{Gaussian vs Gaussian Mixtures}{section.3.6}% 35
-\BOOKMARK [2][-]{subsection.3.6.6}{KNN based HMM}{section.3.6}% 36
-\BOOKMARK [0][-]{chapter.4}{Hidden Markov Model and dimensionality reduction design}{}% 37
-\BOOKMARK [1][-]{section.4.1}{Design overview}{chapter.4}% 38
-\BOOKMARK [1][-]{section.4.2}{Description of available dataset}{chapter.4}% 39
-\BOOKMARK [1][-]{section.4.3}{Quadrupede Gait sequence modelling with HMM}{chapter.4}% 40
-\BOOKMARK [2][-]{subsection.4.3.1}{HMM model elements: states and observations properties}{section.4.3}% 41
-\BOOKMARK [2][-]{subsection.4.3.2}{Splitting the 16-states HMM in two 4-states HHMs}{section.4.3}% 42
-\BOOKMARK [2][-]{subsection.4.3.3}{State transitions}{section.4.3}% 43
-\BOOKMARK [1][-]{section.4.4}{Pre-processing and increasing the dataset}{chapter.4}% 44
-\BOOKMARK [1][-]{section.4.5}{Dimensionality reduction}{chapter.4}% 45
-\BOOKMARK [2][-]{subsection.4.5.1}{Feature ranking with separability index \(SI\)}{section.4.5}% 46
-\BOOKMARK [2][-]{subsection.4.5.2}{Determining optimal number of features using SI and MCE}{section.4.5}% 47
-\BOOKMARK [2][-]{subsection.4.5.3}{Feature ranking}{section.4.5}% 48
-\BOOKMARK [2][-]{subsection.4.5.4}{Forward feature selection}{section.4.5}% 49
-\BOOKMARK [2][-]{subsection.4.5.5}{Full-search feature selection}{section.4.5}% 50
-\BOOKMARK [2][-]{subsection.4.5.6}{Principal Component Analysis \(PCA\)}{section.4.5}% 51
-\BOOKMARK [2][-]{subsection.4.5.7}{Linear Discriminant Analysis \(LDA\)}{section.4.5}% 52
-\BOOKMARK [1][-]{section.4.6}{Solving the three basics HMM problems}{chapter.4}% 53
-\BOOKMARK [2][-]{subsection.4.6.1}{Solution to the training problem}{section.4.6}% 54
-\BOOKMARK [2][-]{subsection.4.6.2}{Solution to the evaluation problem}{section.4.6}% 55
-\BOOKMARK [2][-]{subsection.4.6.3}{Solution to the decoding problem}{section.4.6}% 56
-\BOOKMARK [1][-]{section.4.7}{Model's classification accuracy evaluation}{chapter.4}% 57
-\BOOKMARK [1][-]{section.4.8}{Practical implementation}{chapter.4}% 58
-\BOOKMARK [2][-]{subsection.4.8.1}{Code for building and training the model}{section.4.8}% 59
-\BOOKMARK [1][-]{section.4.9}{Implementation testing}{chapter.4}% 60
-\BOOKMARK [2][-]{subsection.4.9.1}{Prove that the reduced dataset represents the original well enough}{section.4.9}% 61
-\BOOKMARK [2][-]{subsection.4.9.2}{Prove that information loss is not much: BIC and AIC}{section.4.9}% 62
-\BOOKMARK [2][-]{subsection.4.9.3}{Proving learning ability by increasing loglik for many iteration: check one of papers}{section.4.9}% 63
-\BOOKMARK [2][-]{subsection.4.9.4}{Prove that prior affects the prediction accuracy}{section.4.9}% 64
-\BOOKMARK [0][-]{chapter.5}{Results}{}% 65
-\BOOKMARK [1][-]{section.5.1}{Experiement 1: The necessity of combining the front and back IMU sensor measurements}{chapter.5}% 66
-\BOOKMARK [2][-]{subsection.5.1.1}{Aim of the experiement}{section.5.1}% 67
-\BOOKMARK [2][-]{subsection.5.1.2}{Experiment apparatus}{section.5.1}% 68
-\BOOKMARK [2][-]{subsection.5.1.3}{Experiment procedure}{section.5.1}% 69
-\BOOKMARK [2][-]{subsection.5.1.4}{Experiment results}{section.5.1}% 70
-\BOOKMARK [2][-]{subsection.5.1.5}{Analysis and discussion of results}{section.5.1}% 71
-\BOOKMARK [2][-]{subsection.5.1.6}{Conclusions and recommendations of the experiment}{section.5.1}% 72
-\BOOKMARK [1][-]{section.5.2}{Experiement 2: The effect of a CHMM' observation dimensionality on its performance}{chapter.5}% 73
-\BOOKMARK [2][-]{subsection.5.2.1}{Aim of the experiement}{section.5.2}% 74
-\BOOKMARK [2][-]{subsection.5.2.2}{Experiment apparatus}{section.5.2}% 75
-\BOOKMARK [2][-]{subsection.5.2.3}{Experiment procedure}{section.5.2}% 76
-\BOOKMARK [2][-]{subsection.5.2.4}{Experiment results}{section.5.2}% 77
-\BOOKMARK [2][-]{subsection.5.2.5}{Analysis and discussion of results}{section.5.2}% 78
-\BOOKMARK [2][-]{subsection.5.2.6}{Conclusions and recommendations of the experiment}{section.5.2}% 79
-\BOOKMARK [1][-]{section.5.3}{Experiement 3: The effect of dimensionality reduction on CHMM's performance}{chapter.5}% 80
-\BOOKMARK [2][-]{subsection.5.3.1}{Aim of the experiement}{section.5.3}% 81
-\BOOKMARK [2][-]{subsection.5.3.2}{Experiment apparatus}{section.5.3}% 82
-\BOOKMARK [2][-]{subsection.5.3.3}{Experiment procedure}{section.5.3}% 83
-\BOOKMARK [2][-]{subsection.5.3.4}{Experiment results}{section.5.3}% 84
-\BOOKMARK [2][-]{subsection.5.3.5}{Analysis and discusion of results}{section.5.3}% 85
-\BOOKMARK [2][-]{subsection.5.3.6}{Conclusions and recommendations of the experiment}{section.5.3}% 86
-\BOOKMARK [1][-]{section.5.4}{Experiement 4: Motion type recognition}{chapter.5}% 87
-\BOOKMARK [2][-]{subsection.5.4.1}{Aim of the experiement}{section.5.4}% 88
-\BOOKMARK [2][-]{subsection.5.4.2}{Experiment apparatus}{section.5.4}% 89
-\BOOKMARK [2][-]{subsection.5.4.3}{Experiment procedure}{section.5.4}% 90
-\BOOKMARK [2][-]{subsection.5.4.4}{Experiment results}{section.5.4}% 91
-\BOOKMARK [2][-]{subsection.5.4.5}{Analysis of results}{section.5.4}% 92
-\BOOKMARK [2][-]{subsection.5.4.6}{Conclusions of the experiment}{section.5.4}% 93
-\BOOKMARK [1][-]{section.5.5}{Experiement 5: Comparing the back and front gait of the dog}{chapter.5}% 94
-\BOOKMARK [2][-]{subsection.5.5.1}{Aim of the experiement}{section.5.5}% 95
-\BOOKMARK [2][-]{subsection.5.5.2}{Experiment apparatus}{section.5.5}% 96
-\BOOKMARK [2][-]{subsection.5.5.3}{Experiment procedure}{section.5.5}% 97
-\BOOKMARK [2][-]{subsection.5.5.4}{Experiment results}{section.5.5}% 98
-\BOOKMARK [2][-]{subsection.5.5.5}{Analysis of results}{section.5.5}% 99
-\BOOKMARK [2][-]{subsection.5.5.6}{Conclusions and recommendations of the experiment}{section.5.5}% 100
-\BOOKMARK [0][-]{chapter.6}{Discussion}{}% 101
-\BOOKMARK [0][-]{chapter.7}{Conclusions}{}% 102
-\BOOKMARK [0][-]{chapter.8}{Recommendations}{}% 103
-\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 104
-\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 105
-\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 106
+\BOOKMARK [0][-]{chapter.2}{Literature review and basic theory}{}% 8
+\BOOKMARK [1][-]{section.2.1}{Hidden Markov Models}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.1.1}{HMM parameters specification}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.2}{The three basics problems for HMM design}{section.2.1}% 11
+\BOOKMARK [1][-]{section.2.2}{Dimensionality reduction}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.2.1}{Motivations for dimensionality reduction}{section.2.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.2}{Feature selection: filters and wrappers}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.3}{Feature extraction}{section.2.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Hidden Markov Model and dimensionality reduction design}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Design overview}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Description of available dataset}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Quadruped Gait sequence modelling with HMM}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.3.1}{HMM model elements: states and observations properties}{section.3.3}% 20
+\BOOKMARK [2][-]{subsection.3.3.2}{Splitting the 16-states HMM into two 4-states HHMs}{section.3.3}% 21
+\BOOKMARK [2][-]{subsection.3.3.3}{State transitions}{section.3.3}% 22
+\BOOKMARK [1][-]{section.3.4}{Pre-processing and increasing the dataset}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.5}{Dimensionality reduction}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.5.1}{Feature ranking with separability index \(SI\)}{section.3.5}% 25
+\BOOKMARK [2][-]{subsection.3.5.2}{Determining optimal number of features using SI and MCE}{section.3.5}% 26
+\BOOKMARK [2][-]{subsection.3.5.3}{Feature ranking}{section.3.5}% 27
+\BOOKMARK [2][-]{subsection.3.5.4}{Forward feature selection}{section.3.5}% 28
+\BOOKMARK [2][-]{subsection.3.5.5}{Full-search feature selection}{section.3.5}% 29
+\BOOKMARK [2][-]{subsection.3.5.6}{Principal Component Analysis \(PCA\)}{section.3.5}% 30
+\BOOKMARK [2][-]{subsection.3.5.7}{Linear Discriminant Analysis \(LDA\)}{section.3.5}% 31
+\BOOKMARK [1][-]{section.3.6}{Solving the three basics HMM problems}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.6.1}{Solution to the training problem}{section.3.6}% 33
+\BOOKMARK [2][-]{subsection.3.6.2}{Solution to the evaluation problem}{section.3.6}% 34
+\BOOKMARK [2][-]{subsection.3.6.3}{Solution to the decoding problem}{section.3.6}% 35
+\BOOKMARK [1][-]{section.3.7}{Evaluation of the footfall identification accuracy}{chapter.3}% 36
+\BOOKMARK [1][-]{section.3.8}{Practical implementation}{chapter.3}% 37
+\BOOKMARK [2][-]{subsection.3.8.1}{Model's parameters estimation implementation}{section.3.8}% 38
+\BOOKMARK [2][-]{subsection.3.8.2}{Decoding and log-likelihood computation implementation}{section.3.8}% 39
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 40
+\BOOKMARK [1][-]{section.4.1}{Experiment 1: The necessity of combining the front and back IMU sensor measurements}{chapter.4}% 41
+\BOOKMARK [2][-]{subsection.4.1.1}{Aim of the experiment}{section.4.1}% 42
+\BOOKMARK [2][-]{subsection.4.1.2}{Experiment apparatus}{section.4.1}% 43
+\BOOKMARK [2][-]{subsection.4.1.3}{Experiment procedure}{section.4.1}% 44
+\BOOKMARK [2][-]{subsection.4.1.4}{Experiment results}{section.4.1}% 45
+\BOOKMARK [2][-]{subsection.4.1.5}{Analysis and discussion of results}{section.4.1}% 46
+\BOOKMARK [2][-]{subsection.4.1.6}{Conclusions and recommendations of the experiment}{section.4.1}% 47
+\BOOKMARK [1][-]{section.4.2}{Experiment 2: The effect of a CHMM' observation dimensionality on its performance}{chapter.4}% 48
+\BOOKMARK [2][-]{subsection.4.2.1}{Aim of the experiment}{section.4.2}% 49
+\BOOKMARK [2][-]{subsection.4.2.2}{Experiment apparatus}{section.4.2}% 50
+\BOOKMARK [2][-]{subsection.4.2.3}{Experiment procedure}{section.4.2}% 51
+\BOOKMARK [2][-]{subsection.4.2.4}{Experiment results}{section.4.2}% 52
+\BOOKMARK [2][-]{subsection.4.2.5}{Analysis and discussion of results}{section.4.2}% 53
+\BOOKMARK [2][-]{subsection.4.2.6}{Conclusions and recommendations of the experiment}{section.4.2}% 54
+\BOOKMARK [1][-]{section.4.3}{Experiment 3: The effect of dimensionality reduction on CHMM's performance}{chapter.4}% 55
+\BOOKMARK [2][-]{subsection.4.3.1}{Aim of the experiment}{section.4.3}% 56
+\BOOKMARK [2][-]{subsection.4.3.2}{Experiment apparatus}{section.4.3}% 57
+\BOOKMARK [2][-]{subsection.4.3.3}{Experiment procedure}{section.4.3}% 58
+\BOOKMARK [2][-]{subsection.4.3.4}{Experiment results}{section.4.3}% 59
+\BOOKMARK [2][-]{subsection.4.3.5}{Analysis and discusion of results}{section.4.3}% 60
+\BOOKMARK [2][-]{subsection.4.3.6}{Conclusions and recommendations of the experiment}{section.4.3}% 61
+\BOOKMARK [1][-]{section.4.4}{Experiment 4: Motion type recognition}{chapter.4}% 62
+\BOOKMARK [2][-]{subsection.4.4.1}{Aim of the experiment}{section.4.4}% 63
+\BOOKMARK [2][-]{subsection.4.4.2}{Experiment apparatus}{section.4.4}% 64
+\BOOKMARK [2][-]{subsection.4.4.3}{Experiment procedure}{section.4.4}% 65
+\BOOKMARK [2][-]{subsection.4.4.4}{Experiment results}{section.4.4}% 66
+\BOOKMARK [2][-]{subsection.4.4.5}{Analysis of results}{section.4.4}% 67
+\BOOKMARK [2][-]{subsection.4.4.6}{Conclusions of the experiment}{section.4.4}% 68
+\BOOKMARK [1][-]{section.4.5}{Experiment 5: Comparing the back and front gait of the dog}{chapter.4}% 69
+\BOOKMARK [2][-]{subsection.4.5.1}{Aim of the experiment}{section.4.5}% 70
+\BOOKMARK [2][-]{subsection.4.5.2}{Experiment apparatus}{section.4.5}% 71
+\BOOKMARK [2][-]{subsection.4.5.3}{Experiment procedure}{section.4.5}% 72
+\BOOKMARK [2][-]{subsection.4.5.4}{Experiment results}{section.4.5}% 73
+\BOOKMARK [2][-]{subsection.4.5.5}{Analysis of results}{section.4.5}% 74
+\BOOKMARK [2][-]{subsection.4.5.6}{Conclusions and recommendations of the experiment}{section.4.5}% 75
+\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 76
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 77
+\BOOKMARK [0][-]{chapter.7}{Recommendations}{}% 78
+\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 79
+\BOOKMARK [1][-]{section.A.1}{Implementation and experiment code}{appendix.A}% 80
+\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 81
+\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 82

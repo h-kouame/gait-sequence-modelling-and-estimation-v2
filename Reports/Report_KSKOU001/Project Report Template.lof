@@ -1,28 +1,27 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces The procedure of filters in dimensionality reduction}}{9}{figure.2.1}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The procedure of wrappers in dimensionality reduction}}{10}{figure.2.2}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The procedure of hybrid filter-wrapper in dimensionality reductiony}}{11}{figure.2.3}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The procedure of wrappers in dimensionality reduction}}{9}{figure.2.2}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The procedure of hybrid filter-wrapper in dimensionality reduction}}{10}{figure.2.3}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Ergodic HMM graphical model showing the hidden states, observation, and transitions between states}}{17}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Misclassification error vs feature number using separability index and KNN}}{19}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Optimal PCA component number}}{22}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Finding best number of mixture component using AIC}}{25}{figure.3.4}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Ergodic HMM graphical model showing the hidden states, observation, and transitions between states}}{20}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Misclassification error vs feature number using separability index and KNN}}{22}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Optimal PCA component number}}{25}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Finding best number of mixture component using AIC}}{28}{figure.4.4}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Front footfalls prediction accuracy with both IMUs vs with only the front IMU}}{37}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Front footfalls prediction log-likelihood with both IMUs vs with only the front IMU}}{38}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Back footfalls prediction accuracy with both IMUs vs with only the front IMU}}{39}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Back footfalls prediction log-likelihood with both IMUs vs with only the front IMU}}{40}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces The effect of CHMM's observation dimensionality the state sequence decoding accuracy}}{43}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces The effect of CHMM's observation dimensionality the log-likelihood}}{44}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Scatter plot of 5-dimensional observations grouped per state based on ground-truth state sequence}}{44}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Scatter plot of 5-dimensional observations grouped per state based on estimated state sequence}}{45}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Scatter plot of 18-dimensional observations grouped per state based on ground-truth state sequence}}{45}{figure.5.9}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Scatter plot of 18-dimensional observations grouped per state based on estimated state sequence}}{46}{figure.5.10}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces The effect of training datasize on the prediction accuracy}}{49}{figure.5.11}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces The effect of training datasize on the log likelihood}}{50}{figure.5.12}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Bias-Variance tradeoff analysis}}{51}{figure.5.13}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Front footfalls prediction accuracy of both IMUs vs with only the front IMU}}{34}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Front footfalls prediction log-likelihood with both IMUs vs with only the front IMU}}{35}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Back footfalls prediction accuracy with both IMUs vs with only the front IMU}}{36}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Back footfalls prediction log-likelihood with both IMUs vs with only the front IMU}}{37}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces The effect of CHMM's observation dimensionality the state sequence decoding accuracy}}{40}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces The effect of CHMM's observation dimensionality the log-likelihood}}{41}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Scatter plot of 5-dimensional observations grouped according the ground-truth state sequence}}{41}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Scatter plot of 5-dimensional observations grouped according to the estimated state sequence}}{42}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Scatter plot of 18-dimensional observations grouped according to the ground-truth state sequence}}{42}{figure.4.9}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Scatter plot of 18-dimensional observations grouped according to the estimated state sequence}}{43}{figure.4.10}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces The effect of training datasize on the prediction accuracy}}{46}{figure.4.11}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces The effect of training datasize on the log likelihood}}{47}{figure.4.12}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Bias-Variance tradeoff analysis}}{48}{figure.4.13}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
