@@ -1,2 +1,16 @@
 \chapter{Conclusions}
-
+The present report consolidates the work done on gait sequence modelling and estimation using Hidden Markov Models (HMMs). 
+We went from the continuous IMU measurements of a dog moving, to gait state identification using HMM with Gaussian mixture density functions.\\
+Given limitation imposed by the small size of the dataset, dimensionality reduction techniques were explored. In addition, data aggregation and mirroring techniques were employed to increase the data. After successfully implementing the various models, experiments were designed and performed to test the hypotheses formulated in the introduction. These hypotheses are repeated here as a reminder.
+\begin{enumerate}
+	\item HMMs can successfully model gait sequence dynamics using IMU data, in the absence of huge training data.
+	\item Data aggregation and mirroring techniques can be used to overcome training data size limitations.
+	\item Dimensionality reduction can increase the performance of an HMM, in the absence of a large training set.
+	\item HMMs can be used to successfully perform gait activity recognition.
+\end{enumerate}
+In light of the above results and the discussions, these hypotheses can be confidently accepted. \\
+Indeed, continuous HMMs with Gaussian mixture can be used to build robust gait sequence estimators from IMI measurements with up to 95\% precision.
+This accuracy is obtainable by aggregating the measurements of the different gait actions and/or by using considering the reverse gait sequence as a valid sequence.\\
+Furthermore, when dealing with a small training data, dimensionality reduction can increase the model's performance by up to 78\%. However, with a large dataset, it might not be necessary to perform any reduction with just 18-dimensions. This last conclusion should be taken with some degree of reservation.
+Finally, the last experiment showed that IMU based HMM can be used for gait type classification.\\
+The objectives of this project can, therefore, be considered met. In the next section recommendations are made for possible improvements and future works.

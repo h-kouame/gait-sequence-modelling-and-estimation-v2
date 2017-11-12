@@ -86,9 +86,9 @@
 \contentsline {section}{\numberline {5.2}Data aggregation and mirroring}{52}{section.5.2}
 \contentsline {section}{\numberline {5.3}State duration time}{52}{section.5.3}
 \contentsline {chapter}{\numberline {6}Conclusions}{53}{chapter.6}
-\contentsline {chapter}{\numberline {7}Recommendations}{54}{chapter.7}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{59}{appendix.A}
-\contentsline {section}{\numberline {A.1}Implementation and experiment code}{59}{section.A.1}
-\contentsline {section}{\numberline {A.2}Additional results}{59}{section.A.2}
-\contentsline {chapter}{\numberline {B}Addenda}{76}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{76}{section.B.1}
+\contentsline {chapter}{\numberline {7}Recommendations}{55}{chapter.7}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{60}{appendix.A}
+\contentsline {section}{\numberline {A.1}Implementation and experiment code}{60}{section.A.1}
+\contentsline {section}{\numberline {A.2}Additional results}{60}{section.A.2}
+\contentsline {chapter}{\numberline {B}Addenda}{77}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{77}{section.B.1}
