@@ -1,6 +1,22 @@
 \chapter{Discussion}
 
-Here is what the results mean and how they tie to existing literature...
+Different experiments were performed and presented in the results section \ref{sec:results}. This section further discusses the findings under the following headings.
 
-Discuss the relevance of your results and how they fit into the theoretical work you described in your
-literature review.
+\section{Data dimensionality and bias analysis}
+
+This secetion is based on experiment 1 \ref{exp:feat-size} and 2 \ref{exp:dim}.
+From the two experiments, it is clear that with a limited-size training data, building the model will all 18 features results in a poor performance. Thus, dimensionality reduction needs to be used to increase the model's precision. The best technique to do this is the combination of forward feature selection and feature ranking using separability index. More than 80\% classification accuracy was obatained with four selected features using this filter technique.\\
+However, up to 95\% accuracy was obtained without dimensionality reduction when the training data size is relatively large. Therefore, it may not be necessary to reduce the feature size with enough data set, around 2000 samples. The robustness of the model without dimensionality reduction backs this statement. In fact, the variance error was extremely low both models: with and without dimensionality reduction. This is not surprising for two different reasons. Inherently, HMMs are very robust because they are probabilistic models. Moreover, the estimated means and the co-variances are the two potential sources of bias in the model. But, the mean is an unbiased estimator as proven in \ref{eq:unbiased-mean} 
+\begin{align} 
+	E[\mu^*] = E[\frac{1}{N}\sum_{k=1}^{N}X^k] = \frac{1}{N}\sum_{k=1}^{N}E[X^k]=\mu \label{eq:unbiased-mean}
+\end{align} 
+Furthermore, although variance is a biased estimator, they were normilised with N-1. Thus, with a large N value, the bias tends to zero as shown here in \ref{eq:biased-var} and \ref{eq:unbiased-var}. So, with a large dataset, the gait sequence estimator is unbiased when the observation sequence is long and biased, otherwise. In fact, with small training data sequence, the bias increases with the feature size. This explains the very poor performance of the model is built with 539 18-dimenstional observations.
+ \begin{align} 
+	Biased \quad	E[\sigma^{2^*}] = E[\frac{1}{N}\sum_{k=1}^{N}(X^k - \mu*)^2] = \frac{N - 1}{N}\sigma^2 \label{eq:biased-var}\\
+ \quad with \quad a \quad large \quad N, \quad E[\sigma^{2^*}] = \sigma^2 \label{eq:unbiased-var} \quad becomes \quad unbiased
+ \end{align}
+
+\section{Data aggregation and mirroring}
+Overall, the different models performed better with the increase in training data size. This fact shows that the data aggregation and the mirroring techniques worked very well. Nevertheless, the aggregation of the data from all the action types led to a loss of specificity as expected, therefore, decreasing the model's precision. This fact was uncovered by the motion recognition experiment \ref{exp:motion}. In this experiment, when specific models were built for each action, the prediction accuracies in table \ref{tab:action-recogn-acc} were very close to 100\%.\\
+Even though the reverse sequences were appended, the models still performed very well when tested with the correct data. This testifies that the increase of data by mirroring does not reduce performance, contrary to the aggregation method.
+\section{State duration time}

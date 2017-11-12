@@ -26,7 +26,6 @@
 \usepackage{amsmath}
 \usepackage{listings}
 \usepackage{color}
-\usepackage[export]{adjustbox}
 %\usepackage{subcaption}
 %\usepackage[export]{wrapfigure}
 
@@ -153,24 +152,22 @@ Date:\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots .
 \hrule
 
 % Place your abstract here.
-\begin{itemize}
-\item Open the {\bf Project Report Template.tex} file and carefully follow the comments (starting with \%).
-\item Process the file with {\bf pdflatex}, using other processors may need you to change some features such as graphics types.
-\item Note the files included in the  {\bf Project Report Template.tex} (with the .tex extension excluded). You can open these files separately and modify their contents 
-or create new ones.
-\item Contact the latex namual for more features in your document such as equations, subfigures, footnotes, subscripts \& superscripts, special characters etc.
-\item I recommend using the {\bf kile} latex IDE, as it is simple to use.
-\end{itemize}
-
-
+Hidden Markov Models (HMMs) are doubly embedded stochastic processes with a rich underlying statistical structure. 
+In the present work, gait sequence modelling and estimation was performed with HMMs using inertial measurement unit (IMU) data. More specifically, from IMU measurements, a dog's footfalls were correctly identified with up to 95\% precision. The continuous-valued IMU measurements were modelled with Gaussian mixtures. The originality of this project lies in the following three reasons. \\\\
+Firstly, the similar work found in literature only uses 6-dimensional accelerometer and gyroscope measurements \cite{ches2012} \cite{cont2013}. The gait estimation was performed using 18-dimensional data. Thus, feature extraction and feature subset selection techniques were used for dimensionality reduction. The experiments demonstrated that up to 78\% performance increase is obtainable by using dimensionality reduction when, the training data is not large.\\\\
+Secondly, the available IMU dataset was very small in size. Two different methods were employed to overcome this limitation. \\In the first method,
+the reverse gait measurements were appended to the original data to increase the training data. In addition, the IMU measurements of the dog running, walking, and trotting were aggregated. 
+Subsequently, it was possible to build more than 90\% accurate HMM model with 18-dimensional IMU measurements with low variance error.\\\\
+Thirdly, the HMM gait estimation model was designed by building separate models for the front and the back legs of the dog. It, therefore, follows that, the gait estimation algorithm developed in this projet is applicable to both quadrupeds and bipeds.\\\\
+Finally, the designed HMM models were successfully used to perform motion type recognition. Overall, this undergraduate final year project may be deemed successful.
 \newpage
 \tableofcontents
 
-%\newpage
-%\listoffigures
+\newpage
+\listoffigures
 
-%\newpage
-%\listoftables
+\newpage
+\listoftables
 
 % Page formatting, to place section titles as headers of odd pages and Chapter titles as headers of even pages.
 \newpage
@@ -184,7 +181,6 @@ or create new ones.
 % THe files included below are .tex files containing the respective chapters these are already created in this package and you can add to or modify them.
 \include{Introduction}
 \include{Literature}
-\include{Methodology}
 \include{Design}
 \include{Experimental Design}
 \include{Results}

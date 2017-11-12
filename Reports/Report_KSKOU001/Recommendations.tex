@@ -1,3 +1,15 @@
 \chapter{Recommendations}
-
-Make sensible recommendations for further work.
+In this chapter are presented the recommendations that follow from the completion of the project. These recommendations can serve as an extension of the project for improvement and future work.
+\begin{itemize}
+	\item \textit{Online real-time testing:} Even though the model was tested with unseen data, an online real-time implementation and testing on a moving dog would testify of the reliability of the model built.
+	
+	\item \textit{Gather more data from different dogs:} The HMM model was formulated and the experiments were performed based on measurements from a single subject. More data should be gathered from multiple dogs to test the present and subsequently tune the model's parameters based on the outcome of the tests.
+	
+	\item \textit{Incorporate more domain knowledge:} Given the limited amount of time, domain-specific knowledge was not thoroughly explored. Making more use of available knowledge on quadruped movement may improve the model's complexity and performance. 
+	
+	\item \textit{Compare the HMM models to other algorithms:} The performance of the constructed models should be compared to other classification and pattern recognition methods.
+	
+	\item \textit{Combine the front and back HMMs:} In this design, separate models were built for the front and the back legs of the dog. Although this made the algorithm applicable to bipedal gait estimation, it would be useful to combined the two models and evaluate the performance of the holistic 16-states HMM.
+	
+	\item \textit{Investigate more dimensionality reduction techniques:} The feature extraction methods performed did not perform very well, more dimensionality reduction methods such as Fast Fourier Transform (FFT) \cite{towa2009}, time-frequency analysis \cite{ches2012} should be investigated.
+\end{itemize}
