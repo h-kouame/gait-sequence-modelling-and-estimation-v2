@@ -25,53 +25,52 @@
 \BOOKMARK [2][-]{subsection.3.5.3}{Feature ranking}{section.3.5}% 25
 \BOOKMARK [2][-]{subsection.3.5.4}{Forward feature selection}{section.3.5}% 26
 \BOOKMARK [2][-]{subsection.3.5.5}{Full-search feature selection}{section.3.5}% 27
-\BOOKMARK [2][-]{subsection.3.5.6}{Principal Component Analysis \(PCA\)}{section.3.5}% 28
-\BOOKMARK [2][-]{subsection.3.5.7}{Linear Discriminant Analysis \(LDA\)}{section.3.5}% 29
-\BOOKMARK [1][-]{section.3.6}{Solving the three basics HMM problems}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.6.1}{Solution to the training problem}{section.3.6}% 31
-\BOOKMARK [2][-]{subsection.3.6.2}{Solution to the evaluation problem}{section.3.6}% 32
-\BOOKMARK [2][-]{subsection.3.6.3}{Solution to the decoding problem}{section.3.6}% 33
-\BOOKMARK [1][-]{section.3.7}{Evaluation of the footfall identification accuracy}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.8}{Practical implementation}{chapter.3}% 35
-\BOOKMARK [2][-]{subsection.3.8.1}{Model's parameters estimation implementation}{section.3.8}% 36
-\BOOKMARK [2][-]{subsection.3.8.2}{Decoding and log-likelihood computation implementation}{section.3.8}% 37
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 38
-\BOOKMARK [1][-]{section.4.1}{Experiment 1: Observation sequence dimensionality's effect on performance}{chapter.4}% 39
-\BOOKMARK [2][-]{subsection.4.1.1}{Aim of the experiment}{section.4.1}% 40
-\BOOKMARK [2][-]{subsection.4.1.2}{Experiment apparatus}{section.4.1}% 41
-\BOOKMARK [2][-]{subsection.4.1.3}{Experiment procedure}{section.4.1}% 42
-\BOOKMARK [2][-]{subsection.4.1.4}{Experiment results}{section.4.1}% 43
-\BOOKMARK [2][-]{subsection.4.1.5}{Analysis and discussion of results}{section.4.1}% 44
-\BOOKMARK [2][-]{subsection.4.1.6}{Conclusions and recommendations of the experiment}{section.4.1}% 45
-\BOOKMARK [1][-]{section.4.2}{Experiment 2: The impact of dimensionality reduction on performance}{chapter.4}% 46
-\BOOKMARK [2][-]{subsection.4.2.1}{Aim of the experiment}{section.4.2}% 47
-\BOOKMARK [2][-]{subsection.4.2.2}{Experiment apparatus}{section.4.2}% 48
-\BOOKMARK [2][-]{subsection.4.2.3}{Experiment procedure}{section.4.2}% 49
-\BOOKMARK [2][-]{subsection.4.2.4}{Experiment results}{section.4.2}% 50
-\BOOKMARK [2][-]{subsection.4.2.5}{Analysis and discusion of results}{section.4.2}% 51
-\BOOKMARK [2][-]{subsection.4.2.6}{Conclusions and recommendations of the experiment}{section.4.2}% 52
-\BOOKMARK [1][-]{section.4.3}{Experiment 3: The necessity of combining the front and back IMU sensor measurements}{chapter.4}% 53
-\BOOKMARK [2][-]{subsection.4.3.1}{Aim of the experiment}{section.4.3}% 54
-\BOOKMARK [2][-]{subsection.4.3.2}{Experiment apparatus}{section.4.3}% 55
-\BOOKMARK [2][-]{subsection.4.3.3}{Experiment procedure}{section.4.3}% 56
-\BOOKMARK [2][-]{subsection.4.3.4}{Experiment results}{section.4.3}% 57
-\BOOKMARK [2][-]{subsection.4.3.5}{Analysis and discussion of results}{section.4.3}% 58
-\BOOKMARK [2][-]{subsection.4.3.6}{Conclusions and recommendations of the experiment}{section.4.3}% 59
-\BOOKMARK [1][-]{section.4.4}{Experiment 4: Motion type recognition}{chapter.4}% 60
-\BOOKMARK [2][-]{subsection.4.4.1}{Aim of the experiment}{section.4.4}% 61
-\BOOKMARK [2][-]{subsection.4.4.2}{Experiment apparatus}{section.4.4}% 62
-\BOOKMARK [2][-]{subsection.4.4.3}{Experiment procedure}{section.4.4}% 63
-\BOOKMARK [2][-]{subsection.4.4.4}{Experiment results}{section.4.4}% 64
-\BOOKMARK [2][-]{subsection.4.4.5}{Analysis of results}{section.4.4}% 65
-\BOOKMARK [2][-]{subsection.4.4.6}{Conclusions of the experiment}{section.4.4}% 66
-\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 67
-\BOOKMARK [1][-]{section.5.1}{Data dimensionality and bias analysis}{chapter.5}% 68
-\BOOKMARK [1][-]{section.5.2}{Data aggregation and mirroring}{chapter.5}% 69
-\BOOKMARK [1][-]{section.5.3}{State duration time}{chapter.5}% 70
-\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 71
-\BOOKMARK [0][-]{chapter.7}{Recommendations}{}% 72
-\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 73
-\BOOKMARK [1][-]{section.A.1}{Implementation and experiment code}{appendix.A}% 74
-\BOOKMARK [1][-]{section.A.2}{Additional results}{appendix.A}% 75
-\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 76
-\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 77
+\BOOKMARK [2][-]{subsection.3.5.6}{PCA and LDA}{section.3.5}% 28
+\BOOKMARK [1][-]{section.3.6}{Solving the three basics HMM problems}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.6.1}{Solution to the training problem}{section.3.6}% 30
+\BOOKMARK [2][-]{subsection.3.6.2}{Solution to the evaluation problem}{section.3.6}% 31
+\BOOKMARK [2][-]{subsection.3.6.3}{Solution to the decoding problem}{section.3.6}% 32
+\BOOKMARK [1][-]{section.3.7}{Evaluation of the footfall identification accuracy}{chapter.3}% 33
+\BOOKMARK [1][-]{section.3.8}{Practical implementation}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.8.1}{Model's parameters estimation implementation}{section.3.8}% 35
+\BOOKMARK [2][-]{subsection.3.8.2}{Decoding and log-likelihood computation implementation}{section.3.8}% 36
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 37
+\BOOKMARK [1][-]{section.4.1}{Experiment 1: Observation sequence dimensionality's effect on performance}{chapter.4}% 38
+\BOOKMARK [2][-]{subsection.4.1.1}{Aim of the experiment}{section.4.1}% 39
+\BOOKMARK [2][-]{subsection.4.1.2}{Experiment apparatus}{section.4.1}% 40
+\BOOKMARK [2][-]{subsection.4.1.3}{Experiment procedure}{section.4.1}% 41
+\BOOKMARK [2][-]{subsection.4.1.4}{Experiment results}{section.4.1}% 42
+\BOOKMARK [2][-]{subsection.4.1.5}{Analysis and discussion of results}{section.4.1}% 43
+\BOOKMARK [2][-]{subsection.4.1.6}{Conclusions and recommendations of the experiment}{section.4.1}% 44
+\BOOKMARK [1][-]{section.4.2}{Experiment 2: The impact of dimensionality reduction on performance}{chapter.4}% 45
+\BOOKMARK [2][-]{subsection.4.2.1}{Aim of the experiment}{section.4.2}% 46
+\BOOKMARK [2][-]{subsection.4.2.2}{Experiment apparatus}{section.4.2}% 47
+\BOOKMARK [2][-]{subsection.4.2.3}{Experiment procedure}{section.4.2}% 48
+\BOOKMARK [2][-]{subsection.4.2.4}{Experiment results}{section.4.2}% 49
+\BOOKMARK [2][-]{subsection.4.2.5}{Analysis and discusion of results}{section.4.2}% 50
+\BOOKMARK [2][-]{subsection.4.2.6}{Conclusions and recommendations of the experiment}{section.4.2}% 51
+\BOOKMARK [1][-]{section.4.3}{Experiment 3: The necessity of combining the front and back IMU sensor measurements}{chapter.4}% 52
+\BOOKMARK [2][-]{subsection.4.3.1}{Aim of the experiment}{section.4.3}% 53
+\BOOKMARK [2][-]{subsection.4.3.2}{Experiment apparatus}{section.4.3}% 54
+\BOOKMARK [2][-]{subsection.4.3.3}{Experiment procedure}{section.4.3}% 55
+\BOOKMARK [2][-]{subsection.4.3.4}{Experiment results}{section.4.3}% 56
+\BOOKMARK [2][-]{subsection.4.3.5}{Analysis and discussion of results}{section.4.3}% 57
+\BOOKMARK [2][-]{subsection.4.3.6}{Conclusions and recommendations of the experiment}{section.4.3}% 58
+\BOOKMARK [1][-]{section.4.4}{Experiment 4: Motion type recognition}{chapter.4}% 59
+\BOOKMARK [2][-]{subsection.4.4.1}{Aim of the experiment}{section.4.4}% 60
+\BOOKMARK [2][-]{subsection.4.4.2}{Experiment apparatus}{section.4.4}% 61
+\BOOKMARK [2][-]{subsection.4.4.3}{Experiment procedure}{section.4.4}% 62
+\BOOKMARK [2][-]{subsection.4.4.4}{Experiment results}{section.4.4}% 63
+\BOOKMARK [2][-]{subsection.4.4.5}{Analysis of results}{section.4.4}% 64
+\BOOKMARK [2][-]{subsection.4.4.6}{Conclusions of the experiment}{section.4.4}% 65
+\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 66
+\BOOKMARK [1][-]{section.5.1}{Data dimensionality and bias analysis}{chapter.5}% 67
+\BOOKMARK [1][-]{section.5.2}{Data aggregation and mirroring}{chapter.5}% 68
+\BOOKMARK [1][-]{section.5.3}{State duration time}{chapter.5}% 69
+\BOOKMARK [0][-]{chapter.6}{Conclusions}{}% 70
+\BOOKMARK [0][-]{chapter.7}{Recommendations}{}% 71
+\BOOKMARK [0][-]{appendix.A}{Additional Files and Schematics}{}% 72
+\BOOKMARK [1][-]{section.A.1}{Implementation and experiment code}{appendix.A}% 73
+\BOOKMARK [1][-]{section.A.2}{Additional results}{appendix.A}% 74
+\BOOKMARK [0][-]{appendix.B}{Addenda}{}% 75
+\BOOKMARK [1][-]{section.B.1}{Ethics Forms}{appendix.B}% 76
