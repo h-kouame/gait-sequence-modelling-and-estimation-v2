@@ -15,7 +15,7 @@ An HMM is fully specified by the following parameters
 	\item \(\Phi =   \{ \phi_{j}(k\}\), the probability distribution of observation symbols in state j.
 	\item The initial state distribution, \(\pi = {\pi_i}\)
 \end{enumerate}
-For continuous HMM (CHMM), i.e, HMM with continuous-valued observations, \(\Phi\) consists in a probability distribution function. Many applications have successfully modeled such distributions with mixtures of Gaussian distributions \cite{cont2013} \cite{ches2012}.
+For continuous HMM (CHMM), i.e, HMM with continuous-valued observations, \(\Phi\) consists in a probability distribution function. Many applications have successfully modelled such distributions with mixtures of Gaussian distributions \cite{cont2013} \cite{ches2012}.
 As such, \(\phi\) is approximated by a weighted sum of M multivariate Gaussian distributions \(\eta\). For a given, observation sequence, \(\phi\)  and \(\eta\) are therefore given by equations \ref{eq:phi} and \ref{eq:eta},
 
 \begin{align} 
@@ -42,7 +42,7 @@ HMM theory is built on three basic assumptions listed below.
 
 \item \textit{The output/observation independence assumption}: The current observation also known as emission symbol is statistically independent of the previous observations. It is "emitted" only by the current state, \(P[O|q_1, q_2, ..., q_T, \lambda]=\prod_{t=1}^{T}P[O_t|q_t, \lambda]\).
 \end{enumerate} 
-The three assumptions make an HMM a relatively simple graphical model to implemented. This simplicity naturally comes with some limitations in modeling more complex problems which, however, may be modeled with higher-order HMMs. %%TODO: look for ref for this fact
+The three assumptions make an HMM a relatively simple graphical model to implemented. This simplicity naturally comes with some limitations in modelling more complex problems which, however, may be modelled with higher-order HMMs. %%TODO: look for ref for this fact
 Furthermore, the three assumptions are very similar to those of a Markov chain. This is because the stochastic process of an HMM pertaining to the hidden states can be reduced to a Markov chain. In fact, an HMM is an extension of a Markov Chain. The essential difference between the two is that, with the former, there is no a one-to-one mapping between the states and the observation symbols \cite{biol1998}.
 
 \subsection{The three basics problems for HMM design}
@@ -55,7 +55,8 @@ The naive answer to this question is simply computing the \(P(O|\lambda)\) accor
 \begin{align}
 	P(O|\lambda) = \sum_{q_1}^{q_T}\pi_{q_1}b_{q_1}(O_1)a_{q_1q_2}b_{q_2}(O_2)...a_{q_{T-1}q_T}(O)) \label{eq:P}
 \end{align}
-This approach has two issues, it is not only, computationally too expensive because of the exponential complexity with respect to T, but also, intractable for very long sequence. In practice, \(P(O|\lambda)\) is computed by an algorithm called \textit{forward-backward} procedure, which is a more efficient method.
+This approach has two issues, it is not only, computationally to
+o expensive because of the exponential complexity with respect to T, but also, intractable for very long sequence. In practice, \(P(O|\lambda)\) is computed by an algorithm called \textit{forward-backward} procedure, which is a more efficient method.
 
 \subsubsection{The decoding problem}
  The decoding problem can be reduced to this interrogation: \textit{Given the observation sequence \(O = O_1O_2O_T\), and the model \(\lambda\), how do we choose a corresponding state sequence \(Q = q_1q_2...Q_T\) which is optimal in some meaningful sense i.e, best "explains" the observations?}
