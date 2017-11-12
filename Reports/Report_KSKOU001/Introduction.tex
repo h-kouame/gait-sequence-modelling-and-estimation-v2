@@ -1,5 +1,13 @@
 \chapter{Introduction}
 
+Human motion analysis is an important research topic motivated by medical, artistic or scientific purposes \cite{towa2009}. Among others reasons, it is investigated for human activity monitoring, fall detection, gesture recognition, balance control evaluation, and abnormal behaviour detection \cite{cont2013}. To carry out these studies, micro-electro-mechanical inertial measurement units (IMUs) are increasingly used to capture motion data. Primarily, because they are lightweight and cheap \cite{ches2012} \cite{towa2009} \cite{cont2013}.\\
+Gait analysis requires the identification of latent gait states \cite{cont2013}. A gait state being a particular stance in a given gait activity.
+For this reason, it is extensively used in biologically inspired robot design. More specifically, understanding animals gait mechanism is very invaluable in bio-robotics.\\
+Although, human gait analysis has been successfully performed using IMU, the threshold-based algorithms, %%TODO: ref 30 in "COnt'
+and the fuzzy logic methods %%TODO: ref 8 in "COnt' 
+used, lack robustnes \cite{cont2013}. Thus, a more robust probabilistic technique is investigated in the present work. In this final year undergraduate project, we use Hidden Markov Model (HMM) to perform gait sequence modelling and estimation with IMU measurements of a moving dog.
+
+
 \section{Background to the study}
 Bio-inspired robotics identifies useful mechanisms from nature to inform real-world engineering systems. In this vein, the University of Cape Town (UCT) set out to investigate how a cheetah uses its tail for stability during high acceleration, quick turns and sudden braking for sophisticated robots design. \\
 To achieve this purpose, inertial measurement unit (IMU) data for a dog running, walking and trotting was acquired and labeled with the corresponding footfalls.\\
@@ -9,35 +17,31 @@ This dataset can, therefore, be used to perform gait sequence modelling and anal
 The objective of the present work as stated in its outline is to "design, implement, and test (Hidden Markov Models) for estimating the gait sequence
 from IMU data, so that specific models can be formulated and their
 parameters estimated and interrogated." Thus, four main sub-objectives are formulated.
-\begin{enumerate}
+\begin{itemize}
 	\item Formulate HMM models to estimate the gait sequence of a dog from the labeled IMU measurements.
 	\item Implement, test and evaluate the formulated models in order to estimate their parameters.
 	\item Investigate how dimensionality reduction affects the performance of the designed models.
 	\item Using the implemented models, perform useful gait pattern analysis such as motion recognition.
-\end{enumerate}
+\end{itemize}
 
 
-\subsection{Problems to be investigated}
-Description of the main questions to be investigated in this study.
-
-The main questions to be answered are the following:
-\begin{enumerate}
+To achieve the above objectives the questions below will be investigated in this project:
+\begin{itemize}
 	\item How well can HMM model gait sequence dynamics using IMU data, in the absence of enough training samples?
+	\item What techniques can be used to overcome the limited size of the available dataset?
+	\item How does the dimensionality of the dataset affect the performance of an HMM in the absence of a large training set?
 	\item Can dimensionality reduction cause an increase in performance of HMM models when there is not enough training data?
-\end{enumerate}
-\subsection{Purpose of the study}
-Give the significance of investigating these problems. It must be obvious why you are doing this study
-and why it is relevant.
+	\item Can HMM be used to successfully perform gait activity recognition?
+\end{itemize}
+
 
 \section{Scope and limitations}
-The project was proposed with a very broad scope. In order to ensure completion of the project in the allocated time, its scope was therefore reduced to the essential.\\
-More specifically, this project focuses on the design, the implementation, and the performance evaluation of HMM models to identify the dog's footfalls from IMU measurements.\\
-Moreover, particular attention was given to the design of dimensionality reduction techniques design and how they affect the performance of the HMM models when the training dataset is not large.\\
-Furthermore, using the implemented models, motion type recognition was performed using the implemented HMM models.
+The project was proposed with a very broad scope. In order to ensure completion of the project in the allocated time, its scope was therefore reduced to the most essential aspects.\\
+Thus the project focues on the design, the implementation, and the performance evaluation of HMM models to identify the dog's footfalls from IMU measurements.\\
+Moreover, particular attention was paid to the design of dimensionality reduction techniques and how they affect the performance of the HMM models when the training dataset is not large.\\
+Furthermore, using the implemented models, motion type recognition was performed using the implemented HMM models. However, the capturing and calibration of the IMU data is not part of the scope of this project.
 
-The main constraint of this project was the relatively small size of the available IMU data.  
-Besides, the capturing and calibration of the IMU data is not part of the scope of this project.
-
+The main constraint of this project was the relatively small size of the available IMU data.
 \section{Plan of development}
 Here you tell the reader how your report has been organised and what is included in each
 chapter.
