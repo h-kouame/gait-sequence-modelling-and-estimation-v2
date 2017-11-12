@@ -1,8 +1,15 @@
 \chapter{Literature review and basic theory}
 
 \section{Hidden Markov Models}
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=0.7\textwidth,keepaspectratio]{Figures/erg-HMM}
+	\caption{Example of a 3-states ergodic HMM}{\cite{thes2011}}
+	\label{fig:erg}
+\end{figure}
 Hidden Markov Models (HMMs) are doubly embedded stochastic processes with a rich underlying statistical structure. Introduced at the end of the 1960s by Baum and colleagues, they have become one of the preferred techniques in speech recognition after the implementation of Baker and Jelinek in 1970s. HMMs have been successfully applied to various other engineering problems in pattern recognition for classification and fraud detection purposes, amongst others \cite{tuto1989} \cite{tool2001} \cite{towa2009} \cite{twop2008}.\\
-The type of HMM depends on the possible connections between the states. Thus, an HMM, in which a state can transition to any other state is said ergodic. Other types such as the Left-Right model or Bakis do not allow all possible transitions between the states.
+The type of HMM depends on the possible connections between the states. Thus, an HMM, in which a state can transition to any other state is said ergodic. Other types such as the Left-Right model or Bakis do not allow all possible transitions between the states. Figure \ref{fig:erg} is an illustration of an ergodic HMM of 3 states (for simplicity). The annotations are explained in the next secetion. 
+
 \subsection{HMM parameters specification}
 An HMM is fully specified by the following parameters 
 \begin{enumerate}
@@ -92,13 +99,13 @@ Filters and wrappers are two major categories of feature selection methods \cite
 The structure of both methods are illustrated by figure \ref{fig:filt} and figure \ref{fig:wrap}, respectively.
 \begin{figure}[ht!]
 	\centering
-	\includegraphics{Figures/filter}
+	\includegraphics[width=1\textwidth,keepaspectratio]{Figures/filter}
 	\caption{The procedure of filters in dimensionality reduction}{\cite{hybr2011}}
 	\label{fig:filt}
 \end{figure}
 \begin{figure}[ht!]
 	\centering
-	\includegraphics{Figures/wrapper}
+	\includegraphics[width=1\textwidth,keepaspectratio]{Figures/wrapper}
 	\caption{The procedure of wrappers in dimensionality reduction}{\cite{hybr2011}}
 	\label{fig:wrap}
 \end{figure}
@@ -107,7 +114,7 @@ As a result of the two different approaches, filters are fast and do not guarant
 Both approaches are often combined to build effective and efficient feature selection methods. One such approach is shown in figure \ref{fig:filt-wrap}. 
 \begin{figure}[ht!]
 	\centering
-	\includegraphics{Figures/filter-wrapper}
+	\includegraphics[width=.8\textwidth,keepaspectratio]{Figures/filter-wrapper}
 	\caption{The procedure of hybrid filter-wrapper in dimensionality reduction}{\cite{hybr2011}}
 	\label{fig:filt-wrap}
 \end{figure}
@@ -167,6 +174,6 @@ It is a well-received dimensionality reduction tool in the computer vision and p
  LDA is a supervised dimensionality reduction method, it does require the dataset to be labeled. On the other hand, PCA, the next feature extraction method is unsupervised method \cite{prtool}.
  
 \subsubsection{Principal component analysis}
- Principal component analysis (PCA) is an orthogonal linear transformation of a dataset of T K-dimensional observations, \(O \in \Bbb R^{TxK}\), into a so-called PC-space defined by the principal components (PC) \cite{dime2017}.
+ Principal component analysis (PCA) is an orthogonal linear transformation of a dataset of T K-dimensional observations, \(O \in \Bbb R^{T\times K}\), into a so-called PC-space defined by the principal components (PC) \cite{dime2017}.
  Naturally, the dimension of the new space is smaller or equal to K, the original set's dimensionality. The components are ordered according to the variance of the features of the observation set. The principal components represent the eigenvectors of the covariance matrices of the features and the eigenvalues are measures of the features' variances. Thus, the first component is the feature with the highest variance \cite{dime2017}.
  In effect, PCA not only transforms the original observation set into a different space but, it also ranks the features according to their variability. It can therefore be used as an unsupervised dimensionality reduction technique by simply discarding the features with low variance after finding the principal components.

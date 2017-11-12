@@ -1,6 +1,166 @@
-\chapter{Results}
+\chapter{Results} \label{sec:results}
 
-\section{Experiment 1: The necessity of combining the front and back IMU sensor measurements}
+\section{Experiment 1: Observation sequence dimensionality's effect on performance} \label{exp:feat-size}
+
+\subsection{Aim of the experiment}
+The aim of this experiment is to investigate how the number of features impacts the accuracy of a Hidden Markov Model with continuous emission symbols (CHMM), in the abscence of enough training data. Thus, the hypothesis under investigation is:\\
+\textbf{\textit{In the absence of enough training data, a CHMM with observations of high dimensionality performs poorly.}}
+
+\subsection{Experiment apparatus}
+To perform this expereiment, the following materials are required:
+\begin{itemize}
+	\item \(\lambda\), a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
+	\item At least two sample data sets for training the model and testing it.
+	\item A criterion to rank and select subsets of features.
+	\item A measure to evaluate the performance of the CHMM model.
+	\item Finally, a way to visualise the results of the experiments
+\end{itemize}
+
+\subsection{Experiment procedure}
+The expreriment was performed with just the back limps by following the steps listed below:
+\begin{enumerate}
+	\item Step 1 - Preliminary data pre-processing: This step consisted in the data pre-processing as described in \ref{sec:pre-proc}.
+	\item Step 2 - Partitioning data into training and test sets: Here, the dataset was randomly sampled into training and test sets. The training set was made relatively small, it was a sequence of 539 observations. 
+	\item Step 3 -  Feature ranking: The features were ranked using separability of index \ref{sec:rank}. 
+	\item Step 4 - Constructing and training the models: 18 different CHMM models, \(\lambda = {\lambda_i} = \lambda_1, \lambda_2, ..., \lambda_18\) were built and trained using the first i features of the same training dataset.
+	\item Step 5 - Testing and evaluation the models: After training the models, they were tested with the same test dataset with the correct feature subsets and their performance were evaluated in terms of decoding accuracy and log-likelihood value. 
+	\item The different accuracies and the sequence log-likelihood values were finally plotted as a function of the observation dimensionality. Moreover, the observations were grouped based on the corresponding hidden state sequence and scattered in a 2-dimensional principal component space. This is to compare the decoded states against the ground-truth.
+\end{enumerate}
+
+\subsection{Experiment results}
+The results of the experiments are presented in figure \ref{fig:dim-acc}, \ref{fig:dim-log}, \ref{fig:gt-5dim}, \ref{fig:es-5dim}, \ref{fig:gt-18dim}, \ref{fig:es-18dim}.\\
+Figure \ref{fig:dim-acc} and \ref{fig:dim-log} respectively show how the hidden state decoding accuracy and the test sequence log-likelihood estimated by the CHMM model varies as the the number of features considered increases.\\
+Figure \ref{fig:gt-5dim} and \ref{fig:es-5dim} are visualisations of the 5-dimensional observation sequence grouped respectively, according to the actual state sequence and the decoded state sequence. Figure \ref{fig:gt-18dim} and \ref{fig:es-18dim}, are for an 18-dimensional observation.
+5 and 18 dimensions were presented because they resulted in the two extreme prediction accuracies. The results for other dimensions may be found in the appendix from figure \ref{fig:gt-1dim} to figure \ref{fig:es-17dim}, %%TODO: ref appendices
+\begin{figure}[ht!]
+	\centering
+	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/dimensionality-effect-acc}
+	\caption{The effect of CHMM's observation dimensionality the state sequence decoding accuracy}
+	\label{fig:dim-acc}
+\end{figure}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/dimensionality-effect-log}
+	\caption{The effect of CHMM's observation dimensionality the log-likelihood}
+	\label{fig:dim-log}
+\end{figure}
+
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/ground-truth-scatter-with-5-features}
+	\caption{Scatter plot of  5-dimensional observations grouped according the ground-truth state sequence}
+	\label{fig:gt-5dim}
+\end{figure}
+\begin{figure}[ht!]
+	\includegraphics{Figures/estimation-scatter-with-5-features}
+	\caption{Scatter plot of 5-dimensional observations grouped according to the estimated state sequence}
+	\label{fig:es-5dim}
+\end{figure}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/ground-truth-scatter-with-18-features}
+	\caption{Scatter plot of 18-dimensional observations grouped according to the ground-truth state sequence}
+	\label{fig:gt-18dim}
+\end{figure}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/estimation-scatter-with-18-features}
+	\caption{Scatter plot of 18-dimensional observations grouped according to the estimated state sequence}
+	\label{fig:es-18dim}
+\end{figure}
+
+\subsection{Analysis and discussion of results}
+
+Starting with 1 feature, the CHMM model's state decoding accuracy in \ref{fig:dim-acc} increases. It reaches its maximum performance at about 73\% accuracy with 5 features. After 5 features, the accuracy generally declines to about just 40\% accuracy with all 18 features. The decline is however not consistent, for example, there is a local peak at 13 and 17 features.
+A performance increase of up to 78\% was obtained by reducing the feature set's dimension by from 18 to 5.
+In addition, the sequence log-likelihood value is close to zero from 1 to 8 features. It then slowly declining - in overall - from 9 to 15 features and suddenly gets to its lowest value at 18 dimensions.
+The log-likelihood being a measure of the probability that the test sequence was generated by the model, it is clear that the CHMM model better recognises test sequence with smaller feature sizes.\\
+Thus, the smaller the feature size, the better the CHMM performance with a relatively small training dataset. The model is both better at decoding the hidden states as well as recognising IMU measurements generated by the dog's gait mechanism.
+This fact is further shown by \ref{fig:gt-5dim}, \ref{fig:es-5dim}, \ref{fig:gt-18dim} and \ref{fig:es-18dim}. With 5 features, the model correctly attributes most IMU measurements to the correct footfalls except the state 4 observations which were mostly classified as state 3 emissions. In opposite, with 18 features, the HMM model predicted wrongly that the dog remained in state 3 during all the 539 sequences. In fact, with 18 dimensions, the model is not twice as good as predicting with random guesses, i.e, \(0.4 < 2\times\frac{1}{4}\).
+
+\subsection{Conclusions and recommendations of the experiment}
+Based on the above results and discussions, it can be concluded that in the absence of enough training data, a CHMM performs very poorly. This validates the hypothesis formulated. It is therefore necessary to further explore the effect of dimensionality reduction with more robust techniques. This investigation is performed in the next experiment with various dimensionality reduction technique and varying data sizes.
+
+
+\section{Experiment 2: The impact of dimensionality reduction on performance}  \label{exp:dim}
+
+\subsection{Aim of the experiment}
+The aim of this experiment is to investigate the effect of dimensionality reduction on the performance of a continuous Hidden Markov Model (CHMM).
+The hypothesis under investigation is therefore the following:
+\textbf{\textit{Dimension reduction can cause an increase in a CHMM's performance when there is not enough training data.}}
+Thus, the performances of the CHMM with and without dimensionality reduction are compared to test the hypothesis.
+
+\subsection{Experiment apparatus}
+The assets needed to perform the experiment are listed below.
+\begin{itemize}
+	\item \(\lambda\), a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
+	\item Four distinct dimensionality reduction methods. Two feature extraction methods and two feature selection methods were considered. The feature extraction methods were Principle Component Analysis (PCA), Linear Discriminant Analysis (LDA). The two feature selection methods were feature ranking with separability index denoted SI Ranking, and a combination of forward feature selection and separability index denoted SI-forward.
+	\item A performance measure to compare the different models with and without dimensionality reduction. Again, the metrics used were the hidden state decoding accuracy and the ability to recognise a sequence generated by the model namely the log-likelihood.
+\end{itemize}
+
+\subsection{Experiment procedure}
+The experiment was performed as follows.
+Firstly, the dataset was partitioned into two different set for training and testing using random sampling.\\
+Using the same training dataset, five specific models were built and trained. They are denoted as: \(\lambda_{No Reduction}, \lambda_{PCA}, \lambda_{LDA}, \lambda_{SI}, \lambda_{SI-forward}\), respectively, for the model with all 18 features, the models built with PCA, LDA, SI Ranking and SI-forward. Regarding the last four models, the dimension of the training set was reduced with the corresponding technique before feeding it into the actual CHMM model. (Please refer to \ref{sec:dim-red} for more details on the dimension reduction methods design)\\
+Next, the different models were tested with the same test dataset - naturally applying the dimensionality reduction technique where required- and the prediction accuracy and the log-likelihood values were recorded.\\
+This above procedure was repeated while varying the proportion of training data used from \(10\%\) to \(90\%\) of the total dataset.\\
+The prediction accuracies and log-likelihoods were finally plotted as a function of the training data size for each model.
+These findings are presented in the figures \ref{fig:size-acc} and \ref{fig:size-log}. \\\\
+In order to verify, the variance in the five distinct models, a separate an additional experiment was performed for a bias-variance error analysis. Thus, five models were trained and tested 100 times with different datasets. For each model, the average accuracy over the 100 tests was taken as its bias error and variance in the 100, as the variance error.
+
+\subsection{Experiment results}
+Firstly, figure \ref{fig:size-acc} illustrates how the performances of the five CHMMs compare against each other as the training data size increases.
+Secondly, the log-likelihoods presented in \ref{fig:size-log} shows how effectively each model can recognise an observation sequence generated by the underlying mechanism. These results are discussed in the next sub-section.
+Finally, \ref{fig:bias-var} is the bias-variance errors of the different models.
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/size-acc-2}
+	\caption{The effect of training datasize on the prediction accuracy}
+	\label{fig:size-acc}
+\end{figure}
+
+\begin{figure}[ht!]
+	\includegraphics{Figures/size-log-2}
+	\caption{The effect of training datasize on the log likelihood}
+	\label{fig:size-log}
+\end{figure}
+
+\begin{figure}[ht!]
+	\centering
+	\includegraphics{Figures/bias-var}
+	\caption{Bias-Variance tradeoff analysis}
+	\label{fig:bias-var}
+\end{figure}
+
+\subsection{Analysis and discusion of results}
+In the sub-sections below, the effect of each dimensionality reduction technique is discussed.
+
+\subsubsection{No reduction vs feature Ranking: SI Ranking}
+The two graphs under considering here are the purple and the blue graphs in \ref{fig:dim-acc} and \ref{fig:dim-log}. \\
+For a relatively small training data size, i.e, under 1000 samples, the model with feature subset selection using feature ranking outperforms the model with dimensionality reduction. This fact is true for both the prediction accuracy and log-likelihood values. At 539 sample data, there is at least 8\% improvement after reducing the feature size in classification. Based on the linear nature of the graphs before 1000, it could be extrapolated that this improvement will be more significant for observation sequences with less than 539 samples.
+After, 1000 samples, the accuracies of both models increases but, the model built with the 18-dimensional observation sequence increasing performs better.
+%It might, therefore, not be necessary to perform any dimensionality reduction if improving the accuracy is the only motivation when the training data size is greater than 1000 instances. This is more so because, variance error as shown in \ref{fig:bias-var} are close to zero for both models.
+
+\subsubsection{No reduction vs forward feature selection: SI-forward}
+Here, we are discussing the green and the blue graphs in \ref{fig:dim-acc} and \ref{fig:dim-log}. From these two graphs, we can note that the forward feature selection has the similar effect to the feature ranking. This is because they are both feature subset selection methods. It is therfore a confirmation of the above discussion.\\
+From these similar results, we can conclude that the very fast feature ranking \ref{sec:rank} method can be used in lieu of the slower forward feature selection method \ref{sec:forw}. This result confirms the efficacity of the 'feature classifiability' \ref{con:class} as feature ranking criterion for classification applications.
+
+\subsubsection{No reduction vs PCA and LDA}
+
+The two feature extraction methods decreased the performance of the models for all data sizes. In addition, their performances do not consistently increase with the increase in data size. The nature of IMU measurements is not suited to these two feature extraction methods. The experiment could have been better with other successful feature extraction methods found in literature such as FFT \cite{towa2009},
+Time-frequency domain analysis \cite{ches2012}.
+
+\subsubsection{Bias - variance error analysis}
+The presented results in \ref{fig:bias-var} is for a dataset with 539 samples.
+The bias error for all five models is relatively low. This because the test data was similar to the training data. 
+Interestingly, the variance in the training errors over the 100 differet runs are all very close to zero. This is not very surprising because the model's parameters, particularly the mean and the co-variance matrices were designed to have low variance. %%TODO: have a section on robustness of the mean and variance in the evaluation or testing section.
+By looking at the test errors and the bias errors, the best model appears to be the model built with the forward feature selection method, \(\lambda_{SI-forward}\) when the dataset size is small. The next comparable model would be the model built with the feature ranking metho, i.e, \(\lambda_{SI}\). So, with a very strict constraint on the model's speed, \(\lambda_{SI}\) should be favoured because, it is significantly faster than \(\lambda_{SI-forward}\).
+
+\subsection{Conclusions and recommendations of the experiment}
+Considering the above findings, we can effectively confirm that dimensionality reduction can effectively improve the performance of an IMU based CHMM when the dataset is not large enough. However, this does not apply to every dimensionality reduction method. A large range of technique should be explored to select the most appropriate such as the forward feature selection and the feature ranking methods.
+
+
+\section{Experiment 3: The necessity of combining the front and back IMU sensor measurements}
 
 \subsection{Aim of the experiment}
 The objective of this experiment is to determine whether or not it is necessary to consider both the front and back IMU measurements when predicting only the front or back footfalls. Thus, the following hypothesis was constructed:\\
@@ -74,167 +234,7 @@ In light of the finding above, it can be concluded that: using all the front and
 %The formulated hypothesis is, therefore, rejected based on this experiment.\\
 An improvement to this experiment would be to explore how the dimensionality reduction of the different datasets would influence the outcome. Moreover, a futher investigation how well can the back sensors measurement be used to predict the front footfalls. Similarly, how well can the front sensors be used to predict the back footfalls.
 
-\newpage
-\section{Experiment 2: The effect of a CHMM' observation dimensionality on its performance} \label{exp:feat-size}
 
-\subsection{Aim of the experiment}
-The aim of this experiment is to investigate how the number of features impacts the accuracy of a Hidden Markov Model with continuous emission symbols (CHMM), in the abscence of enough training data. Thus, the hypothesis under investigation is:\\
-\textbf{\textit{In the absence of enough training data, a CHMM with observations of high dimensionality performs poorly.}}
-
-\subsection{Experiment apparatus}
-To perform this expereiment, the following materials are required:
-\begin{itemize}
-	\item \(\lambda\), a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
-	\item At least two sample data sets for training the model and testing it.
-	\item A criterion to rank and select subsets of features.
-	\item A measure to evaluate the performance of the CHMM model.
-	\item Finally, a way to visualise the results of the experiments
-\end{itemize}
-
-\subsection{Experiment procedure}
-The expreriment was performed with just the back limps by following the steps listed below:
-\begin{enumerate}
-	\item Step 1 - Preliminary data pre-processing: This step consisted in the data pre-processing as described in \ref{sec:pre-proc}.
-	\item Step 2 - Partitioning data into training and test sets: Here, the dataset was randomly sampled into training and test sets. The training set was made relatively small, it was a sequence of 539 observations. 
-	\item Step 3 -  Feature ranking: The features were ranked using separability of index \ref{sec:rank}. 
-	\item Step 4 - Constructing and training the models: 18 different CHMM models, \(\lambda = {\lambda_i} = \lambda_1, \lambda_2, ..., \lambda_18\) were built and trained using the first i features of the same training dataset.
-	\item Step 5 - Testing and evaluation the models: After training the models, they were tested with the same test dataset with the correct feature subsets and their performance were evaluated in terms of decoding accuracy and log-likelihood value. 
-	\item The different accuracies and the sequence log-likelihood values were finally plotted as a function of the observation dimensionality. Moreover, the observations were grouped based on the corresponding hidden state sequence and scattered in a 2-dimensional principal component space. This is to compare the decoded states against the ground-truth.
-\end{enumerate}
-
-\subsection{Experiment results}
-The results of the experiments are presented in figure \ref{fig:dim-acc}, \ref{fig:dim-log}, \ref{fig:gt-5dim}, \ref{fig:es-5dim}, \ref{fig:gt-18dim}, \ref{fig:es-18dim}.\\
-Figure \ref{fig:dim-acc} and \ref{fig:dim-log} respectively show how the hidden state decoding accuracy and the test sequence log-likelihood estimated by the CHMM model varies as the the number of features considered increases.\\
-Figure \ref{fig:gt-5dim} and \ref{fig:es-5dim} are visualisations of the 5-dimensional observation sequence grouped respectively, according to the actual state sequence and the decoded state sequence. Figure \ref{fig:gt-18dim} and \ref{fig:es-18dim}, are for an 18-dimensional observation.
-5 and 18 dimensions were presented because they resulted in the two extreme prediction accuracies. The results for other dimensions may be found in the appendices, %%TODO: ref appendices
-\begin{figure}[ht!]
-	\centering
-	\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{Figures/dimensionality-effect-acc}
-	\caption{The effect of CHMM's observation dimensionality the state sequence decoding accuracy}
-	\label{fig:dim-acc}
-\end{figure}
-
-\begin{figure}[ht!]
-	\includegraphics{Figures/dimensionality-effect-log}
-	\caption{The effect of CHMM's observation dimensionality the log-likelihood}
-	\label{fig:dim-log}
-\end{figure}
-
-
-\begin{figure}[ht!]
-	\includegraphics{Figures/ground-truth-scatter-with-5-features}
-	\caption{Scatter plot of  5-dimensional observations grouped according the ground-truth state sequence}
-	\label{fig:gt-5dim}
-\end{figure}
-\begin{figure}[ht!]
-	\includegraphics{Figures/estimation-scatter-with-5-features}
-	\caption{Scatter plot of 5-dimensional observations grouped according to the estimated state sequence}
-	\label{fig:es-5dim}
-\end{figure}
-
-\begin{figure}[ht!]
-	\includegraphics{Figures/ground-truth-scatter-with-18-features}
-	\caption{Scatter plot of 18-dimensional observations grouped according to the ground-truth state sequence}
-	\label{fig:gt-18dim}
-\end{figure}
-
-\begin{figure}[ht!]
-	\includegraphics{Figures/estimation-scatter-with-18-features}
-	\caption{Scatter plot of 18-dimensional observations grouped according to the estimated state sequence}
-	\label{fig:es-18dim}
-\end{figure}
-
-\subsection{Analysis and discussion of results}
-
-The CHMM model's state decoding accuracy in \ref{fig:dim-acc} increases from 1 feature and reaches its maximum performance at about 73\% accuracy with 5 features. After 5 features, the accuracy generally declines to about just 40\% accuracy with all 18 features. The decline is however not consistent, for example, there is a local peak at 13 and 17 features.
-A performance increase of up to 78\% was obtained by reducing the feature set's dimension by from 18 to 5.
-In addition, the sequence log-likelihood value is close to zero from 1 to 8 features. It then slowly declining - in overall - from 9 to 15 features and suddenly gets to its lowest value at 18 dimensions.
-The log-likelihood being a measure of the probability that the test sequence was generated by the model, it is clear that the CHMM model better recognises test sequence with smaller feature sizes.\\
-Thus, the smaller the feature size, the better the CHMM performance with a relatively small training dataset. The model is both better at decoding the hidden states as well as recognising IMU measurements generated by the dog's gait mechanism.
-This fact is further shown by \ref{fig:gt-5dim}, \ref{fig:es-5dim}, \ref{fig:gt-18dim} and \ref{fig:es-18dim}. With 5 features, the model correctly attributes most IMU measurements to the correct footfalls except the state 4 observations which were mostly classified as state 3 emissions. In opposite, with 18 features, the HMM model predicted wrongly that the dog remained in state 3 during all the 539 sequences. In fact, with 18 dimensions, the model is not twice as good as predicting with random guesses, i.e, \(0.4 < 2\times\frac{1}{4}\).
-
-\subsection{Conclusions and recommendations of the experiment}
-Based on the above results and discussions, it can be concluded that in the absence of enough training data, a CHMM performs very poorly. This validates the hypothesis formulated. It is therefore necessary to further explore the effect of dimensionality reduction with more robust techniques. This investigation is performed in the next experiment with various dimensionality reduction technique and varying data sizes.
-
-\newpage
-\section{Experiment 3: The effect of dimensionality reduction on CHMM's performance}  \label{exp:dim}
-
-\subsection{Aim of the experiment}
-The aim of this experiment is to investigate the effect of dimensionality reduction on the performance of a continuous Hidden Markov Model (CHMM).
-The hypothesis under investigation is therefore the following:
-\textbf{\textit{Dimension reduction can cause an increase in a CHMM's performance when there is not enough training data.}}
-Thus, the performances of the CHMM with and without dimensionality reduction are compared to test the hypothesis.
-
-\subsection{Experiment apparatus}
-The assets needed to perform the experiment are listed below.
-\begin{itemize}
-	\item \(\lambda\), a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
-	\item Four distinct dimensionality reduction methods. Two feature extraction methods and two feature selection methods were considered. The feature extraction methods were Principle Component Analysis (PCA), Linear Discriminant Analysis (LDA). The two feature selection methods were feature ranking with separability index denoted SI Ranking, and a combination of forward feature selection and separability index denoted SI-forward.
-	\item A performance measure to compare the different models with and without dimensionality reduction. Again, the metrics used were the hidden state decoding accuracy and the ability to recognise a sequence generated by the model namely the log-likelihood.
-\end{itemize}
-
-\subsection{Experiment procedure}
-The experiment was performed as follows.
-Firstly, the dataset was partitioned into two different set for training and testing using random sampling.\\
-Using the same training dataset, five specific models were built and trained. They are denoted as: \(\lambda_{No Reduction}, \lambda_{PCA}, \lambda_{LDA}, \lambda_{SI}, \lambda_{SI-forward}\), respectively, for the model with all 18 features, the models built with PCA, LDA, SI Ranking and SI-forward. Regarding the last four models, the dimension of the training set was reduced with the corresponding technique before feeding it into the actual CHMM model. (Please refer to \ref{sec:dim-red} for more details on the dimension reduction methods design)\\
-Next, the different models were tested with the same test dataset - naturally applying the dimensionality reduction technique where required- and the prediction accuracy and the log-likelihood values were recorded.\\
-This above procedure was repeated while varying the proportion of training data used from \(10\%\) to \(90\%\) of the total dataset.\\
-The prediction accuracies and log-likelihoods were finally plotted as a function of the training data size for each model.
-These findings are presented in the figures \ref{fig:size-acc} and \ref{fig:size-log}. \\\\
-In order to verify, the variance in the five distinct models, a separate an additional experiment was performed for a bias-variance error analysis. Thus, five models were trained and tested 100 times with different datasets. For each model, the average accuracy over the 100 tests was taken as its bias error and variance in the 100, as the variance error.
-
-\subsection{Experiment results}
-Firstly, figure \ref{fig:size-acc} illustrates how the performances of the five CHMMs compare against each other as the training data size increases.
-Secondly, the log-likelihoods presented in \ref{fig:size-log} shows how effectively each model can recognise an observation sequence generated by the underlying mechanism. These results are discussed in the next sub-section.
-Finally, \ref{fig:bias-var} is the bias-variance errors of the different models.
-
-\begin{figure}[ht!]
-	\includegraphics{Figures/size-acc-2}
-	\caption{The effect of training datasize on the prediction accuracy}
-	\label{fig:size-acc}
-\end{figure}
-
-\begin{figure}[ht!]
-	\includegraphics{Figures/size-log-2}
-	\caption{The effect of training datasize on the log likelihood}
-	\label{fig:size-log}
-\end{figure}
-
-\begin{figure}[ht!]
-	\centering
-	\includegraphics{Figures/bias-var}
-	\caption{Bias-Variance tradeoff analysis}
-	\label{fig:bias-var}
-\end{figure}
-
-\subsection{Analysis and discusion of results}
-In the sub-sections below, the effect of each dimensionality reduction technique is discussed.
- 
-\subsubsection{No reduction vs feature Ranking: SI Ranking}
-The two graphs under considering here are the purple and the blue graphs in \ref{fig:dim-acc} and \ref{fig:dim-log}. \\
-For a relatively small training data size, i.e, under 1000 samples, the model with feature subset selection using feature ranking outperforms the model with dimensionality reduction. This fact is true for both the prediction accuracy and log-likelihood values. At 539 sample data, there is at least 8\% improvement after reducing the feature size in classification. Based on the linear nature of the graphs before 1000, it could be extrapolated that this improvement will be more significant for observation sequences with less than 539 samples.
-After, 1000 samples, the accuracies of both models increases but, the model built with the 18-dimensional observation sequence increasing performs better.
-%It might, therefore, not be necessary to perform any dimensionality reduction if improving the accuracy is the only motivation when the training data size is greater than 1000 instances. This is more so because, variance error as shown in \ref{fig:bias-var} are close to zero for both models.
-
-\subsubsection{No reduction vs forward feature selection: SI-forward}
-Here, we are discussing the green and the blue graphs in \ref{fig:dim-acc} and \ref{fig:dim-log}. From these two graphs, we can note that the forward feature selection has the similar effect to the feature ranking. This is because they are both feature subset selection methods. It is therfore a confirmation of the above discussion.\\
-From these similar results, we can conclude that the very fast feature ranking \ref{sec:rank} method can be used in lieu of the slower forward feature selection method \ref{sec:forw}. This result confirms the efficacity of the 'feature classifiability' \ref{con:class} as feature ranking criterion for classification applications.
-
-\subsubsection{No reduction vs PCA and LDA}
-
-The two feature extraction methods decreased the performance of the models for all data sizes. In addition, their performances do not consistently increase with the increase in data size. The nature of IMU measurements is not suited to these two feature extraction methods. The experiment could have been better with other successful feature extraction methods found in literature such as FFT \cite{towa2009},
-Time-frequency domain analysis \cite{ches2012}.
-
-\subsubsection{Bias - variance error analysis}
-The presented results in \ref{fig:bias-var} is for a dataset with 539 samples.
-The bias error for all five models is relatively low. This because the test data was similar to the training data. 
-Interestingly, the variance in the training errors over the 100 differet runs are all very close to zero. This is not very surprising because the model's parameters, particularly the mean and the co-variance matrices were designed to have low variance. %%TODO: have a section on robustness of the mean and variance in the evaluation or testing section.
-By looking at the test errors and the bias errors, the best model appears to be the model built with the forward feature selection method, \(\lambda_{SI-forward}\) when the dataset size is small. The next comparable model would be the model built with the feature ranking metho, i.e, \(\lambda_{SI}\). So, with a very strict constraint on the model's speed, \(\lambda_{SI}\) should be favoured because, it is significantly faster than \(\lambda_{SI-forward}\).
-
-\subsection{Conclusions and recommendations of the experiment}
-Considering the above findings, we can effectively confirm that dimensionality reduction can effectively improve the performance of an IMU based CHMM when the dataset is not large enough. However, this does not apply to every dimensionality reduction method. A large range of technique should be explored to select the most appropriate such as the forward feature selection and the feature ranking methods.
-
-\newpage
 \section{Experiment 4: Motion type recognition}  \label{exp:motion}
 
 \subsection{Aim of the experiment}
@@ -311,222 +311,211 @@ On the account of the findings discussed in the above subsection, the following 
 Indeed, IMU based CHMM can be used to successfully perform motion type recognition. 
 
 
-\newpage
-\section{Experiment 5: Comparing the back and front gait of the dog}  \label{exp:front-back}
-
-\subsection{Aim of the experiment}
-The present experiment is very similar to motion recognition experiment in \ref{exp:motion} in nature but, it differs in purpose. Here, the aim is to study the similarities and differences between the front and back limb movements of a dog, given a specific action. The dog's run, walk and trot where investigated.
-The hypothesis below was therefore formulated.
-\textbf{\textit{The front and back limbs of a dog exhibit gait patterns.}}
-
-\subsection{Experiment apparatus}
-The assets needed to perform the experiment are listed below.
-\begin{itemize}
-	\item \(\lambda\), a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
-	\item Dimensionality reduction methods. Two feature extraction methods and two feature subset selection techiniques are considered. The former are Principle Component Analysis (PCA), Linear Discriminant Analysis (LDA) whereas, the latter are feature ranking with separability index \ref{sec:rank}
-	and a combination of forward feature selection and separability index \ref{sec:forw}
-	\item A Performance metric. The metric used were the hidden state decoding accuracy and the log-likelihood of the EM algorithm.
-\end{itemize}
-
-\subsection{Experiment procedure}
-The experiment was performed as follows.
-First, the dataset was partition into two different set for training and testing using random sampling.
-Using the same training dataset five different models were built and trained, \(\Lambda = (\lambda_{No Reduction}, \lambda_{PCA}, \lambda_{LDA}, \lambda_{SI}, \lambda_{SI-forward})\).
-Then the different models were tested with the same test dataset. The prediction accuracy and the log-likelihood value were recorded.
-The training and the test were repeated while varying the proportion of training set used from \(10\%\) to \(90\%\) of the total dataset.
-The prediction accuracies and the EM algorithm likelihoods were finally plotted as a function of the training data size for each model.
-These findings are presented in the figures \ref{fig:size-acc} and \ref{fig:size-log}. 
-
-\subsection{Experiment results}
-Firstly, figure \ref{fig:size-acc} how the performances of the five CHMMs compare against each other as the training data size increases.
-Secondly, the loglikelihoods presented in \ref{fig:size-log} show how effectively can each model recognise an observation sequence generated by the underlying mechanism.
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls (\%)}\\ 
-		\hline
-		Front footfalls & 88.9210 & 17.4678\\ 
-		\hline
-		Back footfalls & 14.3545 & 89.5708 \\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Prediction accuracies for running}
-	\label{tab:front-back-run-acc}
-\end{table}
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
-		\hline
-		Front footfalls &  8.4012x\(10^{-4}\) & 4.2653x\(10^{-4}\)\\ 
-		\hline
-		Back footfalls & 7.9955x\(10^{-4}\) & 8.6471x\(10^{-4}\) \\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Log-likelihood for running}
-	\label{tab:front-back-run-log}
-\end{table}
-
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
-		\hline
-		Front footfalls &  100.0000x\(10^{-4}\) & 55.8629x\(10^{-4}\)\\ 
-		\hline
-		Back footfalls & 55.7803x\(10^{-4}\) & 100.0000x\(10^{-4}\) \\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Prediction accuracies for walking}
-	\label{tab:front-back-walk-acc}
-\end{table}
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls(\%)} &  \textbf{Back footfalls(\%)}\\ 
-		\hline
-		Front footfalls & 2.6346x\(10^{-4}\) & 2.6346x\(10^{-4}\)\\ 
-		\hline
-		Back footfalls & 2.6025x\(10^{-4}\) & 2.6025x\(10^{-4}\)\\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Log-likelihood for walking}
-	\label{tab:front-back-walk-log}
-\end{table}
-
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls(\%)}\\ 
-		\hline
-		Front footfalls &  100.0000 & 74.6082\\ 
-		\hline
-		Back footfalls & 74.6082 & 100.0000 \\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Prediction accuracies for trotting}
-	\label{tab:front-back-trot-acc}
-\end{table}
-
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
-		\hline
-		Front footfalls & 7.0234x\(10^{-4}\) & 7.0234x\(10^{-4}\)\\ 
-		\hline
-		Back footfalls & 6.8193x\(10^{-4}\) & 6.8193x\(10^{-4}\)\\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Log-likelihood for trotting}
-	\label{tab:front-back-trot-log}
-\end{table}
-
-\subsection{Analysis of results}
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls (\%)}\\ 
-		\hline
-		Front footfalls & 1 & -1\\ 
-		\hline
-		Back footfalls & -1 & 1 \\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Prediction accuracies correlation for running}
-	\label{tab:front-back-run-acc-corr}
-\end{table}
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
-		\hline
-		Front footfalls & 1 & -1\\ 
-		\hline
-		Back footfalls & -1 & 1 \\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Prediction log-likelihood correlation for running}
-	\label{tab:front-back-run-log-corr}
-\end{table}
-
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
-		\hline
-		Front footfalls &  1 & -1\\ 
-		\hline
-		Back footfalls & -1 & 1 \\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Prediction accuracies correction for walking}
-	\label{tab:front-back-walk-acc-corr}
-\end{table}
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls(\%)} &  \textbf{Back footfalls(\%)}\\ 
-		\hline
-		Front footfalls & 1 & 1\\ 
-		\hline
-		Back footfalls & 1 & 1\\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Prediction log-likelihood correlation for walking}
-	\label{tab:front-back-walk-log-corr}
-\end{table}
-
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls(\%)}\\ 
-		\hline
-		Front footfalls &  -1 & 1\\ 
-		\hline
-		Back footfalls & 1 & -1 \\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Prediction accuracies correlation for trotting}
-	\label{tab:front-back-trot-acc-corr}
-\end{table}
-
-
-\begin{table}[h!] 
-	\centering
-	\begin{tabular}{ |c|c|c|} 	
-		\hline	
-		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
-		\hline
-		Front footfalls & 1 & 1\\ 
-		\hline
-		Back footfalls & 1 & 1\\ 
-		\hline	   	
-	\end{tabular}
-	\caption{Prediction log-likelihood correlation for trotting}
-	\label{tab:front-back-trot-log-corr}
-\end{table}
-
-\subsection{Conclusions and recommendations of the experiment}
+%\newpage
+%\section{Experiment 5: Comparing the back and front gait of the dog}  \label{exp:front-back}
+%
+%\subsection{Aim of the experiment}
+%The present experiment is very similar to motion recognition experiment in \ref{exp:motion} in nature but, it differs in purpose. Here, the aim is to study the similarities and differences between the front and back limb movements of a dog, given a specific action. The dog's run, walk and trot where investigated.
+%The hypothesis below was therefore formulated.
+%\textbf{\textit{The front and back limbs of a dog exhibit gait patterns.}}
+%
+%\subsection{Experiment apparatus}
+%The assets needed to perform the experiment are listed below.
+%\begin{itemize}
+%	\item \(\lambda\), a continuous Hidden Markov Model specified by \(\lambda = (A, \beta_{jm}, \mu_{jm}, \Sigma_{jm}, \pi)\).
+%
+%\end{itemize}
+%
+%\subsection{Experiment procedure}
+%
+%\subsection{Experiment results}
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls (\%)}\\ 
+%		\hline
+%		Front footfalls & 88.9210 & 17.4678\\ 
+%		\hline
+%		Back footfalls & 14.3545 & 89.5708 \\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Prediction accuracies for running}
+%	\label{tab:front-back-run-acc}
+%\end{table}
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+%		\hline
+%		Front footfalls &  8.4012x\(10^{-4}\) & 4.2653x\(10^{-4}\)\\ 
+%		\hline
+%		Back footfalls & 7.9955x\(10^{-4}\) & 8.6471x\(10^{-4}\) \\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Log-likelihood for running}
+%	\label{tab:front-back-run-log}
+%\end{table}
+%
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+%		\hline
+%		Front footfalls &  100.0000x\(10^{-4}\) & 55.8629x\(10^{-4}\)\\ 
+%		\hline
+%		Back footfalls & 55.7803x\(10^{-4}\) & 100.0000x\(10^{-4}\) \\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Prediction accuracies for walking}
+%	\label{tab:front-back-walk-acc}
+%\end{table}
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls(\%)} &  \textbf{Back footfalls(\%)}\\ 
+%		\hline
+%		Front footfalls & 2.6346x\(10^{-4}\) & 2.6346x\(10^{-4}\)\\ 
+%		\hline
+%		Back footfalls & 2.6025x\(10^{-4}\) & 2.6025x\(10^{-4}\)\\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Log-likelihood for walking}
+%	\label{tab:front-back-walk-log}
+%\end{table}
+%
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls(\%)}\\ 
+%		\hline
+%		Front footfalls &  100.0000 & 74.6082\\ 
+%		\hline
+%		Back footfalls & 74.6082 & 100.0000 \\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Prediction accuracies for trotting}
+%	\label{tab:front-back-trot-acc}
+%\end{table}
+%
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+%		\hline
+%		Front footfalls & 7.0234x\(10^{-4}\) & 7.0234x\(10^{-4}\)\\ 
+%		\hline
+%		Back footfalls & 6.8193x\(10^{-4}\) & 6.8193x\(10^{-4}\)\\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Log-likelihood for trotting}
+%	\label{tab:front-back-trot-log}
+%\end{table}
+%
+%\subsection{Analysis of results}
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls (\%)}\\ 
+%		\hline
+%		Front footfalls & 1 & -1\\ 
+%		\hline
+%		Back footfalls & -1 & 1 \\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Prediction accuracies correlation for running}
+%	\label{tab:front-back-run-acc-corr}
+%\end{table}
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+%		\hline
+%		Front footfalls & 1 & -1\\ 
+%		\hline
+%		Back footfalls & -1 & 1 \\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Prediction log-likelihood correlation for running}
+%	\label{tab:front-back-run-log-corr}
+%\end{table}
+%
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+%		\hline
+%		Front footfalls &  1 & -1\\ 
+%		\hline
+%		Back footfalls & -1 & 1 \\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Prediction accuracies correction for walking}
+%	\label{tab:front-back-walk-acc-corr}
+%\end{table}
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls(\%)} &  \textbf{Back footfalls(\%)}\\ 
+%		\hline
+%		Front footfalls & 1 & 1\\ 
+%		\hline
+%		Back footfalls & 1 & 1\\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Prediction log-likelihood correlation for walking}
+%	\label{tab:front-back-walk-log-corr}
+%\end{table}
+%
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls(\%)}\\ 
+%		\hline
+%		Front footfalls &  -1 & 1\\ 
+%		\hline
+%		Back footfalls & 1 & -1 \\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Prediction accuracies correlation for trotting}
+%	\label{tab:front-back-trot-acc-corr}
+%\end{table}
+%
+%
+%\begin{table}[h!] 
+%	\centering
+%	\begin{tabular}{ |c|c|c|} 	
+%		\hline	
+%		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+%		\hline
+%		Front footfalls & 1 & 1\\ 
+%		\hline
+%		Back footfalls & 1 & 1\\ 
+%		\hline	   	
+%	\end{tabular}
+%	\caption{Prediction log-likelihood correlation for trotting}
+%	\label{tab:front-back-trot-log-corr}
+%\end{table}
+%
+%\subsection{Conclusions and recommendations of the experiment}

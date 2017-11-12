@@ -1,23 +1,11 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces IMU measurements and footfall variables in dataset}}{15}{table.3.1}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Main variables of the dataset}}{15}{table.3.1}
 \contentsline {table}{\numberline {3.2}{\ignorespaces Main design components together with toolboxes and functions used for their implementation}}{28}{table.3.2}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {4.1}{\ignorespaces Footfall prediction confusion matrix (\% accuracy )}}{50}{table.4.1}
 \contentsline {table}{\numberline {4.2}{\ignorespaces Footfall sequence log-likelihood}}{50}{table.4.2}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Prediction accuracies for running}}{53}{table.4.3}
-\contentsline {table}{\numberline {4.4}{\ignorespaces Log-likelihood for running}}{53}{table.4.4}
-\contentsline {table}{\numberline {4.5}{\ignorespaces Prediction accuracies for walking}}{53}{table.4.5}
-\contentsline {table}{\numberline {4.6}{\ignorespaces Log-likelihood for walking}}{53}{table.4.6}
-\contentsline {table}{\numberline {4.7}{\ignorespaces Prediction accuracies for trotting}}{53}{table.4.7}
-\contentsline {table}{\numberline {4.8}{\ignorespaces Log-likelihood for trotting}}{53}{table.4.8}
-\contentsline {table}{\numberline {4.9}{\ignorespaces Prediction accuracies correlation for running}}{54}{table.4.9}
-\contentsline {table}{\numberline {4.10}{\ignorespaces Prediction log-likelihood correlation for running}}{54}{table.4.10}
-\contentsline {table}{\numberline {4.11}{\ignorespaces Prediction accuracies correction for walking}}{54}{table.4.11}
-\contentsline {table}{\numberline {4.12}{\ignorespaces Prediction log-likelihood correlation for walking}}{54}{table.4.12}
-\contentsline {table}{\numberline {4.13}{\ignorespaces Prediction accuracies correlation for trotting}}{54}{table.4.13}
-\contentsline {table}{\numberline {4.14}{\ignorespaces Prediction log-likelihood correlation for trotting}}{54}{table.4.14}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
