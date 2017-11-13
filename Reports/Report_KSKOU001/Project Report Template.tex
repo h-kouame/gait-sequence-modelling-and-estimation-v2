@@ -82,14 +82,14 @@ Gait sequence modelling and estimation
 
 \vskip 5mm
 \begin{center}
-Presented by:\\
-Kouame Hermann Kouassi		% Insert your name here
+Prepared by:\\
+\textbf{Kouame Kouassi}		% Insert your name here
 \end{center}
 
 \vskip 10mm
 \begin{center}
 Prepared for:\\
-Fred Nicolls\\ 		% Insert your supervisor's name here.
+\textbf{A. Prof. Fred Nicolls}\\ 		% Insert your supervisor's name here.
 Dept. of Electrical and Electronics Engineering\\University of Cape Town
 \end{center}
 
@@ -97,9 +97,11 @@ Dept. of Electrical and Electronics Engineering\\University of Cape Town
 \vskip 10mm
 \begin{center}
 Submitted to the Department of Electrical Engineering at the University of Cape Town in partial
-fulfilment of the academic requirements for a Bachelor of Science degree in Electrical and Computer Engineering
-
+fulfilment of the academic requirements for a Bachelor of Science degree in \textbf{Electrical and Computer Engineering}
 \end{center}
+
+\vskip 10mm
+\textbf{Key Words:} Hidden Markov Models, gait estimation, quadruped, IMU, Gaussian mixtures, dimensionality reduction
 
 
 \vskip 5mm
@@ -145,7 +147,19 @@ Date:\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots .
 \pagenumbering{roman}
 {\Large Acknowledgments}\\
 \hrule
+God - For unfailing leading and supporting me throughout this project.
 
+A. Prof Nicolls, my supervisor - for great supervision, advice, insight, open-door policy, and a workspace in the image processing laboratory.
+
+Dr. Amir Patel - For the IMU dataset.
+
+PEJ, my scholarship programme - For giving me the opportunity to study at UCT.
+
+Family - For motivation and their remote support.
+
+Friends - For their encouragement and understanding.
+
+My colleagues in the lab: For a conducive work environment, passionate discussions and their interest in my progress.
 \newpage
 
 {\Large Abstract}\\
@@ -154,12 +168,12 @@ Date:\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots\ldots .
 % Place your abstract here.
 Hidden Markov Models (HMMs) are doubly embedded stochastic processes with a rich underlying statistical structure. 
 In the present work, gait sequence modelling and estimation was performed with HMMs using inertial measurement unit (IMU) data. More specifically, from IMU measurements, a dog's footfalls were correctly identified with up to 95\% precision. The continuous-valued IMU measurements were modelled with Gaussian mixtures. The originality of this project lies in the following three reasons. \\\\
-Firstly, the similar work found in literature only uses 6-dimensional accelerometer and gyroscope measurements \cite{ches2012} \cite{cont2013}. The gait estimation was performed using 18-dimensional data. Thus, feature extraction and feature subset selection techniques were used for dimensionality reduction. The experiments demonstrated that up to 78\% performance increase is obtainable by using dimensionality reduction when, the training data is not large.\\\\
+Firstly, the similar work found in literature only uses 6-dimensional accelerometer and gyroscope measurements \cite{ches2012} \cite{cont2013}. The gait estimation was performed using 18-dimensional data. Thus, feature extraction and feature subset selection techniques were used for dimensionality reduction. The experiments demonstrated that up to 78\% performance increase is obtainable by using dimensionality reduction when the training data is not large.\\\\
 Secondly, the available IMU dataset was very small in size. Two different methods were employed to overcome this limitation. \\In the first method,
 the reverse gait measurements were appended to the original data to increase the training data. In addition, the IMU measurements of the dog running, walking, and trotting were aggregated. 
 Subsequently, it was possible to build more than 90\% accurate HMM model with 18-dimensional IMU measurements with low variance error.\\\\
-Thirdly, the HMM gait estimation model was designed by building separate models for the front and the back legs of the dog. It, therefore, follows that, the gait estimation algorithm developed in this projet is applicable to both quadrupeds and bipeds.\\\\
-Finally, the designed HMM models were successfully used to perform motion type recognition. Overall, this undergraduate final year project may be deemed successful.
+Thirdly, the HMM gait estimation model was designed by building separate models for the front and the back legs of the dog. It, therefore, follows that the gait estimation algorithm developed in this project is applicable to both quadrupeds and bipeds.\\\\
+Finally, the designed HMM models were used to successfully perform motion type recognition. Overall, this undergraduate final year project may be deemed successful.
 \newpage
 \tableofcontents
 
@@ -182,7 +196,7 @@ Finally, the designed HMM models were successfully used to perform motion type r
 \include{Introduction}
 \include{Literature}
 \include{Design}
-\include{Experimental Design}
+\include{Implementation}
 \include{Results}
 \include{Discussion}
 \include{Conclusions}

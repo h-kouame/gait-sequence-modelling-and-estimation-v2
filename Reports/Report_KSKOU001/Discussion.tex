@@ -1,11 +1,11 @@
-\chapter{Discussion}
+\chapter{General discussions}
 
 Different experiments were performed and presented in the results section \ref{sec:results}. This section further discusses the findings under the following headings.
 
 \section{Data dimensionality and bias analysis}
 
 This secetion is based on experiment 1 \ref{exp:feat-size} and 2 \ref{exp:dim}.
-From the two experiments, it is clear that with a limited-size training data, building the model will all 18 features results in a poor performance. Thus, dimensionality reduction needs to be used to increase the model's precision. The best technique to do this is the combination of forward feature selection and feature ranking using separability index. More than 80\% classification accuracy was obatained with four selected features using this filter technique.\\
+From the two experiments, it is clear that with a limited-size training data, building the model will all 18 features results in a poor performance. Thus, dimensionality reduction needs to be used to increase the model's precision. The best technique to do this is the combination of the forward feature selection method and feature ranking using separability index (among the explored techniques). More than 80\% classification accuracy was obtained with four selected features using this filter technique.\\
 However, up to 95\% accuracy was obtained without dimensionality reduction when the training data size is relatively large. Therefore, it may not be necessary to reduce the feature size with enough data set, around 2000 samples. The robustness of the model without dimensionality reduction backs this statement. In fact, the variance error was extremely low both models: with and without dimensionality reduction. This is not surprising for two different reasons. Inherently, HMMs are very robust because they are probabilistic models. Moreover, the estimated means and the co-variances are the two potential sources of bias in the model. But, the mean is an unbiased estimator as proven in \ref{eq:unbiased-mean} 
 \begin{align} 
 	E[\mu^*] = E[\frac{1}{N}\sum_{k=1}^{N}X^k] = \frac{1}{N}\sum_{k=1}^{N}E[X^k]=\mu \label{eq:unbiased-mean}
@@ -19,4 +19,8 @@ Furthermore, although variance is a biased estimator, they were normilised with 
 \section{Data aggregation and mirroring}
 Overall, the different models performed better with the increase in training data size. This fact shows that the data aggregation and the mirroring techniques worked very well. Nevertheless, the aggregation of the data from all the action types led to a loss of specificity as expected, therefore, decreasing the model's precision. This fact was uncovered by the motion recognition experiment \ref{exp:motion}. In this experiment, when specific models were built for each action, the prediction accuracies in table \ref{tab:action-recogn-acc} were very close to 100\%.\\
 Even though the reverse sequences were appended, the models still performed very well when tested with the correct data. This testifies that the increase of data by mirroring does not reduce performance, contrary to the aggregation method.
-\section{State duration time}
+
+\section{Combining front and back IMU measurements}
+Experiment 3 showed that it is not necessary to combine the front and back measurements when predicting only the front and back footfalls.
+This can reduce the complexity of the model by cutting the feature size in half. Besides, performance can be increased when dealing with a small data size.
+It could be therefore wasteful to use two sets of sensors to predict just the front or the back.

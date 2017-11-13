@@ -1,10 +1,198 @@
 \chapter{Additional Files and Schematics}
 
 \section{Implementation and experiment code} \label{apdix-repo}
-The implementation can be accessed from this github repository \href{https://github.com/h-kouame/gait-sequence-modelling-and-estimation-v2}{gait-sequence-modelling-and-estimation-v2}
+The implementation can be accessed from this github repository: \href{https://github.com/h-kouame/gait-sequence-modelling-and-estimation-v2}{https://github.com/h-kouame/gait-sequence-modelling-and-estimation-v2}
 
 \section{Additional results} \label{apdix-results}
 
+\subsection{Front vs Back gait}
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls (\%)}\\ 
+		\hline
+		Front footfalls & 88.9210 & 17.4678\\ 
+		\hline
+		Back footfalls & 14.3545 & 89.5708 \\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Prediction accuracies for running}
+	\label{tab:front-back-run-acc}
+\end{table}
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+		\hline
+		Front footfalls &  8.4012x\(10^{-4}\) & 4.2653x\(10^{-4}\)\\ 
+		\hline
+		Back footfalls & 7.9955x\(10^{-4}\) & 8.6471x\(10^{-4}\) \\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Log-likelihood for running}
+	\label{tab:front-back-run-log}
+\end{table}
+
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+		\hline
+		Front footfalls &  100.0000x\(10^{-4}\) & 55.8629x\(10^{-4}\)\\ 
+		\hline
+		Back footfalls & 55.7803x\(10^{-4}\) & 100.0000x\(10^{-4}\) \\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Prediction accuracies for walking}
+	\label{tab:front-back-walk-acc}
+\end{table}
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls(\%)} &  \textbf{Back footfalls(\%)}\\ 
+		\hline
+		Front footfalls & 2.6346x\(10^{-4}\) & 2.6346x\(10^{-4}\)\\ 
+		\hline
+		Back footfalls & 2.6025x\(10^{-4}\) & 2.6025x\(10^{-4}\)\\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Log-likelihood for walking}
+	\label{tab:front-back-walk-log}
+\end{table}
+
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls(\%)}\\ 
+		\hline
+		Front footfalls &  100.0000 & 74.6082\\ 
+		\hline
+		Back footfalls & 74.6082 & 100.0000 \\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Prediction accuracies for trotting}
+	\label{tab:front-back-trot-acc}
+\end{table}
+
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+		\hline
+		Front footfalls & 7.0234x\(10^{-4}\) & 7.0234x\(10^{-4}\)\\ 
+		\hline
+		Back footfalls & 6.8193x\(10^{-4}\) & 6.8193x\(10^{-4}\)\\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Log-likelihood for trotting}
+	\label{tab:front-back-trot-log}
+\end{table}
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls (\%)}\\ 
+		\hline
+		Front footfalls & 1 & -1\\ 
+		\hline
+		Back footfalls & -1 & 1 \\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Prediction accuracies correlation for running}
+	\label{tab:front-back-run-acc-corr}
+\end{table}
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+		\hline
+		Front footfalls & 1 & -1\\ 
+		\hline
+		Back footfalls & -1 & 1 \\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Prediction log-likelihood correlation for running}
+	\label{tab:front-back-run-log-corr}
+\end{table}
+
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+		\hline
+		Front footfalls &  1 & -1\\ 
+		\hline
+		Back footfalls & -1 & 1 \\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Prediction accuracies correction for walking}
+	\label{tab:front-back-walk-acc-corr}
+\end{table}
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls(\%)} &  \textbf{Back footfalls(\%)}\\ 
+		\hline
+		Front footfalls & 1 & 1\\ 
+		\hline
+		Back footfalls & 1 & 1\\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Prediction log-likelihood correlation for walking}
+	\label{tab:front-back-walk-log-corr}
+\end{table}
+
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls (\%)} &  \textbf{Back footfalls(\%)}\\ 
+		\hline
+		Front footfalls &  -1 & 1\\ 
+		\hline
+		Back footfalls & 1 & -1 \\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Prediction accuracies correlation for trotting}
+	\label{tab:front-back-trot-acc-corr}
+\end{table}
+
+
+\begin{table}[h!] 
+	\centering
+	\begin{tabular}{ |c|c|c|} 	
+		\hline	
+		\textbf{Body part} & \textbf{Front footfalls} &  \textbf{Back footfalls}\\ 
+		\hline
+		Front footfalls & 1 & 1\\ 
+		\hline
+		Back footfalls & 1 & 1\\ 
+		\hline	   	
+	\end{tabular}
+	\caption{Prediction log-likelihood correlation for trotting}
+	\label{tab:front-back-trot-log-corr}
+\end{table}
+
+\subsection{Effect of feature size on performance}
 \begin{figure}[ht!]
 	\includegraphics{Figures/ground-truth-scatter-with-1-features}
 	\caption{Scatter plot of  1-dimensional observations grouped according the ground-truth state sequence}

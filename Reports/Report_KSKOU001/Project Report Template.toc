@@ -3,92 +3,97 @@
 \contentsline {section}{\numberline {1.2}Objectives of this study}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Scope and limitations}{3}{section.1.3}
 \contentsline {section}{\numberline {1.4}Plan of development}{3}{section.1.4}
-\contentsline {chapter}{\numberline {2}Literature review and basic theory}{4}{chapter.2}
-\contentsline {section}{\numberline {2.1}Hidden Markov Models}{4}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}HMM parameters specification}{5}{subsection.2.1.1}
-\contentsline {subsubsection}{Basic assumptions of HMMs theory}{6}{section*.4}
-\contentsline {subsection}{\numberline {2.1.2}The three basics problems for HMM design}{7}{subsection.2.1.2}
-\contentsline {subsubsection}{The evaluation problem}{7}{section*.5}
-\contentsline {subsubsection}{The decoding problem}{7}{section*.6}
-\contentsline {subsubsection}{The training problem}{8}{section*.7}
-\contentsline {section}{\numberline {2.2}Dimensionality reduction}{8}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Motivations for dimensionality reduction}{8}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Feature selection: filters and wrappers}{9}{subsection.2.2.2}
-\contentsline {subsubsection}{Feature ranking using separability index matrix}{10}{section*.8}
-\contentsline {subsection}{\numberline {2.2.3}Feature extraction}{12}{subsection.2.2.3}
-\contentsline {subsubsection}{Linear discriminant analysis}{13}{section*.9}
-\contentsline {subsubsection}{Principal component analysis}{13}{section*.10}
-\contentsline {chapter}{\numberline {3}Hidden Markov Model and dimensionality reduction design}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}Design overview}{14}{section.3.1}
-\contentsline {section}{\numberline {3.2}Description of available dataset}{14}{section.3.2}
-\contentsline {section}{\numberline {3.3}Quadruped Gait sequence modelling with HMM}{15}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}HMM model elements: states and observations properties}{15}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Splitting the 16-states HMM into two 4-states HHMs}{16}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}State transitions}{16}{subsection.3.3.3}
-\contentsline {section}{\numberline {3.4}Pre-processing and increasing the dataset}{17}{section.3.4}
-\contentsline {section}{\numberline {3.5}Dimensionality reduction}{18}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Feature ranking with separability index (SI)}{18}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Determining optimal number of features using SI and MCE}{18}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Feature ranking}{20}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Forward feature selection}{20}{subsection.3.5.4}
-\contentsline {subsection}{\numberline {3.5.5}Full-search feature selection}{21}{subsection.3.5.5}
-\contentsline {subsection}{\numberline {3.5.6}Principal Component Analysis (PCA)}{21}{subsection.3.5.6}
-\contentsline {subsubsection}{Optimal PCA component number}{21}{section*.11}
-\contentsline {subsection}{\numberline {3.5.7}Linear Discriminant Analysis (LDA)}{22}{subsection.3.5.7}
-\contentsline {section}{\numberline {3.6}Solving the three basics HMM problems}{22}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Solution to the training problem}{22}{subsection.3.6.1}
-\contentsline {subsubsection}{Estimation of the transition matrix: A}{22}{section*.12}
-\contentsline {subsubsection}{Estimation of the mean matrix, covariance matrices, and mixture distribution: \(\mu \), \(\Sigma \) and \(\beta \)}{23}{section*.13}
-\contentsline {subsubsection}{Initial state distribution: \(\pi \) estimation}{26}{section*.14}
-\contentsline {subsection}{\numberline {3.6.2}Solution to the evaluation problem}{26}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}Solution to the decoding problem}{26}{subsection.3.6.3}
-\contentsline {section}{\numberline {3.7}Evaluation of the footfall identification accuracy}{27}{section.3.7}
-\contentsline {section}{\numberline {3.8}Practical implementation}{28}{section.3.8}
-\contentsline {subsection}{\numberline {3.8.1}Model's parameters estimation implementation}{28}{subsection.3.8.1}
-\contentsline {subsection}{\numberline {3.8.2}Decoding and log-likelihood computation implementation}{30}{subsection.3.8.2}
-\contentsline {chapter}{\numberline {4}Results}{32}{chapter.4}
-\contentsline {section}{\numberline {4.1}Experiment 1: Observation sequence dimensionality's effect on performance}{32}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Aim of the experiment}{32}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Experiment apparatus}{32}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Experiment procedure}{33}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Experiment results}{33}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Analysis and discussion of results}{34}{subsection.4.1.5}
-\contentsline {subsection}{\numberline {4.1.6}Conclusions and recommendations of the experiment}{37}{subsection.4.1.6}
-\contentsline {section}{\numberline {4.2}Experiment 2: The impact of dimensionality reduction on performance}{38}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Aim of the experiment}{38}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Experiment apparatus}{38}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Experiment procedure}{39}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Experiment results}{39}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Analysis and discusion of results}{39}{subsection.4.2.5}
-\contentsline {subsubsection}{No reduction vs feature Ranking: SI Ranking}{40}{section*.15}
-\contentsline {subsubsection}{No reduction vs forward feature selection: SI-forward}{40}{section*.16}
-\contentsline {subsubsection}{No reduction vs PCA and LDA}{41}{section*.17}
-\contentsline {subsubsection}{Bias - variance error analysis}{42}{section*.18}
-\contentsline {subsection}{\numberline {4.2.6}Conclusions and recommendations of the experiment}{43}{subsection.4.2.6}
-\contentsline {section}{\numberline {4.3}Experiment 3: The necessity of combining the front and back IMU sensor measurements}{43}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Aim of the experiment}{43}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Experiment apparatus}{43}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Experiment procedure}{44}{subsection.4.3.3}
-\contentsline {subsection}{\numberline {4.3.4}Experiment results}{44}{subsection.4.3.4}
-\contentsline {subsection}{\numberline {4.3.5}Analysis and discussion of results}{44}{subsection.4.3.5}
-\contentsline {subsubsection}{Front footfalls}{45}{section*.19}
-\contentsline {subsubsection}{Back footfalls}{46}{section*.20}
-\contentsline {subsection}{\numberline {4.3.6}Conclusions and recommendations of the experiment}{47}{subsection.4.3.6}
-\contentsline {section}{\numberline {4.4}Experiment 4: Motion type recognition}{48}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Aim of the experiment}{48}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Experiment apparatus}{49}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}Experiment procedure}{49}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Experiment results}{50}{subsection.4.4.4}
-\contentsline {subsection}{\numberline {4.4.5}Analysis of results}{50}{subsection.4.4.5}
-\contentsline {subsection}{\numberline {4.4.6}Conclusions of the experiment}{50}{subsection.4.4.6}
-\contentsline {chapter}{\numberline {5}Discussion}{51}{chapter.5}
-\contentsline {section}{\numberline {5.1}Data dimensionality and bias analysis}{51}{section.5.1}
-\contentsline {section}{\numberline {5.2}Data aggregation and mirroring}{52}{section.5.2}
-\contentsline {section}{\numberline {5.3}State duration time}{52}{section.5.3}
-\contentsline {chapter}{\numberline {6}Conclusions}{53}{chapter.6}
-\contentsline {chapter}{\numberline {7}Recommendations}{55}{chapter.7}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{61}{appendix.A}
-\contentsline {section}{\numberline {A.1}Implementation and experiment code}{61}{section.A.1}
-\contentsline {section}{\numberline {A.2}Additional results}{61}{section.A.2}
-\contentsline {chapter}{\numberline {B}Addenda}{78}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{78}{section.B.1}
+\contentsline {chapter}{\numberline {2}Literature review and basic theory}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Hidden Markov Models}{5}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}HMM parameters specification}{6}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Basic assumptions of HMMs theory}{7}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}The three basics problems for HMM design}{8}{subsection.2.1.3}
+\contentsline {subsubsection}{The evaluation problem}{8}{section*.4}
+\contentsline {subsubsection}{The decoding problem}{8}{section*.5}
+\contentsline {subsubsection}{The training problem}{9}{section*.6}
+\contentsline {section}{\numberline {2.2}Dimensionality reduction}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Motivations for dimensionality reduction}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Feature selection: filters and wrappers}{10}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Feature ranking using separability index matrix}{11}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Feature extraction}{14}{subsection.2.2.4}
+\contentsline {subsubsection}{Linear discriminant analysis}{14}{section*.7}
+\contentsline {subsubsection}{Principal component analysis}{14}{section*.8}
+\contentsline {chapter}{\numberline {3}HMM and dimensionality reduction methods design}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}System overview}{15}{section.3.1}
+\contentsline {section}{\numberline {3.2}Description of available dataset}{16}{section.3.2}
+\contentsline {section}{\numberline {3.3}Gait sequence modelling with HMM}{16}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}HMM model elements: states and observations properties}{17}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Splitting the 16-states HMM into two 4-states HHMs}{18}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}State transitions}{18}{subsection.3.3.3}
+\contentsline {section}{\numberline {3.4}Pre-processing and increasing the dataset}{18}{section.3.4}
+\contentsline {section}{\numberline {3.5}Dimensionality reduction}{19}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Feature ranking with separability index (SI)}{20}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Determining optimal number of features using SI and MCE}{20}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Feature ranking}{21}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Forward feature selection}{22}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}Full-search feature selection}{22}{subsection.3.5.5}
+\contentsline {subsection}{\numberline {3.5.6}PCA and LDA}{23}{subsection.3.5.6}
+\contentsline {section}{\numberline {3.6}Solving the three basics HMM problems}{24}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Solution to the training problem}{24}{subsection.3.6.1}
+\contentsline {subsubsection}{Estimation of the transition matrix: A}{24}{section*.9}
+\contentsline {subsubsection}{Estimation of the mean matrix, covariance matrices, and mixture distribution: \(\mu \), \(\Sigma \) and \(\beta \)}{25}{section*.10}
+\contentsline {subsubsection}{Initial state distribution: \(\pi \) estimation}{28}{section*.11}
+\contentsline {subsection}{\numberline {3.6.2}Solution to the evaluation problem}{28}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Solution to the decoding problem}{28}{subsection.3.6.3}
+\contentsline {section}{\numberline {3.7}Evaluation of the footfall identification accuracy}{29}{section.3.7}
+\contentsline {chapter}{\numberline {4}Design implementation}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Implementation overview}{31}{section.4.1}
+\contentsline {section}{\numberline {4.2}Required tools}{32}{section.4.2}
+\contentsline {section}{\numberline {4.3}Model's parameters estimation}{32}{section.4.3}
+\contentsline {section}{\numberline {4.4}Decoding and log-likelihood}{33}{section.4.4}
+\contentsline {section}{\numberline {4.5}Implementation testing}{34}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Front HMM's initial state distribution: \(pi\)}{34}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Front HMM's transition probability: A}{35}{subsection.4.5.2}
+\contentsline {chapter}{\numberline {5}Experiments and results}{38}{chapter.5}
+\contentsline {section}{\numberline {5.1}Experiment 1: Effect of data dimensionality on performance}{38}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Aim of the experiment}{38}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Experiment apparatus}{38}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Experiment procedure}{39}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Experiment results}{39}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Analysis and discussion of results}{40}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.6}Conclusions and recommendations of the experiment}{43}{subsection.5.1.6}
+\contentsline {section}{\numberline {5.2}Experiment 2: The impact of dimensionality reduction on performance}{44}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Aim of the experiment}{44}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Experiment apparatus}{44}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Experiment procedure}{45}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Experiment results}{45}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Analysis and discusion of results}{45}{subsection.5.2.5}
+\contentsline {subsubsection}{No reduction vs feature Ranking: SI Ranking}{46}{section*.12}
+\contentsline {subsubsection}{No reduction vs forward feature selection: SI-forward}{46}{section*.13}
+\contentsline {subsubsection}{No reduction vs PCA and LDA}{47}{section*.14}
+\contentsline {subsubsection}{Bias - variance error analysis}{48}{section*.15}
+\contentsline {subsection}{\numberline {5.2.6}Conclusions and recommendations of the experiment}{49}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}Experiment 3: The necessity of combining the front and back IMU sensor measurements}{49}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Aim of the experiment}{49}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Experiment apparatus}{49}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Experiment procedure}{50}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Experiment results}{50}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Analysis and discussion of results}{50}{subsection.5.3.5}
+\contentsline {subsubsection}{Front footfalls}{51}{section*.16}
+\contentsline {subsubsection}{Back footfalls}{52}{section*.17}
+\contentsline {subsection}{\numberline {5.3.6}Conclusions and recommendations of the experiment}{53}{subsection.5.3.6}
+\contentsline {section}{\numberline {5.4}Experiment 4: Motion type recognition}{54}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Aim of the experiment}{54}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Experiment apparatus}{55}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Experiment procedure}{55}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Experiment results}{56}{subsection.5.4.4}
+\contentsline {subsection}{\numberline {5.4.5}Analysis of results}{56}{subsection.5.4.5}
+\contentsline {subsection}{\numberline {5.4.6}Conclusions of the experiment}{56}{subsection.5.4.6}
+\contentsline {chapter}{\numberline {6}General discussions}{58}{chapter.6}
+\contentsline {section}{\numberline {6.1}Data dimensionality and bias analysis}{58}{section.6.1}
+\contentsline {section}{\numberline {6.2}Data aggregation and mirroring}{59}{section.6.2}
+\contentsline {section}{\numberline {6.3}Combining front and back IMU measurements}{59}{section.6.3}
+\contentsline {chapter}{\numberline {7}General conclusions}{60}{chapter.7}
+\contentsline {chapter}{\numberline {8}Recommendations for future work}{62}{chapter.8}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{68}{appendix.A}
+\contentsline {section}{\numberline {A.1}Implementation and experiment code}{68}{section.A.1}
+\contentsline {section}{\numberline {A.2}Additional results}{68}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Front vs Back gait}{68}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Effect of feature size on performance}{69}{subsection.A.2.2}
+\contentsline {chapter}{\numberline {B}Addenda}{87}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{87}{section.B.1}
