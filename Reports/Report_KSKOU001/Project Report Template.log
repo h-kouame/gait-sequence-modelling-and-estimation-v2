@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  13 NOV 2017 05:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.5.2)  13 NOV 2017 06:17
 entering extended mode
 **"./Project Report Template.tex"
 ("Project Report Template.tex"
@@ -461,7 +461,7 @@ LaTeX Info: Redefining \nameref on input line 66.
 
 \c@lstlisting=\count134
 
-<uctLogo.png, id=339, 418.56375pt x 425.59pt>
+<uctLogo.png, id=343, 418.56375pt x 425.59pt>
 File: uctLogo.png Graphic file (type png)
  <use uctLogo.png>
 Package pdftex.def Info: uctLogo.png used on input line 80.
@@ -523,7 +523,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--208
 
 
 Overfull \hbox (17.50093pt too wide) in paragraph at lines 208--208
-\OT1/cmr/m/n/12 Finally, the designed HMM models were successfully used to perf
+\OT1/cmr/m/n/12 Finally, the designed HMM models were used to successfully perf
 orm motion type recognition.
  []
 
@@ -822,7 +822,7 @@ Overfull \hbox (34.05792pt too wide) in paragraph at lines 56--57
 
  (Literature.tex
 Chapter 2.
-<Figures/erg-HMM.png, id=728, 478.78876pt x 333.49594pt>
+<Figures/erg-HMM.png, id=733, 478.78876pt x 333.49594pt>
 File: Figures/erg-HMM.png Graphic file (type png)
 
 <use Figures/erg-HMM.png>
@@ -839,12 +839,6 @@ rvations, $$ consists
  []
 
 [6]
-Overfull \hbox (0.30249pt too wide) in paragraph at lines 52--54
-\OT1/cmr/m/n/12 The three assumptions make an HMM a relatively simple graphical
- model to implemented.
- []
-
-
 Overfull \hbox (2.73154pt too wide) in paragraph at lines 52--54
 \OT1/cmr/m/n/12 This simplicity naturally comes with some limitations in modell
 ing more complex problems
@@ -856,21 +850,21 @@ Overfull \hbox (2.60098pt too wide) in paragraph at lines 74--78
 tion with the highest likelihood
  []
 
-[8] [9] <Figures/filter.png, id=819, 523.20468pt x 289.83281pt>
+[8] [9] <Figures/filter.png, id=824, 523.20468pt x 289.83281pt>
 File: Figures/filter.png Graphic file (type png)
 
 <use Figures/filter.png>
 Package pdftex.def Info: Figures/filter.png used on input line 102.
 (pdftex.def)             Requested size: 452.9679pt x 250.93188pt.
 
-<Figures/wrapper.png, id=821, 522.45187pt x 269.50688pt>
+<Figures/wrapper.png, id=826, 522.45187pt x 269.50688pt>
 File: Figures/wrapper.png Graphic file (type png)
 
 <use Figures/wrapper.png>
 Package pdftex.def Info: Figures/wrapper.png used on input line 108.
 (pdftex.def)             Requested size: 452.9679pt x 233.66718pt.
 
-<Figures/filter-wrapper.png, id=826, 367.3725pt x 451.6875pt>
+<Figures/filter-wrapper.png, id=831, 367.3725pt x 451.6875pt>
 File: Figures/filter-wrapper.png Graphic file (type png)
 
 <use Figures/filter-wrapper.png>
@@ -911,7 +905,7 @@ Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
 
  (Design.tex
 Chapter 3.
-<Figures/overview-.png, id=881, 607.51968pt x 231.86626pt>
+<Figures/overview-.png, id=886, 607.51968pt x 231.86626pt>
 File: Figures/overview-.png Graphic file (type png)
 
 <use Figures/overview-.png>
@@ -927,7 +921,7 @@ Overfull \hbox (45.29955pt too wide) in paragraph at lines 7--8
 
 
  <./Figures/overview-.png>]
-<Figures/IMU-var.png, id=889, 441.90094pt x 257.46187pt>
+<Figures/IMU-var.png, id=894, 441.90094pt x 257.46187pt>
 File: Figures/IMU-var.png Graphic file (type png)
 
 <use Figures/IMU-var.png>
@@ -955,7 +949,7 @@ o.pdf Figures/MCE.eps>
 (epstopdf)             \includegraphics on input line 105.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/MCE-eps-converted-to.pdf, id=928, 361.35pt x 302.12875pt>
+<Figures/MCE-eps-converted-to.pdf, id=933, 361.35pt x 302.12875pt>
 File: Figures/MCE-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/MCE-eps-converted-to.pdf>
@@ -984,7 +978,7 @@ Package epstopdf Info: Source file: <Figures/best_PCA.eps>
 ted-to.pdf Figures/best_PCA.eps>
 (epstopdf)             \includegraphics on input line 140.
 Package epstopdf Info: Output file is already uptodate.
-<Figures/best_PCA-eps-converted-to.pdf, id=954, 361.35pt x 288.07625pt>
+<Figures/best_PCA-eps-converted-to.pdf, id=959, 361.35pt x 288.07625pt>
 File: Figures/best_PCA-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/best_PCA-eps-converted-to.pdf>
@@ -1032,7 +1026,7 @@ verted-to.pdf Figures/optimal-mix.eps>
 (epstopdf)             \includegraphics on input line 229.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/optimal-mix-eps-converted-to.pdf, id=1016, 421.575pt x 316.18124pt>
+<Figures/optimal-mix-eps-converted-to.pdf, id=1021, 421.575pt x 316.18124pt>
 File: Figures/optimal-mix-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/optimal-mix-eps-converted-to.pdf>
@@ -1063,7 +1057,7 @@ misclassified footfalls. However,
 
  (Implementation.tex
 Chapter 4.
-<Figures/design.png, id=1089, 587.19376pt x 223.58531pt>
+<Figures/design.png, id=1094, 587.19376pt x 223.58531pt>
 File: Figures/design.png Graphic file (type png)
 
 <use Figures/design.png>
@@ -1116,7 +1110,7 @@ nverted-to.pdf Figures/comb-front-A.eps>
 (epstopdf)             \includegraphics on input line 153.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/comb-front-A-eps-converted-to.pdf, id=1192, 421.575pt x 316.18124pt>
+<Figures/comb-front-A-eps-converted-to.pdf, id=1197, 421.575pt x 316.18124pt>
 File: Figures/comb-front-A-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/comb-front-A-eps-converted-to.pdf>
@@ -1135,30 +1129,30 @@ converted-to.pdf Figures/comb-front-erg.eps>
 (epstopdf)             \includegraphics on input line 165.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/comb-front-erg-eps-converted-to.pdf, id=1194, 421.575pt x 316.18124pt>
+<Figures/comb-front-erg-eps-converted-to.pdf, id=1199, 421.575pt x 316.18124pt>
 File: Figures/comb-front-erg-eps-converted-to.pdf Graphic file (type pdf)
 <use Figures/comb-front-erg-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/comb-front-erg-eps-converted-to.pdf used on in
 put line 165.
 (pdftex.def)             Requested size: 452.97844pt x 339.73383pt.
-)
-Overfull \hbox (1.96582pt too wide) in paragraph at lines 158--208
+
+Overfull \hbox (1.96582pt too wide) in paragraph at lines 158--171
 []\OT1/cmr/m/n/12 Each number on figure represent the corresponding state. Each
  row shows the probabilities
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--171
+
+ []
+
 [35 <./Figures/comb-front-A-eps-converted-to.pdf>] [36 <./Figures/comb-front-er
-g-eps-converted-to.pdf>]
+g-eps-converted-to.pdf>]) [37]
 \openout2 = `Results.aux'.
 
  (Results.tex
 Chapter 5.
-
-Overfull \hbox (39.4338pt too wide) in paragraph at lines 3--3
-[]\OT1/cmr/bx/n/17.28 Experiment 1: Observation sequence dimensionality's
- []
-
-[37
+[38
 
 
 
@@ -1180,7 +1174,7 @@ ct-acc-eps-converted-to.pdf Figures/dimensionality-effect-acc.eps>
 (epstopdf)             \includegraphics on input line 37.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/dimensionality-effect-acc-eps-converted-to.pdf, id=1235, 361.35pt x 29
+<Figures/dimensionality-effect-acc-eps-converted-to.pdf, id=1249, 361.35pt x 29
 1.0875pt>
 File: Figures/dimensionality-effect-acc-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1191,11 +1185,11 @@ Package pdftex.def Info: Figures/dimensionality-effect-acc-eps-converted-to.pdf
 
 
 Package Fancyhdr Warning: \headheight is too small (14.49998pt): 
- Make it at least 27.18335pt.
+ Make it at least 27.05003pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[38]
+[39]
 Package epstopdf Info: Source file: <Figures/dimensionality-effect-log.eps>
 (epstopdf)                    date: 2017-11-01 15:15:02
 (epstopdf)                    size: 18527 bytes
@@ -1208,7 +1202,7 @@ ct-log-eps-converted-to.pdf Figures/dimensionality-effect-log.eps>
 (epstopdf)             \includegraphics on input line 43.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/dimensionality-effect-log-eps-converted-to.pdf, id=1247, 365.365pt x 3
+<Figures/dimensionality-effect-log-eps-converted-to.pdf, id=1260, 365.365pt x 3
 01.125pt>
 File: Figures/dimensionality-effect-log-eps-converted-to.pdf Graphic file (type
  pdf)
@@ -1230,7 +1224,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 50.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf, id=1248, 37
+<Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf, id=1261, 37
 6.40625pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-5-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -1253,7 +1247,7 @@ with-5-features-eps-converted-to.pdf Figures/estimation-scatter-with-5-features
 (epstopdf)             \includegraphics on input line 55.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-5-features-eps-converted-to.pdf, id=1249, 376.
+<Figures/estimation-scatter-with-5-features-eps-converted-to.pdf, id=1262, 376.
 40625pt x 288.07625pt>
 File: Figures/estimation-scatter-with-5-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -1276,7 +1270,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 61.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf, id=1250, 3
+<Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf, id=1263, 3
 82.42876pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-18-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -1299,7 +1293,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 67.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-18-features-eps-converted-to.pdf, id=1251, 382
+<Figures/estimation-scatter-with-18-features-eps-converted-to.pdf, id=1264, 382
 .42876pt x 288.07625pt>
 File: Figures/estimation-scatter-with-18-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -1308,17 +1302,17 @@ file (type pdf)
 Package pdftex.def Info: Figures/estimation-scatter-with-18-features-eps-conver
 ted-to.pdf used on input line 67.
 (pdftex.def)             Requested size: 382.42781pt x 288.07553pt.
- [39 <./Figures/dimensionality-effect-acc-eps-converted-to.pdf>]
-
-LaTeX Warning: Text page 40 contains only floats.
-
-[40 <./Figures/dimensionality-effect-log-eps-converted-to.pdf> <./Figures/groun
-d-truth-scatter-with-5-features-eps-converted-to.pdf>]
+ [40 <./Figures/dimensionality-effect-acc-eps-converted-to.pdf>]
 
 LaTeX Warning: Text page 41 contains only floats.
 
-[41 <./Figures/estimation-scatter-with-5-features-eps-converted-to.pdf> <./Figu
-res/ground-truth-scatter-with-18-features-eps-converted-to.pdf>] [42 <./Figures
+[41 <./Figures/dimensionality-effect-log-eps-converted-to.pdf> <./Figures/groun
+d-truth-scatter-with-5-features-eps-converted-to.pdf>]
+
+LaTeX Warning: Text page 42 contains only floats.
+
+[42 <./Figures/estimation-scatter-with-5-features-eps-converted-to.pdf> <./Figu
+res/ground-truth-scatter-with-18-features-eps-converted-to.pdf>] [43 <./Figures
 /estimation-scatter-with-18-features-eps-converted-to.pdf>]
 Overfull \hbox (45.66975pt too wide) in paragraph at lines 85--85
 []\OT1/cmr/bx/n/17.28 Experiment 2: The impact of dimensionality reduction
@@ -1341,7 +1335,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--110
 
  []
 
-[43]
+[44]
 Package epstopdf Info: Source file: <Figures/size-acc-2.eps>
 (epstopdf)                    date: 2017-11-02 13:50:54
 (epstopdf)                    size: 19914 bytes
@@ -1353,7 +1347,7 @@ erted-to.pdf Figures/size-acc-2.eps>
 (epstopdf)             \includegraphics on input line 117.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/size-acc-2-eps-converted-to.pdf, id=1301, 421.575pt x 316.18124pt>
+<Figures/size-acc-2-eps-converted-to.pdf, id=1315, 421.575pt x 316.18124pt>
 File: Figures/size-acc-2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/size-acc-2-eps-converted-to.pdf>
@@ -1371,7 +1365,7 @@ erted-to.pdf Figures/size-log-2.eps>
 (epstopdf)             \includegraphics on input line 123.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/size-log-2-eps-converted-to.pdf, id=1302, 421.575pt x 316.18124pt>
+<Figures/size-log-2-eps-converted-to.pdf, id=1316, 421.575pt x 316.18124pt>
 File: Figures/size-log-2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/size-log-2-eps-converted-to.pdf>
@@ -1389,7 +1383,7 @@ ted-to.pdf Figures/bias-var.eps>
 (epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/bias-var-eps-converted-to.pdf, id=1303, 1028.84375pt x 335.2525pt>
+<Figures/bias-var-eps-converted-to.pdf, id=1317, 1028.84375pt x 335.2525pt>
 File: Figures/bias-var-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/bias-var-eps-converted-to.pdf>
@@ -1413,8 +1407,8 @@ Overfull \hbox (8.60648pt too wide) in paragraph at lines 139--143
 th dimensionality reduction.
  []
 
-[44] [45 <./Figures/size-acc-2-eps-converted-to.pdf>] [46 <./Figures/size-log-2
--eps-converted-to.pdf>] [47 <./Figures/bias-var-eps-converted-to.pdf>]
+[45] [46 <./Figures/size-acc-2-eps-converted-to.pdf>] [47 <./Figures/size-log-2
+-eps-converted-to.pdf>] [48 <./Figures/bias-var-eps-converted-to.pdf>]
 Overfull \hbox (34.72627pt too wide) in paragraph at lines 172--173
 \OT1/cmr/m/n/12 respectively specified by $\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12
  = (\OML/cmm/m/it/12 A[]; []; []; \OT1/cmr/m/n/12 []\OML/cmm/m/it/12 ; []\O
@@ -1422,7 +1416,7 @@ T1/cmr/m/n/12 )$ and $\OML/cmm/m/it/12 [] \OT1/cmr/m/n/12 = (\OML/cmm/m/it/12
 A[]; []; []; \OT1/cmr/m/n/12 []\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 )$.
  []
 
-[48]
+[49]
 Package epstopdf Info: Source file: <Figures/front-comb-acc.eps>
 (epstopdf)                    date: 2017-11-10 12:06:59
 (epstopdf)                    size: 19693 bytes
@@ -1435,7 +1429,7 @@ converted-to.pdf Figures/front-comb-acc.eps>
 (epstopdf)             \includegraphics on input line 190.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/front-comb-acc-eps-converted-to.pdf, id=1355, 421.575pt x 316.18124pt>
+<Figures/front-comb-acc-eps-converted-to.pdf, id=1368, 421.575pt x 316.18124pt>
 File: Figures/front-comb-acc-eps-converted-to.pdf Graphic file (type pdf)
 <use Figures/front-comb-acc-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/front-comb-acc-eps-converted-to.pdf used on in
@@ -1453,7 +1447,7 @@ converted-to.pdf Figures/front-comb-log.eps>
 (epstopdf)             \includegraphics on input line 196.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/front-comb-log-eps-converted-to.pdf, id=1356, 421.575pt x 316.18124pt>
+<Figures/front-comb-log-eps-converted-to.pdf, id=1369, 421.575pt x 316.18124pt>
 File: Figures/front-comb-log-eps-converted-to.pdf Graphic file (type pdf)
 <use Figures/front-comb-log-eps-converted-to.pdf>
 Package pdftex.def Info: Figures/front-comb-log-eps-converted-to.pdf used on in
@@ -1471,7 +1465,7 @@ onverted-to.pdf Figures/back-comb-acc.eps>
 (epstopdf)             \includegraphics on input line 202.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/back-comb-acc-eps-converted-to.pdf, id=1357, 421.575pt x 316.18124pt>
+<Figures/back-comb-acc-eps-converted-to.pdf, id=1370, 421.575pt x 316.18124pt>
 File: Figures/back-comb-acc-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/back-comb-acc-eps-converted-to.pdf>
@@ -1490,7 +1484,7 @@ onverted-to.pdf Figures/back-comb-log.eps>
 (epstopdf)             \includegraphics on input line 208.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/back-comb-log-eps-converted-to.pdf, id=1358, 421.575pt x 316.18124pt>
+<Figures/back-comb-log-eps-converted-to.pdf, id=1371, 421.575pt x 316.18124pt>
 File: Figures/back-comb-log-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figures/back-comb-log-eps-converted-to.pdf>
@@ -1507,13 +1501,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--223
 
  []
 
-[49] [50 <./Figures/front-comb-acc-eps-converted-to.pdf>]
+[50] [51 <./Figures/front-comb-acc-eps-converted-to.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 228--231
 
  []
 
-[51 <./Figures/front-comb-log-eps-converted-to.pdf>] [52 <./Figures/back-comb-a
-cc-eps-converted-to.pdf>] [53 <./Figures/back-comb-log-eps-converted-to.pdf>]
+[52 <./Figures/front-comb-log-eps-converted-to.pdf>] [53 <./Figures/back-comb-a
+cc-eps-converted-to.pdf>] [54 <./Figures/back-comb-log-eps-converted-to.pdf>]
 Overfull \hbox (8.88101pt too wide) in paragraph at lines 250--251
 []\OT1/cmr/m/n/12 An action recognition criterion. In this experience, the pred
 iction accuracies confusion
@@ -1530,35 +1524,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 269--270
 
  []
 
-[54]
+[55]
 
-LaTeX Warning: Reference `apdix-exp' on page 55 undefined on input line 314.
+LaTeX Warning: Reference `apdix-exp' on page 56 undefined on input line 314.
 
-[55]) [56]
+[56]) [57]
 \openout2 = `Discussion.aux'.
 
  (Discussion.tex
 Chapter 6.
-[57
+[58
 
 
 
-])
-Overfull \hbox (3.21904pt too wide) in paragraph at lines 24--208
-\OT1/cmr/m/n/12 Experiment 3 showed that it is not necessary to combined the fr
-ont and back measurements
- []
-
-[58]
+]) [59]
 \openout2 = `Conclusions.aux'.
 
  (Conclusions.tex
 Chapter 7.
-) [59
+) [60
 
 
 
-] [60]
+] [61]
 \openout2 = `Recommendations.aux'.
 
  (Recommendations.tex
@@ -1581,11 +1569,11 @@ Overfull \hbox (14.47182pt too wide) in paragraph at lines 14--15
 []] should be investigated. 
  []
 
-[61
+[62
 
 
 
-]) [62]
+]) [63]
 \openout2 = `References.aux'.
 
  (References.tex
@@ -1618,7 +1606,7 @@ Missing character: There is no  in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no “ in font cmr12!
-[63
+[64
 
 
 
@@ -1727,7 +1715,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--23
 ble:
  []
 
-[64]
+[65]
 Underfull \hbox (badness 10000) in paragraph at lines 24--25
 []\OT1/cmr/m/n/12 Dimension Reduction - Pattern Recognition Tools.[Online]. Ava
 ilable:
@@ -1805,7 +1793,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 []\OT1/cmr/m/n/12 Qiuqiang Kong, "matlab-hmm".[Online]. Available:
  []
 
-[65]
+[66]
 Underfull \hbox (badness 10000) in paragraph at lines 39--40
 []\OT1/cmr/m/n/12 Mahalanobis distance - Pattern Recognition Tools. [Online]
  []
@@ -1822,7 +1810,7 @@ Underfull \hbox (badness 1132) in paragraph at lines 45--46
 [Online].
  []
 
-) [66]
+) [67]
 \openout2 = `appendixa.aux'.
 
  (appendixa.tex
@@ -1868,7 +1856,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 197.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-1-features-eps-converted-to.pdf, id=1489, 36
+<Figures/ground-truth-scatter-with-1-features-eps-converted-to.pdf, id=1501, 36
 9.38pt x 293.095pt>
 File: Figures/ground-truth-scatter-with-1-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -1878,7 +1866,7 @@ Package pdftex.def Info: Figures/ground-truth-scatter-with-1-features-eps-conve
 rted-to.pdf used on input line 197.
 (pdftex.def)             Requested size: 369.37909pt x 293.09427pt.
 
-[67
+[68
 
 
 
@@ -1897,7 +1885,7 @@ with-1-features-eps-converted-to.pdf Figures/estimation-scatter-with-1-features
 (epstopdf)             \includegraphics on input line 202.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-1-features-eps-converted-to.pdf, id=1495, 369.
+<Figures/estimation-scatter-with-1-features-eps-converted-to.pdf, id=1508, 369.
 38pt x 293.095pt>
 File: Figures/estimation-scatter-with-1-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -1920,7 +1908,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 208.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-2-features-eps-converted-to.pdf, id=1496, 36
+<Figures/ground-truth-scatter-with-2-features-eps-converted-to.pdf, id=1509, 36
 6.36874pt x 293.095pt>
 File: Figures/ground-truth-scatter-with-2-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -1943,7 +1931,7 @@ with-2-features-eps-converted-to.pdf Figures/estimation-scatter-with-2-features
 (epstopdf)             \includegraphics on input line 214.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-2-features-eps-converted-to.pdf, id=1497, 366.
+<Figures/estimation-scatter-with-2-features-eps-converted-to.pdf, id=1510, 366.
 36874pt x 293.095pt>
 File: Figures/estimation-scatter-with-2-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -1966,7 +1954,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 220.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-3-features-eps-converted-to.pdf, id=1498, 38
+<Figures/ground-truth-scatter-with-3-features-eps-converted-to.pdf, id=1511, 38
 7.4475pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-3-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -1989,7 +1977,7 @@ with-3-features-eps-converted-to.pdf Figures/estimation-scatter-with-3-features
 (epstopdf)             \includegraphics on input line 225.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-3-features-eps-converted-to.pdf, id=1499, 387.
+<Figures/estimation-scatter-with-3-features-eps-converted-to.pdf, id=1512, 387.
 4475pt x 288.07625pt>
 File: Figures/estimation-scatter-with-3-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2012,7 +2000,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 231.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-4-features-eps-converted-to.pdf, id=1500, 38
+<Figures/ground-truth-scatter-with-4-features-eps-converted-to.pdf, id=1513, 38
 7.4475pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-4-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -2035,7 +2023,7 @@ with-4-features-eps-converted-to.pdf Figures/estimation-scatter-with-4-features
 (epstopdf)             \includegraphics on input line 237.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-4-features-eps-converted-to.pdf, id=1501, 387.
+<Figures/estimation-scatter-with-4-features-eps-converted-to.pdf, id=1514, 387.
 4475pt x 288.07625pt>
 File: Figures/estimation-scatter-with-4-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2058,7 +2046,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 243.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-6-features-eps-converted-to.pdf, id=1502, 37
+<Figures/ground-truth-scatter-with-6-features-eps-converted-to.pdf, id=1515, 37
 3.395pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-6-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -2081,7 +2069,7 @@ with-6-features-eps-converted-to.pdf Figures/estimation-scatter-with-6-features
 (epstopdf)             \includegraphics on input line 248.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-6-features-eps-converted-to.pdf, id=1503, 373.
+<Figures/estimation-scatter-with-6-features-eps-converted-to.pdf, id=1516, 373.
 395pt x 288.07625pt>
 File: Figures/estimation-scatter-with-6-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2104,7 +2092,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 254.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-7-features-eps-converted-to.pdf, id=1504, 37
+<Figures/ground-truth-scatter-with-7-features-eps-converted-to.pdf, id=1517, 37
 3.395pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-7-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -2127,7 +2115,7 @@ with-7-features-eps-converted-to.pdf Figures/estimation-scatter-with-7-features
 (epstopdf)             \includegraphics on input line 260.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-7-features-eps-converted-to.pdf, id=1505, 373.
+<Figures/estimation-scatter-with-7-features-eps-converted-to.pdf, id=1518, 373.
 395pt x 288.07625pt>
 File: Figures/estimation-scatter-with-7-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2150,7 +2138,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 266.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-8-features-eps-converted-to.pdf, id=1506, 37
+<Figures/ground-truth-scatter-with-8-features-eps-converted-to.pdf, id=1519, 37
 3.395pt x 291.0875pt>
 File: Figures/ground-truth-scatter-with-8-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -2173,7 +2161,7 @@ with-8-features-eps-converted-to.pdf Figures/estimation-scatter-with-8-features
 (epstopdf)             \includegraphics on input line 271.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-8-features-eps-converted-to.pdf, id=1507, 373.
+<Figures/estimation-scatter-with-8-features-eps-converted-to.pdf, id=1520, 373.
 395pt x 291.0875pt>
 File: Figures/estimation-scatter-with-8-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2196,7 +2184,7 @@ ures.eps>
 (epstopdf)             \includegraphics on input line 277.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-9-features-eps-converted-to.pdf, id=1508, 37
+<Figures/ground-truth-scatter-with-9-features-eps-converted-to.pdf, id=1521, 37
 3.395pt x 291.0875pt>
 File: Figures/ground-truth-scatter-with-9-features-eps-converted-to.pdf Graphic
  file (type pdf)
@@ -2219,7 +2207,7 @@ with-9-features-eps-converted-to.pdf Figures/estimation-scatter-with-9-features
 (epstopdf)             \includegraphics on input line 283.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-9-features-eps-converted-to.pdf, id=1509, 373.
+<Figures/estimation-scatter-with-9-features-eps-converted-to.pdf, id=1522, 373.
 395pt x 291.0875pt>
 File: Figures/estimation-scatter-with-9-features-eps-converted-to.pdf Graphic f
 ile (type pdf)
@@ -2242,7 +2230,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 289.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-10-features-eps-converted-to.pdf, id=1510, 3
+<Figures/ground-truth-scatter-with-10-features-eps-converted-to.pdf, id=1523, 3
 73.395pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-10-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2265,7 +2253,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 295.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-10-features-eps-converted-to.pdf, id=1511, 373
+<Figures/estimation-scatter-with-10-features-eps-converted-to.pdf, id=1524, 373
 .395pt x 288.07625pt>
 File: Figures/estimation-scatter-with-10-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -2288,7 +2276,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 301.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-11-features-eps-converted-to.pdf, id=1512, 3
+<Figures/ground-truth-scatter-with-11-features-eps-converted-to.pdf, id=1525, 3
 73.395pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-11-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2311,7 +2299,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 306.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-11-features-eps-converted-to.pdf, id=1513, 373
+<Figures/estimation-scatter-with-11-features-eps-converted-to.pdf, id=1526, 373
 .395pt x 288.07625pt>
 File: Figures/estimation-scatter-with-11-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -2334,7 +2322,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 312.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-12-features-eps-converted-to.pdf, id=1514, 3
+<Figures/ground-truth-scatter-with-12-features-eps-converted-to.pdf, id=1527, 3
 73.395pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-12-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2357,7 +2345,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 318.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-12-features-eps-converted-to.pdf, id=1515, 373
+<Figures/estimation-scatter-with-12-features-eps-converted-to.pdf, id=1528, 373
 .395pt x 288.07625pt>
 File: Figures/estimation-scatter-with-12-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -2380,7 +2368,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 324.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-13-features-eps-converted-to.pdf, id=1516, 3
+<Figures/ground-truth-scatter-with-13-features-eps-converted-to.pdf, id=1529, 3
 82.42876pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-13-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2403,7 +2391,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 329.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-13-features-eps-converted-to.pdf, id=1517, 382
+<Figures/estimation-scatter-with-13-features-eps-converted-to.pdf, id=1530, 382
 .42876pt x 288.07625pt>
 File: Figures/estimation-scatter-with-13-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -2426,7 +2414,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 335.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-14-features-eps-converted-to.pdf, id=1518, 3
+<Figures/ground-truth-scatter-with-14-features-eps-converted-to.pdf, id=1531, 3
 82.42876pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-14-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2449,7 +2437,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 341.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-14-features-eps-converted-to.pdf, id=1519, 382
+<Figures/estimation-scatter-with-14-features-eps-converted-to.pdf, id=1532, 382
 .42876pt x 288.07625pt>
 File: Figures/estimation-scatter-with-14-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -2472,7 +2460,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 347.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-15-features-eps-converted-to.pdf, id=1520, 3
+<Figures/ground-truth-scatter-with-15-features-eps-converted-to.pdf, id=1533, 3
 82.42876pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-15-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2495,7 +2483,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 352.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-15-features-eps-converted-to.pdf, id=1521, 382
+<Figures/estimation-scatter-with-15-features-eps-converted-to.pdf, id=1534, 382
 .42876pt x 288.07625pt>
 File: Figures/estimation-scatter-with-15-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -2518,7 +2506,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 358.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-16-features-eps-converted-to.pdf, id=1522, 3
+<Figures/ground-truth-scatter-with-16-features-eps-converted-to.pdf, id=1535, 3
 82.42876pt x 289.08pt>
 File: Figures/ground-truth-scatter-with-16-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2541,7 +2529,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 364.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-16-features-eps-converted-to.pdf, id=1523, 382
+<Figures/estimation-scatter-with-16-features-eps-converted-to.pdf, id=1536, 382
 .42876pt x 289.08pt>
 File: Figures/estimation-scatter-with-16-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -2564,7 +2552,7 @@ atures.eps>
 (epstopdf)             \includegraphics on input line 370.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/ground-truth-scatter-with-17-features-eps-converted-to.pdf, id=1524, 3
+<Figures/ground-truth-scatter-with-17-features-eps-converted-to.pdf, id=1537, 3
 82.42876pt x 288.07625pt>
 File: Figures/ground-truth-scatter-with-17-features-eps-converted-to.pdf Graphi
 c file (type pdf)
@@ -2587,7 +2575,7 @@ es.eps>
 (epstopdf)             \includegraphics on input line 376.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figures/estimation-scatter-with-17-features-eps-converted-to.pdf, id=1525, 382
+<Figures/estimation-scatter-with-17-features-eps-converted-to.pdf, id=1538, 382
 .42876pt x 288.07625pt>
 File: Figures/estimation-scatter-with-17-features-eps-converted-to.pdf Graphic 
 file (type pdf)
@@ -2597,41 +2585,41 @@ Package pdftex.def Info: Figures/estimation-scatter-with-17-features-eps-conver
 ted-to.pdf used on input line 376.
 (pdftex.def)             Requested size: 382.42781pt x 288.07553pt.
 )
-[68] [69 <./Figures/ground-truth-scatter-with-1-features-eps-converted-to.pdf>]
-[70 <./Figures/estimation-scatter-with-1-features-eps-converted-to.pdf> <./Figu
-res/ground-truth-scatter-with-2-features-eps-converted-to.pdf>] [71 <./Figures/
+[69] [70 <./Figures/ground-truth-scatter-with-1-features-eps-converted-to.pdf>]
+[71 <./Figures/estimation-scatter-with-1-features-eps-converted-to.pdf> <./Figu
+res/ground-truth-scatter-with-2-features-eps-converted-to.pdf>] [72 <./Figures/
 estimation-scatter-with-2-features-eps-converted-to.pdf> <./Figures/ground-trut
-h-scatter-with-3-features-eps-converted-to.pdf>] [72 <./Figures/estimation-scat
+h-scatter-with-3-features-eps-converted-to.pdf>] [73 <./Figures/estimation-scat
 ter-with-3-features-eps-converted-to.pdf> <./Figures/ground-truth-scatter-with-
-4-features-eps-converted-to.pdf>] [73 <./Figures/estimation-scatter-with-4-feat
+4-features-eps-converted-to.pdf>] [74 <./Figures/estimation-scatter-with-4-feat
 ures-eps-converted-to.pdf> <./Figures/ground-truth-scatter-with-6-features-eps-
-converted-to.pdf>] [74 <./Figures/estimation-scatter-with-6-features-eps-conver
+converted-to.pdf>] [75 <./Figures/estimation-scatter-with-6-features-eps-conver
 ted-to.pdf> <./Figures/ground-truth-scatter-with-7-features-eps-converted-to.pd
-f>] [75 <./Figures/estimation-scatter-with-7-features-eps-converted-to.pdf> <./
-Figures/ground-truth-scatter-with-8-features-eps-converted-to.pdf>] [76 <./Figu
+f>] [76 <./Figures/estimation-scatter-with-7-features-eps-converted-to.pdf> <./
+Figures/ground-truth-scatter-with-8-features-eps-converted-to.pdf>] [77 <./Figu
 res/estimation-scatter-with-8-features-eps-converted-to.pdf> <./Figures/ground-
-truth-scatter-with-9-features-eps-converted-to.pdf>] [77 <./Figures/estimation-
+truth-scatter-with-9-features-eps-converted-to.pdf>] [78 <./Figures/estimation-
 scatter-with-9-features-eps-converted-to.pdf> <./Figures/ground-truth-scatter-w
-ith-10-features-eps-converted-to.pdf>] [78 <./Figures/estimation-scatter-with-1
+ith-10-features-eps-converted-to.pdf>] [79 <./Figures/estimation-scatter-with-1
 0-features-eps-converted-to.pdf> <./Figures/ground-truth-scatter-with-11-featur
-es-eps-converted-to.pdf>] [79 <./Figures/estimation-scatter-with-11-features-ep
+es-eps-converted-to.pdf>] [80 <./Figures/estimation-scatter-with-11-features-ep
 s-converted-to.pdf> <./Figures/ground-truth-scatter-with-12-features-eps-conver
-ted-to.pdf>] [80 <./Figures/estimation-scatter-with-12-features-eps-converted-t
+ted-to.pdf>] [81 <./Figures/estimation-scatter-with-12-features-eps-converted-t
 o.pdf> <./Figures/ground-truth-scatter-with-13-features-eps-converted-to.pdf>]
-[81 <./Figures/estimation-scatter-with-13-features-eps-converted-to.pdf> <./Fig
-ures/ground-truth-scatter-with-14-features-eps-converted-to.pdf>] [82 <./Figure
+[82 <./Figures/estimation-scatter-with-13-features-eps-converted-to.pdf> <./Fig
+ures/ground-truth-scatter-with-14-features-eps-converted-to.pdf>] [83 <./Figure
 s/estimation-scatter-with-14-features-eps-converted-to.pdf> <./Figures/ground-t
-ruth-scatter-with-15-features-eps-converted-to.pdf>] [83 <./Figures/estimation-
+ruth-scatter-with-15-features-eps-converted-to.pdf>] [84 <./Figures/estimation-
 scatter-with-15-features-eps-converted-to.pdf> <./Figures/ground-truth-scatter-
-with-16-features-eps-converted-to.pdf>] [84 <./Figures/estimation-scatter-with-
+with-16-features-eps-converted-to.pdf>] [85 <./Figures/estimation-scatter-with-
 16-features-eps-converted-to.pdf> <./Figures/ground-truth-scatter-with-17-featu
-res-eps-converted-to.pdf>] [85 <./Figures/estimation-scatter-with-17-features-e
+res-eps-converted-to.pdf>] [86 <./Figures/estimation-scatter-with-17-features-e
 ps-converted-to.pdf>]
 \openout2 = `appendixb.aux'.
 
  (appendixb.tex
 Appendix B.
-<Figures/ethics-form.pdf, id=1697, 845.0471pt x 597.50829pt>
+<Figures/ethics-form.pdf, id=1710, 845.0471pt x 597.50829pt>
 File: Figures/ethics-form.pdf Graphic file (type pdf)
 
 <use Figures/ethics-form.pdf>
@@ -2642,19 +2630,19 @@ Overfull \hbox (27.47368pt too wide) in paragraph at lines 6--9
 [][] 
  []
 
-) [86
+) [87
 
 
 
 ]
 
-LaTeX Warning: Text page 87 contains only floats.
+LaTeX Warning: Text page 88 contains only floats.
 
 
 Overfull \vbox (6.94498pt too high) has occurred while \output is active []
 
 
-[87 <./Figures/ethics-form.pdf>] 
+[88 <./Figures/ethics-form.pdf>] 
 AED: lastpage setting LastPage
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 209.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
@@ -2663,26 +2651,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 209.
 (Recommendations.aux) (References.aux) (appendixa.aux) (appendixb.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 209.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 209.
+Package rerunfilecheck Info: File `"Project Report Template".out' has not chang
+ed.
+(rerunfilecheck)             Checksum: 940E5B6D23806478997050C4B519CAD8;6823.
 
-
-Package rerunfilecheck Warning: File `"Project Report Template".out' has change
-d.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `"Project Report Template".out':
-(rerunfilecheck)             Before: A2BF456221CBCCEBDBC2231C560108F9;6749
-(rerunfilecheck)             After:  BEDC43594681F54D9052CF6A418D2891;6838.
 
 LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 209.
  ) 
 Here is how much of TeX's memory you used:
- 9953 strings out of 493333
- 150991 string characters out of 3139192
- 406403 words of memory out of 3000000
- 12738 multiletter control sequences out of 15000+200000
+ 9959 strings out of 493333
+ 151039 string characters out of 3139192
+ 406388 words of memory out of 3000000
+ 12739 multiletter control sequences out of 15000+200000
  14682 words of font info for 56 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,12n,45p,807b,1845s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2702,9 +2684,9 @@ onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb>
-Output written on "Project Report Template.pdf" (104 pages, 8363155 bytes).
+Output written on "Project Report Template.pdf" (105 pages, 8378587 bytes).
 PDF statistics:
- 1862 PDF objects out of 2073 (max. 8388607)
- 463 named destinations out of 1000 (max. 500000)
- 968 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1874 PDF objects out of 2073 (max. 8388607)
+ 468 named destinations out of 1000 (max. 500000)
+ 976 words of extra memory for PDF output out of 10000 (max. 10000000)
 

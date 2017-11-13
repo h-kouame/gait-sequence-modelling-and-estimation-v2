@@ -49,51 +49,51 @@
 \contentsline {section}{\numberline {4.5}Implementation testing}{34}{section.4.5}
 \contentsline {subsection}{\numberline {4.5.1}Front HMM's initial state distribution: \(pi\)}{34}{subsection.4.5.1}
 \contentsline {subsection}{\numberline {4.5.2}Front HMM's transition probability: A}{35}{subsection.4.5.2}
-\contentsline {chapter}{\numberline {5}Experiments and results}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Experiment 1: Observation sequence dimensionality's effect on performance}{37}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Aim of the experiment}{37}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Experiment apparatus}{37}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Experiment procedure}{38}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Experiment results}{38}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Analysis and discussion of results}{39}{subsection.5.1.5}
-\contentsline {subsection}{\numberline {5.1.6}Conclusions and recommendations of the experiment}{42}{subsection.5.1.6}
-\contentsline {section}{\numberline {5.2}Experiment 2: The impact of dimensionality reduction on performance}{43}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Aim of the experiment}{43}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Experiment apparatus}{43}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Experiment procedure}{44}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Experiment results}{44}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Analysis and discusion of results}{44}{subsection.5.2.5}
-\contentsline {subsubsection}{No reduction vs feature Ranking: SI Ranking}{45}{section*.12}
-\contentsline {subsubsection}{No reduction vs forward feature selection: SI-forward}{45}{section*.13}
-\contentsline {subsubsection}{No reduction vs PCA and LDA}{46}{section*.14}
-\contentsline {subsubsection}{Bias - variance error analysis}{47}{section*.15}
-\contentsline {subsection}{\numberline {5.2.6}Conclusions and recommendations of the experiment}{48}{subsection.5.2.6}
-\contentsline {section}{\numberline {5.3}Experiment 3: The necessity of combining the front and back IMU sensor measurements}{48}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Aim of the experiment}{48}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Experiment apparatus}{48}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Experiment procedure}{49}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Experiment results}{49}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Analysis and discussion of results}{49}{subsection.5.3.5}
-\contentsline {subsubsection}{Front footfalls}{50}{section*.16}
-\contentsline {subsubsection}{Back footfalls}{51}{section*.17}
-\contentsline {subsection}{\numberline {5.3.6}Conclusions and recommendations of the experiment}{52}{subsection.5.3.6}
-\contentsline {section}{\numberline {5.4}Experiment 4: Motion type recognition}{53}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Aim of the experiment}{53}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Experiment apparatus}{54}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Experiment procedure}{54}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Experiment results}{55}{subsection.5.4.4}
-\contentsline {subsection}{\numberline {5.4.5}Analysis of results}{55}{subsection.5.4.5}
-\contentsline {subsection}{\numberline {5.4.6}Conclusions of the experiment}{55}{subsection.5.4.6}
-\contentsline {chapter}{\numberline {6}General discussions}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}Data dimensionality and bias analysis}{57}{section.6.1}
-\contentsline {section}{\numberline {6.2}Data aggregation and mirroring}{58}{section.6.2}
-\contentsline {section}{\numberline {6.3}Combining front and back IMU measurements}{58}{section.6.3}
-\contentsline {chapter}{\numberline {7}General conclusions}{59}{chapter.7}
-\contentsline {chapter}{\numberline {8}Recommendations for future work}{61}{chapter.8}
-\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{67}{appendix.A}
-\contentsline {section}{\numberline {A.1}Implementation and experiment code}{67}{section.A.1}
-\contentsline {section}{\numberline {A.2}Additional results}{67}{section.A.2}
-\contentsline {subsection}{\numberline {A.2.1}Front vs Back gait}{67}{subsection.A.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Effect of feature size on performance}{68}{subsection.A.2.2}
-\contentsline {chapter}{\numberline {B}Addenda}{86}{appendix.B}
-\contentsline {section}{\numberline {B.1}Ethics Forms}{86}{section.B.1}
+\contentsline {chapter}{\numberline {5}Experiments and results}{38}{chapter.5}
+\contentsline {section}{\numberline {5.1}Experiment 1: Effect of data dimensionality on performance}{38}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Aim of the experiment}{38}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Experiment apparatus}{38}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Experiment procedure}{39}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Experiment results}{39}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Analysis and discussion of results}{40}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.6}Conclusions and recommendations of the experiment}{43}{subsection.5.1.6}
+\contentsline {section}{\numberline {5.2}Experiment 2: The impact of dimensionality reduction on performance}{44}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Aim of the experiment}{44}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Experiment apparatus}{44}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Experiment procedure}{45}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Experiment results}{45}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Analysis and discusion of results}{45}{subsection.5.2.5}
+\contentsline {subsubsection}{No reduction vs feature Ranking: SI Ranking}{46}{section*.12}
+\contentsline {subsubsection}{No reduction vs forward feature selection: SI-forward}{46}{section*.13}
+\contentsline {subsubsection}{No reduction vs PCA and LDA}{47}{section*.14}
+\contentsline {subsubsection}{Bias - variance error analysis}{48}{section*.15}
+\contentsline {subsection}{\numberline {5.2.6}Conclusions and recommendations of the experiment}{49}{subsection.5.2.6}
+\contentsline {section}{\numberline {5.3}Experiment 3: The necessity of combining the front and back IMU sensor measurements}{49}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Aim of the experiment}{49}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Experiment apparatus}{49}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Experiment procedure}{50}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Experiment results}{50}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Analysis and discussion of results}{50}{subsection.5.3.5}
+\contentsline {subsubsection}{Front footfalls}{51}{section*.16}
+\contentsline {subsubsection}{Back footfalls}{52}{section*.17}
+\contentsline {subsection}{\numberline {5.3.6}Conclusions and recommendations of the experiment}{53}{subsection.5.3.6}
+\contentsline {section}{\numberline {5.4}Experiment 4: Motion type recognition}{54}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Aim of the experiment}{54}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Experiment apparatus}{55}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Experiment procedure}{55}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Experiment results}{56}{subsection.5.4.4}
+\contentsline {subsection}{\numberline {5.4.5}Analysis of results}{56}{subsection.5.4.5}
+\contentsline {subsection}{\numberline {5.4.6}Conclusions of the experiment}{56}{subsection.5.4.6}
+\contentsline {chapter}{\numberline {6}General discussions}{58}{chapter.6}
+\contentsline {section}{\numberline {6.1}Data dimensionality and bias analysis}{58}{section.6.1}
+\contentsline {section}{\numberline {6.2}Data aggregation and mirroring}{59}{section.6.2}
+\contentsline {section}{\numberline {6.3}Combining front and back IMU measurements}{59}{section.6.3}
+\contentsline {chapter}{\numberline {7}General conclusions}{60}{chapter.7}
+\contentsline {chapter}{\numberline {8}Recommendations for future work}{62}{chapter.8}
+\contentsline {chapter}{\numberline {A}Additional Files and Schematics}{68}{appendix.A}
+\contentsline {section}{\numberline {A.1}Implementation and experiment code}{68}{section.A.1}
+\contentsline {section}{\numberline {A.2}Additional results}{68}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Front vs Back gait}{68}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Effect of feature size on performance}{69}{subsection.A.2.2}
+\contentsline {chapter}{\numberline {B}Addenda}{87}{appendix.B}
+\contentsline {section}{\numberline {B.1}Ethics Forms}{87}{section.B.1}

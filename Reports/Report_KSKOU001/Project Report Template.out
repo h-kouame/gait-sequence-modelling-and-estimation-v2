@@ -42,7 +42,7 @@
 \BOOKMARK [2][-]{subsection.4.5.1}{Front HMM's initial state distribution: pi}{section.4.5}% 42
 \BOOKMARK [2][-]{subsection.4.5.2}{Front HMM's transition probability: A}{section.4.5}% 43
 \BOOKMARK [0][-]{chapter.5}{Experiments and results}{}% 44
-\BOOKMARK [1][-]{section.5.1}{Experiment 1: Observation sequence dimensionality's effect on performance}{chapter.5}% 45
+\BOOKMARK [1][-]{section.5.1}{Experiment 1: Effect of data dimensionality on performance}{chapter.5}% 45
 \BOOKMARK [2][-]{subsection.5.1.1}{Aim of the experiment}{section.5.1}% 46
 \BOOKMARK [2][-]{subsection.5.1.2}{Experiment apparatus}{section.5.1}% 47
 \BOOKMARK [2][-]{subsection.5.1.3}{Experiment procedure}{section.5.1}% 48

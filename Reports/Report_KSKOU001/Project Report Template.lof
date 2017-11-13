@@ -14,53 +14,53 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Front HMM's transition matrix heap map}}{35}{figure.4.2}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Front HMM's state transition structure}}{36}{figure.4.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces The effect of CHMM's observation dimensionality the state sequence decoding accuracy}}{39}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces The effect of CHMM's observation dimensionality the log-likelihood}}{40}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Scatter plot of 5-dimensional observations grouped according the ground-truth state sequence}}{40}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Scatter plot of 5-dimensional observations grouped according to the estimated state sequence}}{41}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Scatter plot of 18-dimensional observations grouped according to the ground-truth state sequence}}{41}{figure.5.5}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Scatter plot of 18-dimensional observations grouped according to the estimated state sequence}}{42}{figure.5.6}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces The effect of training datasize on the prediction accuracy}}{45}{figure.5.7}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces The effect of training datasize on the log likelihood}}{46}{figure.5.8}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Bias-Variance tradeoff analysis}}{47}{figure.5.9}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Front footfalls prediction accuracy of both IMUs vs with only the front IMU}}{50}{figure.5.10}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Front footfalls prediction log-likelihood with both IMUs vs with only the front IMU}}{51}{figure.5.11}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Back footfalls prediction accuracy with both IMUs vs with only the front IMU}}{52}{figure.5.12}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces Back footfalls prediction log-likelihood with both IMUs vs with only the front IMU}}{53}{figure.5.13}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces The effect of CHMM's observation dimensionality the state sequence decoding accuracy}}{40}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces The effect of CHMM's observation dimensionality the log-likelihood}}{41}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Scatter plot of 5-dimensional observations grouped according the ground-truth state sequence}}{41}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Scatter plot of 5-dimensional observations grouped according to the estimated state sequence}}{42}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Scatter plot of 18-dimensional observations grouped according to the ground-truth state sequence}}{42}{figure.5.5}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Scatter plot of 18-dimensional observations grouped according to the estimated state sequence}}{43}{figure.5.6}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces The effect of training datasize on the prediction accuracy}}{46}{figure.5.7}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces The effect of training datasize on the log likelihood}}{47}{figure.5.8}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Bias-Variance tradeoff analysis}}{48}{figure.5.9}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Front footfalls prediction accuracy of both IMUs vs with only the front IMU}}{51}{figure.5.10}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Front footfalls prediction log-likelihood with both IMUs vs with only the front IMU}}{52}{figure.5.11}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Back footfalls prediction accuracy with both IMUs vs with only the front IMU}}{53}{figure.5.12}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Back footfalls prediction log-likelihood with both IMUs vs with only the front IMU}}{54}{figure.5.13}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Scatter plot of 1-dimensional observations grouped according the ground-truth state sequence}}{69}{figure.A.1}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Scatter plot of 1-dimensional observations grouped according to the estimated state sequence}}{70}{figure.A.2}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Scatter plot of 2-dimensional observations grouped according to the ground-truth state sequence}}{70}{figure.A.3}
-\contentsline {figure}{\numberline {A.4}{\ignorespaces Scatter plot of 2-dimensional observations grouped according to the estimated state sequence}}{71}{figure.A.4}
-\contentsline {figure}{\numberline {A.5}{\ignorespaces Scatter plot of 3-dimensional observations grouped according the ground-truth state sequence}}{71}{figure.A.5}
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Scatter plot of 3-dimensional observations grouped according to the estimated state sequence}}{72}{figure.A.6}
-\contentsline {figure}{\numberline {A.7}{\ignorespaces Scatter plot of 4-dimensional observations grouped according to the ground-truth state sequence}}{72}{figure.A.7}
-\contentsline {figure}{\numberline {A.8}{\ignorespaces Scatter plot of 4-dimensional observations grouped according to the estimated state sequence}}{73}{figure.A.8}
-\contentsline {figure}{\numberline {A.9}{\ignorespaces Scatter plot of 6-dimensional observations grouped according the ground-truth state sequence}}{73}{figure.A.9}
-\contentsline {figure}{\numberline {A.10}{\ignorespaces Scatter plot of 6-dimensional observations grouped according to the estimated state sequence}}{74}{figure.A.10}
-\contentsline {figure}{\numberline {A.11}{\ignorespaces Scatter plot of 7-dimensional observations grouped according to the ground-truth state sequence}}{74}{figure.A.11}
-\contentsline {figure}{\numberline {A.12}{\ignorespaces Scatter plot of 7-dimensional observations grouped according to the estimated state sequence}}{75}{figure.A.12}
-\contentsline {figure}{\numberline {A.13}{\ignorespaces Scatter plot of 8-dimensional observations grouped according the ground-truth state sequence}}{75}{figure.A.13}
-\contentsline {figure}{\numberline {A.14}{\ignorespaces Scatter plot of 8-dimensional observations grouped according to the estimated state sequence}}{76}{figure.A.14}
-\contentsline {figure}{\numberline {A.15}{\ignorespaces Scatter plot of 9-dimensional observations grouped according to the ground-truth state sequence}}{76}{figure.A.15}
-\contentsline {figure}{\numberline {A.16}{\ignorespaces Scatter plot of 9-dimensional observations grouped according to the estimated state sequence}}{77}{figure.A.16}
-\contentsline {figure}{\numberline {A.17}{\ignorespaces Scatter plot of 10-dimensional observations grouped according to the ground-truth state sequence}}{77}{figure.A.17}
-\contentsline {figure}{\numberline {A.18}{\ignorespaces Scatter plot of 10-dimensional observations grouped according to the estimated state sequence}}{78}{figure.A.18}
-\contentsline {figure}{\numberline {A.19}{\ignorespaces Scatter plot of 11-dimensional observations grouped according the ground-truth state sequence}}{78}{figure.A.19}
-\contentsline {figure}{\numberline {A.20}{\ignorespaces Scatter plot of 11-dimensional observations grouped according to the estimated state sequence}}{79}{figure.A.20}
-\contentsline {figure}{\numberline {A.21}{\ignorespaces Scatter plot of 12-dimensional observations grouped according to the ground-truth state sequence}}{79}{figure.A.21}
-\contentsline {figure}{\numberline {A.22}{\ignorespaces Scatter plot of 12-dimensional observations grouped according to the estimated state sequence}}{80}{figure.A.22}
-\contentsline {figure}{\numberline {A.23}{\ignorespaces Scatter plot of 13-dimensional observations grouped according the ground-truth state sequence}}{80}{figure.A.23}
-\contentsline {figure}{\numberline {A.24}{\ignorespaces Scatter plot of 13-dimensional observations grouped according to the estimated state sequence}}{81}{figure.A.24}
-\contentsline {figure}{\numberline {A.25}{\ignorespaces Scatter plot of 14-dimensional observations grouped according to the ground-truth state sequence}}{81}{figure.A.25}
-\contentsline {figure}{\numberline {A.26}{\ignorespaces Scatter plot of 14-dimensional observations grouped according to the estimated state sequence}}{82}{figure.A.26}
-\contentsline {figure}{\numberline {A.27}{\ignorespaces Scatter plot of 15-dimensional observations grouped according the ground-truth state sequence}}{82}{figure.A.27}
-\contentsline {figure}{\numberline {A.28}{\ignorespaces Scatter plot of 15-dimensional observations grouped according to the estimated state sequence}}{83}{figure.A.28}
-\contentsline {figure}{\numberline {A.29}{\ignorespaces Scatter plot of 16-dimensional observations grouped according to the ground-truth state sequence}}{83}{figure.A.29}
-\contentsline {figure}{\numberline {A.30}{\ignorespaces Scatter plot of 16-dimensional observations grouped according to the estimated state sequence}}{84}{figure.A.30}
-\contentsline {figure}{\numberline {A.31}{\ignorespaces Scatter plot of 17-dimensional observations grouped according to the ground-truth state sequence}}{84}{figure.A.31}
-\contentsline {figure}{\numberline {A.32}{\ignorespaces Scatter plot of 17-dimensional observations grouped according to the estimated state sequence}}{85}{figure.A.32}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Scatter plot of 1-dimensional observations grouped according the ground-truth state sequence}}{70}{figure.A.1}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Scatter plot of 1-dimensional observations grouped according to the estimated state sequence}}{71}{figure.A.2}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Scatter plot of 2-dimensional observations grouped according to the ground-truth state sequence}}{71}{figure.A.3}
+\contentsline {figure}{\numberline {A.4}{\ignorespaces Scatter plot of 2-dimensional observations grouped according to the estimated state sequence}}{72}{figure.A.4}
+\contentsline {figure}{\numberline {A.5}{\ignorespaces Scatter plot of 3-dimensional observations grouped according the ground-truth state sequence}}{72}{figure.A.5}
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Scatter plot of 3-dimensional observations grouped according to the estimated state sequence}}{73}{figure.A.6}
+\contentsline {figure}{\numberline {A.7}{\ignorespaces Scatter plot of 4-dimensional observations grouped according to the ground-truth state sequence}}{73}{figure.A.7}
+\contentsline {figure}{\numberline {A.8}{\ignorespaces Scatter plot of 4-dimensional observations grouped according to the estimated state sequence}}{74}{figure.A.8}
+\contentsline {figure}{\numberline {A.9}{\ignorespaces Scatter plot of 6-dimensional observations grouped according the ground-truth state sequence}}{74}{figure.A.9}
+\contentsline {figure}{\numberline {A.10}{\ignorespaces Scatter plot of 6-dimensional observations grouped according to the estimated state sequence}}{75}{figure.A.10}
+\contentsline {figure}{\numberline {A.11}{\ignorespaces Scatter plot of 7-dimensional observations grouped according to the ground-truth state sequence}}{75}{figure.A.11}
+\contentsline {figure}{\numberline {A.12}{\ignorespaces Scatter plot of 7-dimensional observations grouped according to the estimated state sequence}}{76}{figure.A.12}
+\contentsline {figure}{\numberline {A.13}{\ignorespaces Scatter plot of 8-dimensional observations grouped according the ground-truth state sequence}}{76}{figure.A.13}
+\contentsline {figure}{\numberline {A.14}{\ignorespaces Scatter plot of 8-dimensional observations grouped according to the estimated state sequence}}{77}{figure.A.14}
+\contentsline {figure}{\numberline {A.15}{\ignorespaces Scatter plot of 9-dimensional observations grouped according to the ground-truth state sequence}}{77}{figure.A.15}
+\contentsline {figure}{\numberline {A.16}{\ignorespaces Scatter plot of 9-dimensional observations grouped according to the estimated state sequence}}{78}{figure.A.16}
+\contentsline {figure}{\numberline {A.17}{\ignorespaces Scatter plot of 10-dimensional observations grouped according to the ground-truth state sequence}}{78}{figure.A.17}
+\contentsline {figure}{\numberline {A.18}{\ignorespaces Scatter plot of 10-dimensional observations grouped according to the estimated state sequence}}{79}{figure.A.18}
+\contentsline {figure}{\numberline {A.19}{\ignorespaces Scatter plot of 11-dimensional observations grouped according the ground-truth state sequence}}{79}{figure.A.19}
+\contentsline {figure}{\numberline {A.20}{\ignorespaces Scatter plot of 11-dimensional observations grouped according to the estimated state sequence}}{80}{figure.A.20}
+\contentsline {figure}{\numberline {A.21}{\ignorespaces Scatter plot of 12-dimensional observations grouped according to the ground-truth state sequence}}{80}{figure.A.21}
+\contentsline {figure}{\numberline {A.22}{\ignorespaces Scatter plot of 12-dimensional observations grouped according to the estimated state sequence}}{81}{figure.A.22}
+\contentsline {figure}{\numberline {A.23}{\ignorespaces Scatter plot of 13-dimensional observations grouped according the ground-truth state sequence}}{81}{figure.A.23}
+\contentsline {figure}{\numberline {A.24}{\ignorespaces Scatter plot of 13-dimensional observations grouped according to the estimated state sequence}}{82}{figure.A.24}
+\contentsline {figure}{\numberline {A.25}{\ignorespaces Scatter plot of 14-dimensional observations grouped according to the ground-truth state sequence}}{82}{figure.A.25}
+\contentsline {figure}{\numberline {A.26}{\ignorespaces Scatter plot of 14-dimensional observations grouped according to the estimated state sequence}}{83}{figure.A.26}
+\contentsline {figure}{\numberline {A.27}{\ignorespaces Scatter plot of 15-dimensional observations grouped according the ground-truth state sequence}}{83}{figure.A.27}
+\contentsline {figure}{\numberline {A.28}{\ignorespaces Scatter plot of 15-dimensional observations grouped according to the estimated state sequence}}{84}{figure.A.28}
+\contentsline {figure}{\numberline {A.29}{\ignorespaces Scatter plot of 16-dimensional observations grouped according to the ground-truth state sequence}}{84}{figure.A.29}
+\contentsline {figure}{\numberline {A.30}{\ignorespaces Scatter plot of 16-dimensional observations grouped according to the estimated state sequence}}{85}{figure.A.30}
+\contentsline {figure}{\numberline {A.31}{\ignorespaces Scatter plot of 17-dimensional observations grouped according to the ground-truth state sequence}}{85}{figure.A.31}
+\contentsline {figure}{\numberline {A.32}{\ignorespaces Scatter plot of 17-dimensional observations grouped according to the estimated state sequence}}{86}{figure.A.32}
 \addvspace {10\p@ }

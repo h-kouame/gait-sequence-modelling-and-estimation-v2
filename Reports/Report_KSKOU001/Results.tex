@@ -1,6 +1,6 @@
 \chapter{Experiments and results} \label{sec:results}
 
-\section{Experiment 1: Observation sequence dimensionality's effect on performance} \label{exp:feat-size}
+\section{Experiment 1: Effect of data dimensionality on performance} \label{exp:feat-size}
 
 \subsection{Aim of the experiment}
 The aim of this experiment is to investigate how the number of features impacts the accuracy of a Hidden Markov Model with continuous emission symbols (CHMM), in the abscence of enough training data. Thus, the hypothesis under investigation is:\\
@@ -153,7 +153,7 @@ time-frequency domain analysis \cite{ches2012}.
 \subsubsection{Bias - variance error analysis}
 The presented results in \ref{fig:bias-var} is for a dataset with 539 samples.
 The bias error for all five models is relatively low. This because the test data was similar to the training data. 
-Interestingly, the variance in the training errors over the 100 differet runs are all very close to zero. This is not very surprising because the model's parameters, particularly the mean and the co-variance matrices were designed to have low variance. %%TODO: have a section on robustness of the mean and variance in the evaluation or testing section.
+Interestingly, the variance in the training errors over the 100 different runs are all very close to zero. This is not very surprising because the model's parameters, particularly the mean and the co-variance matrices were designed with minimal to no bias error. %%TODO: have a section on robustness of the mean and variance in the evaluation or testing section.
 By looking at the test errors and the bias errors, the best model appears to be the model built with the forward feature selection method, \(\lambda_{SI-forward}\) when the dataset size is small. The next comparable model would be the model built with the feature ranking metho, i.e, \(\lambda_{SI}\). So, with a very strict constraint on the model's speed, \(\lambda_{SI}\) should be favoured because, it is significantly faster than \(\lambda_{SI-forward}\).
 
 \subsection{Conclusions and recommendations of the experiment}
