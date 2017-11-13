@@ -232,7 +232,7 @@ This finding is advantageous for several reasons. In fact, this realisation can 
 \subsection{Conclusions and recommendations of the experiment}
 In light of the finding above, it can be concluded that: using all the front and back IMU measurements to predict just the front and back footfalls does not necessarily improves the performance. It degrades the performance when there is not enough training data because of the high dimensionality.
 %The formulated hypothesis is, therefore, rejected based on this experiment.\\
-An improvement to this experiment would be to explore how the dimensionality reduction of the different datasets would influence the outcome. Moreover, a futher investigation how well can the back sensors measurement be used to predict the front footfalls. Similarly, how well can the front sensors be used to predict the back footfalls.
+An improvement to this experiment would be to explore how the dimensionality reduction of the different datasets would influence the outcome. Moreover, a further investigation how well can the back sensors measurement be used to predict the front footfalls. Similarly, how well can the front sensors be used to predict the back footfalls.
 
 
 \section{Experiment 4: Motion type recognition}  \label{exp:motion}
@@ -261,7 +261,7 @@ The following steps were followed to run the experiment.
 	\item Testing and evaluating the models: Each model was tested three times with the remaining 35\% of the three distinct datasets. The prediction accuracies and the log-likelihoods were recorded and tabulated as presented in the results sub-section.\\
 	The log-likelihood value \ref{tab:action-recogn-log} measure the likelihood of the IMU measurement sequence having been emitted by the CHMM model in question.
 	Thus, for a given sequence of measurements, can be attributed to the model that outputs the highest log-likelihood value \cite{cont2013}.
-	The same purpose can be achieved by using the prediction accuracy confusion matrix, where the best candidate model is the model  with the highest accuracy for given an observation sequence.
+	The same purpose can be achieved by using the prediction accuracy confusion matrix, where the best candidate model is the model with the highest accuracy given an observation sequence.
 \end{enumerate} 
 
 \subsection{Experiment results}
@@ -270,16 +270,18 @@ Table \ref{tab:action-recogn-log}: the hidden state decoding accuracy and \ref{t
 
 \begin{table}[h!] 
 	\centering
-	\begin{tabular}{ |c|c|c|c|} 	
+	\begin{tabular}{ c|c|c|c} 	
+		\hline
 		\hline	
 		& \(D_r\) &  \(D_w\) & \(D_t\)\\ 
+		\hline
 		\hline
 		\(\lambda_{running}\) & 91.16\% & 2.06\% & 0.22\% \\ 
 		\hline
 		\(\lambda_{walking}\) & 21.06\% & 100.00\% & 75.53\% \\ 
 		\hline
-		\(\lambda_{trotting}\) & 27.40\% & 45.72\% & 100.00\%\\
-		\hline	   	
+		\(\lambda_{trotting}\) & 27.40\% & 45.72\% & 100.00\%\\	
+		\hline
 	\end{tabular}
 	\caption{Footfall prediction confusion matrix (\% accuracy )}
 	\label{tab:action-recogn-acc}
@@ -287,16 +289,17 @@ Table \ref{tab:action-recogn-log}: the hidden state decoding accuracy and \ref{t
 
 \begin{table}[h!] 
 	\centering
-	\begin{tabular}{ |c|c|c|c|} 	
+	\begin{tabular}{c|c|c|c} 	
 		\hline	
+		\hline
 		& \(D_r\) &  \(D_w\) & \(D_t\)\\ 
 		\hline
 		\(\lambda_{running}\) & 0.00  & -0.00\(\times10^{14}\)   & -0.00\(\times10^{14}\)\\ 
 		\hline
 		\(\lambda_{walking}\)  & -0.00\(\times10^{14}\)  &  0.00  & -0.00\(\times10^{14}\)\\ 
 		\hline
-		\(\lambda_{trotting}\)  & -1.44\(\times10^{12}\)  &  -0.1302  & 0.00\\
-		\hline	   	
+		\(\lambda_{trotting}\)  & -1.44\(\times10^{12}\)  &  -0.1302  & 0.00\\	
+		\hline   	
 	\end{tabular}
 	\caption{Footfall sequence log-likelihood}
 	\label{tab:action-recogn-log}
@@ -308,7 +311,7 @@ It is worth mentioning the 100\% accuracies when the unseen walking and trotting
 
 \subsection{Conclusions of the experiment}
 On the account of the findings discussed in the above subsection, the following conclusions can be drawn.
-Indeed, IMU based CHMM can be used to successfully perform motion type recognition. 
+Indeed, IMU based CHMM can be used to successfully perform motion type recognition. A similar experiment was performed to investigated the similarities between and differences between the front and the back limb movements of a dog, given a specific action. The results are presented in \ref{apdix-exp} because of the similarity to this experiment.
 
 
 %\newpage

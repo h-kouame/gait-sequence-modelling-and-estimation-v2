@@ -40,7 +40,7 @@ As a summary, the compact specification of a continuous valued observation HMM i
 	DHMM = \lambda_D = (A, b_j(k), \pi) \label{eq:DHMM}
 \end{align}
 
-\subsubsection{Basic assumptions of HMMs theory}
+\subsection{Basic assumptions of HMMs theory}
 HMM theory is built on three basic assumptions listed below.
 \begin{enumerate}
 \label{con:markov} \item \textit{The Markov assumption}: HMM assumes that the probability of being in the current	at any instance of time t, is uniquely dependent on the previous state, at time, t + 1. More specifically, \(a_{ij} = P[q_t = S_j|q_{t+1}=S_i]\). This assumption makes it unsuitable for long-range correlation capturing applications.
@@ -123,17 +123,17 @@ The output of the filter stage is a smaller set of relevant features which is fe
 In classification problems, using the separability index matrix to determine the classification content or degree of the feature generally results in very good results \cite{sima2013}. 
 The next section gives a particular attention to this approach.
 
-\subsubsection{Feature ranking using separability index matrix}
+\subsection{Feature ranking using separability index matrix}
 In this section, we look into a systematic approach to determine the 'classifiability of a feature' as present in \cite{sima2013}.
 In their paper, Jeong-Su, Sang Wan Lee and Zeungnam Bien, proposed a new criterion called separability index matrix to identify features that can discriminate between the different classes of a classification problem.
-The important concepts of this method are here defined together with their significance.
+The important concepts of this method are here defined together with their significance.\\\\
 
 \begin{enumerate}
 	\item \textbf{Separability Degree Matrix (SDM)}\\\\
 	\(SDM_k\) is a CxC symmetric matrix of the separability measures between the different classes of classification problem of C distinct classes given a particular feature \(x_k\).
 	It is defined in \ref{eq:sdm}
 \subitem \[SDM_k = [J(w_i, w_j; {x_k})] \label{eq:sdm}\]	
-\subitem where \(J(w_i, w_j; {x_k})\) denotes the separability or the distance value between class \(w_i\)  and class \(w_j\) when the criterion function \(J(\textbf{.})\) such as mahalanobis \cite{maha2013} or eucludian, is applied to the feature \(x_k\) \cite{sima2013}. 
+\subitem where \(J(w_i, w_j; {x_k})\) denotes the separability or the distance value between-class \(w_i\)  and class \(w_j\) when the criterion function \(J(\textbf{.})\) such as mahalanobis \cite{maha2013} or eucludian, is applied to the feature \(x_k\) \cite{sima2013}. 
 	\(SDM_k\) is symmetric matrix with zero diagonal values, because for a given feature \(x_k\), \(J(w_i, w_j; {x_k}) = J(w_j, w_i; {x_k})\) and \(J(w_i, w_i; {x_k}) = 0\).
 	This observation can be exploited  to half the computation required to calculate \(SDM_v = {SDM_1, SDM_2, ..., SDM_N}\), the set of  all \(SDM\) for the feature set of size N.
 	 
@@ -176,4 +176,4 @@ It is a well-received dimensionality reduction tool in the computer vision and p
 \subsubsection{Principal component analysis}
  Principal component analysis (PCA) is an orthogonal linear transformation of a dataset of T K-dimensional observations, \(O \in \Bbb R^{T\times K}\), into a so-called PC-space defined by the principal components (PC) \cite{dime2017}.
  Naturally, the dimension of the new space is smaller or equal to K, the original set's dimensionality. The components are ordered according to the variance of the features of the observation set. The principal components represent the eigenvectors of the covariance matrices of the features and the eigenvalues are measures of the features' variances. Thus, the first component is the feature with the highest variance \cite{dime2017}.
- In effect, PCA not only transforms the original observation set into a different space but, it also ranks the features according to their variability. It can therefore be used as an unsupervised dimensionality reduction technique by simply discarding the features with low variance after finding the principal components.
+ In effect, PCA not only transforms the original observation set into a different space but, it also ranks the features according to their variability. It can, therefore, be used as an unsupervised dimensionality reduction technique by simply discarding the features with low variance after finding the principal components.
