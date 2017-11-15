@@ -1,0 +1,277 @@
+\documentclass[serif,mathserif]{beamer}
+\usepackage{amsmath, amsfonts, epsfig, xspace}
+\usepackage{algorithm,algorithmic}
+\usepackage{pstricks,pst-node}
+\usepackage{multimedia}
+\usepackage[normal,tight,center]{subfigure}
+\setlength{\subfigcapskip}{-.5em}
+\usepackage{beamerthemesplit}
+\usetheme{lankton-keynote}
+
+\author[Kouame Kouassi]{Kouame H. Kouassi\\ \quad ECE final year\\ \quad UCT}
+
+\title[Gait Estimation\hspace{2em}\insertframenumber/\inserttotalframenumber]{Gait Sequence Estimation \\using \\Hidden Markov Models}
+
+\date{November 16, 2017} %leave out for today's date to be insterted
+
+\institute{Final year project presentation}
+
+\begin{document}
+
+\maketitle
+
+ %\section{Introduction}  % add these to see outline in slides
+
+\section{Gait Sequence Estimation using HMMs}
+\begin{frame}
+  \frametitle{Introduction}
+  \textbf{Presentation content:}\pause
+  \begin{enumerate}
+  \item Introduction
+  \newline
+  \item System and Model Design
+  \newline
+  \item Parameters Estimation/ Training %leave out the \pause on the final item
+  \newline
+  \item Experiments, Results, \& Discussions
+  \newline
+  \item Conclusions \& Recommendations
+  \newline
+  \item Poster Presentation  
+  \end{enumerate}
+\end{frame}
+
+%\section{Basic HMM Theory} % add these to see outline in slides
+
+\begin{frame}
+	\frametitle{Problem Description}
+	%Every HMM design needs to solve 3 problems:\pause
+	\begin{enumerate}
+		\item \textit{The Markov assumption}\pause
+%		HMM assumes that the probability of being in the current	at any instance of time t, is uniquely dependent on the previous state, at time, t + 1. More specifically, \(a_{ij} = P[q_t = S_j|q_{t+1}=S_i]\). This assumption makes it unsuitable for long-range correlation capturing applications.
+		\newline
+		\newline
+		\item \textit{The stationary assumption}\pause
+%		Furthermore, HMM state transition probabilities are assumed to be time-independent. Thus, the transition probabilities of two distinct time, \(t_1\) and \(t_2\) are identical, \(P[q_{t_1} = S_j|q_{t_1 -1} = S_i] = P[q{t_2}=S_i|q_{t_2-1} = S_i]\). HMMs can therefore effectively model mechanisms with stationary observations.
+		\newline
+		\newline
+		\item \textit{The output/observation independence assumption}
+%		The current observation also known as emission symbol is statistically independent of the previous observations. It is "emitted" only by the current state, \(P[O|q_1, q_2, ..., q_T, \lambda]=\prod_{t=1}^{T}P[O_t|q_t, \lambda]\)
+	\end{enumerate}
+\end{frame}
+
+%\section{Model Design}
+
+\begin{frame}
+  \frametitle{System Overview}
+  \begin{figure}[t]
+    \centering
+    \subfigure[System Block Diagram]{
+	%    \includegraphics[width=3cm]{Figures/dog}}
+	    \includegraphics[width=10cm, height=5cm]{Figures/dog-overview}
+	}
+%    \subfigure[Middle Frame]{
+%%    \includegraphics[width=3cm]{figures/naked_leaves/00000120}}
+%    \includegraphics[width=3cm]{lion.png}}
+%    \subfigure[Last Frame]{
+%%    \includegraphics[width=3cm]{figures/naked_leaves/00000240}}
+%    \includegraphics[width=3cm]{lion.png}}
+  \end{figure}
+\end{frame}
+%\begin{frame}
+%	\frametitle{Model Design}
+%	\begin{figure}[t]
+%		\centering
+%		\subfigure[First Frame]{
+%			%    \includegraphics[width=3cm]{Figures/dog}}
+%			\includegraphics[width=3cm heigh]{Figures/dog-overview}}
+%		\subfigure[Middle Frame]{
+%			%    \includegraphics[width=3cm]{figures/naked_leaves/00000120}}
+%			\includegraphics[width=3cm]{lion.png}}
+%		\subfigure[Last Frame]{
+%			%    \includegraphics[width=3cm]{figures/naked_leaves/00000240}}
+%			\includegraphics[width=3cm]{lion.png}}
+%	\end{figure}
+%\end{frame}
+
+\begin{frame}
+	\frametitle{HMM parameters}
+	\begin{itemize}
+		\item \(\pi = {\pi_i}\) \pause 	 %The initial state distribution,
+		\newline
+		\newline
+		\item \(A =  \{a_{ij} \}\) \pause%, the state transition probabilities. \(a_{ij}\)  denotes probability of transitioning from state \(S_i\) to state \(S_j\).
+		\newline
+		\newline
+		\item \(\Phi =   \{ \phi_{j}(k\}\) \pause%, the probability distribution of observation symbols in state j.
+		\begin{equation*}
+		%\textbf{p}^* = \underset{\textbf{p}}{\arg\!\min}~\sum_{\textbf{x}}\left[ I(\textbf{W}(\textbf{x};\textbf{p})) - T(\textbf{x}) \right]^2
+		\phi(O_t) = \sum_{m=1}^M \beta_{jm} \eta(\mu_{jm}, \Sigma_{jm}, O_t), \label{eq:phi}
+		\end{equation*}
+	\end{itemize}
+\end{frame}
+
+%\section{Training}
+\begin{frame}
+	\frametitle{Solution to the Training Problem}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{Optimal mixture number with AIC}
+	\begin{figure}[t]
+		%\includegraphics[width=0.8\textwidth, height=0.8\textheight, keepaspectratio]{Figures/comb-front-A}
+		\includegraphics[width=0.8\textwidth, height=0.8\textheight, keepaspectratio]{Figures/optimal-mix}
+		%\caption{Finding best number of mixture component using AIC}
+		%\caption{Misclassification error vs feature number using separability index and KNN}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{State transition matrix}
+		\begin{figure}[t]
+		\includegraphics[width=0.8\textwidth, height=0.8\textheight, keepaspectratio]{Figures/comb-front-A}
+		%\caption{Misclassification error vs feature number using separability index and KNN}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Hidden Markov Process}
+	\begin{figure}[t]
+		\includegraphics[width=0.8\textwidth, height=0.8\textheight, keepaspectratio]{Figures/comb-front-erg}
+		\caption{Graphical model of state transition}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Effect of feature dimensionality}
+	\begin{figure}[t]
+		\includegraphics[width=0.7\textwidth, height=0.8\textheight, keepaspectratio]{Figures/dimensionality-effect-acc}
+	\end{figure}
+\end{frame}
+
+%\section{Dimensionality reduction}
+\begin{frame}
+	\textbf{Feature Subset Selection}
+	\newline
+	\newline
+	\begin{enumerate}
+		\item Feature ranking with Separability Index\pause
+		\newline
+		\newline
+		\item Forward feature selection 
+	\end{enumerate}
+\end{frame}
+
+%\section{Dimensionality reduction}
+\begin{frame}
+	\textbf{Feature Extraction}
+	\newline
+	\newline
+	\begin{enumerate}
+		\item Princpal Component Analysis: PCA \pause
+		\newline
+		\newline
+		\item Linear Discriminant Analysis: LDA
+	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Optimal feature number with KNN}
+	\begin{figure}[t]
+		\includegraphics[width=0.7\textwidth, height=0.8\textheight, keepaspectratio]{Figures/MCE}
+		%\caption{Misclassification error vs feature number using separability index and KNN}
+		\label{fig:opt-dim}
+	\end{figure}
+\end{frame}
+
+%\section{Experiments, Results \& Discussions }
+
+\begin{frame}
+	\frametitle{The impact of dimensionality reduction}
+	\begin{figure}[t]
+		\includegraphics[width=0.7\textwidth, height=0.8\textheight, keepaspectratio]{Figures/size-acc-2}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Motion type recognition with log-likelihood}
+	\begin{table}[h!] 
+		\centering
+  		\begin{tabular}{c|c|c|c} 	
+			\hline	
+			\hline
+			& Running Data &  Walking Data & Trotting Data\\ 
+			\hline
+			\textit{Model of Run} & 0.00  & -0.00\(\times10^{14}\)   & -0.00\(\times10^{14}\)\\ 
+			\hline
+			\textit{Model of Walk}  & -0.00\(\times10^{14}\)  &  0.00  & -0.00\(\times10^{14}\)\\ 
+			\hline
+			\textit{Model of Trot}  & -1.44\(\times10^{12}\)  &  -0.1302  & 0.00\\	
+			\hline  
+		\end{tabular}
+		\caption{Classification with prediction accuracy}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Motion type recognition with accuracy}
+	\begin{table}[h!] 		
+		\centering
+		\begin{tabular}{ c|c|c|c} 	
+			\hline
+			\hline	
+			& Running Data &  Walking Data & Trotting Data\\ 
+			\hline
+			\hline
+			\textit{Model of Run} & 91.16\% & 2.06\% & 0.22\% \\ 
+			\hline
+			\textit{Model of Walk} & 21.06\% & 100.00\% & 75.53\% \\ 
+			\hline
+			\textit{Model of Trot} & 27.40\% & 45.72\% & 100.00\%\\	
+			\hline
+		\end{tabular}
+		\caption{Classification with log-likelihood}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Front sensors or both?}
+	\begin{figure}[t]
+		\includegraphics[width=.9\textwidth,height=.75\textheight,keepaspectratio]{Figures/front-comb-acc}
+		\caption{Front footfalls prediction accuracy of both IMUs vs with only the front IMU}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Back sensors or both?}
+	\begin{figure}[t]
+		\includegraphics[width=.9\textwidth,height=.75\textheight,keepaspectratio]{Figures/back-comb-acc}
+		\caption{Back footfalls prediction accuracy of both IMUs vs with only the front IMU}
+	\end{figure}
+\end{frame}
+
+%\section{Conclusions  } % add these to see outline in slides
+
+%\section{Recomendations} % add these to see outline in slides
+
+\begin{frame}
+	\frametitle{Introduction}
+	\textbf{Contribution:}\pause
+	\newline
+	\begin{enumerate}		
+		\item \textit{Quadruped} Gait Estimation from \textit{18-dimensional observations} \pause
+		\newline
+		\newline
+		\item \textit{Data aggregation} and/or \textit{Mirroring} to increase dataset \pause
+		\newline
+		\newline
+		\item Algorithm is applicable to \textit{Human Gait Analysis}
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Questions}
+\end{frame}
+\end{document}

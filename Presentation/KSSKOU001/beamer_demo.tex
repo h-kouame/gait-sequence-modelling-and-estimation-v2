@@ -1,0 +1,101 @@
+\documentclass[serif,mathserif]{beamer}
+\usepackage{amsmath, amsfonts, epsfig, xspace}
+\usepackage{algorithm,algorithmic}
+\usepackage{pstricks,pst-node}
+\usepackage{multimedia}
+\usepackage[normal,tight,center]{subfigure}
+\setlength{\subfigcapskip}{-.5em}
+\usepackage{beamerthemesplit}
+\usetheme{lankton-keynote}
+
+\author[Kouame Kouassi]{Kouame H. Kouassi\\ \quad ECE final year\\ \quad UCT}
+
+\title[Short Title\hspace{2em}\insertframenumber/\inserttotalframenumber]{Gait Sequence Estimation \\using \\Hidden Markov Models}
+
+\date{November 16, 2017} %leave out for today's date to be insterted
+
+\institute{Final year project presentation}
+
+\begin{document}
+
+\maketitle
+
+ \section{Introduction}  % add these to see outline in slides
+
+
+\begin{frame}
+  \frametitle{Introduction}
+  Things in a Bulleted List\pause
+  \begin{itemize}
+  \item Bullets that\pause
+  \item Come up\pause
+  \item One by one %leave out the \pause on the final item
+  \end{itemize}
+\end{frame}
+
+\section{Basic HMM Theory} % add these to see outline in slides
+
+\begin{frame}
+  \frametitle{HMM parameters}
+  \begin{itemize}
+  	\item N  \pause%, the number of distinct states of the model. Together they form the set of individual states \(S = \{S_1, S_2, ..., S_N\}\).
+  	\item T \pause%, the number of observations. A sample observation sequence is denoted as \(O = \{O_1, O_2, ..., O_T\}\).
+  	\item \(Q = {q_t}\) \pause%, the set of states with \(q_t\) denoting the current state at time instance, t such that \(q_t \epsilon S\) and \(t = 1, 2, ..., T\).
+  	\item K \pause%, the number of distinct observation symbols per state. 
+  	\item \(V = \{v_1, v_2, ..., v_K\}\) \pause%, the feature set of K dimensions.
+  	\item \(\pi = {\pi_i}\) \pause 	 %The initial state distribution,
+  	\item \(A =  \{a_{ij} \}\) \pause%, the state transition probabilities. \(a_{ij}\)  denotes probability of transitioning from state \(S_i\) to state \(S_j\).
+  	\item \(\Phi =   \{ \phi_{j}(k\}\) \pause%, the probability distribution of observation symbols in state j.
+  	\item 
+    \begin{equation*}
+      %\textbf{p}^* = \underset{\textbf{p}}{\arg\!\min}~\sum_{\textbf{x}}\left[ I(\textbf{W}(\textbf{x};\textbf{p})) - T(\textbf{x}) \right]^2
+      	\phi(O_t) = \sum_{m=1}^M \beta_{jm} \eta(\mu_{jm}, \Sigma_{jm}, O_t), \label{eq:phi}
+    \end{equation*}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Pictures}
+  \begin{figure}[t]
+    \centering
+    \subfigure[First Frame]{
+%    \includegraphics[width=3cm]{figures/naked_leaves/00000001}}
+    \includegraphics[width=3cm]{lion.png}}
+    \subfigure[Middle Frame]{
+%    \includegraphics[width=3cm]{figures/naked_leaves/00000120}}
+    \includegraphics[width=3cm]{lion.png}}
+    \subfigure[Last Frame]{
+%    \includegraphics[width=3cm]{figures/naked_leaves/00000240}}
+    \includegraphics[width=3cm]{lion.png}}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{A Movie}
+  \begin{center}
+    \movie[height=5cm,width=6.5cm,poster,autostart,loop]{}{leaves.avi}
+  \end{center}
+  \begin{itemize}
+  \item Movies only seem to work in Adobe Reader
+  \item Movie file is not embedded, it must be on the computer
+  \end{itemize}
+\end{frame}
+
+% \section{Conclusion} % add these to see outline in slides
+
+\begin{frame}
+  \frametitle{Credits}
+  \begin{itemize}
+  \item Brought to you by www.shawnlankton.com
+  \item Please let me know about improvements!
+  \item This was supposed to look like a KeyNote Show
+  \item inspiration: http://www.ucl.ac.uk/~ucbpeal/latexposter.html
+  \item inspiration: http://newsgroups.derkeiler.com/... (in code)
+        %http://newsgroups.derkeiler.com/Archive/Comp/comp.text.tex/2007-11/msg00299.html
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Questions}
+\end{frame}
+\end{document}
